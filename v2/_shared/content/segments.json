@@ -1,0 +1,898 @@
+{
+  "meta": {
+    "pack": "Lepa Svaki Dan v2 texts pack: segments.json",
+    "generatedBy": "ECHOSYSTEM-MOTHER AGENCY",
+    "generatedAt": "2026-10-07T16:33:36Z",
+    "ids": "segment.id equals the old blog category key (dermatologija, estetske, kozmetika, telo) and articles[].segmentId; slug is the URL part",
+    "heroImage": "chosen by what the image really shows (media pack manifest.json alt/shows), not by its file name; fit says how close it is",
+    "intro": "one verbatim quote from the articles or the old site (content.json); nothing is invented. alternative = a second verbatim sentence.",
+    "counts": {
+      "segments": 4,
+      "articles": 21
+    }
+  },
+  "segments": [
+    {
+      "id": "dermatologija",
+      "slug": "dermatologija",
+      "name": "Dermatologija",
+      "folder": "Dermatologija",
+      "order": 1,
+      "articleIds": [
+        "art-1",
+        "art-2",
+        "art-3",
+        "art-4"
+      ],
+      "articleCount": 4,
+      "blogCategoryKey": "dermatologija",
+      "priceList": {
+        "tabs": [
+          {
+            "tabId": "estetske",
+            "label": "Estetske procedure",
+            "primaryGroupIds": [
+              "estetske:5",
+              "estetske:7"
+            ],
+            "relatedGroupIds": [
+              "estetske:3"
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "tabId": "estetske",
+            "tabLabel": "Estetske procedure",
+            "groupIndex": 5,
+            "groupId": "estetske:5",
+            "groupTitle": "Dermatologija",
+            "role": "primary",
+            "articleIds": [
+              "art-1",
+              "art-2",
+              "art-3"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "estetske",
+            "tabLabel": "Estetske procedure",
+            "groupIndex": 7,
+            "groupId": "estetske:7",
+            "groupTitle": "Rast kose",
+            "role": "primary",
+            "articleIds": [
+              "art-2",
+              "art-4"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "estetske",
+            "tabLabel": "Estetske procedure",
+            "groupIndex": 3,
+            "groupId": "estetske:3",
+            "groupTitle": "Biorevitalizacija i skinbosteri",
+            "role": "related",
+            "articleIds": [
+              "art-4"
+            ],
+            "origins": []
+          }
+        ],
+        "note": "On the price list the dermatology services live in the tab \"Estetske procedure\" (groups \"Dermatologija\" and \"Rast kose\"); there is no separate dermatology tab."
+      },
+      "heroImage": {
+        "id": "woman-portrait",
+        "fit": "approximate",
+        "alt": "Portret žene sa zategnutom punđom i blistavim tenom, pogleda skrenutog u stranu, ruka joj počiva na ramenu.",
+        "shows": "Beauty portret: žena tamne kose u punđi, sjajan ten, ruka na ramenu, gola ramena. Isečena (providna pozadina), 1500x1675.",
+        "type": "cutout",
+        "hasAlpha": true,
+        "srcset": "woman-portrait-480.webp 480w, woman-portrait-800.webp 800w, woman-portrait-1200.webp 1200w",
+        "files": [
+          "woman-portrait-480.webp",
+          "woman-portrait-800.webp",
+          "woman-portrait-1200.webp"
+        ],
+        "caveat": "The pack has no clinical, laser or dermatology photo. This cut-out beauty portrait of a woman with a radiant complexion is the closest honest match (skin). Replace with a real clinic photo when one exists.",
+        "alternates": [
+          {
+            "id": "hero-orhideja",
+            "shows": "Grozd belih orhideja levo (sa magenta/ljubičastim središtem), nekoliko latica u letu, ogromna glatka krem površina desno."
+          }
+        ]
+      },
+      "intro": {
+        "text": "Klasična (klinička) dermatologija bavi se prevencijom, dijagnostikom i lečenjem bolesti kože, kose, noktiju i vidljivih sluzokoža.",
+        "source": {
+          "kind": "article",
+          "articleId": "art-2",
+          "blockIndex": 0,
+          "sentence": 1
+        },
+        "verbatim": true,
+        "alternative": {
+          "text": "Candela medicinski laseri predstavljaju zlatan standard u dermatologiji za rešavanje konkretnih problema: uklanjanje kapilara, hiperpigmentacija, ožiljaka, kao i za podmlađivanje kože.",
+          "source": {
+            "kind": "article",
+            "articleId": "art-1",
+            "blockIndex": 0,
+            "sentence": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "estetske",
+      "slug": "estetske-procedure",
+      "name": "Estetske procedure",
+      "folder": "Estske procedure",
+      "folderNote": "The folder on disk is spelled \"Estske procedure\" (typo); the segment name is \"Estetske procedure\".",
+      "order": 2,
+      "articleIds": [
+        "art-5",
+        "art-6",
+        "art-7",
+        "art-8"
+      ],
+      "articleCount": 4,
+      "blogCategoryKey": "estetske",
+      "priceList": {
+        "tabs": [
+          {
+            "tabId": "estetske",
+            "label": "Estetske procedure",
+            "primaryGroupIds": [
+              "estetske:1",
+              "estetske:2",
+              "estetske:3",
+              "estetske:4"
+            ],
+            "relatedGroupIds": []
+          },
+          {
+            "tabId": "lice",
+            "label": "Tretmani lica",
+            "primaryGroupIds": [],
+            "relatedGroupIds": [
+              "lice:1",
+              "lice:2",
+              "lice:3"
+            ]
+          },
+          {
+            "tabId": "protokoli",
+            "label": "Naši protokoli",
+            "primaryGroupIds": [],
+            "relatedGroupIds": [
+              "protokoli:0"
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "tabId": "estetske",
+            "tabLabel": "Estetske procedure",
+            "groupIndex": 1,
+            "groupId": "estetske:1",
+            "groupTitle": "Hijaluronski fileri",
+            "role": "primary",
+            "articleIds": [
+              "art-6",
+              "art-7"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "estetske",
+            "tabLabel": "Estetske procedure",
+            "groupIndex": 2,
+            "groupId": "estetske:2",
+            "groupTitle": "Botox tretman",
+            "role": "primary",
+            "articleIds": [
+              "art-6",
+              "art-7"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "estetske",
+            "tabLabel": "Estetske procedure",
+            "groupIndex": 3,
+            "groupId": "estetske:3",
+            "groupTitle": "Biorevitalizacija i skinbosteri",
+            "role": "primary",
+            "articleIds": [
+              "art-5"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "estetske",
+            "tabLabel": "Estetske procedure",
+            "groupIndex": 4,
+            "groupId": "estetske:4",
+            "groupTitle": "Lifting niti i mezoniti",
+            "role": "primary",
+            "articleIds": [
+              "art-8"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 1,
+            "groupId": "lice:1",
+            "groupTitle": "Biološki tretmani",
+            "role": "related",
+            "articleIds": [
+              "art-6"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 2,
+            "groupId": "lice:2",
+            "groupTitle": "Venus Glow / Dermafacial",
+            "role": "related",
+            "articleIds": [
+              "art-6"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 3,
+            "groupId": "lice:3",
+            "groupTitle": "Hemijski pilinzi",
+            "role": "related",
+            "articleIds": [
+              "art-6"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "protokoli",
+            "tabLabel": "Naši protokoli",
+            "groupIndex": 0,
+            "groupId": "protokoli:0",
+            "groupTitle": "GLOW & GO",
+            "role": "related",
+            "articleIds": [
+              "art-6"
+            ],
+            "origins": []
+          }
+        ]
+      },
+      "heroImage": {
+        "id": "hero-orhideja",
+        "fit": "mood-only",
+        "alt": "Bele orhideje sa ljubičasto-ružičastim središtem i latice koje lebde na toplo krem pozadini.",
+        "shows": "Grozd belih orhideja levo (sa magenta/ljubičastim središtem), nekoliko latica u letu, ogromna glatka krem površina desno.",
+        "type": "photo",
+        "hasAlpha": false,
+        "srcset": "hero-orhideja-480.webp 480w, hero-orhideja-800.webp 800w, hero-orhideja-1200.webp 1200w, hero-orhideja-1800.webp 1800w",
+        "files": [
+          "hero-orhideja-480.webp",
+          "hero-orhideja-800.webp",
+          "hero-orhideja-1200.webp",
+          "hero-orhideja-1800.webp"
+        ],
+        "caveat": "No photo in the pack shows an injectable or thread procedure. The orchid image is neutral and makes no medical claim; use woman-portrait instead if it is not used for Dermatologija.",
+        "alternates": [
+          {
+            "id": "woman-portrait",
+            "shows": "Beauty portret: žena tamne kose u punđi, sjajan ten, ruka na ramenu, gola ramena. Isečena (providna pozadina), 1500x1675."
+          }
+        ]
+      },
+      "intro": {
+        "text": "Botox, hijaluron, PRP, Profhilo, biostimulatori, mezoniti.",
+        "source": {
+          "kind": "content.json",
+          "path": "verticals[2].summary",
+          "note": "category line of the old site"
+        },
+        "verbatim": true,
+        "alternative": {
+          "text": "Aplikacija hijaluronskih filera spada u najzastupljenije estetske procedure.",
+          "source": {
+            "kind": "article",
+            "articleId": "art-7",
+            "blockIndex": 0,
+            "sentence": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "kozmetika",
+      "slug": "kozmeticki-tretmani",
+      "name": "Kozmetički tretmani",
+      "folder": "Kozmetički tretmani",
+      "order": 3,
+      "articleIds": [
+        "art-9",
+        "art-10",
+        "art-11",
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-15"
+      ],
+      "articleCount": 7,
+      "blogCategoryKey": "kozmetika",
+      "priceList": {
+        "tabs": [
+          {
+            "tabId": "lice",
+            "label": "Tretmani lica",
+            "primaryGroupIds": [
+              "lice:0",
+              "lice:1",
+              "lice:2",
+              "lice:3",
+              "lice:5",
+              "lice:6",
+              "lice:7"
+            ],
+            "relatedGroupIds": []
+          },
+          {
+            "tabId": "telo",
+            "label": "Tretmani tela",
+            "primaryGroupIds": [],
+            "relatedGroupIds": [
+              "telo:1",
+              "telo:5"
+            ]
+          },
+          {
+            "tabId": "protokoli",
+            "label": "Naši protokoli",
+            "primaryGroupIds": [],
+            "relatedGroupIds": [
+              "protokoli:0",
+              "protokoli:1",
+              "protokoli:2"
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 0,
+            "groupId": "lice:0",
+            "groupTitle": "Higijenski tretmani",
+            "role": "primary",
+            "articleIds": [
+              "art-9",
+              "art-11"
+            ],
+            "origins": [
+              "SERVICE_BLOG_LINKS"
+            ]
+          },
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 1,
+            "groupId": "lice:1",
+            "groupTitle": "Biološki tretmani",
+            "role": "primary",
+            "articleIds": [
+              "art-9",
+              "art-12",
+              "art-13",
+              "art-14"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 2,
+            "groupId": "lice:2",
+            "groupTitle": "Venus Glow / Dermafacial",
+            "role": "primary",
+            "articleIds": [
+              "art-12",
+              "art-13",
+              "art-14"
+            ],
+            "origins": [
+              "SERVICE_BLOG_LINKS"
+            ]
+          },
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 3,
+            "groupId": "lice:3",
+            "groupTitle": "Hemijski pilinzi",
+            "role": "primary",
+            "articleIds": [
+              "art-10"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 5,
+            "groupId": "lice:5",
+            "groupTitle": "Dermapen",
+            "role": "primary",
+            "articleIds": [
+              "art-10"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 6,
+            "groupId": "lice:6",
+            "groupTitle": "Venus Legacy lice",
+            "role": "primary",
+            "articleIds": [
+              "art-15"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 7,
+            "groupId": "lice:7",
+            "groupTitle": "Myolift i masaže lica",
+            "role": "primary",
+            "articleIds": [
+              "art-12",
+              "art-15"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "telo",
+            "tabLabel": "Tretmani tela",
+            "groupIndex": 1,
+            "groupId": "telo:1",
+            "groupTitle": "Presoterapija ProBallancer",
+            "role": "related",
+            "articleIds": [
+              "art-9"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "telo",
+            "tabLabel": "Tretmani tela",
+            "groupIndex": 5,
+            "groupId": "telo:5",
+            "groupTitle": "Tretmani za ciljanu negu",
+            "role": "related",
+            "articleIds": [
+              "art-13",
+              "art-14"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "protokoli",
+            "tabLabel": "Naši protokoli",
+            "groupIndex": 0,
+            "groupId": "protokoli:0",
+            "groupTitle": "GLOW & GO",
+            "role": "related",
+            "articleIds": [
+              "art-14"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "protokoli",
+            "tabLabel": "Naši protokoli",
+            "groupIndex": 1,
+            "groupId": "protokoli:1",
+            "groupTitle": "Anti-aging protokoli",
+            "role": "related",
+            "articleIds": [
+              "art-12",
+              "art-15"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "protokoli",
+            "tabLabel": "Naši protokoli",
+            "groupIndex": 2,
+            "groupId": "protokoli:2",
+            "groupTitle": "Posebna stanja i prilike",
+            "role": "related",
+            "articleIds": [
+              "art-12",
+              "art-13",
+              "art-14"
+            ],
+            "origins": []
+          }
+        ],
+        "note": "The old site calls this tab \"Tretmani lica\": all seven articles of the segment are face treatments."
+      },
+      "heroImage": {
+        "id": "vertical-protocols",
+        "fit": "exact",
+        "alt": "Terapeutkinja nežno masira lice žene čija je glava umotana belim peškirom, tokom tretmana lica.",
+        "shows": "Krupan kadar lica klijentkinje (zatvorene oči, peškir oko glave) i ruku terapeutkinje koje masiraju vilicu/obraz; terapeutkinja u tamnoplavoj majici sa priveskom na vrhu kadra.",
+        "type": "photo",
+        "hasAlpha": false,
+        "srcset": "vertical-protocols-480.webp 480w, vertical-protocols-800.webp 800w, vertical-protocols-1200.webp 1200w, vertical-protocols-1800.webp 1800w",
+        "files": [
+          "vertical-protocols-480.webp",
+          "vertical-protocols-800.webp",
+          "vertical-protocols-1200.webp",
+          "vertical-protocols-1800.webp"
+        ],
+        "caveat": "Shows a facial massage during a face treatment, which is what most articles of this segment describe (biological, hygienic, Venus Glow, Myolift).",
+        "alternates": [
+          {
+            "id": "founder-portrait",
+            "shows": "Profil žene zatvorenih očiju, na čelo joj se četkicom nanosi tamna maska; druga ruka pridržava drvenu posudu sa kristalima i lišćem. Zamućena svetla pozadina sa biljkama i svećama."
+          }
+        ]
+      },
+      "intro": {
+        "text": "Higijenski i biološki tretmani, pilinzi, Venus Glow, Dermapen, Myolift.",
+        "source": {
+          "kind": "content.json",
+          "path": "verticals[0].summary",
+          "note": "category line of the old site"
+        },
+        "verbatim": true,
+        "alternative": {
+          "text": "Ako se za neki od tretmana lica može reći da predstavlja svojevrsno uživanje koje sebi treba redovno priuštiti, onda su to biološki tretmani lica.",
+          "source": {
+            "kind": "article",
+            "articleId": "art-9",
+            "blockIndex": 0,
+            "sentence": 1
+          }
+        }
+      }
+    },
+    {
+      "id": "telo",
+      "slug": "telo",
+      "name": "Telo",
+      "folder": "Telo",
+      "order": 4,
+      "articleIds": [
+        "art-16",
+        "art-17",
+        "art-18",
+        "art-19",
+        "art-20",
+        "art-21"
+      ],
+      "articleCount": 6,
+      "blogCategoryKey": "telo",
+      "priceList": {
+        "tabs": [
+          {
+            "tabId": "telo",
+            "label": "Tretmani tela",
+            "primaryGroupIds": [
+              "telo:0",
+              "telo:1",
+              "telo:3",
+              "telo:4",
+              "telo:5"
+            ],
+            "relatedGroupIds": [
+              "telo:2"
+            ]
+          },
+          {
+            "tabId": "laserska",
+            "label": "Laserska epilacija",
+            "primaryGroupIds": [
+              "laserska:0",
+              "laserska:1",
+              "laserska:2",
+              "laserska:3",
+              "laserska:4"
+            ],
+            "relatedGroupIds": []
+          },
+          {
+            "tabId": "lice",
+            "label": "Tretmani lica",
+            "primaryGroupIds": [],
+            "relatedGroupIds": [
+              "lice:1",
+              "lice:7"
+            ]
+          },
+          {
+            "tabId": "protokoli",
+            "label": "Naši protokoli",
+            "primaryGroupIds": [],
+            "relatedGroupIds": [
+              "protokoli:0",
+              "protokoli:2",
+              "protokoli:3"
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "tabId": "telo",
+            "tabLabel": "Tretmani tela",
+            "groupIndex": 0,
+            "groupId": "telo:0",
+            "groupTitle": "Venus Legacy telo",
+            "role": "primary",
+            "articleIds": [
+              "art-16",
+              "art-18",
+              "art-20"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "telo",
+            "tabLabel": "Tretmani tela",
+            "groupIndex": 1,
+            "groupId": "telo:1",
+            "groupTitle": "Presoterapija ProBallancer",
+            "role": "primary",
+            "articleIds": [
+              "art-16",
+              "art-18",
+              "art-19"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "telo",
+            "tabLabel": "Tretmani tela",
+            "groupIndex": 3,
+            "groupId": "telo:3",
+            "groupTitle": "AWT, Anticelulit i preoblikovanje",
+            "role": "primary",
+            "articleIds": [
+              "art-16"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "telo",
+            "tabLabel": "Tretmani tela",
+            "groupIndex": 4,
+            "groupId": "telo:4",
+            "groupTitle": "MedContour, Smanjenje masnih naslaga",
+            "role": "primary",
+            "articleIds": [
+              "art-17"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "telo",
+            "tabLabel": "Tretmani tela",
+            "groupIndex": 5,
+            "groupId": "telo:5",
+            "groupTitle": "Tretmani za ciljanu negu",
+            "role": "primary",
+            "articleIds": [
+              "art-18",
+              "art-19"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "laserska",
+            "tabLabel": "Laserska epilacija",
+            "groupIndex": 0,
+            "groupId": "laserska:0",
+            "groupTitle": "Paketi, celo telo",
+            "role": "primary",
+            "articleIds": [
+              "art-21"
+            ],
+            "origins": [
+              "tab"
+            ]
+          },
+          {
+            "tabId": "laserska",
+            "tabLabel": "Laserska epilacija",
+            "groupIndex": 1,
+            "groupId": "laserska:1",
+            "groupTitle": "Lice",
+            "role": "primary",
+            "articleIds": [
+              "art-21"
+            ],
+            "origins": [
+              "tab"
+            ]
+          },
+          {
+            "tabId": "laserska",
+            "tabLabel": "Laserska epilacija",
+            "groupIndex": 2,
+            "groupId": "laserska:2",
+            "groupTitle": "Telo, gornji deo",
+            "role": "primary",
+            "articleIds": [
+              "art-21"
+            ],
+            "origins": [
+              "tab"
+            ]
+          },
+          {
+            "tabId": "laserska",
+            "tabLabel": "Laserska epilacija",
+            "groupIndex": 3,
+            "groupId": "laserska:3",
+            "groupTitle": "Telo, donji deo",
+            "role": "primary",
+            "articleIds": [
+              "art-21"
+            ],
+            "origins": [
+              "tab"
+            ]
+          },
+          {
+            "tabId": "laserska",
+            "tabLabel": "Laserska epilacija",
+            "groupIndex": 4,
+            "groupId": "laserska:4",
+            "groupTitle": "Kombinacije",
+            "role": "primary",
+            "articleIds": [
+              "art-21"
+            ],
+            "origins": [
+              "tab"
+            ]
+          },
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 1,
+            "groupId": "lice:1",
+            "groupTitle": "Biološki tretmani",
+            "role": "related",
+            "articleIds": [
+              "art-19"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "lice",
+            "tabLabel": "Tretmani lica",
+            "groupIndex": 7,
+            "groupId": "lice:7",
+            "groupTitle": "Myolift i masaže lica",
+            "role": "related",
+            "articleIds": [
+              "art-19"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "telo",
+            "tabLabel": "Tretmani tela",
+            "groupIndex": 2,
+            "groupId": "telo:2",
+            "groupTitle": "Masaže",
+            "role": "related",
+            "articleIds": [
+              "art-18",
+              "art-19"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "protokoli",
+            "tabLabel": "Naši protokoli",
+            "groupIndex": 0,
+            "groupId": "protokoli:0",
+            "groupTitle": "GLOW & GO",
+            "role": "related",
+            "articleIds": [
+              "art-19"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "protokoli",
+            "tabLabel": "Naši protokoli",
+            "groupIndex": 2,
+            "groupId": "protokoli:2",
+            "groupTitle": "Posebna stanja i prilike",
+            "role": "related",
+            "articleIds": [
+              "art-19",
+              "art-20"
+            ],
+            "origins": []
+          },
+          {
+            "tabId": "protokoli",
+            "tabLabel": "Naši protokoli",
+            "groupIndex": 3,
+            "groupId": "protokoli:3",
+            "groupTitle": "Summer Body Ready protokoli",
+            "role": "related",
+            "articleIds": [
+              "art-19",
+              "art-20"
+            ],
+            "origins": []
+          }
+        ],
+        "note": "The laser epilation article belongs to this segment but its price list is its own tab \"Laserska epilacija\"."
+      },
+      "heroImage": {
+        "id": "vertical-laser",
+        "fit": "approximate",
+        "alt": "Terapeut u sivoj uniformi masira leđa žene koja leži na stolu, uz upaljene sveće u mekom svetlu.",
+        "shows": "Dve ruke u sivo-lila uniformi masiraju leđa i rame žene (lice okrenuto nadole, vidi se samo mindjuša i punđa); sveće u pozadini, velika zamućena sveća desno u prvom planu.",
+        "type": "photo",
+        "hasAlpha": false,
+        "srcset": "vertical-laser-480.webp 480w, vertical-laser-800.webp 800w, vertical-laser-1200.webp 1200w, vertical-laser-1800.webp 1800w",
+        "files": [
+          "vertical-laser-480.webp",
+          "vertical-laser-800.webp",
+          "vertical-laser-1200.webp",
+          "vertical-laser-1800.webp"
+        ],
+        "caveat": "The file is called \"vertical-laser\" but the photo shows a back massage, not a laser. It fits the body-care and massage articles; none of the pack photos shows a device (AWT, Med Contour, Venus Legacy, laser epilation).",
+        "alternates": [
+          {
+            "id": "vertical-body",
+            "shows": "Prvi plan u fokusu: bočice ulja (žuto/zlatno), kapaljka, dve čajne sveće, beli kamenčići, jastučić sa biljem. Pozadina jako zamućena: žena zatvorenih očiju oslonjena na ruke."
+          },
+          {
+            "id": "location-novi-beograd",
+            "shows": "Ruke u bordo majici drže dva topla biljna jastučića (kese sa biljem) na leđima klijentkinje; treći jastučić u prvom planu. Zeleno-tirkizni zid, drvo i narandžasta vaza."
+          }
+        ]
+      },
+      "intro": {
+        "text": "Venus Legacy, presoterapija, anticelulit protokoli, masaže.",
+        "source": {
+          "kind": "content.json",
+          "path": "verticals[1].summary",
+          "note": "category line of the old site"
+        },
+        "verbatim": true,
+        "note": "The old site line names Venus Legacy, presoterapija, anticelulit protocols and massages; the segment also holds the AWT, Med Contour and laser epilation texts, which this line does not name.",
+        "alternative": {
+          "text": "Pored klasičnih masaža lica i tela, nudimo vam čitav niz targetiranih tretmana koji su tu da vam pomognu u smanjenju i korigovanju konkretnih nesavršenosti.",
+          "source": {
+            "kind": "article",
+            "articleId": "art-18",
+            "blockIndex": 0,
+            "sentence": 1
+          }
+        }
+      }
+    }
+  ]
+}

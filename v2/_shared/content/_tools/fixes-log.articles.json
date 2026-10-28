@@ -1,0 +1,185 @@
+{
+  "generatedAt": "2026-10-07T16:33:36Z",
+  "changes": [
+    {
+      "file": "procedure/Dermatologija/Candela - Laserska dermatologija.docx",
+      "where": "block 0",
+      "before": "Candela medicinski laseri predstavljaju zlatan standard u dermatologiji za rešavanje konkretnih problema \u2013 uklanjanje kapilara, hiperpigmentacija, ožiljaka, kao i za podmlađivanje kože.",
+      "after": "Candela medicinski laseri predstavljaju zlatan standard u dermatologiji za rešavanje konkretnih problema: uklanjanje kapilara, hiperpigmentacija, ožiljaka, kao i za podmlađivanje kože.",
+      "rules": [
+        "dash:problema {U+2013} uklanjanje kapilara"
+      ]
+    },
+    {
+      "file": "procedure/Dermatologija/Tretmani skalpa i rast kose.docx",
+      "where": "block 13",
+      "before": "S obzirom na to da predstavlja najprirodniju od svih estetskih procedura, ona je namenjena svima, mada je tokom konsultacija našem dermatologu neophodno navesti sve informacije u vezi sa vašim zdravstvenim stanjem \u2013 eventualne bolesti ili terapije koje uzimate.",
+      "after": "S obzirom na to da predstavlja najprirodniju od svih estetskih procedura, ona je namenjena svima, mada je tokom konsultacija našem dermatologu neophodno navesti sve informacije u vezi sa vašim zdravstvenim stanjem: eventualne bolesti ili terapije koje uzimate.",
+      "rules": [
+        "dash:zdravstvenim stanjem {U+2013} eventualne"
+      ]
+    },
+    {
+      "file": "procedure/Estske procedure/Biorevitalizacija i regenerativne procedure.docx",
+      "where": "block 3 item 0",
+      "before": "PRP \u2013 tretman sopstvenom krvnom plazmom koji podstiče regeneraciju i podmlađivanje kože;",
+      "after": "PRP: tretman sopstvenom krvnom plazmom koji podstiče regeneraciju i podmlađivanje kože;",
+      "rules": [
+        "dash:PRP {U+2013} tretman"
+      ]
+    },
+    {
+      "file": "procedure/Estske procedure/Biorevitalizacija i regenerativne procedure.docx",
+      "where": "block 3 item 1",
+      "before": "Mezoterapija \u2013 aplikovanje koktela vitamina, minerala i hijalurona mezoterapijskim iglicama;",
+      "after": "Mezoterapija: aplikovanje koktela vitamina, minerala i hijalurona mezoterapijskim iglicama;",
+      "rules": [
+        "dash:Mezoterapija {U+2013} aplikovanje"
+      ]
+    },
+    {
+      "file": "procedure/Estske procedure/Biorevitalizacija i regenerativne procedure.docx",
+      "where": "block 3 item 2",
+      "before": "Skin boosters \u2013 preparati na bazi hijalurona koji su namenjeni dugotrajnoj hidrataciji i obnovi kože.",
+      "after": "Skin boosters: preparati na bazi hijalurona koji su namenjeni dugotrajnoj hidrataciji i obnovi kože.",
+      "rules": [
+        "dash:Skin boosters {U+2013} preparati"
+      ]
+    },
+    {
+      "file": "procedure/Estske procedure/Botulin toksin tipa A - Botoks.docx",
+      "where": "title",
+      "before": "Botulinski toksin tipa A \u2013 Botoks tretman",
+      "after": "Botulinski toksin tipa A - Botoks tretman",
+      "rules": [
+        "dash:tipa A {U+2013} Botoks tretman"
+      ]
+    },
+    {
+      "file": "procedure/Estske procedure/Botulin toksin tipa A - Botoks.docx",
+      "where": "block 2",
+      "before": "Dve procedure koje možete zakazati u našem Beauty Concept-u, a koje podrazumevaju upotrebu botoksa, jesu estetska i primena u terapiji hiperhidroze \u2013 prekomernog znojenja ispod pazuha.",
+      "after": "Dve procedure koje možete zakazati u našem Beauty Concept-u, a koje podrazumevaju upotrebu botoksa, jesu estetska i primena u terapiji hiperhidroze, prekomernog znojenja ispod pazuha.",
+      "rules": [
+        "dash:hiperhidroze {U+2013} prekomernog"
+      ]
+    },
+    {
+      "file": "procedure/Estske procedure/Hijaluronski fileri.docx",
+      "where": "block 13",
+      "before": "Korekcija temporalne regije \u2013 slepoočnica",
+      "after": "Korekcija temporalne regije - slepoočnica",
+      "rules": [
+        "dash:regije {U+2013} slepoočnica"
+      ]
+    },
+    {
+      "file": "procedure/Kozmetički tretmani/Biološki tretmani.docx",
+      "where": "block 15",
+      "before": "Ukoliko se tokom biološkog tretmana lica odlučite se i za dodatni užitak \u2013 presoterapiju (aparaturnu masažu i drenažu tela), dovoljno je da nam ovu želju naglasite pre zakazivanja.",
+      "after": "Ukoliko se tokom biološkog tretmana lica odlučite se i za dodatni užitak: presoterapiju (aparaturnu masažu i drenažu tela), dovoljno je da nam ovu želju naglasite pre zakazivanja.",
+      "rules": [
+        "dash:dodatni užitak {U+2013} presoterapiju"
+      ]
+    },
+    {
+      "file": "procedure/Kozmetički tretmani/Myolift MD.docx",
+      "where": "block 1",
+      "before": "7E Miolift™ MD mikrostruje deluju na mišiće lica na isti način na koji trening deluje na naše telo \u2013 zatežu one kojima je zatezanje potrebno, relaksiraju mišiće koji su napeti, i doprinose odličnom tonusu lica, pospešujući cirkulaciju i drenažu.",
+      "after": "7E Miolift™ MD mikrostruje deluju na mišiće lica na isti način na koji trening deluje na naše telo: zatežu one kojima je zatezanje potrebno, relaksiraju mišiće koji su napeti, i doprinose odličnom tonusu lica, pospešujući cirkulaciju i drenažu.",
+      "rules": [
+        "dash:naše telo {U+2013} zatežu"
+      ]
+    },
+    {
+      "file": "procedure/Kozmetički tretmani/Myolift MD.docx",
+      "where": "block 9 item 0",
+      "before": "MYOLIFT tretman \u2013 drenaža, cirkulacija i trening mišića lica",
+      "after": "MYOLIFT tretman: drenaža, cirkulacija i trening mišića lica",
+      "rules": [
+        "dash:MYOLIFT tretman {U+2013} drenaža"
+      ]
+    },
+    {
+      "file": "procedure/Kozmetički tretmani/Myolift MD.docx",
+      "where": "block 9 item 2",
+      "before": "RED CARPET READY \u2013 Myolift (drenaža, cirkulacija, tonus mišića), Carbon piling/biorevitalizujući piling, maska, nega i ampula",
+      "after": "RED CARPET READY: Myolift (drenaža, cirkulacija, tonus mišića), Carbon piling/biorevitalizujući piling, maska, nega i ampula",
+      "rules": [
+        "dash:RED CARPET READY {U+2013} Myolift"
+      ]
+    },
+    {
+      "file": "procedure/Kozmetički tretmani/Myolift MD.docx",
+      "where": "block 9 item 3",
+      "before": "NON-SMOKER GLOW \u2013 Myolift tretman, biorevitalizujući/glow piling, personalizovana nega",
+      "after": "NON-SMOKER GLOW: Myolift tretman, biorevitalizujući/glow piling, personalizovana nega",
+      "rules": [
+        "dash:NON-SMOKER GLOW {U+2013} Myolift"
+      ]
+    },
+    {
+      "file": "procedure/Kozmetički tretmani/Myolift MD.docx",
+      "where": "block 9 item 4",
+      "before": "MYOLIFT TRY ME OUT \u2013 piling, masaža, Myolift maske, personalizovana nega",
+      "after": "MYOLIFT TRY ME OUT: piling, masaža, Myolift maske, personalizovana nega",
+      "rules": [
+        "dash:MYOLIFT TRY ME OUT {U+2013} piling"
+      ]
+    },
+    {
+      "file": "procedure/Kozmetički tretmani/Myolift MD.docx",
+      "where": "block 9 item 5",
+      "before": "PREP ME UP \u2013 Myolift priprema za estetske procedure i korekcije (piling, Venus Glow čišćenje pora, drenažna masaža, Myolift maske, personalizovana nega)",
+      "after": "PREP ME UP: Myolift priprema za estetske procedure i korekcije (piling, Venus Glow čišćenje pora, drenažna masaža, Myolift maske, personalizovana nega)",
+      "rules": [
+        "dash:PREP ME UP {U+2013} Myolift"
+      ]
+    },
+    {
+      "file": "procedure/Kozmetički tretmani/Myolift MD.docx",
+      "where": "block 9 item 6",
+      "before": "FACE GYM PROTOKOL \u2013 6 Myolift tretmana i dva liftinga u pet tačaka",
+      "after": "FACE GYM PROTOKOL: 6 Myolift tretmana i dva liftinga u pet tačaka",
+      "rules": [
+        "dash:FACE GYM PROTOKOL {U+2013} 6 Myolift"
+      ]
+    },
+    {
+      "file": "procedure/Telo/Venus Legacy protokoli.docx",
+      "where": "block 1",
+      "before": "Tretmani su potpuno neinvazivni, dok se aparat može koristiti i na regijama koje su često zapostavljene \u2013 u predelu oko očiju, na vratu i šakama \u2013 zbog čega je omiljen među milionima pacijenata širom sveta.",
+      "after": "Tretmani su potpuno neinvazivni, dok se aparat može koristiti i na regijama koje su često zapostavljene, u predelu oko očiju, na vratu i šakama, zbog čega je omiljen među milionima pacijenata širom sveta.",
+      "rules": [
+        "dash:zapostavljene {U+2013} u predelu oko očiju, na vratu i šakama {U+2013} zbog čega"
+      ]
+    },
+    {
+      "file": "procedure/Telo/Venus Velocity laserska epilacija.docx",
+      "where": "block 13",
+      "before": "Takođe, ukoliko ne postoji zdravstvena prepreka i ukoliko tretman obavlja stručna osoba koristeći bezbedan medicinski laser \u2013 on je potpuno bezbedan.",
+      "after": "Takođe, ukoliko ne postoji zdravstvena prepreka i ukoliko tretman obavlja stručna osoba koristeći bezbedan medicinski laser, on je potpuno bezbedan.",
+      "rules": [
+        "dash:medicinski laser {U+2013} on je"
+      ]
+    },
+    {
+      "file": "procedure/Telo/Venus Velocity laserska epilacija.docx",
+      "where": "block 15",
+      "before": "Laser radi u dva moda \u2013 slide i stamp, što omogućava brzo i efikasno rešavanje problema sa dlačicama, kroz individualan pristup svakom pacijentu u skladu sa regijom i potrebama.",
+      "after": "Laser radi u dva moda: slide i stamp, što omogućava brzo i efikasno rešavanje problema sa dlačicama, kroz individualan pristup svakom pacijentu u skladu sa regijom i potrebama.",
+      "rules": [
+        "dash:dva moda {U+2013} slide i stamp"
+      ]
+    },
+    {
+      "file": "procedure/Telo/Venus Velocity laserska epilacija.docx",
+      "where": "block 20",
+      "before": "Lasersku epilaciju mogu raditi svi \u2013 i muškarci i žene \u2013 ukoliko im njihovo zdravstveno stanje to dozvoljava. Muškarci se često odlučuju za lasersko uklanjanje dlačica sa leđa i stomaka, jer su to regije koje su najsklonije iritacijama, posebno u letnjem periodu, mada ne retko tretiraju i ramena.",
+      "after": "Lasersku epilaciju mogu raditi svi, i muškarci i žene, ukoliko im njihovo zdravstveno stanje to dozvoljava. Muškarci se često odlučuju za lasersko uklanjanje dlačica sa leđa i stomaka, jer su to regije koje su najsklonije iritacijama, posebno u letnjem periodu, mada ne retko tretiraju i ramena.",
+      "rules": [
+        "dash:svi {U+2013} i muškarci i žene {U+2013} ukoliko"
+      ]
+    }
+  ]
+}

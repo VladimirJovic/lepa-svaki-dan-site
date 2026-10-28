@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 6" width="120" height="6" role="img"><title>Hairline divider with centre dot</title><desc>Hairline and dot motif of the LEPA SVAKI DAN mark. Colour via currentColor.</desc>
+<path d="M0 3H52.8 M67.2 3H120" fill="none" stroke="currentColor" stroke-width="0.514" stroke-linecap="butt"/>
+<circle cx="60" cy="3" r="2.2" fill="currentColor"/>
+</svg>

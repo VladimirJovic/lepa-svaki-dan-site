@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog, Lepa Svaki Dan | Beauty &amp; Wellbeing Concept Beograd</title>
+<meta name="description" content="Stručni tekstovi o tretmanima lica i tela, estetskim procedurama i dermatologiji, Lepa Svaki Dan, Beograd.">
+<link rel="icon" href="favicon.ico">
+<style>
+/* ============================================================
+   FONT — Galano Grotesque, isti font koji se koristi na
+   https://lepasvakidan.rs/ (pravi sajt klijentkinje). Fajlovi su
+   preuzeti sa https://lepasvakidan.rs/ i smešteni lokalno u assets/fonts/ (CORS ne dozvoljava direktno učitavanje sa njihovog servera).
+   ============================================================ */
+@font-face{
+  font-family:'Galano';
+  src:url('assets/fonts/GalanoGrotesqueRegular.woff') format('woff');
+  font-weight:300 500;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:'Galano';
+  src:url('assets/fonts/GalanoGrotesqueBold.woff') format('woff');
+  font-weight:600 900;
+  font-style:normal;
+  font-display:swap;
+}
+/* ============================================================
+   LEPA SVAKI DAN — design tokens (portovano iz globals.css)
+   Isti fajl kao u index.html — radi konzistentnog izgleda na
+   svim stranicama sajta.
+   ============================================================ */
+:root{
+  --white:#FFFFFF;
+  --canvas:#FAF7F6;
+  --card:#F7F3EF;
+  --card-blush:#F7F0ED;
+
+  --ink:#231F20;
+  --ink-soft:#383835;
+  --mist:#88837E;
+  --mist-light:#B5AFAA;
+
+  --lila:#AF96C7;
+  --lila-glow:#C7B5D8;
+  --lila-soft:#C7B5D8;
+  --lavanda:#C7B5D8;
+  --lavanda-dim:#9A84AF;
+
+  --champagne:#C59526;
+  --champagne-glow:#CFA84D;
+  --bronze:#9A741E;
+  --parchment:#E0CBA8;
+
+  --sage:#6B9080;
+
+  --nude-text:#8A5C4C;
+
+  --onyx:#454340;
+  --onyx-soft:#302E2B;
+  --footer-warm:#695A74;
+  --pearl:#E8DBC5;
+
+  --nb:#3F6E5E;
+  --bw:#5B6F94;
+  --nb-soft:#E1ECE6;
+  --bw-soft:#E2E8F1;
+  --nb-text:#264A3D;
+  --bw-text:#37466A;
+  --both-soft:#F2EEE6;
+  --both-text:#5A4928;
+
+  --font-serif:'Galano', Arial, sans-serif;
+  --font-sans:'Galano', Arial, sans-serif;
+  --font-script:'Galano', Arial, sans-serif;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; -webkit-font-smoothing:antialiased; overflow-x:hidden; width:100%; max-width:100vw; }
+body{
+  margin:0;
+  font-family:var(--font-sans);
+  background:var(--white);
+  color:var(--ink);
+  overflow-x:hidden;
+  width:100%;
+  max-width:100vw;
+  position:relative;
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+::selection{ background:var(--champagne); color:var(--onyx); }
+
+.container{ max-width:1280px; margin:0 auto; padding:0 1rem; }
+@media(min-width:1024px){ .container{ padding:0 2rem; } }
+.container-sm{ max-width:920px; margin:0 auto; padding:0 1rem; }
+@media(min-width:1024px){ .container-sm{ padding:0 2rem; } }
+.container-xs{ max-width:800px; margin:0 auto; padding:0 1rem; }
+
+.font-display{ font-family:var(--font-serif); font-weight:500; letter-spacing:-0.01em; line-height:1.25; }
+.font-display-italic{ font-family:var(--font-serif); font-style:italic; font-weight:400; letter-spacing:-0.01em; line-height:1.25; }
+.font-script{ font-family:var(--font-script); font-weight:400; letter-spacing:0.01em; line-height:1.1; }
+.text-lila{ color:var(--lila); }
+.text-champagne{ color:var(--champagne); }
+
+.eyebrow{
+  font-size:10px; font-weight:600; text-transform:uppercase;
+  letter-spacing:.38em; color:var(--lila); margin-bottom:1rem;
+}
+.eyebrow-champagne{ color:var(--champagne); }
+.eyebrow-center{ text-align:center; }
+
+.section{ padding:5rem 0; }
+@media(min-width:1024px){ .section{ padding:7rem 0; } }
+.bg-canvas{ background:var(--canvas); }
+.bg-white{ background:var(--white); }
+.bg-onyx{ background:var(--onyx); color:var(--white); }
+
+.btn{
+  display:inline-flex; align-items:center; gap:.6rem;
+  border-radius:999px; padding:1rem 2.1rem; font-size:13px; font-weight:600;
+  transition:all .25s ease; white-space:nowrap;
+}
+.btn-lila{ background:var(--lila); color:var(--onyx); box-shadow:0 4px 18px rgba(175,150,199,.4); }
+.btn-lila:hover{ background:var(--lila-glow); box-shadow:0 8px 32px rgba(175,150,199,.35); }
+.btn-outline{
+  border:1px solid rgba(0,0,0,.12); background:rgba(255,255,255,.7);
+  color:var(--ink-soft); font-weight:500;
+}
+.btn-outline:hover{ border-color:rgba(175,150,199,.4); color:var(--lila); }
+.btn-outline-dark{ border:1px solid rgba(207,168,77,.35); color:#fff; font-weight:500; }
+.btn-outline-dark:hover{ border-color:rgba(175,150,199,.6); color:var(--lila); }
+
+h2.section-title{ font-family:var(--font-serif); font-weight:500; font-size:clamp(2.6rem,5vw,4.4rem); line-height:1.25; color:var(--ink); text-wrap:balance; }
+h2.section-title-md{ font-size:clamp(2rem,5vw,4rem); }
+p.copy{ margin-top:.75rem; max-width:36rem; font-size:15px; line-height:1.9; color:var(--mist); font-weight:300; }
+
+/* ── Reveal on scroll ─────────────────────────────────── */
+.reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+.reveal.is-visible{ opacity:1; transform:translateY(0); }
+
+/* ── Scroll progress bar ──────────────────────────────── */
+#scroll-progress{ position:fixed; top:0; left:0; width:100vw; height:2px; background:var(--lila); transform-origin:left; transform:scaleX(0); z-index:70; transition:transform .1s linear; }
+#cursor-trail{ position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:55; pointer-events:none; }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+header.nav-wrap{ position:fixed; top:0; left:0; width:100vw; z-index:60; display:flex; justify-content:center; padding:1rem 1rem 0; }
+@media(min-width:1024px){ header.nav-wrap{ padding:1rem 2rem 0; } }
+.nav{
+  position:relative; width:100%; max-width:1280px;
+  display:flex; align-items:center; justify-content:space-between;
+  border-radius:999px; padding:.6rem 1rem;
+  background:rgba(255,255,255,.9); backdrop-filter:blur(10px);
+  border:1px solid rgba(175,150,199,.35);
+  box-shadow:0 4px 24px rgba(175,150,199,.22);
+  transition:all .4s ease;
+}
+@media(min-width:1024px){ .nav{ padding:.75rem 1.5rem; } }
+.nav.scrolled{ background:rgba(255,255,255,.98); box-shadow:0 2px 24px rgba(0,0,0,.07); }
+.nav-links{ display:none; align-items:center; gap:1.75rem; font-size:13px; font-weight:500; color:var(--ink-soft); }
+@media(min-width:1024px){ .nav-links{ display:flex; } }
+.nav-links a{ position:relative; padding:.25rem 0; transition:color .2s; }
+.nav-links a:hover{ color:var(--lila); }
+.nav-links a.active{ color:var(--lila); }
+.nav-links a::after{ content:""; position:absolute; left:0; bottom:-2px; height:1px; width:100%; background:var(--lila); transform:scaleX(0); transform-origin:left; transition:transform .3s; }
+.nav-links a:hover::after{ transform:scaleX(1); }
+.nav-links a.active::after{ transform:scaleX(1); }
+.nav-mobile-spacer{ display:none; }
+.nav-logo{ position:static; flex:0 0 auto; display:flex; align-items:center; margin:0 .25rem; }
+@media(min-width:1024px){ .nav-logo{ position:absolute; left:50%; transform:translateX(-50%); margin:0; } }
+.nav-logo img{ height:32px; width:auto; max-width:34vw; object-fit:contain; }
+@media(min-width:360px){ .nav-logo img{ height:40px; } }
+@media(min-width:1024px){ .nav-logo img{ max-width:none; } }
+.nav-right{ display:flex; align-items:center; gap:.4rem; flex:1 1 0; min-width:0; justify-content:flex-end; }
+@media(min-width:1024px){ .nav-right{ flex:none; margin-left:0; justify-content:flex-start; gap:.75rem; } }
+.nav-phone-wrap{ position:relative; }
+.nav-phone-btn{ display:flex; align-items:center; gap:.4rem; font-size:12px; font-weight:500; color:var(--ink-soft); padding:.5rem; border-radius:999px; transition:color .2s, background .2s; }
+@media(min-width:1024px){ .nav-phone-btn{ padding:.55rem .8rem; } }
+.nav-phone-btn:hover{ color:var(--lila); background:rgba(175,150,199,.08); }
+.nav-phone-wrap.open .nav-phone-btn{ color:var(--lila); background:rgba(175,150,199,.1); }
+.nav-phone-btn-text{ display:none; }
+@media(min-width:1024px){ .nav-phone-btn-text{ display:inline; } }
+.nav-phone-caret{ transition:transform .2s; }
+.nav-phone-wrap.open .nav-phone-caret{ transform:rotate(180deg); }
+.nav-phone-menu{ position:absolute; top:calc(100% + .6rem); right:0; width:260px; background:#fff; border-radius:1rem; box-shadow:0 12px 40px rgba(0,0,0,.16); border:1px solid rgba(0,0,0,.06); padding:.5rem; opacity:0; visibility:hidden; transform:translateY(-8px); transition:opacity .2s ease, transform .2s ease, visibility .2s; z-index:80; }
+.nav-phone-wrap.open .nav-phone-menu{ opacity:1; visibility:visible; transform:translateY(0); }
+.nav-phone-item{ padding:.7rem .75rem; border-radius:.75rem; }
+.nav-phone-item + .nav-phone-item{ margin-top:.1rem; border-top:1px solid rgba(0,0,0,.06); padding-top:.85rem; }
+.nav-phone-item-loc{ display:block; font-size:9px; font-weight:600; text-transform:uppercase; letter-spacing:.14em; color:var(--mist); margin-bottom:.15rem; }
+.nav-phone-item-num{ display:block; font-size:14px; font-weight:600; color:var(--ink); margin-bottom:.6rem; }
+.nav-phone-item-actions{ display:flex; gap:.5rem; }
+.nav-phone-action{ flex:1; display:flex; align-items:center; justify-content:center; gap:.35rem; border-radius:999px; padding:.5rem .6rem; font-size:11.5px; font-weight:600; transition:all .2s; }
+.nav-phone-action.call{ background:rgba(0,0,0,.05); color:var(--ink-soft); }
+.nav-phone-action.call:hover{ background:rgba(0,0,0,.09); }
+.nav-phone-action.wa{ background:rgba(63,110,94,.1); color:#2D5346; }
+.nav-phone-action.wa:hover{ background:rgba(63,110,94,.18); }
+@media(min-width:1024px){ .nav-phone-action.call{ display:none; } }
+.nav-cta{ display:flex; align-items:center; border-radius:999px; background:var(--lila); color:var(--onyx); padding:.5rem .7rem; font-size:11.5px; font-weight:600; white-space:nowrap; transition:all .25s; }
+@media(min-width:1024px){ .nav-cta{ padding:.6rem 1.25rem; font-size:12px; color:var(--onyx); } }
+.nav-cta-full{ display:none; }
+.nav-cta-short{ display:inline; }
+@media(min-width:430px){ .nav-cta-full{ display:inline; } .nav-cta-short{ display:none; } }
+.nav-cta:hover{ background:var(--lila-glow); box-shadow:0 4px 16px rgba(175,150,199,.35); }
+.nav-burger{ display:flex; flex-direction:column; gap:5px; padding:.25rem; margin-left:.5rem; }
+@media(min-width:1024px){ .nav-burger{ display:none; } }
+.nav-burger span{ display:block; height:2px; width:20px; background:var(--ink); border-radius:2px; }
+.nav-burger span:nth-child(3){ width:14px; }
+.mobile-menu{ max-height:0; overflow:hidden; transition:max-height .35s ease; width:100%; max-width:1280px; margin-top:.5rem; }
+.mobile-menu.open{ max-height:340px; }
+.mobile-menu-inner{ background:rgba(255,255,255,.98); border-radius:24px; padding:1.25rem 1.5rem; display:flex; flex-direction:column; gap:1rem; font-size:14px; font-weight:500; box-shadow:0 8px 30px rgba(0,0,0,.08); }
+.mobile-menu-inner a.active{ color:var(--lila); }
+
+/* ============================================================
+   BLOG HERO
+   ============================================================ */
+.blog-hero{ padding:9rem 0 3rem; background:var(--canvas); text-align:center; }
+.blog-hero p.copy{ margin-left:auto; margin-right:auto; text-align:center; max-width:32rem; }
+
+/* ============================================================
+   SEARCH — pretraga tekstova i cenovnika
+   ============================================================ */
+.search-wrap{ position:relative; z-index:50; max-width:560px; margin:2rem auto 0; }
+.search-input-row{ display:flex; align-items:center; gap:.75rem; border-radius:999px; background:#fff; border:1px solid rgba(0,0,0,.1); padding:.85rem 1.25rem; box-shadow:0 1px 8px rgba(0,0,0,.05); }
+.search-input-row svg{ flex-shrink:0; color:var(--mist); }
+.search-input-row input{ flex:1; min-width:0; border:none; outline:none; background:none; font-family:var(--font-sans); font-size:14px; color:var(--ink); }
+.search-input-row input::placeholder{ color:var(--mist-light); }
+.search-results{ position:absolute; top:calc(100% + .5rem); left:0; right:0; background:#fff; border-radius:1rem; box-shadow:0 12px 40px rgba(0,0,0,.14); border:1px solid rgba(0,0,0,.06); max-height:420px; overflow-y:auto; z-index:45; display:none; text-align:left; }
+.search-results.open{ display:block; }
+.search-result{ display:block; width:100%; text-align:left; padding:.85rem 1.25rem; border-bottom:1px solid rgba(0,0,0,.05); transition:background .15s; cursor:pointer; }
+.search-result:last-child{ border-bottom:none; }
+.search-result:hover{ background:rgba(175,150,199,.05); }
+.search-result-top{ display:flex; align-items:center; justify-content:space-between; gap:.75rem; }
+.search-result-name{ font-family:var(--font-serif); font-size:14px; color:var(--ink); flex:1; min-width:0; }
+.search-result-price{ font-size:12px; font-weight:600; color:var(--ink); white-space:nowrap; }
+.search-result-meta{ margin-top:.2rem; display:flex; align-items:center; gap:.4rem; font-size:10px; text-transform:uppercase; letter-spacing:.12em; }
+.search-result-type{ font-weight:700; padding:.1rem .5rem; border-radius:999px; background:rgba(175,150,199,.1); color:var(--lila); }
+.search-result-type.text{ background:rgba(197,149,38,.12); color:var(--champagne); }
+.search-result-cat{ color:var(--mist); text-transform:none; letter-spacing:0; }
+.search-empty{ padding:1.5rem; text-align:center; font-size:13px; color:var(--mist); }
+
+/* ============================================================
+   TABS (reuse istog principa kao cenovnik tabovi na početnoj)
+   ============================================================ */
+.tabs-sticky{ position:sticky; top:72px; z-index:30; background:rgba(250,247,246,.95); backdrop-filter:blur(8px); padding:1.5rem 0; }
+.tabs{ display:flex; overflow-x:auto; gap:.25rem; border-radius:1rem; background:rgba(255,255,255,.7); padding:.25rem; box-shadow:0 1px 8px rgba(0,0,0,.06); border:1px solid rgba(0,0,0,.06); scrollbar-width:none; max-width:920px; margin:0 auto; }
+.tabs::-webkit-scrollbar{ display:none; }
+.tab-btn{ flex-shrink:0; border-radius:.75rem; padding:.6rem 1rem; font-size:12.5px; font-weight:500; color:var(--mist); transition:all .2s; white-space:nowrap; }
+.tab-btn:hover{ color:var(--ink-soft); }
+.tab-btn.active{ color:var(--onyx); background:#fff; box-shadow:0 2px 12px rgba(175,150,199,.18); }
+.tab-btn .dot{ display:none; width:6px; height:6px; border-radius:999px; background:var(--lila); margin-right:.35rem; }
+.tab-btn.active .dot{ display:inline-block; }
+
+/* ============================================================
+   BLOG GRID + POST CARD
+   ============================================================ */
+.blog-grid{ display:grid; gap:1.5rem; grid-template-columns:1fr; }
+@media(min-width:640px){ .blog-grid{ grid-template-columns:1fr 1fr; } }
+@media(min-width:1024px){ .blog-grid{ grid-template-columns:repeat(3,1fr); } }
+
+.post-card{ display:flex; flex-direction:column; border-radius:1.25rem; overflow:hidden; background:#fff; border:1px solid rgba(0,0,0,.07); transition:all .3s; cursor:pointer; text-align:left; width:100%; }
+.post-card:hover{ border-color:rgba(175,150,199,.35); box-shadow:0 8px 40px rgba(175,150,199,.14); transform:translateY(-4px); }
+.post-card-img{ position:relative; aspect-ratio:4/3; overflow:hidden; }
+.post-card-img img{ width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+.post-card:hover .post-card-img img{ transform:scale(1.06); }
+.post-card-cat{ position:absolute; top:.9rem; left:.9rem; display:inline-flex; align-items:center; border-radius:999px; background:rgba(255,255,255,.92); backdrop-filter:blur(4px); color:var(--lila); padding:.3rem .8rem; font-size:9px; font-weight:600; text-transform:uppercase; letter-spacing:.16em; }
+.post-card-body{ padding:1.5rem; display:flex; flex-direction:column; flex:1; }
+.post-card-title{ font-family:var(--font-serif); font-size:1.2rem; line-height:1.3; color:var(--ink); }
+.post-card-excerpt{ margin-top:.6rem; font-size:13px; line-height:1.65; color:var(--mist); font-weight:300; flex:1; }
+.post-tags{ margin-top:.75rem; display:flex; flex-wrap:wrap; gap:.35rem; }
+.tag-pill{ display:inline-flex; align-items:center; border-radius:999px; background:rgba(175,150,199,.08); color:var(--lila); padding:.15rem .55rem; font-size:10px; font-weight:500; white-space:nowrap; }
+.post-card-link{ margin-top:1.25rem; display:inline-flex; align-items:center; gap:.4rem; font-size:12px; font-weight:600; color:var(--lila); transition:gap .2s; }
+.post-card:hover .post-card-link{ gap:.6rem; }
+.blog-empty{ grid-column:1/-1; text-align:center; padding:4rem 1rem; color:var(--mist); font-size:14px; }
+
+/* ============================================================
+   POST MODAL — čitanje celog teksta
+   ============================================================ */
+.post-modal-overlay{ position:fixed; inset:0; z-index:90; background:rgba(69,67,64,.6); backdrop-filter:blur(4px); display:flex; align-items:flex-start; justify-content:center; padding:6rem 1rem 2rem; opacity:0; pointer-events:none; transition:opacity .3s ease; overflow-y:auto; }
+.post-modal-overlay.open{ opacity:1; pointer-events:auto; }
+.post-modal{ position:relative; max-width:720px; width:100%; background:#fff; border-radius:1.5rem; padding:2rem; transform:translateY(16px); transition:transform .35s cubic-bezier(.16,1,.3,1); margin-bottom:2rem; }
+@media(min-width:768px){ .post-modal{ padding:3rem; } }
+.post-modal-overlay.open .post-modal{ transform:translateY(0); }
+.post-modal-close{ position:absolute; top:1.25rem; right:1.25rem; display:flex; align-items:center; justify-content:center; width:2.5rem; height:2.5rem; border-radius:999px; background:var(--canvas); color:var(--ink-soft); transition:all .2s; z-index:2; }
+.post-modal-close:hover{ background:rgba(175,150,199,.12); color:var(--lila); }
+.post-modal-img{ position:relative; aspect-ratio:16/9; border-radius:1rem; overflow:hidden; margin-bottom:1.5rem; }
+.post-modal-img img{ width:100%; height:100%; object-fit:cover; }
+.post-modal-title{ font-family:var(--font-serif); font-weight:500; font-size:clamp(1.6rem,4vw,2.4rem); color:var(--ink); line-height:1.25; margin-top:.75rem; }
+.post-modal-body p{ margin-top:1.1rem; font-size:15px; line-height:1.85; color:var(--mist); font-weight:300; }
+.post-modal-body h3{ font-family:var(--font-serif); font-weight:500; font-size:1.25rem; color:var(--ink); margin-top:2rem; }
+.post-modal-body ul{ margin-top:.85rem; padding-left:1.1rem; }
+.post-modal-body li{ font-size:14px; line-height:1.8; color:var(--mist); font-weight:300; margin-top:.4rem; }
+.post-modal-body .tbd{ background:rgba(175,150,199,.15); color:var(--lila); padding:.05rem .35rem; border-radius:.3rem; font-style:normal; }
+.post-modal-nav{ margin-top:2.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; border-top:1px solid rgba(0,0,0,.07); padding-top:1.5rem; }
+.post-modal-nav button{ display:inline-flex; align-items:center; gap:.4rem; font-size:12px; font-weight:600; color:var(--ink-soft); transition:color .2s; }
+.post-modal-nav button:hover{ color:var(--lila); }
+
+/* ============================================================
+   CTA BAND
+   ============================================================ */
+.cta-band{ position:relative; overflow:hidden; padding:8rem 1.5rem; text-align:center; background:var(--footer-warm); }
+@media(min-width:1024px){ .cta-band{ padding:10rem 1.5rem; } }
+.cta-bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.4; }
+.cta-overlay{ position:absolute; inset:0; background:linear-gradient(to bottom, rgba(105,90,116,.6), rgba(105,90,116,.4), rgba(105,90,116,.7)); }
+.cta-content{ position:relative; max-width:760px; margin:0 auto; }
+.cta-eyebrow{ margin-bottom:1.5rem; display:flex; align-items:center; justify-content:center; gap:1rem; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:.38em; color:var(--lila); }
+.cta-eyebrow .rule{ height:1px; width:2rem; background:rgba(175,150,199,.5); }
+.cta-content h2{ font-family:var(--font-serif); font-weight:500; font-size:clamp(2.8rem,6.5vw,6rem); color:#fff; line-height:1.3; }
+.cta-content p{ margin:.75rem auto 0; max-width:28rem; font-size:15px; line-height:1.75; color:#fff; font-weight:300; }
+.cta-buttons{ margin-top:2.5rem; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.75rem; }
+@media(min-width:640px){ .cta-buttons{ flex-direction:row; } }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{ background:var(--footer-warm); color:#fff; }
+.footer-grid{ display:grid; gap:2.5rem; padding:3.5rem 2rem; }
+@media(min-width:1024px){ .footer-grid{ grid-template-columns:repeat(12,1fr); padding:4rem 2rem; } }
+.footer-col-5{ grid-column:span 12; }
+@media(min-width:1024px){ .footer-col-5{ grid-column:span 5; } }
+.footer-col-3{ grid-column:span 6; }
+@media(min-width:1024px){ .footer-col-3{ grid-column:span 3; } }
+.footer-col-2{ grid-column:span 6; }
+@media(min-width:1024px){ .footer-col-2{ grid-column:span 2; } }
+.footer-brand{ font-family:var(--font-serif); font-size:2.4rem; color:#fff; line-height:1.3; }
+.footer-desc{ margin-top:1rem; max-width:22rem; font-size:14px; line-height:1.75; color:#fff; font-weight:300; }
+.footer-heading{ font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:.3em; color:rgba(207,168,77,.75); margin-bottom:1.25rem; }
+.footer-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.75rem; font-size:14px; color:#fff; font-weight:300; }
+.footer-list a:hover{ color:var(--lila); }
+.footer-list .loc-name{ font-size:10px; font-weight:600; color:rgba(175,150,199,.6); text-transform:uppercase; letter-spacing:.2em; margin-bottom:.15rem; }
+.footer-bottom{ margin:0 2rem; border-top:1px solid rgba(255,255,255,.12); padding:2rem 0 3rem; display:flex; flex-direction:column; gap:.75rem; font-size:11px; color:#fff; }
+@media(min-width:768px){ .footer-bottom{ flex-direction:row; align-items:center; justify-content:space-between; } }
+.footer-bottom .credit{ text-transform:uppercase; letter-spacing:.2em; }
+.footer-bottom .credit span{ color:rgba(175,150,199,.55); }
+
+/* ============================================================
+   BACK TO TOP
+   ============================================================ */
+#back-to-top{ position:fixed; bottom:1.5rem; right:1.5rem; z-index:60; display:flex; align-items:center; justify-content:center; width:3rem; height:3rem; border-radius:999px; color:#fff; background:linear-gradient(135deg,#A68EBD 0%,#7E6C8F 50%,#5B4E67 100%); box-shadow:0 10px 30px rgba(175,150,199,.45); opacity:0; transform:translateY(20px) scale(.85); pointer-events:none; transition:all .3s cubic-bezier(.34,1.5,.64,1); }
+#back-to-top.visible{ opacity:1; transform:translateY(0) scale(1); pointer-events:auto; }
+#back-to-top:hover{ transform:scale(1.08); }
+@media(min-width:1024px){ #back-to-top{ bottom:2rem; right:2rem; width:3.5rem; height:3.5rem; } }
+
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+<canvas id="cursor-trail" aria-hidden="true"></canvas>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<header class="nav-wrap">
+  <div style="width:100%; max-width:1280px; display:flex; flex-direction:column; align-items:center;">
+    <nav class="nav" id="main-nav">
+      <div class="nav-links">
+        <a href="index.html#tretmani">Tretmani</a>
+        <a href="index.html#o-nama">O nama</a>
+        <a href="index.html#lokacije">Lokacije</a>
+        <a href="index.html#usluge">Cenovnik</a>
+        <a href="posebna-ponuda.html">Posebna ponuda</a>
+        <a href="blog.html" class="active">Blog</a>
+      </div>
+      <div class="nav-mobile-spacer" aria-hidden="true"></div>
+      <a href="index.html" class="nav-logo"><img src="assets/images/logo.png" alt="Lepa Svaki Dan, Beauty & Wellbeing Concept"></a>
+      <div class="nav-right">
+        <div class="nav-phone-wrap" id="nav-phone-wrap">
+          <button class="nav-phone-btn" id="nav-phone-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Pozovite nas">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            <span class="nav-phone-btn-text">Pozovite nas</span>
+            <svg class="nav-phone-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="nav-phone-menu" id="nav-phone-menu">
+            <div class="nav-phone-item">
+              <span class="nav-phone-item-loc">Novi Beograd</span>
+              <span class="nav-phone-item-num">+381 64 8239 439</span>
+              <div class="nav-phone-item-actions">
+                <a href="tel:+381648239439" class="nav-phone-action call">Pozovi</a>
+                <a href="https://wa.me/381648239439" target="_blank" rel="noreferrer" class="nav-phone-action wa">WhatsApp</a>
+              </div>
+            </div>
+            <div class="nav-phone-item">
+              <span class="nav-phone-item-loc">Belgrade Waterfront</span>
+              <span class="nav-phone-item-num">+381 66 177 117</span>
+              <div class="nav-phone-item-actions">
+                <a href="tel:+38166177117" class="nav-phone-action call">Pozovi</a>
+                <a href="https://wa.me/38166177117" target="_blank" rel="noreferrer" class="nav-phone-action wa">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/381648239439" target="_blank" rel="noreferrer" class="nav-cta"><span class="nav-cta-short">Zakaži</span><span class="nav-cta-full">Zakaži termin ›</span></a>
+        <button class="nav-burger" id="nav-burger" aria-label="Meni"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-inner">
+        <a href="index.html#tretmani">Tretmani</a>
+        <a href="index.html#o-nama">O nama</a>
+        <a href="index.html#lokacije">Lokacije</a>
+        <a href="index.html#usluge">Cenovnik</a>
+        <a href="posebna-ponuda.html">Posebna ponuda</a>
+        <a href="blog.html" class="active">Blog</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     BLOG HERO
+     ============================================================ -->
+<section class="blog-hero">
+  <div class="container-sm">
+    <div class="eyebrow eyebrow-center reveal">Blog</div>
+    <h1 class="section-title section-title-md reveal" style="text-align:center;">Sve što treba da znate <span class="font-display-italic text-lila">o nezi kože i tela</span>.</h1>
+    <p class="copy reveal">Stručni tekstovi o tretmanima, procedurama i protokolima iz naše ponude, pišemo ih da vam pomognemo da odaberete pravi put za svoju kožu.</p>
+    <div class="search-wrap reveal">
+      <div class="search-input-row">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="search-input" placeholder="Pretraži tekstove, npr. &quot;akne&quot; ili &quot;glow&quot;..." autocomplete="off">
+      </div>
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TABS + GRID
+     ============================================================ -->
+<section class="bg-canvas" style="padding-bottom:6rem;">
+  <div class="tabs-sticky">
+    <div class="tabs" id="blog-tabs"></div>
+  </div>
+  <div class="container-sm">
+    <div class="blog-grid" id="blog-grid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA BAND
+     ============================================================ -->
+<section class="cta-band bg-onyx">
+  <img class="cta-bg" src="assets/images/cta-bg.png" alt="">
+  <div class="cta-overlay"></div>
+  <div class="cta-content">
+    <div class="cta-eyebrow reveal"><span class="rule"></span>Zakažite konsultaciju<span class="rule"></span></div>
+    <h2 class="reveal">Niste sigurni koji je<br>tretman <span class="font-display-italic text-lila">za vas</span>?</h2>
+    <p class="reveal">Pozovite nas ili nam pišite, naš tim će vam pomoći da odaberete pravi plan za vašu kožu.</p>
+    <div class="cta-buttons reveal">
+      <a href="https://wa.me/381648239439" target="_blank" rel="noreferrer" class="btn btn-lila">+381 64 8239 439</a>
+      <a href="https://wa.me/381648239439" target="_blank" rel="noreferrer" class="btn btn-outline-dark">Piši na WhatsApp ›</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container" style="padding:0;">
+    <div class="footer-grid">
+      <div class="footer-col-5">
+        <div class="footer-brand"><span class="font-display-italic text-lila">lepa</span> svaki dan</div>
+        <p class="footer-desc">Beauty &amp; Wellbeing concept koji spaja modernu estetsku medicinu sa ritualom nege. Dve lokacije u Beogradu.</p>
+      </div>
+      <div class="footer-col-3">
+        <div class="footer-heading">Kontakt</div>
+        <ul class="footer-list">
+          <li><a href="https://wa.me/381648239439" target="_blank" rel="noreferrer">+381 64 8239 439</a></li>
+          <li><a href="https://wa.me/38166177117" target="_blank" rel="noreferrer">+381 66 177 117</a></li>
+          <li><a href="mailto:office@lepasvakidan.rs">office@lepasvakidan.rs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col-2">
+        <div class="footer-heading">Pratite nas</div>
+        <ul class="footer-list">
+          <li><a href="https://instagram.com/bclepasvakidan" target="_blank" rel="noreferrer">Instagram</a></li>
+          <li><a href="https://facebook.com/lepasvakidan" target="_blank" rel="noreferrer">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-col-2">
+        <div class="footer-heading">Lokacije</div>
+        <ul class="footer-list">
+          <li><div class="loc-name">Beauty Concept</div>Trešnjinog cveta 1ž</li>
+          <li><div class="loc-name">Wellbeing Concept</div>Hercegovačka 17</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© <span id="footer-year">2026</span> Lepa Svaki Dan. Sva prava zadržana.</div>
+      <div class="credit">Pripremio <span>ECHOSYSTEM-MOTHER AGENCY</span></div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Vrati se na vrh">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+<!-- ============================================================
+     POST READING MODAL
+     ============================================================ -->
+<div class="post-modal-overlay" id="post-modal-overlay">
+  <div class="post-modal" id="post-modal">
+    <button class="post-modal-close" id="post-modal-close" aria-label="Zatvori">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <div id="post-modal-content"></div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   DATA — blog tekstovi (izvor: tekstovi_ispravka.rar, materijal
+   koji je poslala Tamara — copywriter tekstovi po tretmanima).
+   ------------------------------------------------------------
+   KAKO RUČNO IZMENITI:
+   - Svaki tekst je jedan objekat sa: category, categoryLabel,
+     title, image, excerpt i blocks (niz pasusa/podnaslova/listi).
+   - blocks tipovi: {type:'p', text:'...'} = pasus,
+     {type:'h2', text:'...'} = podnaslov unutar teksta,
+     {type:'list', items:['...','...']} = lista.
+   - Nizovi "__________" u tekstu su namerno ostavljene praznine
+     iz originalnog dokumenta (ime uređaja / ime doktora) — Tamara
+     treba da ih popuni pre nego što tekst postane finalan
+     (vidi izmene.txt, IV. TEKSTOVI, tačka 20).
+   ============================================================ */
+const blogPosts = [
+  {
+    category: 'dermatologija', categoryLabel: 'Dermatologija',
+    title: 'Laserska dermatologija Candela laserima',
+    image: 'assets/images/vertical-laser.jpg',
+    excerpt: 'Candela medicinski laseri predstavljaju zlatan standard u dermatologiji za rešavanje konkretnih problema – uklanjanje kapilara, hiperpigmentacija, ožiljaka,...',
+    blocks: [
+      { type:'p', text:'Candela medicinski laseri predstavljaju zlatan standard u dermatologiji za rešavanje konkretnih problema – uklanjanje kapilara, hiperpigmentacija, ožiljaka, kao i za podmlađivanje kože.' },
+      { type:'p', text:'Ovi uređaji potpuno ciljano deluju na problematične regije, pružajući brze rezultate uz maksimalnu bezbednost tkiva.' },
+      { type:'h2', text:'Najpopularniji Candela laseri u dermatologiji' },
+      { type:'p', text:'Candela Nordlys predstavlja svestranu platformu za lečenje rozacee, proširenih kapilara, akni i hiperpigmentacija. Frakcioni nastavci omogućavaju regeneraciju kože, uz uklanjanje finih bora i ožiljaka.' },
+      { type:'p', text:'Vbeam Candela (PDL) specijalizovani je vaskularni laser koji emituje žutu svetlost. Idealan je za uklanjanje hemangioma, crvenila i vaskularnih promena.' },
+      { type:'p', text:'Candela GentleLaser Pro i GentleMax Pro laser je koji se uspešno primenjuje u tretiranju pigmentih fleka i vaskularnih lezija.' },
+      { type:'p', text:'U našem Beauty Concept-u dostupan je __________ laser.' },
+      { type:'h2', text:'Zašto su Candela laseri naš izbor?' },
+      { type:'p', text:'Zato što su potpuno bezbedni, jer poseduju integrisani sistem hlađenja (DCD) koji štiti kožu i značajno smanjuje bol i crvenilo tokom tretmana.' },
+      { type:'p', text:'Pored toga, tretmani se obavljaju veoma brzo jer imaju veći prečnik snopa i prilagodljivi su različitim tipovima kože i indikacijama, zbog čega se i smatraju zlatnim standardom laserske dermatologije.' },
+      { type:'p', text:'Pre svakog tretmana Candela laserom, obavezan je dermatološki pregled sa našom dr _______________, nakon kojeg se priprema potpuno individualan pristup i protokol, koji su oblikovani prema potrebama vaše kože.' },
+      { type:'p', text:'Pozovite nas ili nam pišite, i zakažite pregled' },
+    ]
+  },
+  {
+    category: 'dermatologija', categoryLabel: 'Dermatologija',
+    title: 'Klasična dermatologija: Šta obuhvata dermatološki pregled?',
+    image: 'assets/images/founder-portrait.jpg',
+    excerpt: 'Klasična (klinička) dermatologija bavi se prevencijom, dijagnostikom i lečenjem bolesti kože, kose, noktiju i vidljivih sluzokoža. Za razliku od estetske,...',
+    blocks: [
+      { type:'p', text:'Klasična (klinička) dermatologija bavi se prevencijom, dijagnostikom i lečenjem bolesti kože, kose, noktiju i vidljivih sluzokoža. Za razliku od estetske, klasična dermatologija stavlja fokus na rešavanje konkretnih medicinskih problema i uzroka, a ne na vizuelne korekcije.' },
+      { type:'h2', text:'Šta sve obuhvata klasičan dermatološki pregled?' },
+      { type:'p', text:'Veoma smo srećni i ponosni što je dr _____________ deo našeg tima, kod koje, pored estetskih dermatoloških korekcija, možete zakazati i klasičan dermatološki pregled.' },
+      { type:'p', text:'Ovaj pregled obuhvata:' },
+      { type:'list', items:['Pregled celog tela, odnosno vizuelni pregled kože, sluzokože, noktiju ili vlasišta;', 'Dermatoskopiju, kojom se vrši bezbolna procena mladeža ili drugih promena na koži korišćenjem dermatoskopa;', 'Dijagnostiku i uzimanje uzoraka, u slučaju potrebe za uzimanjem briseva ili biopsiju kože.'] },
+      { type:'h2', text:'Koje probleme kože leči klasična dermatologija?' },
+      { type:'p', text:'Neki od najčešćih problema kože sa kojima se susreću dermatolozi jesu akne, ekcemi (atopijski dermatitis) i psorijaze, mada se ne retko pacijenti javljaju zbog alergijskih reakcija ili sumnjivih promena na koži.' },
+      { type:'p', text:'Pored akni, i rozacea je sve učestaliji problem kože koji se mora dermatološki tretirati, ali i alopecija (opadanje kose) i bolesti noktiju.' },
+      { type:'p', text:'Ipak, najvažniji razlog zbog kog treba redovno ići na preglede dermatologa jeste melanom, jedan od najzloćudnijih tumora kože. Nekada i najmanja tačka na vašem telu može biti melanom, stoga vas pozivamo da redovno kontrolišete stanje svojih mladeža i da, ukoliko primetite bilo kakve promene, ne odlažete pregled dermatologa, već da odmah odreagujete.' },
+      { type:'h2', text:'Koja je razlika između klasične i estetske dermatologije?' },
+      { type:'p', text:'Za razliku od klasične, estetska dermatologija se fokusira na poboljšanje izgleda kože uz pomoć hirurških zahvata, korišćenjem savremenih dermatoloških tretmana ili lasera, kako bi se smanjila vidljivost bora, uklonile pigmentacije ili jednostavno unapredio izgled kože.' },
+      { type:'p', text:'Današnja estetska dermatologija uključuje čitav niz tretmana:' },
+      { type:'list', items:['Botoks i hijaluron za smanjenje bora, obnavljanje volumena kože, ali i za rešavanje problema prekomernog znojenja.', 'Hemijski pilinzi i mezoterapija, za poboljšanje tonusa i teksture kože.', 'Laserski tretmani za uklanjanje pigmentacija, ožiljaka i neujednačenog tena.'] },
+      { type:'p', text:'Svaka od ovih procedura potpuno se prilagođava potrebama vaše kože, te sa našom dr _______ pravimo protokol pisan tačno po meri vaše kože, bilo da želite da izgledate odmornije, uklonite prve znake starenja, imate potrebu za specifičnim estetskim korekcijama ili, jednostavno, želite da lečite određene promene na vašoj koži.' },
+      { type:'p', text:'Pozovite nas ili nam pišite, a mi ćemo se maksimalno prilagoditi vašim zahtevima.' },
+    ]
+  },
+  {
+    category: 'dermatologija', categoryLabel: 'Dermatologija',
+    title: 'Radiotalasno uklanjanje promena na koži',
+    image: 'assets/images/vertical-laser.jpg',
+    excerpt: 'Radiotalasno uklanjanje promena na koži predstavlja vrstu dermatološkog zahvata, odnosno radiofrekventne elektrohirurgije koja je razvijena kako bi se...',
+    blocks: [
+      { type:'p', text:'Radiotalasno uklanjanje promena na koži predstavlja vrstu dermatološkog zahvata, odnosno radiofrekventne elektrohirurgije koja je razvijena kako bi se promene uklonile uz minimalna oštećenja kože.' },
+      { type:'p', text:'Ova metoda ima direktan terapijski efekat na tkivo i postala je veoma zastupljena u dermatologiji.' },
+      { type:'h2', text:'Koje promene na koži se mogu ukloniti radiotalasima?' },
+      { type:'p', text:'Radiotalasna metoda koristi se za uklanjanje benignih kožnih lezija. To mogu biti ciste, meki fibromi, viseće bradavice, seboroične keratoze, hemangiomi i dr.' },
+      { type:'p', text:'Jedine promene koje se ne smeju uklanjati radiotalasima jesu pigmentne promene (mladeži), jer je za ovaj zahvat neophodna klasična hirurška intervencija, kojom se uklanja cela pigmentna promena.' },
+      { type:'h2', text:'Kako se izvodi procedura radiotalasnog uklanjanja promena na koži?' },
+      { type:'p', text:'Na kožu se, pre same intervencije, nanosi anestetik u obliku kreme ili intradermalne injekcije ispod mesta koje treba tretirati. Najpre se vrši radiotalasno isecanje elektrodom, a potom se promena na koži uklanja sterilnom pincetom.' },
+      { type:'h2', text:'Koliko traje procedura radiotalasnog uklanjanja promena i da li je bolna?' },
+      { type:'p', text:'Procedura traje kratko, svega nekoliko sekundi, i može biti praćena minimalnim, gotovo neprimetnim krvarenjem.' },
+      { type:'p', text:'S obzirom na to da se nekoliko minuta pred početak radiotalasnog uklanjanja promena nanosi anestetik u obliku kreme (za uklanjanje manjih promena), odnosno interdermalni anestetik (u slučaju uklanjanja većih promena), procedura je bezbolna i prijatna za pacijenta.' },
+      { type:'h2', text:'Da li je potreban oporavak nakon radiotalasnog uklanjanja promena?' },
+      { type:'p', text:'Dermatološki pregled kod naše dr ______________ obavezan je korak pre same procedure. Nakon što dermatolog potvrdi da se promena može tretirati radiotalasima, sledi intervencija nakon koje nema potrebe za ušivanjem niti previjanjem.' },
+      { type:'p', text:'Možete očekivati stvaranje manje ili veće kraste na tretiranom delu, koja potpuno otpadne u periodu od tri do 10 dana, pa se najčešće savetuje upotreba antibiotskih masti nekoliko dana nakon procedure, dok tretirano mesto potpuno ne zaraste. Želimo da naglasimo da radiotalasno uklanjanje promena na koži ne ostavlja ožiljke.' },
+      { type:'p', text:'Uz konsultaciju sa našim dermatologom, ovoj metodi mogu se podvrgnuti svi pacijenti. Izuzetak su trudnice i pacijenti kojima je ugrađen pejsmejker.' },
+      { type:'p', text:'Pozovite nas ili nam pišite i zakažite pregled i konsultacije sa našim dermatologom.' },
+    ]
+  },
+  {
+    category: 'dermatologija', categoryLabel: 'Dermatologija',
+    title: 'PRP i mezoterapija: Tretmani skalpa za pospešivanje rasta kose',
+    image: 'assets/images/founder-portrait.jpg',
+    excerpt: 'Tretmani skalpa, koji imaju za cilj pospešivanje rasta kose, veoma su zastupljeni u dermatologiji, jer su fokusirani na stimulaciju folikula, poboljšanje...',
+    blocks: [
+      { type:'p', text:'Tretmani skalpa, koji imaju za cilj pospešivanje rasta kose, veoma su zastupljeni u dermatologiji, jer su fokusirani na stimulaciju folikula, poboljšanje mikrocirkulacije temena i unos hranljivih materija u teme.' },
+      { type:'p', text:'Najpopularniji i najefikasniji među njima upravo su PRP tretman, koji podrazumeva ubrizgavanje sopstvene krvne plazme u teme, kao i mezoterapija, pomoću koje se u teme glave ubrizgavaju vitamini koji pospešuju rast kose. Oba tretmana dostupna su u našem Beauty concept-u.' },
+      { type:'h2', text:'Šta sve podrazumeva PRP tretman i na koji način pospešuje rast kose?' },
+      { type:'p', text:'PRP, poznatiji i kao „vampirski tretman“, podrazumeva korišćenje regenerativne moći sopstvene krvi u tretiranju skalpa i pospešivanju rasta kose.' },
+      { type:'p', text:'Nakon što se u dogovoru sa našim dermatologom ustanovi da postoji indikacija za rad i odredi individualni protokol (broj tretmana i njihova dinamika), pacijentu se vadi krv koja u specijalnoj epruveti prolazi kroz centrifuge, kako bi se odvojio deo bogat faktorima rasta, koji podstiču regeneraciju. Nakon toga se, na prethodno dezinfikovanoj i anesteziranoj regiji, aplikuje PRP serum ubodima tankom iglom.' },
+      { type:'h2', text:'Da li je PRP tretman bolan i koliko je tretmana potrebno za rezultate?' },
+      { type:'p', text:'S obzirom na to da se PRP serum nanosi ubodima tankom iglom u skalp, postupak može da bude neprijatan. Međutim, pre samog tretmana nanosi se anestetik, pa se ta neprijatnost maksimalno umanjuje, a kako je procedura kratkotrajna, a efekti sjajni, ona je zanemarljiva.' },
+      { type:'p', text:'Broj tretmana za postizanje rezultata je individualan. U slučaju da vam je potrebno da ojačate skalp, najčešće se izvodi tri tretmana u nizu, dok se kod aktivnog opadanja kose broj tretmana povećava, a preporučuje se i kombinovanje sa drugim procedurama, poput mezoterapije ili dermapena.' },
+      { type:'h2', text:'Šta je mezoterapija?' },
+      { type:'p', text:'Mezoterapija predstavlja metodu injektovanja vitaminskih koktela i različitih aktivnih supstanci koji imaju za cilj podsticanje rasta kose, sprečavanje opadanja ili poboljšavanje kvaliteta i ishrane temena.' },
+      { type:'p', text:'S obzirom na to da se često kombinuje sa PRP tretmanom, ne samo u pospešivanju rasta kose, već i kada je reč o estetskim tretmanima lica, u dogovoru sa našim dermatologom kreira se protokol namenjen baš vama koji se usklađuje sa vašim potrebama.' },
+      { type:'h2', text:'Kome je namenjen PRP tretman?' },
+      { type:'p', text:'Neki doktori vole da kažu da su preventivni PRP tretmani namenjeni „pametnim i stpljivim pacijentima“ koji vole da na prirodan način održavaju zdravlje kose i puste da priroda i procesi u organizmu odrade svoj posao.' },
+      { type:'p', text:'S obzirom na to da predstavlja najprirodniju od svih estetskih procedura, ona je namenjena svima, mada je tokom konsultacija našem dermatologu neophodno navesti sve informacije u vezi sa vašim zdravstvenim stanjem – eventualne bolesti ili terapije koje uzimate.' },
+      { type:'p', text:'Nakon procedure tretirana regija se ne umiva i ne kvasi, a tačnu informaciju o periodu tokom kog to važi dobićete od doktora.' },
+      { type:'p', text:'Pozovite nas ili nam pišete i zakažite konsultacije sa dr _____________. Čekamo vas!' },
+    ]
+  },
+  {
+    category: 'estetske', categoryLabel: 'Estetske procedure',
+    title: 'Regenerativne procedure i biorevitalizacija lica, vrata i dekoltea',
+    image: 'assets/images/vertical-esthetic.jpg',
+    excerpt: 'Ukoliko želite da svojoj koži pružite dubinsku hidrataciju, podizanje prirodnog sjaja i elastičnosti, uz obnavljanje kolagena, onda je biorevitalizacija...',
+    blocks: [
+      { type:'p', text:'Ukoliko želite da svojoj koži pružite dubinsku hidrataciju, podizanje prirodnog sjaja i elastičnosti, uz obnavljanje kolagena, onda je biorevitalizacija lica, vrata i dekoltea, uz druge regenerativne procedure koje su dostupne u našem Beauty Concept-u, pravi izbor za vas.' },
+      { type:'p', text:'Ova procedura spada u jednu od metoda anti-aging-a koje se najčešće preporučuju svima, jer predstavljaju napredniji nivo nege kože, budući da ni na koji način ne utiču na promenu izgleda ili kontura lica, već samo pospešuju kvalitet i jedrinu kože.' },
+      { type:'p', text:'Pored ove, u regenerativne procedure, koje podstiču prirodne procese obnavljanja kože, spadaju još i:' },
+      { type:'list', items:['PRP – tretman sopstvenom krvnom plazmom koji podstiče regeneraciju i podmlađivanje kože;', 'Mezoterapija – aplikovanje koktela vitamina, minerala i hijalurona mezoterapijskim iglicama;', 'Skin boosters – preparati na bazi hijalurona koji su namenjeni dugotrajnoj hidrataciji i obnovi kože.'] },
+      { type:'h2', text:'Kome je namenjena biorevitalizacija?' },
+      { type:'p', text:'Biorevitalizacija je pogodna za svakoga i u tome se ogleda njena najveća prednost! Možete je primenjivati i ukoliko želite da sprečite pojavu prvih znakova starenja, ali i ako želite da korigujete postojeće znakove starenja na svom licu, vratu ili dekolteu.' },
+      { type:'p', text:'Pored toga što je idealna za rani anti-aging, biorevitalizacija je odličan izbor i za osobe koje nisu pristalice invazivnijih metoda, pa može biti sjajna dopuna anti-aging procedurama.' },
+      { type:'p', text:'Često se preporučuje osobama sa suvom, dehidriranom i osetljivom kožom, budući da je glavni sastojak upravo hijaluronska kiselina, koja savršeno hidrira kožu. Iz istog razloga preporučuje se i na osetljivim regijama, kao što su vrat i dekolte, jer savršeno pospešuje njihovu dodatnu negu.' },
+      { type:'h2', text:'Kako izgleda jedan tretman biorevitalizacije?' },
+      { type:'p', text:'Nakon detaljnog čišćenja, na lice se maže anestetik krema koja stoji 10-15 minuta. Nakon toga se kreće sa aplikacijom koja podrazumeva više uboda sa manjim razmakom, kako bi se pokrila čitava tretirana regija.' },
+      { type:'h2', text:'Koji su efekti biorevitalizacije?' },
+      { type:'p', text:'Ovom metodom postiže se duboka hidratacija i ishrana kože, pa su svežiji i jedriji izgled kože prvi efekti koji se njome postižu. Pored toga, biorevitalizacija pomaže u odlaganju prvih znakova starenja, utičući na poboljšanje teksture kože, vraćanje svežine i smanjenje sitnih bora.' },
+      { type:'p', text:'Optimalan broj vezanih tretmana koje je potrebno uraditi za potpuni efekat je tri, dok nakon toga možete održavati izgled kože prema preporučenoj dinamici.' },
+      { type:'h2', text:'Da li je potreban oporavak nakon tretmana?' },
+      { type:'p', text:'Nakon ovog tretmana nije potreban poseban oporavak, ali su mogući crvenilo i blag otok na mestu uboda. Kao i kod svake injekcione procedure, moguća je i pojava male modrice. Crvenilo i otok brzo prolaze, a preporučuje se i izbegavanje šminke 12 sati nakon tretmana.' },
+      { type:'h2', text:'Sa kojim procedurama i tretmanima se biorevitalizacija može kombinovati?' },
+      { type:'p', text:'Gotovo da nema ograničenja kada su u pitanju tretmani i procedure sa kojima se biorevitalizacija može kombinovati.' },
+      { type:'p', text:'Hemijski pilinzi će, primera radi, samo dodatno naglasiti efekat, jer će delovati pozitivno na teksturu i ten kože. Biološki tretmani na savršen način neguju kožu, čineći efekte biorevitalizacije još intenzivnijim, a nema prepreka i za primenu drugih estetskih procedura poput hijaluronskih filera i botoksa.' },
+      { type:'p', text:'Uz konsultaciju sa našim stručnim timom, za vas ćemo osmisliti protokol prilagođen vašoj koži čiji će vas rezultati oduševiti. Stoga nas zovite ili nam pišite i zakažite svoj termin danas.' },
+    ]
+  },
+  {
+    category: 'estetske', categoryLabel: 'Estetske procedure',
+    title: 'Botulinski toksin tipa A – Botoks tretman',
+    image: 'assets/images/about.jpg',
+    excerpt: 'Tretman botulinskim toksinom tipa A, poznatiji kao botoks tretman, definitivno je najtraženija estetska procedura protiv bora. Iako je njegova popularnost...',
+    blocks: [
+      { type:'p', text:'Tretman botulinskim toksinom tipa A, poznatiji kao botoks tretman, definitivno je najtraženija estetska procedura protiv bora. Iako je njegova popularnost najveća u estetskoj medicini, botoks kao lek ima daleko širu primenu u neurologiji.' },
+      { type:'p', text:'Botulinski toksin tipa A predstavlja izuzetno moćnu i opasnu supstancu, ukoliko se upotrebljava na neadekvatan način. U rukama stručnjaka, njegova primena je potpuno bezbedna, pa se kao lek koristi u borbi protiv nevoljnih pokreta mišića lica, glavobolja, škrgutanje zubima, znojenja i dr.' },
+      { type:'p', text:'Dve procedure koje možete zakazati u našem Beauty Concept-u, a koje podrazumevaju upotrebu botoksa, jesu estetska i primena u terapiji hiperhidroze – prekomernog znojenja ispod pazuha.' },
+      { type:'h2', text:'Kome su botoks tretmani namenjeni?' },
+      { type:'h2', text:'Estetska primena botoksa' },
+      { type:'p', text:'U estetskoj primeni, botoks tretman predstavlja najbolju prevenciju i proceduru za korekciju mimičnih bora kao prvih znakova starenja, pa je idealan za sve koji bi voleli da spreče njihovo produbljivanje, odnosno da koriguju i učine manje vidljivim one koje su već nastale.' },
+      { type:'h2', text:'Botoks terapija protiv znojenja' },
+      { type:'p', text:'U terapiji pojačanog znojenja ispod pazuha (hiperhidroza), botoks tretman idealan je za sve koji imaju veliki problem sa prekomernim znojenjem, te izbegavaju nošenje svetlih boja zbog neprijatnosti i mokrih fleka koje se pojavljuju u predelu pazuha, naročito tokom letnjeg perioda ili tokom pojačane aktivnosti.' },
+      { type:'h2', text:'Sa koliko godina je moguća primena botoksa u estetskim procedurama?' },
+      { type:'p', text:'Iako je botoks kao lek registrovan za primenu od 18. godine starosti, njegova se primena ne zasniva na godinama, već na postojanju indikacija za rad.' },
+      { type:'p', text:'Zanimljivo je da je botoks jedna od retkih korekcija za koju indikaciju postavlja sam pacijent. Nekome bore kao pokazatelj prvih znakova starenja uopšte ne smetaju, i te osobe nisu kandidati za primenu botoksa, čak i kada koriste i vole efekat hijaluronskih filera. Međutim, nekim pacijenatima te promene najviše smetaju.' },
+      { type:'p', text:'Kod osoba koje imaju izraženu mimiku i koje bi volele da izbegnu pojavu izraženijih bora, botoks je idealno rešenje za preventivnu korekciju.' },
+      { type:'h2', text:'Kako izgleda postupak aplikacije botoksa?' },
+      { type:'p', text:'Pre same procedure, lice se čisti i na njega se maže anestetik kremom koji stoji 10-15 minuta. Nakon što anestetik počne da deluje, doktor će od vas tražiti da pravite različite izraze lica: da se mrštite, čudite, gledate kao da vam ide pesak u oči i druge, kako bi se u potpunosti sagledala aktivnost mišića koji su odgovori za kreiranje bora, i kako bi se pravilnom aplikacijom smanjila njihova amplituda kretanja.' },
+      { type:'h2', text:'Kako botoks deluje i koliko dugo traje njegov efekat?' },
+      { type:'p', text:'Ukoliko je pravilno aplikovan, botoks treba da smanji amplitudu kretanja mišića, a samim tim i stvaranje bora, te da očuva mimiku i prirodan izgled lica.' },
+      { type:'p', text:'Nakon tretmana, potrebno je nekoliko dana da ispolji svoje dejstvo, pa je moguć prolazan osećaj napetosti ili jače delovanje na mimiku u prvim danima, koji spontano prolaze nakon nekoliko dana.' },
+      { type:'p', text:'Efekat botoksa traje nekoliko meseci, što delimično zavisi i od vaših životnih navika (npr. intenziteta treninga na koje odlazite), kao i od izraženosti i jačine mimike lica.' },
+      { type:'h2', text:'Šta treba izbegavati nakon tretmana botoksom?' },
+      { type:'p', text:'Kao i kod svih estetskih procedura, nakon aplikovanja botoksa potrebno je izbegavati sunčanje, solarijum, naporne treninge u prvim danima, a savetuje se i da držite podignutu glavu prvih nekoliko sati od korekcije.' },
+      { type:'h2', text:'Koji tretmani su dobra priprema za botoks?' },
+      { type:'p', text:'Redovna nega kože pre tretmana botoksom prvi je korak u postizanju vidljivijih i intenzivnijih rezultata. Zbog toga su, kao priprema za botoks, odličan izbor sledeći tretmani: hemijski pilinzi, biološki tretmani, Venus Glow i Glow&Go protokoli.' },
+      { type:'p', text:'Pozovite nas ili nam pišite i zakažite konsultacije sa našim stručnim timom. Čekamo vas!' },
+    ]
+  },
+  {
+    category: 'estetske', categoryLabel: 'Estetske procedure',
+    title: 'Hijaluronski fileri',
+    image: 'assets/images/vertical-esthetic.jpg',
+    excerpt: 'Aplikacija hijaluronskih filera spada u najzastupljenije estetske procedure. Zahvaljujući rezultatima koji se njima postižu, činjenici da imaju široku...',
+    blocks: [
+      { type:'p', text:'Aplikacija hijaluronskih filera spada u najzastupljenije estetske procedure. Zahvaljujući rezultatima koji se njima postižu, činjenici da imaju široku primenu za različite indikacije, ali i bezbednosti kada su u rukama profesionalaca, interesovanje za ovom procedurom se ne smanjuje, već neprestano raste.' },
+      { type:'h2', text:'Čemu služe hijaluronski fileri i kome su namenjeni?' },
+      { type:'p', text:'Hijaluronski fileri mogu se koristiti za:' },
+      { type:'list', items:['Prevenciju i sprečavanje prvih znakova starenja. To se postiže pružanjem podrške i volumena na svim ključnim tačkama, kako bi se sprečili znakovi starenja koji se pojavljuju usled resorpcije koštane strukture i dubokog masnog tkiva.', 'Za korekciju već vidljivih znakova starenja i vraćanje volumena i kontura licu. Dodavanjem volumena na ključnim tačkama na kojima on najpre nestaje, sprečava se vizuelno „padanje“ lica.', 'Za korekciju asimetrija ili dodavanje volumena u cilju poboljšanja kontura lica i usana, kako bi se postigao senzualniji, ženstveniji i lepši izgled.'] },
+      { type:'p', text:'Ako uzmemo u obzir sve prethodno navedene primene, hijaluronski fileri namenjeni su svima koji žele preventivno da deluju na prve znakove starenja, ili da koriguju one već postojeće, uz zadržavanje prirodnog izgleda lica. Idealni su i za korekciju volumena usana, kao i za korekciju i naglašavanje kontura lica ili ublažavanje i rešavanje asimetrija.' },
+      { type:'p', text:'Iako su dame malo redovnije, pacijenti mogu biti i muškarci i žene.' },
+      { type:'h2', text:'Na kojim se sve regijama i u kojoj količini aplikuju hijaluronski fileri?' },
+      { type:'p', text:'Hijaluronski fileri mogu se aplikovati gotovo na celom licu, dok količina zavisi od potreba vašeg lica, odnosno rezultata koje želite da postignete.' },
+      { type:'p', text:'Najčešće regije, kao i količina filera koja se optimalno preporučuje u zavisnosti od regije, navedeni su u nastavku.' },
+      { type:'h2', text:'Korekcija podočnjaka hijaluronskim filerima' },
+      { type:'p', text:'Ova korekcija naziva se još i korekcijom tear trough deformiteta, odnosno korekcijom brazde suznog kanala.' },
+      { type:'p', text:'Za podočnjake se koristi najređi i najfiniji hijaluronski filer, kako bi se popunila brazda koja je kod nekih osoba urođena, dok je kod većine nastala procesom starenja. Korekcijom te brazde smanjuje se vidljivost podočnjaka, odnosno umoran izgled lica.' },
+      { type:'p', text:'U praksi se koristi do 1ml filera, dok se ne retko za pun efekat preporučuje korigovanje i središnjeg dela lica, davanjem volumena u predelu jagodica. U slučaju dopune procedure, i količina filera se povećava.' },
+      { type:'h2', text:'Korekcija temporalne regije – slepoočnica' },
+      { type:'p', text:'Temporalna regija, odnosno slepoočnice, veoma su podložne vidljivim znakovima starenja usled gubljenja volumena u toj regiji. Iako je kod nekih ljudi takav oblik lica urođen, kod većine nastaje procesom starenja.' },
+      { type:'p', text:'Može dati umorniji, stariji i ne tako harmoničan izgled lica i zato je korekcija, iako suptilna i na prvi pogled neprimetna, i više nego delotvorna. Njome se postiže i blago otvaranje i podizanje kapaka, a samim tim i otvoreniji pogled.' },
+      { type:'p', text:'Uobičajena količina je 1 do 2ml, u zavisnosti od potreba lica, mada kod određenih pacijenata kod kojih je ovaj deficit izraženiji, može doći i do više ponovljenih korekcija tokom određenog vremenskog perioda.' },
+      { type:'h2', text:'Korekcija jagodica' },
+      { type:'p', text:'Poznata i kao supermodel look, korekcija jagodica je veoma popularna i efikasna estetska procedura u prevenciji starenja, jer se dodavanjem blagog volumena daje podrška, usporavaju znaci starenja i pada volumena lica (nazolabijalne brazde) i spušteniji uglovi usana.' },
+      { type:'p', text:'Ovom korekcijom postiže se jedriji i mršaviji, odnosno konturisaniji izgled lica. Polazna je tačka kod pacijenata kojima smetaju nazolabijalne bore, jer one nastaju upravo padom volumena središnjeg dela lica, ali i kao prevencija starenja.' },
+      { type:'p', text:'Korekcija blagog konturisanja jagodica počinje sa količinom od 1ml (najčešće kod mlađih pacijenata), ali ona zavisi od oblika lica, godina i potreba pacijenta. Kod starijih pacijenata ili ljudi okruglog lica, potrebno je više konture, pa se za postizanje punog efekta može ubrizgati i količina od 2ml.' },
+      { type:'h2', text:'Korekcija usana' },
+      { type:'p', text:'Ovo je najpopularnija procedura kada su u pitanju hijaluronski fileri. Omogućava postizanje boljeg i lepšeg volumena, simetrije, jedrine, senzualnosti i podmlađivanje regije oko usana.' },
+      { type:'p', text:'Ovo je, takođe, jedini u potpunosti bezbedan način za povećanje volumena usana, budući da su svi sintetički materijali zabranjeni zbog rizika i komplikacija koje izazivaju. Pravilno aplikovanje, kao i kvalitet filera, doprinose potpuno prirodnom izgledu čim splasne inicijalni otok.' },
+      { type:'p', text:'Preporuka je krenuti sa 1ml aplikovanim u usne i regiju oko usana, a ako postoji potreba, uvek je moguće dodati još malo volumena. To možete učiniti tri nedelje nakon prve korekcije.' },
+      { type:'h2', text:'Korekcija nosa hijaluronskim filerima' },
+      { type:'p', text:'Korekcija nosa primenjuje se u slučajevima kada je pacijentima potrebno blago podizanje vrha nosa ili korekcija profila kod osoba koje nemaju dovoljno izražen problem da bi pribegli klasičnoj hirurgiji.' },
+      { type:'p', text:'Budući da su korekcije hijaluronskim filerima na nosu minimalne, uglavnom se koristi količina do 1ml, ali je vrlo važno dobro proceniti razloge za i protiv kada se odlučujete za ovu korekciju, jer kod određenog broja pacijenata ubrizgavanje filera može dodatno naglasiti veličinu nosa.' },
+      { type:'h2', text:'Korekcija ivice vilice i brade' },
+      { type:'p', text:'Korekcija donje trećine lica, odnosno ivice vilice i brade, najčešće primenu ima kod vidljivih znakova starenja, kada se zbog resorpcije kosti ta linija polako izgubi. Koža procesom starenja gubi čvrstinu, pa lice gubi svoj oblik, postaje četvrtastije, a koža „visi“.' },
+      { type:'p', text:'Kod osoba kojima donja trećina lica nije dovoljno prirodno razvijena, ova korekcija utiče na harmoniju lica ili čini da se podbradak manje primećuje.' },
+      { type:'p', text:'Količina filera koja je potrebna za ovu estetsku proceduru najčešće ide od 2ml do nekoliko ml, što zavisi od potreba pacijenta i stepena volumena koji je potrebno nadoknaditi.' },
+      { type:'h2', text:'Šta podrazumeva fenomenalni i sve traženiji „8 Point Lift“?' },
+      { type:'p', text:'Fenomenalni i sve traženiji 8 Point Lift, podrazumeva aplikaciju hijaluronskih filera u 8 ključnih tačaka, čime se postiže suptilno podizanje i konturisanje lica, zahvaljujući potpori koju hijaluron pruža na ključnim tačkama na licu.' },
+      { type:'p', text:'Ova procedura kombinuje dve gustine filera, kako bi se obezbedili prirodnost i trajnost efekta, dok je rezultat vidljiv odmah, iako se smatra finalnim nakon tri nedelje.' },
+      { type:'p', text:'Idealna je za sve pacijente koji žele odličan postupak za prevenciju starenja, rani anti-aging ili suptilnu korekciju prvih znakova starenja. Količina filera koja je potrebna zavisi od potreba lica i efekta koji želimo da postignemo, pa se najčešće ubrizgava 2ml.' },
+      { type:'h2', text:'Šta je „7/9 Point Shape“ korekcija hijaluronskim filerima?' },
+      { type:'p', text:'7/9 Point Shape sve je popularnija estetska korekcija koja podrazumeva aplikaciju filera u nekoliko ključnih tačaka na spoljnim delovima lica (središnjeg i donjeg dela), kako bi se konturisalo, podmladilo i kako bi se sprečili prvi znakovi starenja.' },
+      { type:'p', text:'Ovaj pristup maksimalno čuva ključne karakteristike lica, dajući prirodne rezultate u estetskom smislu, i u mirovanju i tokom mimike lica.' },
+      { type:'h2', text:'Full Face Approach' },
+      { type:'p', text:'U poslednje vreme, kada se govori o hijaluronskim filerima u svrhu anti-aging-a, najčešće se govori o Full Face pristupu. On podrazumeva sagledavanje lica kao celine iz ugla doktora kao objektivnog posmatrača, uz uvažavanje želja pacijenta kao subjektivnog posmatrača.' },
+      { type:'p', text:'Stoga doktori sve češće pribegavaju ozbiljnom razgovoru i pregledu tokom kojih ustanove kojim epitetima i emocijama pacijent opisuje svoje lice, što im ukazuje na regije koje je potrebno korigovati.' },
+      { type:'p', text:'Plan se postavlja na osnovu subjektivnih želja pacijenta i objektivnih potreba, i podrazumeva sagledavanje lica kao celine, čime se određuje na kojim regijama i na kom nivou je korekcija potrebna.' },
+      { type:'p', text:'Full Face pristup stoga kombinuje podmlađivanje i prevenciju starenja na nivou kosti, dubokog masnog tkiva i kože, kombinujući adekvatnu količinu filera i Botoks tretman, u slučaju da pacijent želi da smanji vidljivost bora ili ih potpuno ukloni.' },
+      { type:'p', text:'Full Face Approach često podrazumeva i aplikaciju veće količine filera u istom aktu, i uvažava sve promene koje su već nastale na licu, kao i sve promene koje bi tek nastale ukoliko se na njih ne deluje preventivno.' },
+      { type:'p', text:'Ovaj pristup podrazumeva i pravljenje godišnjeg plana korekcija kako bi se dobar izgled održavao i vremenom unapređivao.' },
+      { type:'p', text:'Ukoliko imate potrebu za nekim od navedenih estetskih korekcija ili jednostavno želite da zakažete konsultacije sa našim stručnim timom, pozovite nas ili nam pišite.' },
+    ]
+  },
+  {
+    category: 'estetske', categoryLabel: 'Estetske procedure',
+    title: 'Lifting nitima: Nehirurški lifting i konturisanje',
+    image: 'assets/images/about.jpg',
+    excerpt: 'Da li ste čuli za lifting nitima? Reč je o minimalno invazivnoj estetskoj proceduri kojom se, specijalnim biorazgradivim nitima, zateže koža lica i tela.',
+    blocks: [
+      { type:'p', text:'Da li ste čuli za lifting nitima? Reč je o minimalno invazivnoj estetskoj proceduri kojom se, specijalnim biorazgradivim nitima, zateže koža lica i tela.' },
+      { type:'p', text:'Napravljene od biorazgradivih materijala (PDO, PLA, PCL), niti pružaju lifting efekat, stimulišu sintezu kolagena i elastina, i poboljšavaju tonus i teksturu kože.' },
+      { type:'p', text:'Najčešće se koriste za zatezanje obraza, podizanje obrva, nehirurški Cat Eye efekat, lifting vrata i podbratka, a često se primenjuju i na telu, za zatezanje nadlaktica, stomaka, kolena i grudi.' },
+      { type:'h2', text:'Kako izgleda jedan tretman nitima?' },
+      { type:'p', text:'Nakon obeležavanja regije koju želimo da tretiramo, nanosimo topikalni anestetik koji stoji 15 minuta. Nakon toga sledi aplikovanje niti, što je procedura koja traje nekih 15 minuta.' },
+      { type:'p', text:'Proces je gotovo bezbolan i ne ostavlja bilo kakve tragove, pa se nakon tretmana bez bojazni možete vratiti svakodnevnim aktivnostima.' },
+      { type:'h2', text:'Za koje korekcije nitima se naši pacijenti najčešće odlučuju?' },
+      { type:'p', text:'Kao što smo na početku naveli, nitima se mogu tretirati različiti delovi lica i tela.' },
+      { type:'p', text:'Pre svega, obrazi. Ovo je deo lica koji se najčešće tretira nitima. Pored obraza, lifting nitima može se raditi i na donjoj i srednjoj trećini lica, kao i na jagodicama. Za kompletan efekat ove regije, može se uraditi i zatezanje podbratka.' },
+      { type:'p', text:'Niti se često koriste i za podizanje obrva, kako bi se odložilo hirurško podizanje obrva. Ova procedura direktno poboljšava i izgled donjih kapaka, pa se njome i blefaroplastika odlaže na neko vreme.' },
+      { type:'p', text:'Ukoliko, pak, želite da postignete čuveni „majči pogled“, odnosno Cat Eye efekat, ovom metodom to postižete nehirurškim putem, jer doprinosi efektu podignutih i produženih spoljašnjih izgleda očiju.' },
+      { type:'h2', text:'Zatezanje tela nitima' },
+      { type:'p', text:'Najčešće tretirane regije na telu su nadlaktice, koža iznad kolena, stomak, a u poslednje vreme sve je popularnija i procedura liftiga kože grudi.' },
+      { type:'h2', text:'Koliko traje efekat liftinga nitima?' },
+      { type:'p', text:'Prvi efekti liftinga vide se odmah nakon prvog tretmana, dok je potpun efekat vidljiv dva meseca nakon tretmana. Efekat liftinga nitima mogu trajati i do tri godine, pa nije čudo što je ovaj tretman sve popularniji i traženiji među našim pacijentima.' },
+      { type:'h2', text:'Sa kojim tretmanima se lifting nitima može kombinovati?' },
+      { type:'p', text:'Za postizanje dodatnog efekta liftinga i konturisanja, ovaj tretman možete kombinovati sa botoksom, mezoterapijom, PRP tretmanom, hijaluronskim filerima, dermapenom i drugim.' },
+      { type:'p', text:'Ne propustite ovu priliku da zakažete svoj termin i otkrijete svu „moć“ niti u zatezanju kože lica i tela. Zajedno sa našim stručnim timom, za vas ćemo napraviti protokol skrojen prema vašim potrebama i tako postignuti maksimalne rezultate. Čekamo vas u našem Beauty Concept-u!' },
+    ]
+  },
+  {
+    category: 'kozmetika', categoryLabel: 'Kozmetički tretmani',
+    title: 'Biološki tretmani lica: Užitak koji sebi morate priuštiti',
+    image: 'assets/images/vertical-face.jpg',
+    excerpt: 'Ako se za neki od tretmana lica može reći da predstavlja svojevrsno uživanje koje sebi treba redovno priuštiti, onda su to biološki tretmani lica. Pored...',
+    blocks: [
+      { type:'p', text:'Ako se za neki od tretmana lica može reći da predstavlja svojevrsno uživanje koje sebi treba redovno priuštiti, onda su to biološki tretmani lica. Pored toga što podstiču cirkulaciju i vraćaju jedrinu licu, vratu i dekolteu, reč je o tretmanima koji predstavljaju prvu prvenciju starenja kože, a koje na licu mesta kreiraju naše kozmetičarke i potpuno su prilagođeni potrebama vaše kože.' },
+      { type:'h2', text:'Kako izgleda biološki tretman lica?' },
+      { type:'p', text:'Bilo da je reč o unapred kreiranim protokolima poznatih kozmetičkih kuća ili protokolu koji na licu mesta kreiraju naše kozmetičarke, svaki biološki tretman lica počinje masažom kako biste se potpuno opustili i pripremili za naredne korake.' },
+      { type:'p', text:'Fokus je na licu, vratu, dekolteu i ramenima, dok ceo tretman ima za cilj da podstakne drenažu, cirkulaciju i vrati jedrinu vašem licu.' },
+      { type:'p', text:'Nakon masaže, sledi piling koji je u potpunosti prilagođen potrebama vaše kože, dok se nakon pilinga nanose serumi i ampule koji licu, vratu i dekolteu pružaju negu koja im je najpotrebnija (u zavisnosti od tipa kože, potreba i godina). Završni korak biološkog tretmana lica je maska, za dodatni nivo hidratacije.' },
+      { type:'p', text:'Uz higijenske tretmane lica, ovo su neinvazivne procedure koje, pored potpunog užitka, pružaju i adekvatnu negu u potpunosti prilagođenu vašoj koži.' },
+      { type:'h2', text:'Kome su namenjeni biološki tretmani lica?' },
+      { type:'p', text:'Biološki tretmani lica namenjeni su svima. Izuzetak su veoma mlade osobe ili osobe koje imaju problematičnu kožu kojoj masaža, odnosno stimulacija koja se njome postiže, mogu izazvati dodatne komplikacije. U svim ostalim situacijama, tretmani su maksimalno bezbedni i prilagođeni vama i potrebama vaše kože.' },
+      { type:'h2', text:'Koliko često možete raditi biološke tretmane kože?' },
+      { type:'p', text:'Ne postoje posebne smernice za dinamiku kojom treba raditi biološke tretmane lica, pa ih možete zakazivati dinamikom koja vama najviše odgovara.' },
+      { type:'p', text:'Izuzetak predstavljaju isključivo tretmani profesionalnih beauty kuća, koji pomažu rešavanju određenih problema kože (hiperpigmentacijama, finim linijama i sl.). Za ove protokole potrebno je poštovati dinamiku koja je unapred određena.' },
+      { type:'p', text:'Izbegavajte umivanje lica nekoliko sati nakon bioloških tretmana, kako bi ampule, serumi i maska za lice imali maksimalno dejstvo na koži. U slučaju da je u okviru biološkog tretmana rađen i hemijski piling, preporučuje se redovno nanošenje SPF-a, uz izbegavanje sunca narednih nekoliko dana.' },
+      { type:'h2', text:'Kako da odaberem biološki tretman koji je baš za mene?' },
+      { type:'p', text:'Maksimalno personalizovan pristup jedna je od naših ključnih vrednosti.' },
+      { type:'p', text:'Zbog toga je naš savet da, uz konsultaciju sa našim kozmetičarkama, odaberete tretman koji je potpuno prilagođen potrebama vaše kože. Cilj nam je da, nakon završenog tretmana, primetite i osetite blagodeti koje je odabrani protokol imao za vašu kožu.' },
+      { type:'p', text:'Ukoliko se tokom biološkog tretmana lica odlučite se i za dodatni užitak – presoterapiju (aparaturnu masažu i drenažu tela), dovoljno je da nam ovu želju naglasite pre zakazivanja.' },
+      { type:'p', text:'Čekamo vas!' },
+    ]
+  },
+  {
+    category: 'kozmetika', categoryLabel: 'Kozmetički tretmani',
+    title: 'Dermapen i hemijski pilinzi za „holivudski tretman“',
+    image: 'assets/images/about.jpg',
+    excerpt: 'Tragate za najdelotvornijom metodom za podmlađivanje kože? Isprobajte „holivudski tretman“ Dermapenom i hemijskim pilinzima.',
+    blocks: [
+      { type:'p', text:'Tragate za najdelotvornijom metodom za podmlađivanje kože? Isprobajte „holivudski tretman“ Dermapenom i hemijskim pilinzima.' },
+      { type:'h2', text:'Šta je Dermapen i koje su njegove blagodeti u nezi kože?' },
+      { type:'p', text:'Kao jedna od najdelotvornijih metoda za podmlađivanje kože, Dermapen tretman pomaže vraćanju jedrine lica, a samim tim i mladalačkog izgleda kože, dok osim antiage efekta, ovaj tretman predstavlja odličan izbor za redukciju ožiljaka.' },
+      { type:'p', text:'Reč je o mezoterapiji mikroiglicama (microneedling) koja je osmišljena kao biostimulacioni i regenerativan tretman koji najdelotvornije pomaže potpunom podmlađivanju kože i čini neizostavan korak svih profesionalnih procedura i tretmana u nezi lica.' },
+      { type:'p', text:'Dermapenom se efikasno stimuliše proizvodnja kolagena, dok mezoterapija mikroiglicama doprinosi podmlađivanju kože potpuno prirodnim putem.' },
+      { type:'h2', text:'Zašto su hemijski pilinzi neizostavni u nezi kože?' },
+      { type:'p', text:'Hemijski piling lica predstavlja kontrolisani tretman nanošenja voćnih (AHA/BHA) ili drugih kiselina, koje uklanjaju oštećene površinske slojeve kože, podstičući njenu regeneraciju. Zbog svojih pozitivnih efekata, hemijski pilinzi neretko su deo kako higijenskih, tako i bioloških tretmana lica.' },
+      { type:'p', text:'Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora.' },
+      { type:'p', text:'U zavisnosti od potreba vaše kože, ali i problema koje želite da otklonite ili umanjite, prilikom hemijskog pilinga mogu se primenjivati različiti tipovi kiselina, kao i različita dubina pilinga. U našem beauty konceptu, pristup se u potpunosti prilagođava potrebama i tipu vaše kože.' },
+      { type:'p', text:'Površinski piling predstavlja najblaži oblik, koji uglavnom podrazumeva korišćenje voćnih (AHA i BHA) kiselina. Ovim tipom pilinga uklanjaju se mrtve ćelije kože, čime se podstiče njena regeneracija.' },
+      { type:'p', text:'Pilingom srednje dubine prodire se u dublje slojeve epidermisa. Ovaj tip pilinga odličan je za ublažavanje ožiljaka i bora. Nakon njega je moguće crvenilo i perutanje, pa je potrebna posebna nega nekoliko dana nakon tretmana.' },
+      { type:'p', text:'Duboki piling je medicinski piling i njega može primenjivati isključivo dermatolog.' },
+      { type:'h2', text:'Zašto je kombinacija Dermapena i hemijskog pilinga dobar izbor za moju kožu?' },
+      { type:'p', text:'Hemijskim pilingom vrši se eksfolijacija površinskog sloja kože, čiste se pore i koža priprema za bolju apsorpciju Dermapen tretmana.' },
+      { type:'p', text:'Nakon pilinga, mikroiglice Dermapen aparata stvaraju kontrolisane mikro-kanale na koži, čime se podstiču prirodni mehanizmi zarastanja i stvaranja novog elastina i kolagena. Sinergijom ove dve tehnike smanjuju se ožiljci od akni, hiperpigmentacije, proširene pore i vidljivost bora, čime je efekat podmlađenog izgleda maksimalan.' },
+      { type:'h2', text:'Kada se i kako primenjuje kombinacija Dermapen tretmana i hemijskog pilinga?' },
+      { type:'p', text:'Individualan pristup veoma je važan prilikom primene oba tretmana, kao i tačno poštovanje protokola koji su postavljeni. Zbog toga je veoma važno da pratite sve savete naših kozmetičarki, kako tokom, tako i nakon tretmana.' },
+      { type:'p', text:'Tretmani se često izvode naizmenično, u serijama od nekoliko ciklusa, u razmaku od dve do četiri nedelje.' },
+      { type:'p', text:'S obzirom na fotosenzitivnost kože koja se tretira pilingom i iglicama, preporučuje se da ove tretmane radite tokom jesenjeg i zimskog perioda, uz obavezno korišćenje krema sa visokim zaštitnim faktorom.' },
+      { type:'p', text:'Iskusite pravi „holivudski tretman“. Zakažite svoj termin danas.' },
+    ]
+  },
+  {
+    category: 'kozmetika', categoryLabel: 'Kozmetički tretmani',
+    title: 'Higijenski tretmani lica: Za dubinsko čišćenje i regeneraciju kože',
+    image: 'assets/images/woman-portrait.png',
+    excerpt: 'Nema boljeg načina za dubinsko čišćenje, hidrataciju i regeneraciju kože od higijenskog tretmana lica. Uz biološke tretmane, ovo je jedan od najboljih...',
+    blocks: [
+      { type:'p', text:'Nema boljeg načina za dubinsko čišćenje, hidrataciju i regeneraciju kože od higijenskog tretmana lica. Uz biološke tretmane, ovo je jedan od najboljih načina za pravilnu, potpunu i redovnu negu kože.' },
+      { type:'h2', text:'Kako izgleda higijenski tretman lica?' },
+      { type:'p', text:'Higijenski tretman lica sastoji se iz tri koraka: pilinga, čišćenja lica (komedoekspresije) i hidratacije. Svaki od ovih koraka pomaže uspostavljanju balansa kože, sprečava pojavu bubuljica, mitisera i akni, i smanjuju vidljivost pora koje se intenzivira kada se napune nečistoćama i masnoćom.' },
+      { type:'p', text:'Kao i kod svakog od (u našoj ponudi) dostupnih tretmana lica, i higijenski tretman podrazumeva pristup koji je u potpunosti krojen prema potrebama vaše kože. Svaki od ova tri koraka može biti jednostavan, sa bazičnim proizvodima, ili nešto kompleksniji, u zavisnosti od efekta koji je potrebno postići.' },
+      { type:'p', text:'Ta kompleksnost najčešće se ogleda u izboru pilinga, koji se bira u zavisnosti od potreba kože, te može biti mehanički, enzimski ili hemijski, ali i u izboru maski za negu i hidrataciju lica.' },
+      { type:'h2', text:'Kome su namenjeni higijenski tretmani lica?' },
+      { type:'p', text:'Iako su higijenski tretmani lica namenjeni svima, bez izuzetaka, najintenzivniju potrebu za njima imaju mlađe osobe, koje su u pubertetu, kao i osobe sa kombinovanom i masnom kožom, jer se primenom ovog tretmana održava balans i lep izgled kože.' },
+      { type:'p', text:'Preporučuje se primena jednom mesečno za problematičnu kožu, odnosno dva do četiri puta godišnje za normalnu kožu. Dinamika zavisi od potreba vaše kože, pa je savet da se o najboljoj dinamici za vas konsultujete sa našim kozmetičarkama.' },
+      { type:'h2', text:'Šta treba raditi pre i posle higijenskog tretmana lica?' },
+      { type:'p', text:'Za higijenski tretman lica nije potrebna bilo kakva priprema, dok je preporuka da se nakon tretmana lice zaštiti tečnim puderom (ukoliko odmah nastavljate sa svakodnevnim obavezama), odnosno da se ne umiva pre spavanja, ukoliko je tretman rađen u kasnim popodnevnim satima.' },
+      { type:'p', text:'Ako je u okviru tretmana rađen hemijski piling, obavezno je nanošenje SPF-a, kao i izbegavanje sunca, nekoliko dana.' },
+      { type:'p', text:'Nemojte se iznenaditi ukoliko primetite blago crvenilo odmah nakon tretmana. To je potpuno normalna pojava koja nestaje nakon nekoliko sati ili jednog dana.' },
+      { type:'h2', text:'Personalizovani pristup nezi vaše kože' },
+      { type:'p', text:'Budite slobodni da tokom ili nakon tretmana naše iskusne kozmetičarke pitate za savete i proizvode za negu lica koje ćete primenjivati i nanositi u narednim danima.' },
+      { type:'p', text:'Redovna nega lica neophodna je za pravilno održavanje zdravog izgleda kože i dužeg efekta tretmana, a naše devojke su tu da vam daju prave savete i upute vas u proizvode koji su najpogodniji za vas.' },
+      { type:'p', text:'Pogledajte cenovnik naših usluga i zakažite termin danas.' },
+    ]
+  },
+  {
+    category: 'kozmetika', categoryLabel: 'Kozmetički tretmani',
+    title: '7E MyoLift™ MD tretman: Neinvazivni trening vašeg lica',
+    image: 'assets/images/vertical-face.jpg',
+    excerpt: 'Da li želite da osetite efekat „prave mikrostruje“? Predstavljamo vam 7E MyoLift™ MD, mikrostrujni uređaj za nehirurške, kozmetičke tretmane.',
+    blocks: [
+      { type:'p', text:'Da li želite da osetite efekat „prave mikrostruje“? Predstavljamo vam 7E MyoLift™ MD, mikrostrujni uređaj za nehirurške, kozmetičke tretmane.' },
+      { type:'p', text:'7E MyoLift™ MD mikrostruje deluju na mišiće lica na isti način na koji trening deluje na naše telo – zatežu one kojima je zatezanje potrebno, relaksiraju mišiće koji su napeti, i doprinose odličnom tonusu lica, pospešujući cirkulaciju i drenažu.' },
+      { type:'h2', text:'Zašto se 7E MyoLift™ MD smatra jednim od najefikasnijih tretmana za negu lica?' },
+      { type:'p', text:'Uređaj koji se primenjuje prilikom ovog tretmana koristi tehnologiju mikrostruje koja direktno prodire u sredinu mišića, čime doprinosi njihovoj relaksaciji i vraćanju tonusa. To se odvija bez vidljive i osetne kontrakcije, kako bi se sprečilo trošenje adenozin-trifosfata (ATP) koji je neophodan energijski sastojak ćelija za normalnu mišićnu funkciju. ATP je važan i zbog toga što sprečava gomilanje mlečne kiseline u mišićnom tkivu, a time i starenje i slabljenje mišića.' },
+      { type:'p', text:'Ovaj uređaj za miolifting poseduje nekoliko različitih programa kojima se postiže drenaža, ubrzava cirkulacija i vrši priprema lica u cilju relaksacije mišića, odnosno ublažavanja bora koje su nastale mimikom, kao i vraćanja tonusa i jedrine licu.' },
+      { type:'p', text:'7E MyoLift™ MD tretman idealan je izbor za preventivno i korektivno delovanje na sve znakove starenja, zbog čega je namenjen manje-više svima. Međutim, pristup ovom tretmanu individualan je i u potpunosti prilagođen svakoj osobi koja se odluči za njega, godinama i potrebama njene kože. Zbog toga se pre tretmana određuje protokol namenjen isključivo vama.' },
+      { type:'h2', text:'Koliko traje MyoLift tretman i da li se može kombinovati sa drugim tretmanima?' },
+      { type:'p', text:'Iako je sam MyoLift tretman dovoljan za postizanje fenomenalnih rezultata, za vas smo pripremili mnoštvo različitih protokola i kombinacija tretmana koji dodatno pospešuju postignute rezultate.' },
+      { type:'p', text:'Trenutno su u ponudi sledeći protokoli ovog tretmana:' },
+      { type:'list', items:['MYOLIFT tretman – drenaža, cirkulacija i trening mišića lica', 'MYOLIFT paket protokol od 8 tretmana', 'RED CARPET READY – Myolift (drenaža, cirkulacija, tonus mišića), Carbon piling/biorevitalizujući piling, maska, nega i ampula', 'NON-SMOKER GLOW – Myolift tretman, biorevitalizujući/glow piling, personalizovana nega', 'MYOLIFT TRY ME OUT – piling, masaža, Myolift maske, personalizovana nega', 'PREP ME UP – Myolift priprema za estetske procedure i korekcije (piling, Venus Glow čišćenje pora, drenažna masaža, Myolift maske, personalizovana nega)', 'FACE GYM PROTOKOL – 6 Myolift tretmana i dva liftinga u pet tačaka', 'Individualno kreiran plan i kombinacija Venus Legacy tretmana, Myolifta, i kozmetičkih tretmana ili estetskih procedura'] },
+      { type:'p', text:'Velika prednost ovog tretmana, koja se pokazala u praksi, jeste poboljšanje efekta svih procedura, davanjem dodatne podrške na nivou mišića. Zbog toga je dozvoljeno raditi ih već nekoliko dana nakon svih procedura.' },
+      { type:'h2', text:'Kojim brojem MyoLift tretmana se postižu najbolji rezultati?' },
+      { type:'p', text:'Da bi se postigao pun efekat MyoLift tretmana, preporučuje se serija od 8 tretmana. Međutim, kako potrebe variraju u zavisnosti od godina, indikacije rada, pa i reakcije kože na tretman, kod mlađih osoba je, kao preventiva, nekada dovoljno 6, dok kod starijih osoba može biti preporučeno i do 10 tretmana.' },
+      { type:'p', text:'Ukoliko niste sigurni koji je od MyoLift protokola, ali i svih drugih tretmana lica dobar izbor za vas, kod nas uvek možete zakazati besplatne konsultacije ili prvi termin i konsultacije u istom terminu.' },
+      { type:'p', text:'Čekamo vas!' },
+    ]
+  },
+  {
+    category: 'kozmetika', categoryLabel: 'Kozmetički tretmani',
+    title: 'Preime Dermafacial: Napredna tehnologija za sofisticirano podmlađivanje kože',
+    image: 'assets/images/about.jpg',
+    excerpt: 'U samom vrhu savremene estetske kozmetologije nalazi se Preime Dermafacial tretman, koji kroz kombinaciju naprednih tehnologija postiže sofisticirano...',
+    blocks: [
+      { type:'p', text:'U samom vrhu savremene estetske kozmetologije nalazi se Preime Dermafacial tretman, koji kroz kombinaciju naprednih tehnologija postiže sofisticirano podmlađivanje kože.' },
+      { type:'p', text:'Kombinuje pet različitih tehnologija za dubinsko čišćenje, hidrataciju i regeneraciju kože, a efekat blistavijeg i zategnutijeg tena primetićete već posle prve seanse. Ovaj tretman se odlično kombinuje i sa Venus Glow tretmanom, kada želite dodatni sjaj i hidrataciju kože.' },
+      { type:'h2', text:'Kako izgleda jedan Preime Dermafacial tretman?' },
+      { type:'p', text:'Iako svaki Preime Dermafacial tretman prilagođavamo potrebama vaše kože, on obuhvata pet ključnih tehnologija:' },
+      { type:'list', items:['Aqua B (hidro-mikrodermoabrazija) je prvi korak tretmana, vakuumom izvlači nečistoće iz pora, dok koža istovremeno prima prvu dozu hidratacije i priprema se za sve što sledi.', 'Vibrox nastavlja mehaničkim pilingom koji uklanja mrtve ćelije kože i vidno ujednačava ten.', 'MicroT sonda elektrostimulacijom radi na mišićima lica i vraća im tonus.', 'Collagen+, odnosno radiotalasni lifting koji podstiče kožu da sama proizvodi novi kolagen.', 'UltraB je poslednji korak, ultrazvukom pomaže aktivnim sastojcima da dublje prodru u kožu.'] },
+      { type:'h2', text:'Koji se efekti postižu Preime Dermafacial protokolima?' },
+      { type:'p', text:'Zahvaljujući gore navedenim tehnologijama, svih pet koraka zajedno postiže vidljiv rezultat već posle prve seanse.' },
+      { type:'p', text:'Idealan je izbor kad želite da brzo umanjite bore i postignete glađi, ujednačeniji ten. Nežna eksfolijacija koja je deo tretmana dodatno pomaže kod proširenih pora, viška sebuma i sitnih nepravilnosti poput mitisera.' },
+      { type:'p', text:'Dubinski piling uklanja mrtve ćelije i podstiče obnovu kože, pa se redovnim ponavljanjem tretmana smanjuje i vidljivost hiperpigmentacija, a koža ostaje svežija i sjajnija.' },
+      { type:'p', text:'Zakažite Preime Dermafacial tretman i poklonite svom licu sofisticiranost, sjaj i jedrinu već posle prve posete.' },
+      { type:'p', text:'Pogledajte i ostale tretmane lica i protokole dostupne u našoj ponudi, ili nas pozovite za predlog najbolje kombinacije za vašu kožu.' },
+    ]
+  },
+  {
+    category: 'kozmetika', categoryLabel: 'Kozmetički tretmani',
+    title: 'Venus Glow: Za dubinsko čišćenje i hidrataciju kože',
+    image: 'assets/images/woman-portrait.png',
+    excerpt: 'Ukoliko ste u potrazi za vrhunskim neinvazivnim tretmanom, koji dubinski čisti pore, pospešuje hidrataciju kože lica, te predstavlja odličnu prevenciju...',
+    blocks: [
+      { type:'p', text:'Ukoliko ste u potrazi za vrhunskim neinvazivnim tretmanom, koji dubinski čisti pore, pospešuje hidrataciju kože lica, te predstavlja odličnu prevenciju protiv starenja kože, onda je Venus Glow jedan od protokola koje sebi morate da priuštite.' },
+      { type:'p', text:'Njegova ključna prednost, pored nežnog delovanja na kožu bez iritacija, ogleda se i u tome što se ovaj tretman može maksimalno personalizovati i uklopiti između bilo kog tretmana (biološki, higijenski i dr.) ili bilo kog protokola koji ćete pronaći u našoj ponudi.' },
+      { type:'p', text:'Nakon samo jednog tretmana, vaša koža će izgledati osveženo, odmorno i blistavo.' },
+      { type:'h2', text:'Po čemu se Venus Glow izdvaja od drugih tretmana lica?' },
+      { type:'p', text:'Ukoliko želite da negu svog lica podignete na viši nivo, naš predlog je da se odlučite za jedan od Venus Glow protokola koji, zahvaljujući brzini delovanja, prijatnosti, ali i trenutnim efektima koje pruža, spada među jedan od najpopularnijih beauty tretmana, ne samo u našem konceptu, već i u svetu.' },
+      { type:'p', text:'Deluje poput nežne, ali snažne vodene mikrodermoabrazije, zahvaljujući tečnosti koja se u mlazu ispušta kroz posebnu sondu koja istovremeno pravi vakuum i povlači sadržaj iz pora.' },
+      { type:'p', text:'Tečnost koja se koristi u Venus Glow protokolima može biti obična destilovana voda, kao priprema za ostatak tretmana, ili boda sa posebnim dodacima u vidu ampula sa aktivnim sastojcima, koji potpomažu eksfolijaciju i hidrataciju kože.' },
+      { type:'p', text:'Nakon tretmana na lice se stavlja maska ili ampula, koje su tu da upotpune i „zaključaju“ osvežen i blistav izgled vaše kože.' },
+      { type:'p', text:'Izuzetno je prijatan, ne traje dugo, a rezultati su vidljivi odmah. Ne podrazumeva nikakve restrikcije, već samo adekvatnu negu nakon dolaska, uz upotrebu SPF-a.' },
+      { type:'h2', text:'Kome su namenjeni naši Venus Glow protokoli?' },
+      { type:'p', text:'Kao što je to slučaj sa svim tretmanima lica koje možete pronaći u našoj ponudi, i Venus Glow tretman se maksimalno personalizuje i u potpunosti prilagođava kako vašim, tako i potrebama vaše kože.' },
+      { type:'p', text:'Može se primenjivati gotovo na svakoj koži, bez obzira na tip i godine. Važno je samo da nema većih akutnih upala.' },
+      { type:'p', text:'Ovaj tretman za nijansu može biti prijatniji osobama sa masnom kožom, jer pomaže smanjenju sadržaja koji se zadržava u porama. Stoga dinamiku tretmana određujemo zajedno, u zavisnosti od potreba vaše kože, vaših želja i mogućnosti, ali i od toga koje druge tretmane, pored ovog, primenjujete.' },
+      { type:'p', text:'Odličan je i kao priprema za sve estetske procedure, a ukoliko želite da, osim svom licu, pružite užitak i telu, upotpunite ga presoterapijom za još veće uživanje. Potrebno je samo da nam to naglasite prilikom zakazivanja.' },
+    ]
+  },
+  {
+    category: 'kozmetika', categoryLabel: 'Kozmetički tretmani',
+    title: 'Venus Legacy: Revolucija u zatezanju kože lica',
+    image: 'assets/images/vertical-face.jpg',
+    excerpt: 'Sigurni smo da ste, barem jednom do sada, čuli za benefite Venus Legacy tretmana u nezi lica. Ukoliko niste imali priliku da vidite rezultate koji se njime...',
+    blocks: [
+      { type:'p', text:'Sigurni smo da ste, barem jednom do sada, čuli za benefite Venus Legacy tretmana u nezi lica. Ukoliko niste imali priliku da vidite rezultate koji se njime postižu, zakažite svoj termin i priuštite sebi pravi užitak.' },
+      { type:'p', text:'Rezultati koji se postižu korišćenjem Venus Legacy aparata u nezi lica su:' },
+      { type:'list', items:['Zatezanje i lifting lica, podbratka i vrata,', 'Uklanjanje bora,', 'Uklanjanje podočnjaka.'] },
+      { type:'h2', text:'Kako izgleda jedan Venus Legacy tretman lica?' },
+      { type:'p', text:'Venus Legacy je uređaj sa 4D tehnologijom koji kombinuje:' },
+      { type:'list', items:['Multipolarnu frekvenciju, koja svojom toplotnom energijom dopire do različitih dubina tkiva i podstiče njihovu regeneraciju, stvaranjem mladog kolagena. Koža zahvaljujući ovom koraku postaje vidno zdravija i zategnutija, a bore se smanjuju ili potpuno eliminišu.', 'VariPulse™ tehnologiju sa vakuumima četvorostepene jačine koji stimulišu limfotok i krvotok. Zahvaljujući njima, vidno se poboljšava tonus tkiva i kože lica.', 'Pulsirajuća elektromagnetna polja omogućavaju regeneraciju i poboljšavaju tekturu i izgled kože.', 'Real Time Thermal Feedback. Na monitoru aparata se, u realnom vremenu, prati rast temperature tretirane regije i vremena provedenog na njoj, čime se postiže maksimalna bezbednost tretmana.'] },
+      { type:'p', text:'Pored toga što je maksimalno bezbedan, ovaj tretman je potpuno bezbolan i izuzetno prijatan. Tretirana regija premazuje se specijalnim 3D glicerinom koji omogućava neometano klizanje sonde po površini kože. Zbog toga tretman podseća na blagu masažu i može trajati od 30 do 60 minuta.' },
+      { type:'p', text:'Dobro je da znate da ne morate posebno pripremati kožu za ovaj tretman. Potrebno je da lice bude čisto, bez nanete šminke ili krema. Ovaj tretman takođe ne iziskuje oporavak, pa se nakon njega bez bojazni možete vratiti svakodnevnim obavezama.' },
+      { type:'h2', text:'Kojim brojem Venus Legacy tretmana se postižu najbolji rezultati?' },
+      { type:'p', text:'Broj tretmana se individualno određuje i prilagođava potrebama vaše kože.' },
+      { type:'p', text:'Na licu se, u proseku, radi do 6 tretmana, u vremenskom razmaku od 7 do 21 dana.' },
+      { type:'p', text:'Iako pun efekat nije vidljiv nakon prvog dolaska, sigurno ćete primetiti poboljšanje kvaliteta kože. Svaki naredni tretman daće nove rezulate, a pun efekat Venus Legacy tretmana biće vidljiv na kraju svih dogovorenih serija.' },
+      { type:'h2', text:'Kome su namenjeni Venus Legacy tretmani?' },
+      { type:'p', text:'Venus Legacy tretmani namenjeni su svima koji žele da na potpuno neinvazivan i, pre svega, bezbolan način zategnu kožu lica. Koža je nakon njih ponovo čvrsta i zategnuta, a bore i podočnjaci manje vidljivi.' },
+      { type:'p', text:'Pristup je, kao i kod svih naših tretmana lica, u potpunosti prilagođen vašoj koži i njenim potrebama, pa se tretira regija koja je na vašem licu najproblematičnija.' },
+      { type:'p', text:'Ne zaboravite da se, pored tretmana lica, možete odlučiti i za Venus Legacy tretman za telo, i uživati u maksimalnim benefitima ovih tretmana za celo telo.' },
+      { type:'p', text:'Pozovite nas i zakažite svoj termin. Čekamo vas!' },
+    ]
+  },
+  {
+    category: 'telo', categoryLabel: 'Telo',
+    title: 'AWT (Acoustic Wave Therapy) Storz tretman za telo',
+    image: 'assets/images/vertical-body.jpg',
+    excerpt: 'AWT, odnosno Acoustic Wave Therapy ili Shockwave Storz tretman, neinvazivna je švajcarska metoda koja koristi zvučne (akustične) talase frekvencije do 5...',
+    blocks: [
+      { type:'p', text:'AWT, odnosno Acoustic Wave Therapy ili Shockwave Storz tretman, neinvazivna je švajcarska metoda koja koristi zvučne (akustične) talase frekvencije do 5 bara, kako bi poboljšala cirkulaciju krvi, čime se ubrzava metabolizam i podstiče prirodna regeneracija tkiva. Ovo je proverena metoda za razbijanje celulita, topljenje masnih naslaga i zatezanje kože. Zahvaljujući dokazanim kliničkim studijama, ovaj tretman smatra se standardom u borbi protiv upornog celulita.' },
+      { type:'h2', text:'Kako funkcioniše AWT Storz aparat?' },
+      { type:'p', text:'AWT aparat patentirala je kompanija Storz Medical. Radi na principu slanja radijalnih udarnih talasa duboko u tkivo, delujući na nekoliko nivoa:' },
+      { type:'list', items:['Ubrzava mikrocirkulaciju i limfnu drenažu,', 'Razbija masne ćelije i podstiče njihovo izbacivanje iz organizma,', 'Stimuliše proizvodnju kolagena, čineći kožu čvršćom i glatkijom.'] },
+      { type:'p', text:'AWT ili Shockwave terapija cilja masne naslage koje uzrokuju celulit. Visokoenergetski talasi prodiru duboko u tkivo, podstičući razgradnju masnih naslaga, čime se olakšava njihovo uklanjanje iz tela.' },
+      { type:'p', text:'Povećava se i cirkulacija krvi, odnosno protok krvi, čime se ubrzava metabolizam ćelija, što za rezultat ima brže uklanjanje masnih naslaga i vode iz tela.' },
+      { type:'p', text:'Podsticanje proizvodnje kolagena rezultira poboljšanjem strukture kože i smanjenju vidljivosti celulita.' },
+      { type:'p', text:'Tretman se izvodi ultrazvučnom sondom i pruža osećaj blage masaže. Sondom se mogu tretirati stomak, butine, zadnjica, ruke i leđa, dok jedna sesija traje između 30 i 60 minuta.' },
+      { type:'p', text:'Za tretman nije potrebna priprema, niti je nakon tretmana potreban oporavak. Prvi rezultati vidljivi su već nakon nekoliko tretmana, ali je za postizanje prvih rezultata preporučena serija od 5 do 10 tretmana, često u kombinaciji sa limfnom drenažom.' },
+      { type:'h2', text:'Kome su namenjeni AWT Storz tretmani?' },
+      { type:'p', text:'Ovaj tretman namenjen je svima koji imaju manji ili veći problem sa celulitom ili višak nagomilane vode na određenim regijama tela.' },
+      { type:'p', text:'Ne preporučuje se trudnicama, osobama sa hemofilijom i kardiovaskularnim oboljenjima, proširenim venama i osobama koje imaju istoriju malignih oboljenja.' },
+      { type:'p', text:'Dozvoljen je za korišćenje u periodu dojenja.' },
+      { type:'p', text:'AWT Storz tretman može se izvoditi dva puta nedeljno, dok se, u zavisnosti od potreba vašeg tela, on kombinuje (što se često i preporučuje) sa presoterapijom i Venus Legacy tretmanom.' },
+      { type:'p', text:'Pogledajte naš cenovnik i zakažite svoj termin danas.' },
+    ]
+  },
+  {
+    category: 'telo', categoryLabel: 'Telo',
+    title: 'Med Contour tretman za oblikovanje tela',
+    image: 'assets/images/vertical-laser.jpg',
+    excerpt: 'Med Contour je neinvazivni tretman za oblikovanje tela, redukciju celulita i zatezanje kože. Kombinuje ultrazvuk i radiofrekvenciju kako bi potpuno bezbolno...',
+    blocks: [
+      { type:'p', text:'Med Contour je neinvazivni tretman za oblikovanje tela, redukciju celulita i zatezanje kože. Kombinuje ultrazvuk i radiofrekvenciju kako bi potpuno bezbolno i bezbedno „razbio“ masne naslage i oslobodio ih iz tela bez bilo kakvih estetskih zahvata.' },
+      { type:'h2', text:'Kakvi se efekti postižu Med Contour tretmanom?' },
+      { type:'p', text:'Med Contour aparat sadrži specijalnu ultrazvučnu sondu koja cilja određenu dubinu i razbija opnu masnog tkiva. Time se deluje na vezivno tkivo i efikasno zaglađuje tvrdokorni celulit.' },
+      { type:'p', text:'Nakon ultrazvuka, vakuumskom drenažom oslobođene masnoće brže se izbacuju iz organizma, pa su rezultati vidljivi već nakon prvog tretmana. Tonus i izgled kože su znatno poboljšani, lokalizovane masne naslage su smanjene, čime se smanjuje i ponovna pojava celulita.' },
+      { type:'p', text:'Još jedna velika prednost ovog aparata upravo je radiofrekvencija, koja stimuliše proizvodnju kolagena i sprečava opuštanje kože nakon gubitka obima.' },
+      { type:'p', text:'Pristup Med Contour tretmanu u potpunosti se prilagođava vama, pa dubinu na kojoj radimo određujemo u zavisnosti od količine masnog tkiva i u odnosu na to podešavamo modulaciju frekvence ultrazvuka. Ovakav pristup omogućava da se tretman prilagodi različitim regijama vašeg tela.' },
+      { type:'p', text:'Najčešćše se tretiraju stomak, bokovi, zadnjica, butine, leđa, kolena i nadlaktice.' },
+      { type:'h2', text:'Koje su glavne prednosti Med Contour tretmana?' },
+      { type:'p', text:'Ovaj tretman je, baš kao i Venus Legacy, potpuno bezbedan i bezbolan. Klijenti koji su imali prilike da ga isprobaju kažu da su imali utisak kao da su došli na masažu toplim kamenjem.' },
+      { type:'p', text:'S obzirom na to da je potpuno neinvazivan, on ne zahteva anesteziju, a samim tim ni vreme oporavka. Obično se preporučuje serija od 5 do 10 tretmana, što zavisi od potreba vašeg tela.' },
+      { type:'p', text:'Za najbolje dugoročne rezultate, uz tretman se preporučuje umerena fizička aktivnost, kao i adekvatan unos vode kako bi se lakše izbacili toksini i masti.' },
+      { type:'p', text:'Pozovite nas ili nam pišite i zakažite svoj termin. Čekamo vas!' },
+    ]
+  },
+  {
+    category: 'telo', categoryLabel: 'Telo',
+    title: 'Tretmani tela za opuštanje i negu',
+    image: 'assets/images/vertical-body.jpg',
+    excerpt: 'Pored klasičnih masaža lica i tela, nudimo vam čitav niz targetiranih tretmana koji su tu da vam pomognu u smanjenju i korigovanju konkretnih nesavršenosti.',
+    blocks: [
+      { type:'p', text:'Pored klasičnih masaža lica i tela, nudimo vam čitav niz targetiranih tretmana koji su tu da vam pomognu u smanjenju i korigovanju konkretnih nesavršenosti.' },
+      { type:'p', text:'Mogu se kombinovati sa aparaturnim tretmanima, injekcionim procedurama ili samostalno primenjivati (kao pojedinačni ili u seriji tretmana). U zavisnosti od vaših potreba, pravi se protokol osmišljen isključivo za vaše telo, a ono što je svakom od njih zajedničko jesu eksfolijacija (piling), hidratacija i ciljana nega (koja obuhvata bustere i pakovanja) sa masažom i presoterapijom.' },
+      { type:'h2', text:'Koje ciljane tretmane tela (za opuštanje i negu) možete pronaći u našoj ponudi?' },
+      { type:'p', text:'Naš stručan beauty tim za vas je osmislio pet osnovnih ciljanih tretmana koji vam se preporučuju u zavisnosti od problematike koju želite da tretirate i potreba vaše kože.' },
+      { type:'h2', text:'Anticelulit tretmani' },
+      { type:'p', text:'Kao što im ime kaže, pomažu u lečenju celulita, čineću kožu jedrijom i glatkijom.' },
+      { type:'p', text:'Kombinuju piling, kao pripremu kože za aktivne sastojke iz bustera i pakovanja, sa anticelulit masažom. Za pun efekat, najčešće se kombinuju sa aparaturnim tretmanima, poput Venus Legacy-ja i presoterapije, a mogu se raditi i samostalno u seriji od 10 tretmana.' },
+      { type:'h2', text:'Tretman za zatezanje kože' },
+      { type:'p', text:'Ovo je protokol koji obuhvata hemijski piling, koncentrat, pakovanje i lifting masažu.' },
+      { type:'p', text:'Preporučuje se osobama koje žele da pospeše jedrinu i čvrstinu kože tela, koje su u procesu mršavljenja, kao i nakon porođaja ili u procesu gubitka kilograma. Odlične rezultate daju i u kombinaciji sa Venus Legacy tretmanima za zatezanje kože.' },
+      { type:'h2', text:'Tretman za smanjenje celulita i oblikovanje tela' },
+      { type:'p', text:'Ovaj tretman obuhvata piling, drenažne soli, koncentrat, masažu i bandažere koji pružaju dodatnu pomoć u procesu lečenja celulita i vršenju drenaže, zahvaljujući ravnomernom pritisku koji vrše od stopala ka srcu.' },
+      { type:'p', text:'Iako je procedura manje-više slična, pristup svakom tretmanu je maksimalno individualan, pa se može razlikovati masaža tela koja se primenjuje, kao i odabir preparata ili kombinacije preparata, uz dinamiku sprovođenja. Uz ovaj tretman neretko se preporučuje i kombinacija sa drugim komplementarnim tretmanima.' },
+      { type:'h2', text:'Kick Start Diet tretman' },
+      { type:'p', text:'Ukoliko želite da se osećate dobro u svom telu i da krenete putem zdravijih životnih navika, a potreban vam je boost koji će vam pružiti instant osećaj lakoće, uz podsticanje drenaže, ovo je tretman koji je baš za vas.' },
+      { type:'p', text:'Kick Start Diet kombinuje suvo četkanje i specijalne drenažne bustere sa presoterapijom, koja dodatno podstiče limfnu drenažu i ubrzava cirkulaciju. Dok traje presoterapija, uživaćete u masaži gornjeg dela tela.' },
+      { type:'h2', text:'Loose Goose tretman' },
+      { type:'p', text:'Namenjen je lečenju tzv. guščje kože i upala koje su nastale kao posledica urastanja dlačica ili zadebljanja kože na određenim delovima tela. Kombinuje dve vrste pilinga i neutrališući losion koji, u sinergiji, uklanjaju višak mrtvih ćelija, čineći kožu glatkijom, potpomažu njeno pročišćavanje i sprečavanje nastavka problema.' },
+      { type:'h2', text:'Silky Smooth tretman' },
+      { type:'p', text:'Silky Smooth spada u tretmane za opuštanje i negu kože. Idealan je za oporavak kože nakon letovanja (ili kao priprema za novu sezonu), opuštanje i dubinsku negu.' },
+      { type:'p', text:'Kombinuje piling, pakovanje i masažu, a posebno se preporučuje između laserskih epilacija, posebno kod osoba koje su imale problem sa urastanjem dlačica.' },
+      { type:'h2', text:'Fall in Relaxation tretman' },
+      { type:'p', text:'Namenjen je za opuštanje celog tela, jer pored pilinga i dubinskog pakovanja, uz dodatak zlatne folije, podrazumeva i masažu lica i celog tela.' },
+      { type:'p', text:'Da li već imate svoje favorite? Pozovite nas i zakažite svoj termin.' },
+    ]
+  },
+  {
+    category: 'telo', categoryLabel: 'Telo',
+    title: 'ProBallancer presoterapija: Aparaturna limfna drenaža',
+    image: 'assets/images/vertical-laser.jpg',
+    excerpt: 'Presoterapija predstavlja standardizovanu, najbržu i najkomforniju opciju limfne drenaže, koja pomaže izbacivanje toksina i viška tečnosti, razgradnju...',
+    blocks: [
+      { type:'p', text:'Presoterapija predstavlja standardizovanu, najbržu i najkomforniju opciju limfne drenaže, koja pomaže izbacivanje toksina i viška tečnosti, razgradnju masnih ćelija i razmenu materija u organizmu.' },
+      { type:'p', text:'Ova metoda otvara limfne čvorove i pospešuje pokretanje limfe, čime se ubrzava metabolizam i dovodi do smanjenja stvaranja masnih naslaga. Njena velika prednost ogleda se u tome što se može kombinovati sa svim tretmanima tela.' },
+      { type:'h2', text:'Kako izgleda jedan tretman presoterapije?' },
+      { type:'p', text:'Pre samog tretmana, oblače se papirne pantalone, a nakon njih i odelo za presoterapiju koje prijanja uz telo.' },
+      { type:'p', text:'Pristup tretmanu je u potpunosti prilagođen vama, pa se u zavisnosti od potreba vašeg tela bira odgovarajući program. Pantalone vrše lagan i ravnomeran pritisak na obe noge i stomak, kako bi se pokrenuo limfni sistem i pospešila eliminacija toksina iz organizma.' },
+      { type:'h2', text:'Koji se efekti postižu presoterapijom?' },
+      { type:'p', text:'Pored toga što pruža momentalan osećaj lakoće u nogama, presoterapija utiče na izbacivanje tečnosti iz organizma. Njen efekat se odmah primećuje, jer završetak ovog tretmana prati učestalo mokrenje, smanjenje otoka i osećaja težine.' },
+      { type:'p', text:'Pored toga što uklanja osećaj težine u nogama, presoterapija ubrzava metabolizam, pomaže mršavljenje, ali i održavanje željene telesne težine.' },
+      { type:'h2', text:'Kome je presoterapija namenjena?' },
+      { type:'p', text:'Presoterapija ProBallancer aparatom spada u tretmane koji su namenjeni gotovo svakoj osobi. Posebno je pogodna za ljude koji mnogo sede ili stoje, te imaju problema sa zadržavanjem viška tečnosti.' },
+      { type:'p', text:'Ovaj tretman odličan je izbor i ukoliko se nalazite u procesu mršavljenja, a zahvaljujući posebnim programima koje pruža ProBallancer aparat, u njemu mogu uživati i trudnice, ali i mame koje su se skoro porodile i doje, jer je potpuno bezbedan.' },
+      { type:'h2', text:'Sa kojim tretmanima se može kombinovati ovaj tretman?' },
+      { type:'p', text:'Presoterapiju možete kombinovati sa svim tretmanima lica, a odlična je u kombinaciji i sa svim tretmanima tela.' },
+      { type:'p', text:'Odlične rezultate pokazala je u kombinaciji sa Venus Legacy-jem, a sjajno se kombinuje i sa mezoterapijom tela.' },
+      { type:'p', text:'Ako niste sigurni koja je kombinacija najbolja za vas, naš stručan tim je tu da vam pomogne. Pozovite nas i zakažite svoj termin, a mi ćemo za vas pripremiti protokol pisan prema vama i prilagoditi ga vašim potrebama i mogućnostima.' },
+    ]
+  },
+  {
+    category: 'telo', categoryLabel: 'Telo',
+    title: 'Venus Legacy tretmani: Za preoblikovanje i zatezanje tela',
+    image: 'assets/images/vertical-body.jpg',
+    excerpt: 'Venus Legacy aparat predstavlja jedan od najpopularnijih, a svakako najboljih rešenja za neinvazivno preoblikovanje i zatezanje kože. Pored toga što pomaže...',
+    blocks: [
+      { type:'p', text:'Venus Legacy aparat predstavlja jedan od najpopularnijih, a svakako najboljih rešenja za neinvazivno preoblikovanje i zatezanje kože. Pored toga što pomaže u lečenju celulita, koristi se i za anti-aging tretmane lica, vrata i dekoltea.' },
+      { type:'p', text:'Tretmani su potpuno neinvazivni, dok se aparat može koristiti i na regijama koje su često zapostavljene – u predelu oko očiju, na vratu i šakama – zbog čega je omiljen među milionima pacijenata širom sveta.' },
+      { type:'p', text:'Još jedna njegova prednost jeste maksimalno prilagođavanje tretmana, kao i mogućnost kombinovanja sa brojnim drugim tretmanima, za postizanje maksimalnih rezultata.' },
+      { type:'h2', text:'Po kom principu funkcioniše Venus Legacy aparat?' },
+      { type:'p', text:'Venus Legacy je aparat koji sadrži nekoliko tehnologija.' },
+      { type:'p', text:'Multipolarna frekvencija toplotnom energijom (tj. podizanjem temperature) dopire do različitih dubina tkiva i podstiče njihovu prirodnu regeneraciju, stvarajući novi kolagen. Njegovim sazrevanjem dobija se zdravija, zategnutija koža bolje teksture, uz smanjeni obim i eliminisani celulit.' },
+      { type:'p', text:'VariPulse tehnologija zahvaljujući vakuumu četvorostepene jačine prodire u dublje slojeve, stimulišući limfotok i krvotok, čime se podiže tonus kože i tkiva.' },
+      { type:'p', text:'Pulsirajuća elektromagnetna polja regenerišu kožu, poboljšavajući njenu teksturu i izgled.' },
+      { type:'p', text:'Real Time Thermal Feedback ono je što ovaj aparat čini bezbednim. Zahvaljujući ovoj mogućnosti, aparat se maksimalno prilagođava potrebama i reakcijama tkiva svakog pacijenta, dok se na monitoru prati podizanje temperature tretirane regije i vreme provedeno u „radnoj temperaturi“. Na taj način se, u svakom trenutku, prilagođava tok tretmana i postižu maksimalni rezultati.' },
+      { type:'h2', text:'Kakvi se rezultati postižu Venus Legacy tretmanom?' },
+      { type:'p', text:'Kao i kod svih drugih tretmana tela u našem Beauty Concept-u, i Venus Legacy tretmani podrazumevaju pristup skrojen prema potrebama svakog pacijenta.' },
+      { type:'p', text:'Iako svaka osoba drugačije reaguje na tretman, svi klijenti rekli su nam da im već nakon prvog tretmana koža deluje jedrije i svežije, i da osećaju da je zategnutija. Stoga su prvi rezultati vidljivi već nakon prvog tretmana, ali se za potpun efekat preporučuje serija od 6 tretmana.' },
+      { type:'p', text:'Oporavka nakon ovog tretmana nema. On je potpuno bezbolan i bezbedan, veoma prijatan i osećaćete se kao da se nalazite na masaži.' },
+      { type:'p', text:'Aparatom se mogu tretirati sve regije u svrhu preoblikovanja, zatezanja i lečenja celulita. Još jedna njegova velika prednost ogleda se u smanjenju vidljivosti strija, a može se uspešno koristiti i za podmlađivanje šaka.' },
+      { type:'h2', text:'Kada je pravo vreme za Venus Legacy tretman?' },
+      { type:'p', text:'Iako Venus Legacy tretman može da se primenjuje tokom cele godine, naše iskustvo pokazuje da proleće najčešće podstakne većinu na preduzimanje konkretne akcije, barem kada je u pitanju telo.' },
+      { type:'p', text:'Proleće je idealno doba za seriju Venus Legacy tretmana i zbog toga što mogu biti odlična priprema za leto, nakon čega je dovoljno da svoju figuru održavate tokom godine.' },
+      { type:'p', text:'Ukoliko prvi put radite ovaj tretman, za vas smo kreirali poseban, instant paket koji će vas uveriti u efikasnost i rezultate koji se njime postižu.' },
+      { type:'h2', text:'Sa kojim tretmanima je moguće kombinovati Venus Legacy?' },
+      { type:'p', text:'Presoterapija je uvek odličan izbor za kombinovanje sa Venus Legacy tretmanom. Ona se primenjuje na samom početku, kako bi se pokrenula cirkulacija, limfna drenaža i dodatno pospešio efekat Legacy-ja.' },
+      { type:'p', text:'Nakon toga slede busteri i specijalna pakovanja koji su podrška učvršćivanju, preoblikovanju tela ili borbi sa celulitom.' },
+      { type:'p', text:'Venus Legacy spada u tretmane koji nikoga ne ostavljaju ravnodušnim, i kada je u pitanju efekat, ali i kada je u pitanju najbrži i najefikasniji način da rešite nekoliko beauty problema u isto vreme.' },
+      { type:'p', text:'Pozovite nas i zakažite svoj termin danas.' },
+    ]
+  },
+  {
+    category: 'telo', categoryLabel: 'Telo',
+    title: 'Bezbolna i bezbedna: Laserska epilacija Venus Velocity aparatom',
+    image: 'assets/images/vertical-laser.jpg',
+    excerpt: 'Laserska epilacija jedan je od najtraženijih tretmana tela na svetu, naročito poslednjih godina, jer sa sobom nosi čitav niz prednosti:',
+    blocks: [
+      { type:'p', text:'Laserska epilacija jedan je od najtraženijih tretmana tela na svetu, naročito poslednjih godina, jer sa sobom nosi čitav niz prednosti:' },
+      { type:'list', items:['skraćuje vreme spremanja jer nema stalnog uklanjanja dlačica,', 'smanjuje troškove depilacije i kupovine novih brijača i pruža slobodu da ne razmišljate kada je vreme za narednu depilaciju,', 'pomaže da se zauvek rešite bolnog urastanja dlačica i nastanka iritacija, podliva i fleka koji su često posledica ovog procesa.'] },
+      { type:'p', text:'Ako tome dodate da je potpuno bezbedna i bezbolna i da je dovoljno samo nekoliko tretmana da se brzo i efikasno rešite neželjenih dlačica sa svih regija na kojima vam smetaju, onda znate zašto ovaj tretman treba da bude vaša naredna „investicija“.' },
+      { type:'h2', text:'Kako izgleda priprema i tretman laserske epilacije Venus Velocity aparatom?' },
+      { type:'p', text:'Da biste kožu pripremili za tretman laserske epilacije, potrebno je da se uzdržite depiliranja ili čupanja dlačica 6 nedelja pre tretmana.' },
+      { type:'p', text:'Tokom tog perioda dozvoljeno je i, čak poželjno, brijanje, koje se radi i uoči tretmana kako bi koža bila potpuno glatka i spremna za delovanje lasera.' },
+      { type:'p', text:'Pre početka tretmana, popunjava se upitnik sa nizom pitanja koja nam pomažu da utvrdimo da li postoji bilo kakva zdravstvena prepreka za ovu proceduru.' },
+      { type:'p', text:'Osim zdravstvenih, od vas ćemo zatražiti i neke osnovne informacije, koje nam pomažu u kreiranju idealnog, prilagođenog pristupa u skladu sa vašim potrebama.' },
+      { type:'p', text:'Ukoliko ne postoji nijedna zdravstvena prepreka, prvi naredni korak jeste iscrtavanje polja, kako bi se osiguralo da se Venus Velocity laserom pređu svi problematični delovi, ali i kako bi se, jedan po jedan, zaštitili mladeži od delovanja lasera.' },
+      { type:'p', text:'Tek kada se svi pripremni koraci ispune, može se pristupiti laserskoj epilaciji koja podrazumeva duge i ravnomerne pokrete laserom po označenoj regiji. Taj pokret može trajati od nekoliko sekundi do nekoliko desetina sekundi po regiji.' },
+      { type:'p', text:'Bezbednost nam je veoma važna, pa je tokom tretmana obavezno nošenje zaštitnih naočara koje dobijate pre epilacije.' },
+      { type:'h2', text:'Da li je tretman bolan i da li je bezbedan?' },
+      { type:'p', text:'Tretman nije bolan, ali možete osetiti blagu toplotu ili blago peckanje na tretiranoj regiji. Naše klijentkinje često tokom tretmana piju kafu ili odgovaraju na mejlove.' },
+      { type:'p', text:'Takođe, ukoliko ne postoji zdravstvena prepreka i ukoliko tretman obavlja stručna osoba koristeći bezbedan medicinski laser – on je potpuno bezbedan.' },
+      { type:'p', text:'Iz navedenih razloga, naš izbor za ovu proceduru bio je Venus Velocity laser, koji je odobren od strane svih institucija, uključujući i FDA.' },
+      { type:'p', text:'Laser radi u dva moda – slide i stamp, što omogućava brzo i efikasno rešavanje problema sa dlačicama, kroz individualan pristup svakom pacijentu u skladu sa regijom i potrebama.' },
+      { type:'p', text:'Laser prepoznaje različite potrebe kože (ton, boju dlačica, debljina, gustina) i maksimalno im se prilagođava, dok zahvaljujući sondama različitih veličina možemo bolje pristupiti različitim regijama.' },
+      { type:'h2', text:'Koliko traje, kome je namenjen i koliko se često radi laserska epilacija?' },
+      { type:'p', text:'Tretman koji podrazumeva aktivan rad laserom traje od 30 do 45 minuta. Preostalo vreme izdvaja se za zaštitu kože i nanošenje ili skidanje gela.' },
+      { type:'p', text:'Tretman laserske epilacije radi se na 8 nedelja, dok se vreme između tretmana određuje na osnovu individualnih potreba i dinamike rasta dlačica.' },
+      { type:'p', text:'Lasersku epilaciju mogu raditi svi – i muškarci i žene – ukoliko im njihovo zdravstveno stanje to dozvoljava. Muškarci se često odlučuju za lasersko uklanjanje dlačica sa leđa i stomaka, jer su to regije koje su najsklonije iritacijama, posebno u letnjem periodu, mada ne retko tretiraju i ramena.' },
+      { type:'p', text:'Samim tim, laserska epilacija ima određene kontraindikacije. Ne radi se u slučaju stanja i bolesti koji zahtevaju poseban oprez i konsultaciju sa lekarom.' },
+      { type:'p', text:'U apsolutne kontraindikacije spadaju karcinom kože ili istorija ovog karcinoma, akutni upalni procesi, trudnoća i dojenje, kao i određena neurološka oboljenja.' },
+      { type:'p', text:'U relativne kontraindikacije spadaju korišćenje određenih lekova ili biljaka kao dodatka ishrani i blaži problemi sa hormonima, koji mogu dati nestabilne rezultate.' },
+      { type:'p', text:'S obzirom na to da i mlađa populacija sve češće želi da reši probleme sa dlačicama, uslov je da osoba koja se odluči na ovaj tretman tela ima stabilan hormonski status i ciklus, kako bi se u konsultaciji sa lekarom napravio plan.' },
+      { type:'p', text:'Zbog svega navedenog popunjavanje upitnika pre tretmana je obavezno i od ovog koraka se ne odstupa!' },
+      { type:'h2', text:'Koje je idealno vreme za lasersku epilaciju i koliko je tretmana potrebno za postizanje rezultata?' },
+      { type:'p', text:'Rezultati laserke epilacije mogu varirati od osobe do osobe, ali je 6 tretmana optimum za rešavanje problema sa dlačicama. Zanimljivo je da je većina naših klijenata već nakon prvog tretmana primetila promenu u brzini rasta dlačica, koje nakon tretmana sporije rastu.' },
+      { type:'p', text:'Kada je reč o godišnjem dobu, zahvaljujući Venus Velocity aparatu, nema posebnih prepreka sve dok se poštuju sve preporuke.' },
+      { type:'p', text:'Mnogo je ljudi kojima je laserska epilacija promenila i umnogome olakšala život. Zbog toga je ovaj tretman naša preporuka za sve ljude koji žele da se reše upornih dlačica.' },
+      { type:'p', text:'Pozovite nas ili nam pišite i zakažite svoj termin.' },
+    ]
+  },
+];
+const BLOG_CATEGORIES = [
+  { key:'sve', label:'Sve tekstove' },
+  { key:'dermatologija', label:'Dermatologija' },
+  { key:'estetske', label:'Estetske procedure' },
+  { key:'kozmetika', label:'Kozmetički tretmani' },
+  { key:'telo', label:'Telo' }
+];
+
+function esc(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function formatBody(text){ return esc(text).replace(/_{4,}/g, m => '<span class="tbd">' + m + '</span>'); }
+
+/* ============================================================
+   TAGOVI — isti princip i ista lista pravila kao u index.html
+   (cenovnik), samo primenjena na blog tekstove. Vidi napomenu u
+   index.html uz TAG_RULES za uputstvo kako se dodaje novi tag.
+   ============================================================ */
+const TAG_RULES = [
+  { tag:"#akne", match:["akne","masna koža","masne kože","masnoć","pore"] },
+  { tag:"#antiaging", match:["anti-aging","anti aging","starenj","podmlađ","kolagen","retinol","bora","bore"] },
+  { tag:"#lifting", match:["lifting","zatezanj","zategn"] },
+  { tag:"#hidratacija", match:["hidrataci","hidrira","dehidr"] },
+  { tag:"#glow", match:["glow","sjaj","blista","osvež"] },
+  { tag:"#pilinzi", match:["piling","pilinz","eksfolijaci"] },
+  { tag:"#dermapen", match:["dermapen","mikroiglic"] },
+  { tag:"#botoks", match:["botoks","botox","botulin"] },
+  { tag:"#hijaluron", match:["hijaluron","filer"] },
+  { tag:"#biorevitalizacija", match:["biorevital","skin booster","skinbooster","mezoporacij","profhilo","jalupro","lola","ejal","radiesse","harmonica","aesplla"] },
+  { tag:"#mezoterapija", match:["mezoterapij"] },
+  { tag:"#lifting-niti", match:["niti"] },
+  { tag:"#laserska-epilacija", match:["laserska epilacij","epilacij","dlačic","nausnice","brada","pazuh","prepone"] },
+  { tag:"#dermatologija", match:["dermato","dermoskopij","mladež","candela","radiotalas","nd:yag","kapilar"] },
+  { tag:"#pigmentacije", match:["pigmentacij","pega"] },
+  { tag:"#ozbiljci", match:["ožiljc","ožiljak"] },
+  { tag:"#celulit", match:["celulit","awt","med contour"] },
+  { tag:"#telo", match:["tela","telo","stomak","butine","zadnjic"] },
+  { tag:"#lice", match:["lica","lice","obraz"] },
+  { tag:"#dekolte", match:["dekolte","vrat"] },
+  { tag:"#kosa", match:["kos","skalp","teme","alopecij"] },
+  { tag:"#trudnoca", match:["trudnic","trudnoć","porođaj","mam"] },
+  { tag:"#osetljiva-koza", match:["osetljiv"] },
+  { tag:"#masaza", match:["masaž"] },
+  { tag:"#drenaza", match:["drenaž","presoterapij","proballancer"] },
+  { tag:"#venus-legacy", match:["venus legacy"] },
+  { tag:"#venus-glow", match:["venus glow","dermafacial"] },
+  { tag:"#myolift", match:["myolift","mikrostruj"] },
+  { tag:"#podocnjaci", match:["podočnjac"] },
+  { tag:"#usne", match:["usn"] },
+  { tag:"#vencanje", match:["venčanj","wedding"] },
+  { tag:"#detoks", match:["detoks"] },
+  { tag:"#prp", match:["prp","plazm"] },
+  { tag:"#infuzije", match:["infuzij","boost","hydromix","hangover","imuno"] },
+];
+function deriveTags(text){
+  const lower = (text || "").toLowerCase();
+  const tags = [];
+  TAG_RULES.forEach(r => { if (r.match.some(m => lower.includes(m))) tags.push(r.tag); });
+  return tags;
+}
+function postFullText(post){
+  const bodyText = post.blocks.map(b => b.type === "list" ? b.items.join(" ") : (b.text || "")).join(" ");
+  return post.title + " " + post.excerpt + " " + bodyText;
+}
+
+/* ============================================================
+   PRETRAGA — pretraga SAMO blog tekstova (lokalni podaci).
+   Pretraga cenovnika/ponuda živi isključivo na index.html —
+   ova stranica namerno ne pretražuje tretmane. Vidi izmene.txt
+   III.18.
+   ------------------------------------------------------------
+   KAKO RUČNO IZMENITI:
+   - SEARCH_SYNONYMS — isti princip i ista lista kao u index.html.
+   ============================================================ */
+
+const SEARCH_SYNONYMS = {
+  "glass skin": ["#glow","#hidratacija"],
+  "clear skin": ["#akne"],
+  "čista koža": ["#akne"],
+  "cista koza": ["#akne"],
+  "lečenje akni": ["#akne"],
+  "lecenje akni": ["#akne"],
+  "bore": ["#antiaging"],
+  "podmlađivanje": ["#antiaging"],
+  "dlačice": ["#laserska-epilacija"],
+  "trajno uklanjanje dlačica": ["#laserska-epilacija"],
+};
+function synonymTags(q){
+  const extra = [];
+  Object.keys(SEARCH_SYNONYMS).forEach(syn => { if (q.includes(syn)) extra.push(...SEARCH_SYNONYMS[syn]); });
+  return extra;
+}
+function scoreMatch(haystack, q, extraTags, itemTags){
+  let score = 0;
+  const h = (haystack || "").toLowerCase();
+  if (h.includes(q)) score += 5;
+  (itemTags || []).forEach(t => {
+    if (extraTags.includes(t)) score += 4;
+    if (t.replace("#","").includes(q)) score += 3;
+  });
+  return score;
+}
+function performSearch(query){
+  const q = query.trim().toLowerCase();
+  if (q.length < 2) return [];
+  const extraTags = synonymTags(q);
+  const results = [];
+  blogPosts.forEach((post, i) => {
+    const tags = deriveTags(postFullText(post));
+    const score = scoreMatch(post.title + " " + post.excerpt, q, extraTags, tags);
+    if (score > 0) results.push({ type:"text", name:post.title, meta:post.categoryLabel, score, postIndex:i });
+  });
+  return results.sort((a,b) => b.score - a.score).slice(0,10);
+}
+
+let activeBlogCategory = 'sve';
+let currentFilteredPosts = blogPosts.slice();
+let currentPostIndex = -1;
+
+function filteredPosts(){
+  return activeBlogCategory === 'sve' ? blogPosts : blogPosts.filter(p => p.category === activeBlogCategory);
+}
+
+function renderBlogTabs(){
+  const el = document.getElementById("blog-tabs");
+  el.innerHTML = BLOG_CATEGORIES.map(c => {
+    const count = c.key === 'sve' ? blogPosts.length : blogPosts.filter(p => p.category === c.key).length;
+    return `
+      <button class="tab-btn ${activeBlogCategory === c.key ? 'active' : ''}" data-cat="${c.key}">
+        <span class="dot"></span>${esc(c.label)} <span style="opacity:.55;">(${count})</span>
+      </button>
+    `;
+  }).join("");
+  el.querySelectorAll(".tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      activeBlogCategory = btn.dataset.cat;
+      renderBlogTabs();
+      renderBlogGrid();
+    });
+  });
+}
+
+function renderBlogGrid(){
+  const el = document.getElementById("blog-grid");
+  currentFilteredPosts = filteredPosts();
+  if (currentFilteredPosts.length === 0) {
+    el.innerHTML = `<div class="blog-empty">Nema tekstova u ovoj kategoriji.</div>`;
+    return;
+  }
+  el.innerHTML = currentFilteredPosts.map((post, i) => `
+    <button class="post-card reveal" data-index="${i}">
+      <div class="post-card-img">
+        <img src="${post.image}" alt="${esc(post.title)}">
+        <span class="post-card-cat">${esc(post.categoryLabel)}</span>
+      </div>
+      <div class="post-card-body">
+        <h3 class="post-card-title">${esc(post.title)}</h3>
+        <p class="post-card-excerpt">${esc(post.excerpt)}</p>
+        ${(() => { const tags = deriveTags(postFullText(post)).slice(0,4); return tags.length ? `<div class="post-tags">${tags.map(t => `<span class="tag-pill">${t.replace(/^#/, '')}</span>`).join("")}</div>` : ''; })()}
+        <span class="post-card-link">Pročitaj više
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </div>
+    </button>
+  `).join("");
+  el.querySelectorAll(".post-card").forEach(card => {
+    card.addEventListener("click", () => openPost(parseInt(card.dataset.index, 10)));
+  });
+  observeReveals();
+}
+
+function renderPostBody(blocks){
+  let html = "";
+  let listBuffer = null;
+  blocks.forEach(b => {
+    if (b.type === "h2") {
+      html += `<h3>${formatBody(b.text)}</h3>`;
+    } else if (b.type === "list") {
+      html += "<ul>" + b.items.map(it => `<li>${formatBody(it)}</li>`).join("") + "</ul>";
+    } else {
+      html += `<p>${formatBody(b.text)}</p>`;
+    }
+  });
+  return html;
+}
+
+function openPost(index){
+  currentPostIndex = index;
+  const post = currentFilteredPosts[index];
+  if (!post) return;
+  document.getElementById("post-modal-content").innerHTML = `
+    <div class="post-modal-img"><img src="${post.image}" alt="${esc(post.title)}"></div>
+    <span class="post-card-cat" style="position:static; display:inline-flex;">${esc(post.categoryLabel)}</span>
+    <h2 class="post-modal-title">${esc(post.title)}</h2>
+    ${(() => { const tags = deriveTags(postFullText(post)); return tags.length ? `<div class="post-tags">${tags.map(t => `<span class="tag-pill">${t.replace(/^#/, '')}</span>`).join("")}</div>` : ''; })()}
+    <div class="post-modal-body">${renderPostBody(post.blocks)}</div>
+    <div class="post-modal-nav">
+      <button id="post-prev">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Prethodni
+      </button>
+      <button id="post-next">
+        Sledeći
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  `;
+  document.getElementById("post-prev").addEventListener("click", () => openPost((currentPostIndex - 1 + currentFilteredPosts.length) % currentFilteredPosts.length));
+  document.getElementById("post-next").addEventListener("click", () => openPost((currentPostIndex + 1) % currentFilteredPosts.length));
+  const overlay = document.getElementById("post-modal-overlay");
+  overlay.classList.add("open");
+  overlay.scrollTop = 0;
+  document.getElementById("post-modal").scrollTop = 0;
+  document.body.style.overflow = "hidden";
+}
+
+function closePost(){
+  document.getElementById("post-modal-overlay").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+document.getElementById("post-modal-close").addEventListener("click", closePost);
+document.getElementById("post-modal-overlay").addEventListener("click", (e) => {
+  if (e.target.id === "post-modal-overlay") closePost();
+});
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closePost();
+});
+
+renderBlogTabs();
+renderBlogGrid();
+
+/* ============================================================
+   DEEP LINK — #post=N ili #post=<naslov teksta> (stiže iz pretrage
+   na index.html kada korisnik klikne na rezultat-tekst, iz cenovnika
+   kada klikne na uslugu koja ima svoj tekst, ili je direktan link)
+   ============================================================ */
+(function applyPostHash(){
+  const match = window.location.hash.match(/post=([^&]+)/);
+  if (!match) return;
+  const raw = decodeURIComponent(match[1]);
+  const idx = /^\d+$/.test(raw) ? parseInt(raw, 10) : blogPosts.findIndex(p => p.title === raw);
+  if (idx >= 0 && idx < blogPosts.length) {
+    setTimeout(() => openPost(idx), 50);
+  }
+})();
+
+/* ============================================================
+   SEARCH UI — pretraga tekstova + cenovnika
+   ============================================================ */
+(function initSearch(){
+  const input = document.getElementById("search-input");
+  const resultsEl = document.getElementById("search-results");
+  let debounceTimer = null;
+  let lastResults = [];
+
+  function renderResults(results, query){
+    lastResults = results;
+    if (!results.length) {
+      resultsEl.innerHTML = `<div class="search-empty">Nema rezultata za "${esc(query)}".</div>`;
+      resultsEl.classList.add("open");
+      return;
+    }
+    resultsEl.innerHTML = results.map((r,i) => `
+        <button class="search-result" data-index="${i}">
+          <div class="search-result-top">
+            <span class="search-result-name">${esc(r.name)}</span>
+          </div>
+          <div class="search-result-meta"><span class="search-result-type text">Tekst</span><span class="search-result-cat">${esc(r.meta)}</span></div>
+        </button>
+      `).join("");
+    resultsEl.classList.add("open");
+    resultsEl.querySelectorAll(".search-result").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const r = lastResults[parseInt(btn.dataset.index, 10)];
+        resultsEl.classList.remove("open");
+        input.value = "";
+        activeBlogCategory = "sve";
+        renderBlogTabs();
+        renderBlogGrid();
+        openPost(r.postIndex);
+      });
+    });
+  }
+
+  input.addEventListener("input", () => {
+    clearTimeout(debounceTimer);
+    const q = input.value;
+    debounceTimer = setTimeout(() => {
+      if (q.trim().length < 2) { resultsEl.classList.remove("open"); return; }
+      renderResults(performSearch(q), q);
+    }, 150);
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-wrap")) resultsEl.classList.remove("open");
+  });
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") { resultsEl.classList.remove("open"); input.blur(); }
+  });
+})();
+
+/* ============================================================
+   NAV — scroll shadow + mobile menu
+   ============================================================ */
+const mainNav = document.getElementById("main-nav");
+function onScrollNav(){ mainNav.classList.toggle("scrolled", window.scrollY > 60); }
+onScrollNav();
+window.addEventListener("scroll", onScrollNav, { passive:true });
+
+const navBurger = document.getElementById("nav-burger");
+const mobileMenu = document.getElementById("mobile-menu");
+navBurger.addEventListener("click", ()=> mobileMenu.classList.toggle("open"));
+mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", ()=> mobileMenu.classList.remove("open")));
+
+/* ============================================================
+   NAV — dropdown sa telefonima
+   ============================================================ */
+const navPhoneWrap = document.getElementById("nav-phone-wrap");
+const navPhoneBtn = document.getElementById("nav-phone-btn");
+navPhoneBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const isOpen = navPhoneWrap.classList.toggle("open");
+  navPhoneBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+});
+document.addEventListener("click", (e) => {
+  if (!navPhoneWrap.contains(e.target)) {
+    navPhoneWrap.classList.remove("open");
+    navPhoneBtn.setAttribute("aria-expanded", "false");
+  }
+});
+navPhoneWrap.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+  navPhoneWrap.classList.remove("open");
+  navPhoneBtn.setAttribute("aria-expanded", "false");
+}));
+
+/* ============================================================
+   SCROLL PROGRESS
+   ============================================================ */
+const progressBar = document.getElementById("scroll-progress");
+function onScrollProgress(){
+  const h = document.documentElement;
+  const scrolled = h.scrollTop;
+  const height = h.scrollHeight - h.clientHeight;
+  const pct = height > 0 ? scrolled / height : 0;
+  progressBar.style.transform = "scaleX(" + pct + ")";
+}
+window.addEventListener("scroll", onScrollProgress, { passive:true });
+onScrollProgress();
+
+/* ============================================================
+   BACK TO TOP
+   ============================================================ */
+const backToTop = document.getElementById("back-to-top");
+function onScrollBackToTop(){ backToTop.classList.toggle("visible", window.scrollY > 600); }
+window.addEventListener("scroll", onScrollBackToTop, { passive:true });
+onScrollBackToTop();
+backToTop.addEventListener("click", ()=> window.scrollTo({ top:0, behavior:"smooth" }));
+
+/* ============================================================
+   CURSOR TRAIL — zlatna kapljica koja prati kursor + varnice + ripple
+   na klik. Preskače se na touch uređajima i uz prefers-reduced-motion.
+   Portovano iz components/CursorTrail.tsx (canvas, 60fps).
+   ============================================================ */
+(function cursorTrail(){
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isTouch = window.matchMedia("(pointer: coarse)").matches;
+  const canvas = document.getElementById("cursor-trail");
+  if (prefersReducedMotion || isTouch || !canvas) { if (canvas) canvas.remove(); return; }
+
+  const ctx = canvas.getContext("2d");
+  let dpr = window.devicePixelRatio || 1;
+
+  function resize(){
+    canvas.width = window.innerWidth * dpr;
+    canvas.height = window.innerHeight * dpr;
+    canvas.style.width = window.innerWidth + "px";
+    canvas.style.height = window.innerHeight + "px";
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.scale(dpr, dpr);
+  }
+  resize();
+  window.addEventListener("resize", resize);
+
+  const particles = [];
+  const ripples = [];
+  const cursor = { x:-100, y:-100, tx:-100, ty:-100, active:false };
+  let lastSpawn = 0, lastX = 0, lastY = 0;
+
+  function spawnSparkle(x, y, count){
+    for (let i = 0; i < count; i++) {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = Math.random() * 0.7;
+      particles.push({
+        x, y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed - 0.15,
+        life: 0,
+        max: 600 + Math.random() * 600,
+        size: 1.2 + Math.random() * 2.2,
+        hueShift: (Math.random() - 0.5) * 12,
+      });
+    }
+  }
+
+  function onMove(e){
+    const x = e.clientX, y = e.clientY;
+    cursor.tx = x; cursor.ty = y; cursor.active = true;
+    const dist = Math.hypot(x - lastX, y - lastY);
+    const now = performance.now();
+    if (dist > 6 && now - lastSpawn > 32) { spawnSparkle(x, y, 1); lastSpawn = now; }
+    lastX = x; lastY = y;
+  }
+  function onLeave(){ cursor.active = false; }
+  function onDown(e){
+    ripples.push({ x:e.clientX, y:e.clientY, life:0, max:700, maxR:70 });
+    spawnSparkle(e.clientX, e.clientY, 10);
+  }
+
+  window.addEventListener("pointermove", onMove, { passive:true });
+  window.addEventListener("pointerleave", onLeave);
+  window.addEventListener("pointerdown", onDown);
+
+  let lastFrame = performance.now();
+  function tick(now){
+    const dt = Math.min(40, now - lastFrame);
+    lastFrame = now;
+    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.life += dt;
+      if (p.life >= p.max) { particles.splice(i, 1); continue; }
+      p.x += p.vx * (dt / 16);
+      p.y += p.vy * (dt / 16);
+      p.vy += 0.005 * (dt / 16);
+      const t = p.life / p.max;
+      const alpha = (1 - t) * 0.85;
+      const size = p.size * (1 - t * 0.5);
+      ctx.fillStyle = `hsla(${42 + p.hueShift}, 78%, 62%, ${alpha})`;
+      ctx.shadowColor = "rgba(207,168,77,0.55)";
+      ctx.shadowBlur = 8;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.shadowBlur = 0;
+
+    for (let i = ripples.length - 1; i >= 0; i--) {
+      const r = ripples[i];
+      r.life += dt;
+      if (r.life >= r.max) { ripples.splice(i, 1); continue; }
+      const t = r.life / r.max;
+      const radius = r.maxR * t;
+      const alpha = (1 - t) * 0.55;
+      ctx.strokeStyle = `rgba(207,168,77,${alpha})`;
+      ctx.lineWidth = 2 * (1 - t * 0.6);
+      ctx.beginPath();
+      ctx.arc(r.x, r.y, radius, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.strokeStyle = `rgba(255,236,180,${alpha * 0.7})`;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.arc(r.x, r.y, radius * 0.66, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    if (cursor.active) {
+      cursor.x += (cursor.tx - cursor.x) * 0.22;
+      cursor.y += (cursor.ty - cursor.y) * 0.22;
+      const grad = ctx.createRadialGradient(cursor.x, cursor.y, 0, cursor.x, cursor.y, 14);
+      grad.addColorStop(0, "rgba(255,236,180,0.9)");
+      grad.addColorStop(0.4, "rgba(207,168,77,0.45)");
+      grad.addColorStop(1, "rgba(207,168,77,0)");
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(cursor.x, cursor.y, 14, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "rgba(255,245,210,0.9)";
+      ctx.beginPath();
+      ctx.arc(cursor.x, cursor.y, 1.6, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+
+/* ============================================================
+   REVEAL ON SCROLL
+   ============================================================ */
+function observeReveals(){
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add("is-visible"); io.unobserve(e.target); } });
+  }, { threshold:0.15, rootMargin:"0px 0px -40px 0px" });
+  document.querySelectorAll(".reveal:not(.is-visible)").forEach(el => io.observe(el));
+}
+observeReveals();
+
+/* ============================================================
+   FOOTER YEAR
+   ============================================================ */
+document.getElementById("footer-year").textContent = new Date().getFullYear() >= 2026 ? new Date().getFullYear() : 2026;
+</script>
+</body>
+</html>

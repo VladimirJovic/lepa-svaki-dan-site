@@ -1,0 +1,5174 @@
+{
+  "meta": {
+    "pack": "Lepa Svaki Dan v2 texts pack: search-synonyms.json",
+    "generatedBy": "ECHOSYSTEM-MOTHER AGENCY",
+    "generatedAt": "2026-10-07T16:33:36Z",
+    "display": "HIDDEN vocabulary: use it to find results, never render the phrases as hashtags, chips or tags.",
+    "normalization": "Fold both the query and the phrases before comparing: lowercase, c/c/s/z for c-caron/c-acute/s-caron/z-caron, \"dj\" for d-stroke, drop combining marks. Every phrase is already stored with and without diacritics; phraseIndex is keyed by the folded form.",
+    "targets": {
+      "groupIds": "\"<tab>:<groupIndex>\" (service-links.json)",
+      "serviceIds": "content.json allServices[].id",
+      "articleIds": "art-1 ... art-21",
+      "segmentIds": "segments.json (derived from the targeted articles)",
+      "offerIds": "content.json offers[].id (extra key: the old site searches offers too)"
+    },
+    "strength": {
+      "strong": "the target is the subject of the phrase",
+      "medium": "the text supports it, it is not the main subject or the wording differs",
+      "weak": "closest hook only, show as a soft suggestion and never as a treatment claim"
+    },
+    "honesty": "Every target contains one of the entry terms in its own name/description/title/text, or is linked to a targeted article that does (see evidence). Entries with directEvidence:false are the only exception and say so.",
+    "counts": {
+      "entries": 36,
+      "questions": 12,
+      "phrases": 314,
+      "requiredPhrasesCovered": 35,
+      "weakEntries": [
+        "ukljesteni-vrat",
+        "rastezanje"
+      ]
+    }
+  },
+  "entries": [
+    {
+      "id": "glass-skin",
+      "phrases": [
+        "glass skin",
+        "glasskin",
+        "glas skin",
+        "staklena koža",
+        "staklena koza",
+        "staklasta koža",
+        "staklasta koza"
+      ],
+      "targets": {
+        "groupIds": [
+          "lice:2"
+        ],
+        "serviceIds": [
+          "lice:1:6",
+          "lice:2:0"
+        ],
+        "articleIds": [
+          "art-14",
+          "art-13",
+          "art-5"
+        ],
+        "segmentIds": [
+          "kozmetika",
+          "estetske"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "Trend term the site never uses. Mapped to the treatments whose own text promises deep hydration and a glowing, fresh look (Venus Glow, Dermafacial, biorevitalization). No promise of a specific result.",
+      "evidence": {
+        "art-14": {
+          "term": "blistav",
+          "in": "block 2",
+          "snippet": "Nakon samo jednog tretmana, važa koža će izgledati osveženo, odmorno i blistavo."
+        },
+        "art-13": {
+          "term": "blistav",
+          "in": "block 1",
+          "snippet": "aciju i podmlađivanje, pružajući efekat blistave, zategnute i osvežene kože čiji su rez"
+        },
+        "art-5": {
+          "term": "sjaj",
+          "in": "block 0",
+          "snippet": "binsku hidrataciju, podizanje prirodnog sjaja i elastičnosti, uz obnavljanje kolagen"
+        },
+        "lice:2": {
+          "term": "glow",
+          "in": "group title",
+          "snippet": "Venus Glow / Dermafacial"
+        },
+        "lice:1:6": {
+          "term": "hydrat",
+          "in": "name",
+          "snippet": "REHYDRATE"
+        },
+        "lice:2:0": {
+          "term": "glow",
+          "in": "name",
+          "snippet": "VENUS GLOW, Squeaky Clean"
+        }
+      }
+    },
+    {
+      "id": "blistava-koza",
+      "phrases": [
+        "blistava koža",
+        "blistava koza",
+        "blistav ten",
+        "sjajna koža",
+        "sjajna koza",
+        "sjaj kože",
+        "sjaj koze",
+        "glow",
+        "glow koža",
+        "glow koza",
+        "glow efekat",
+        "instant glow"
+      ],
+      "targets": {
+        "groupIds": [
+          "lice:2",
+          "protokoli:0"
+        ],
+        "serviceIds": [
+          "lice:1:6",
+          "lice:1:8",
+          "lice:1:10",
+          "lice:2:0",
+          "lice:2:2",
+          "protokoli:0:0",
+          "protokoli:0:2"
+        ],
+        "articleIds": [
+          "art-14",
+          "art-13",
+          "art-5"
+        ],
+        "segmentIds": [
+          "kozmetika",
+          "estetske"
+        ],
+        "offerIds": [
+          "offer-1"
+        ]
+      },
+      "strength": "strong",
+      "note": "The old site already ties \"glow\", \"sjaj\" and \"blista\" to its #glow tag. Mapped to the Glow protocols and Venus Glow / Dermafacial, plus the Instant Glow Up offer (its own title says \"Glow Up\").",
+      "evidence": {
+        "art-14": {
+          "term": "blistav",
+          "in": "block 2",
+          "snippet": "Nakon samo jednog tretmana, važa koža će izgledati osveženo, odmorno i blistavo."
+        },
+        "art-13": {
+          "term": "blistav",
+          "in": "block 1",
+          "snippet": "aciju i podmlađivanje, pružajući efekat blistave, zategnute i osvežene kože čiji su rez"
+        },
+        "art-5": {
+          "term": "sjaj",
+          "in": "block 0",
+          "snippet": "binsku hidrataciju, podizanje prirodnog sjaja i elastičnosti, uz obnavljanje kolagen"
+        },
+        "lice:2": {
+          "term": "glow",
+          "in": "group title",
+          "snippet": "Venus Glow / Dermafacial"
+        },
+        "protokoli:0": {
+          "term": "glow",
+          "in": "group title",
+          "snippet": "GLOW & GO"
+        },
+        "lice:1:6": {
+          "term": "glow",
+          "in": "description",
+          "snippet": "Venus Glow/Dermafacial, biorevitalizujući piling, hijaluron mezoporacija, maska"
+        },
+        "lice:1:8": {
+          "term": "glow",
+          "in": "name",
+          "snippet": "CINDERELLA GLOW"
+        },
+        "lice:1:10": {
+          "term": "glow",
+          "in": "name",
+          "snippet": "READY TO GLOW"
+        },
+        "lice:2:0": {
+          "term": "glow",
+          "in": "name",
+          "snippet": "VENUS GLOW, Squeaky Clean"
+        },
+        "lice:2:2": {
+          "term": "glow",
+          "in": "description",
+          "snippet": "Venus Glow čišćenje i fresh up protokol nege"
+        },
+        "protokoli:0:0": {
+          "term": "glow",
+          "in": "name",
+          "snippet": "GLOW & GO 1"
+        },
+        "protokoli:0:2": {
+          "term": "glow",
+          "in": "name",
+          "snippet": "GLOW & GO 2"
+        },
+        "offer-1": {
+          "term": "glow",
+          "in": "offer title",
+          "snippet": "Instant Glow Up"
+        }
+      }
+    },
+    {
+      "id": "ciscenje-lica",
+      "phrases": [
+        "čišćenje lica",
+        "ciscenje lica",
+        "dubinsko čišćenje",
+        "dubinsko ciscenje",
+        "dubinsko čišćenje lica",
+        "dubinsko ciscenje lica",
+        "čišćenje pora",
+        "ciscenje pora",
+        "čišćenje kože",
+        "ciscenje koze",
+        "higijenski tretman",
+        "higijenski tretman lica",
+        "higijenski",
+        "komedoekspresija"
+      ],
+      "targets": {
+        "groupIds": [
+          "lice:0",
+          "lice:2"
+        ],
+        "serviceIds": [
+          "lice:0:0",
+          "lice:0:1",
+          "lice:0:2",
+          "lice:0:3",
+          "lice:0:4",
+          "lice:1:5",
+          "lice:2:0"
+        ],
+        "articleIds": [
+          "art-11",
+          "art-14",
+          "art-13"
+        ],
+        "segmentIds": [
+          "kozmetika"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Hygienic treatments are the classic facial cleansing (peeling, comedone extraction, hydration); Venus Glow and Dermafacial are described as deep pore cleansing; SKIN DETOX lists \"dubinsko čišćenje\".",
+      "evidence": {
+        "art-11": {
+          "term": "cisc",
+          "in": "subtitle",
+          "snippet": "Za dubinsko čišćenje i regeneraciju kože"
+        },
+        "art-14": {
+          "term": "cisc",
+          "in": "subtitle",
+          "snippet": "Za dubinsko čišćenje i hidrataciju kože"
+        },
+        "art-13": {
+          "term": "cisc",
+          "in": "block 1",
+          "snippet": "pet različitih tehnologija za dubinsko čišćenje, hidrataciju i podmlađivanje, pruža"
+        },
+        "lice:0": {
+          "term": "cisc",
+          "in": "service description (lice:0:0)",
+          "snippet": "Klasičan piling, čišćenje, maska"
+        },
+        "lice:2": {
+          "term": "cisc",
+          "in": "service description (lice:2:0)",
+          "snippet": "Dubinsko čišćenje pora, piling, maska i nega"
+        },
+        "lice:0:0": {
+          "term": "cisc",
+          "in": "description",
+          "snippet": "Klasičan piling, čišćenje, maska"
+        },
+        "lice:0:1": {
+          "term": "cisc",
+          "via": "art-11",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Za dubinsko čišćenje i regeneraciju kože"
+        },
+        "lice:0:2": {
+          "term": "cisc",
+          "in": "description",
+          "snippet": "Hemijski piling, čišćenje, maska"
+        },
+        "lice:0:3": {
+          "term": "cisc",
+          "via": "art-11",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Za dubinsko čišćenje i regeneraciju kože"
+        },
+        "lice:0:4": {
+          "term": "cisc",
+          "via": "art-11",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Za dubinsko čišćenje i regeneraciju kože"
+        },
+        "lice:1:5": {
+          "term": "cisc",
+          "in": "description",
+          "snippet": "Venus Glow / Dermafacial dubinsko čišćenje, piling, komedoekspresija, maska"
+        },
+        "lice:2:0": {
+          "term": "cisc",
+          "in": "description",
+          "snippet": "Dubinsko čišćenje pora, piling, maska i nega"
+        }
+      }
+    },
+    {
+      "id": "cista-koza",
+      "phrases": [
+        "čista koža",
+        "cista koza",
+        "clear skin",
+        "bistra koža",
+        "bistra koza",
+        "čist ten",
+        "cist ten"
+      ],
+      "targets": {
+        "groupIds": [
+          "lice:0",
+          "lice:2"
+        ],
+        "serviceIds": [
+          "lice:0:0",
+          "lice:0:1",
+          "lice:0:2",
+          "lice:0:3",
+          "lice:0:4",
+          "lice:2:0",
+          "estetske:5:5"
+        ],
+        "articleIds": [
+          "art-11",
+          "art-14",
+          "art-10"
+        ],
+        "segmentIds": [
+          "kozmetika"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "The old site maps \"čista koža\" and \"clear skin\" to its #akne tag. Mapped to the cleansing treatments plus the Candela acne treatment; the peel text mentions pore cleansing and acne.",
+      "evidence": {
+        "art-11": {
+          "term": "cist",
+          "in": "block 2",
+          "snippet": "ra koje se intenzivira kada se napune nečistoćama i masnoćom."
+        },
+        "art-14": {
+          "term": "cist",
+          "in": "block 0",
+          "snippet": "m neinvazivnim tretmanom, koji dubinski čisti pore, pospešuje hidrataciju kože lica,"
+        },
+        "art-10": {
+          "term": "cist",
+          "in": "block 13",
+          "snippet": "e eksfolijacija površinskog sloja kože, čiste se pore i koža priprema za bolju apsor"
+        },
+        "lice:0": {
+          "term": "cisc",
+          "in": "service description (lice:0:0)",
+          "snippet": "Klasičan piling, čišćenje, maska"
+        },
+        "lice:2": {
+          "term": "cisc",
+          "in": "service description (lice:2:0)",
+          "snippet": "Dubinsko čišćenje pora, piling, maska i nega"
+        },
+        "lice:0:0": {
+          "term": "cisc",
+          "in": "description",
+          "snippet": "Klasičan piling, čišćenje, maska"
+        },
+        "lice:0:1": {
+          "term": "cist",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": "ra koje se intenzivira kada se napune nečistoćama i masnoćom."
+        },
+        "lice:0:2": {
+          "term": "cisc",
+          "in": "description",
+          "snippet": "Hemijski piling, čišćenje, maska"
+        },
+        "lice:0:3": {
+          "term": "cist",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": "ra koje se intenzivira kada se napune nečistoćama i masnoćom."
+        },
+        "lice:0:4": {
+          "term": "cist",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": "ra koje se intenzivira kada se napune nečistoćama i masnoćom."
+        },
+        "lice:2:0": {
+          "term": "cisc",
+          "in": "description",
+          "snippet": "Dubinsko čišćenje pora, piling, maska i nega"
+        },
+        "estetske:5:5": {
+          "term": "akn",
+          "in": "name",
+          "snippet": "Candela Nordlys, Tretman akni na licu"
+        }
+      }
+    },
+    {
+      "id": "akne",
+      "phrases": [
+        "akne",
+        "akni",
+        "akna",
+        "bubuljice",
+        "bubuljica",
+        "mitiseri",
+        "mitisera",
+        "problematična koža",
+        "problematicna koza"
+      ],
+      "targets": {
+        "groupIds": [
+          "lice:0",
+          "lice:3",
+          "estetske:5"
+        ],
+        "serviceIds": [
+          "lice:0:0",
+          "lice:0:1",
+          "lice:0:2",
+          "lice:0:3",
+          "lice:0:4",
+          "lice:3:0",
+          "lice:3:1",
+          "lice:3:5",
+          "estetske:5:5"
+        ],
+        "articleIds": [
+          "art-11",
+          "art-10",
+          "art-2",
+          "art-1"
+        ],
+        "segmentIds": [
+          "kozmetika",
+          "dermatologija"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Acne is cosmetic care (hygienic treatments, chemical peels: \"ublažavanje\") and a dermatological problem (exam, Candela Nordlys acne treatment). No cure is promised anywhere in the texts.",
+      "evidence": {
+        "art-11": {
+          "term": "akn",
+          "in": "block 2",
+          "snippet": ", sprečava pojavu bubuljica, mitisera i akni, i smanjuju vidljivost pora koje se in"
+        },
+        "art-10": {
+          "term": "akn",
+          "in": "block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        },
+        "art-2": {
+          "term": "akn",
+          "in": "block 6",
+          "snippet": "e sa kojima se susreću dermatolozi jesu akne, ekcemi (atopijski dermatitis) i psori"
+        },
+        "art-1": {
+          "term": "akn",
+          "in": "block 3",
+          "snippet": "a lečenje rozacee, proširenih kapilara, akni i hiperpigmentacija. Frakcioni nastavc"
+        },
+        "lice:0": {
+          "term": "akn",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": ", sprečava pojavu bubuljica, mitisera i akni, i smanjuju vidljivost pora koje se in"
+        },
+        "lice:3": {
+          "term": "akn",
+          "via": "art-10",
+          "in": "linked article (primary link) block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        },
+        "estetske:5": {
+          "term": "akn",
+          "in": "service name (estetske:5:5)",
+          "snippet": "Candela Nordlys, Tretman akni na licu"
+        },
+        "lice:0:0": {
+          "term": "akn",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": ", sprečava pojavu bubuljica, mitisera i akni, i smanjuju vidljivost pora koje se in"
+        },
+        "lice:0:1": {
+          "term": "akn",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": ", sprečava pojavu bubuljica, mitisera i akni, i smanjuju vidljivost pora koje se in"
+        },
+        "lice:0:2": {
+          "term": "akn",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": ", sprečava pojavu bubuljica, mitisera i akni, i smanjuju vidljivost pora koje se in"
+        },
+        "lice:0:3": {
+          "term": "akn",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": ", sprečava pojavu bubuljica, mitisera i akni, i smanjuju vidljivost pora koje se in"
+        },
+        "lice:0:4": {
+          "term": "akn",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": ", sprečava pojavu bubuljica, mitisera i akni, i smanjuju vidljivost pora koje se in"
+        },
+        "lice:3:0": {
+          "term": "akn",
+          "via": "art-10",
+          "in": "linked article (primary link) block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        },
+        "lice:3:1": {
+          "term": "akn",
+          "via": "art-10",
+          "in": "linked article (primary link) block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        },
+        "lice:3:5": {
+          "term": "akn",
+          "via": "art-10",
+          "in": "linked article (primary link) block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        },
+        "estetske:5:5": {
+          "term": "akn",
+          "in": "name",
+          "snippet": "Candela Nordlys, Tretman akni na licu"
+        }
+      }
+    },
+    {
+      "id": "lecenje-akni",
+      "phrases": [
+        "lečenje akni",
+        "lecenje akni",
+        "lečenje akni na licu",
+        "lecenje akni na licu",
+        "kako da se rešim akni",
+        "kako da se resim akni",
+        "kako se leče akne",
+        "kako se lece akne",
+        "tretman akni",
+        "tretman akne"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:5"
+        ],
+        "serviceIds": [
+          "estetske:5:0",
+          "estetske:5:1",
+          "estetske:5:5"
+        ],
+        "articleIds": [
+          "art-2",
+          "art-1",
+          "art-11",
+          "art-10"
+        ],
+        "segmentIds": [
+          "dermatologija",
+          "kozmetika"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "The old site maps \"lečenje akni\" to #akne. Medical treatment = dermatologist exam and the Candela Nordlys acne treatment; the cosmetic texts only say hygienic treatments and peels \"ublažavaju\".",
+      "evidence": {
+        "art-2": {
+          "term": "akn",
+          "in": "block 6",
+          "snippet": "e sa kojima se susreću dermatolozi jesu akne, ekcemi (atopijski dermatitis) i psori"
+        },
+        "art-1": {
+          "term": "akn",
+          "in": "block 3",
+          "snippet": "a lečenje rozacee, proširenih kapilara, akni i hiperpigmentacija. Frakcioni nastavc"
+        },
+        "art-11": {
+          "term": "akn",
+          "in": "block 2",
+          "snippet": ", sprečava pojavu bubuljica, mitisera i akni, i smanjuju vidljivost pora koje se in"
+        },
+        "art-10": {
+          "term": "akn",
+          "in": "block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        },
+        "estetske:5": {
+          "term": "akn",
+          "in": "service name (estetske:5:5)",
+          "snippet": "Candela Nordlys, Tretman akni na licu"
+        },
+        "estetske:5:0": {
+          "term": "akn",
+          "via": "art-2",
+          "in": "linked article (primary link) block 6",
+          "snippet": "e sa kojima se susreću dermatolozi jesu akne, ekcemi (atopijski dermatitis) i psori"
+        },
+        "estetske:5:1": {
+          "term": "akn",
+          "via": "art-2",
+          "in": "linked article (primary link) block 6",
+          "snippet": "e sa kojima se susreću dermatolozi jesu akne, ekcemi (atopijski dermatitis) i psori"
+        },
+        "estetske:5:5": {
+          "term": "akn",
+          "in": "name",
+          "snippet": "Candela Nordlys, Tretman akni na licu"
+        }
+      }
+    },
+    {
+      "id": "oziljci-od-akni",
+      "phrases": [
+        "ožiljci od akni",
+        "oziljci od akni",
+        "ožiljci posle akni",
+        "oziljci posle akni",
+        "ozilci od akni"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:5",
+          "lice:5",
+          "lice:3"
+        ],
+        "serviceIds": [
+          "lice:5:0",
+          "lice:5:1",
+          "estetske:5:6"
+        ],
+        "articleIds": [
+          "art-1",
+          "art-10"
+        ],
+        "segmentIds": [
+          "dermatologija",
+          "kozmetika"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "\"ozilci\" is the shorthand used in the brief, kept as a variant. Candela Nordlys Frax is the only price-list line that names acne scars; the Dermapen / peel article says the combination reduces scars from acne.",
+      "evidence": {
+        "art-1": {
+          "term": "ozilj",
+          "in": "block 0",
+          "snippet": "uklanjanje kapilara, hiperpigmentacija, ožiljaka, kao i za podmlađivanje kože."
+        },
+        "art-10": {
+          "term": "ozilj",
+          "in": "block 2",
+          "snippet": "predstavlja odličan izbor za redukciju ožiljaka."
+        },
+        "estetske:5": {
+          "term": "ozilj",
+          "in": "service name (estetske:5:6)",
+          "snippet": "Candela Nordlys Frax, Ožiljci od akni, celo lice"
+        },
+        "lice:5": {
+          "term": "ozilj",
+          "via": "art-10",
+          "in": "linked article (primary link) block 2",
+          "snippet": "predstavlja odličan izbor za redukciju ožiljaka."
+        },
+        "lice:3": {
+          "term": "ozilj",
+          "via": "art-10",
+          "in": "linked article (primary link) block 2",
+          "snippet": "predstavlja odličan izbor za redukciju ožiljaka."
+        },
+        "lice:5:0": {
+          "term": "ozilj",
+          "via": "art-10",
+          "in": "linked article (primary link) block 2",
+          "snippet": "predstavlja odličan izbor za redukciju ožiljaka."
+        },
+        "lice:5:1": {
+          "term": "ozilj",
+          "via": "art-10",
+          "in": "linked article (primary link) block 2",
+          "snippet": "predstavlja odličan izbor za redukciju ožiljaka."
+        },
+        "estetske:5:6": {
+          "term": "ozilj",
+          "in": "name",
+          "snippet": "Candela Nordlys Frax, Ožiljci od akni, celo lice"
+        }
+      }
+    },
+    {
+      "id": "oziljci",
+      "phrases": [
+        "ožiljci",
+        "oziljci",
+        "ožiljak",
+        "oziljak",
+        "ožiljaka",
+        "oziljaka",
+        "ozilci"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:5",
+          "lice:5",
+          "lice:3"
+        ],
+        "serviceIds": [
+          "lice:5:0",
+          "lice:5:1",
+          "estetske:5:6"
+        ],
+        "articleIds": [
+          "art-1",
+          "art-10",
+          "art-2"
+        ],
+        "segmentIds": [
+          "dermatologija",
+          "kozmetika"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "Generic scars: same treatments as acne scars. Wording of the texts: Dermapen \"redukcija ožiljaka\", Candela \"uklanjanje ... ožiljaka\", aesthetic dermatology \"laserski tretmani za ... ožiljaka\". No removal is promised.",
+      "evidence": {
+        "art-1": {
+          "term": "ozilj",
+          "in": "block 0",
+          "snippet": "uklanjanje kapilara, hiperpigmentacija, ožiljaka, kao i za podmlađivanje kože."
+        },
+        "art-10": {
+          "term": "ozilj",
+          "in": "block 2",
+          "snippet": "predstavlja odličan izbor za redukciju ožiljaka."
+        },
+        "art-2": {
+          "term": "ozilj",
+          "in": "block 12 item 2",
+          "snippet": "Laserski tretmani za uklanjanje pigmentacija, ožiljaka i neujednačenog tena."
+        },
+        "estetske:5": {
+          "term": "ozilj",
+          "in": "service name (estetske:5:6)",
+          "snippet": "Candela Nordlys Frax, Ožiljci od akni, celo lice"
+        },
+        "lice:5": {
+          "term": "ozilj",
+          "via": "art-10",
+          "in": "linked article (primary link) block 2",
+          "snippet": "predstavlja odličan izbor za redukciju ožiljaka."
+        },
+        "lice:3": {
+          "term": "ozilj",
+          "via": "art-10",
+          "in": "linked article (primary link) block 2",
+          "snippet": "predstavlja odličan izbor za redukciju ožiljaka."
+        },
+        "lice:5:0": {
+          "term": "ozilj",
+          "via": "art-10",
+          "in": "linked article (primary link) block 2",
+          "snippet": "predstavlja odličan izbor za redukciju ožiljaka."
+        },
+        "lice:5:1": {
+          "term": "ozilj",
+          "via": "art-10",
+          "in": "linked article (primary link) block 2",
+          "snippet": "predstavlja odličan izbor za redukciju ožiljaka."
+        },
+        "estetske:5:6": {
+          "term": "ozilj",
+          "in": "name",
+          "snippet": "Candela Nordlys Frax, Ožiljci od akni, celo lice"
+        }
+      }
+    },
+    {
+      "id": "pigmentacija",
+      "phrases": [
+        "pigmentacija",
+        "pigmentacije",
+        "hiperpigmentacija",
+        "hiperpigmentacije",
+        "pigmentne mrlje",
+        "pigmentne fleke"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:5",
+          "lice:3",
+          "lice:5"
+        ],
+        "serviceIds": [],
+        "articleIds": [
+          "art-1",
+          "art-10",
+          "art-13",
+          "art-2"
+        ],
+        "segmentIds": [
+          "dermatologija",
+          "kozmetika"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "The texts mention pigmentation for Candela lasers, chemical peels with Dermapen, Dermafacial and aesthetic dermatology. No price-list service is named after pigmentation, so only groups are mapped (the device or peel is decided at the consultation).",
+      "evidence": {
+        "art-1": {
+          "term": "pigment",
+          "in": "block 0",
+          "snippet": "nih problema: uklanjanje kapilara, hiperpigmentacija, ožiljaka, kao i za podmlađivanje"
+        },
+        "art-10": {
+          "term": "pigment",
+          "in": "block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        },
+        "art-13": {
+          "term": "pigment",
+          "in": "block 8",
+          "snippet": "tretman ujedno doprinosi smanjenju hiperpigmentacija, čineći vašu kožu svežijom i sjajn"
+        },
+        "art-2": {
+          "term": "pigment",
+          "in": "block 10",
+          "snippet": "i se smanjila vidljivost bora, uklonile pigmentacije ili jednostavno unapredio izgled k"
+        },
+        "estetske:5": {
+          "term": "pigment",
+          "via": "art-1",
+          "in": "linked article (primary link) block 0",
+          "snippet": "nih problema: uklanjanje kapilara, hiperpigmentacija, ožiljaka, kao i za podmlađivanje"
+        },
+        "lice:3": {
+          "term": "pigment",
+          "via": "art-10",
+          "in": "linked article (primary link) block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        },
+        "lice:5": {
+          "term": "pigment",
+          "via": "art-10",
+          "in": "linked article (primary link) block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        }
+      }
+    },
+    {
+      "id": "flekice",
+      "phrases": [
+        "flekice",
+        "flekica",
+        "fleke",
+        "fleka",
+        "pigmentne fleke"
+      ],
+      "targets": {
+        "groupIds": [
+          "lice:2",
+          "estetske:5"
+        ],
+        "serviceIds": [
+          "lice:2:3",
+          "lice:2:4"
+        ],
+        "articleIds": [
+          "art-13",
+          "art-1"
+        ],
+        "segmentIds": [
+          "kozmetika",
+          "dermatologija"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "Dermafacial text: \"smanjenju mitisera i flekica\"; Candela GentleLaser text: \"pigmentih fleka\". No price-list line is named after spots.",
+      "evidence": {
+        "art-13": {
+          "term": "flek",
+          "in": "block 7",
+          "snippet": "a, čišćenju pora i smanjenju mitisera i flekica."
+        },
+        "art-1": {
+          "term": "flek",
+          "in": "block 5",
+          "snippet": "pešno primenjuje u tretiranju pigmentih fleka i vaskularnih lezija."
+        },
+        "lice:2": {
+          "term": "flek",
+          "via": "art-13",
+          "in": "linked article (primary link) block 7",
+          "snippet": "a, čišćenju pora i smanjenju mitisera i flekica."
+        },
+        "estetske:5": {
+          "term": "flek",
+          "via": "art-1",
+          "in": "linked article (primary link) block 5",
+          "snippet": "pešno primenjuje u tretiranju pigmentih fleka i vaskularnih lezija."
+        },
+        "lice:2:3": {
+          "term": "flek",
+          "via": "art-13",
+          "in": "linked article (primary link) block 7",
+          "snippet": "a, čišćenju pora i smanjenju mitisera i flekica."
+        },
+        "lice:2:4": {
+          "term": "flek",
+          "via": "art-13",
+          "in": "linked article (primary link) block 7",
+          "snippet": "a, čišćenju pora i smanjenju mitisera i flekica."
+        }
+      }
+    },
+    {
+      "id": "bore",
+      "phrases": [
+        "bore",
+        "bora",
+        "borice",
+        "bore na licu",
+        "fine linije",
+        "sitne bore",
+        "mimične bore",
+        "mimicne bore",
+        "nazolabijalne bore"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:2",
+          "lice:6",
+          "lice:7"
+        ],
+        "serviceIds": [
+          "estetske:2:0",
+          "estetske:2:1",
+          "estetske:2:2"
+        ],
+        "articleIds": [
+          "art-6",
+          "art-15",
+          "art-12",
+          "art-5",
+          "art-10",
+          "art-13",
+          "art-7"
+        ],
+        "segmentIds": [
+          "estetske",
+          "kozmetika"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Botox wrinkle correction is the direct match (service names say \"Korekcija bora\"); the other articles describe softening, smoothing or reducing wrinkles in their own words.",
+      "evidence": {
+        "art-6": {
+          "term": "bora",
+          "in": "block 0",
+          "snippet": "najtraženija estetska procedura protiv bora. Iako je njegova popularnost najveća u"
+        },
+        "art-15": {
+          "term": "bora",
+          "in": "block 2 item 1",
+          "snippet": "Uklanjanje bora,"
+        },
+        "art-12": {
+          "term": "bora",
+          "in": "block 4",
+          "snippet": "relaksacije mišića, odnosno ublažavanja bora koje su nastale mimikom, kao i vraćanja"
+        },
+        "art-5": {
+          "term": "bora",
+          "in": "block 11",
+          "snippet": "že, vraćanje svežine i smanjenje sitnih bora."
+        },
+        "art-10": {
+          "term": "bora",
+          "in": "block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        },
+        "art-13": {
+          "term": "bore",
+          "in": "block 7",
+          "snippet": "e za sve koji žele da trenutno redukuju bore, i postignu jedriji i glatkiji izgled k"
+        },
+        "art-7": {
+          "term": "bore",
+          "in": "block 19",
+          "snippet": "pacijenata kojima smetaju nazolabijalne bore, jer one nastaju upravo padom volumena"
+        },
+        "estetske:2": {
+          "term": "bora",
+          "in": "service name (estetske:2:0)",
+          "snippet": "Korekcija bora, lice ili vrat I"
+        },
+        "lice:6": {
+          "term": "bora",
+          "via": "art-15",
+          "in": "linked article (primary link) block 2 item 1",
+          "snippet": "Uklanjanje bora,"
+        },
+        "lice:7": {
+          "term": "bora",
+          "via": "art-12",
+          "in": "linked article (primary link) block 4",
+          "snippet": "relaksacije mišića, odnosno ublažavanja bora koje su nastale mimikom, kao i vraćanja"
+        },
+        "estetske:2:0": {
+          "term": "bora",
+          "in": "name",
+          "snippet": "Korekcija bora, lice ili vrat I"
+        },
+        "estetske:2:1": {
+          "term": "bora",
+          "in": "name",
+          "snippet": "Korekcija bora, lice ili vrat II"
+        },
+        "estetske:2:2": {
+          "term": "bora",
+          "in": "name",
+          "snippet": "Korekcija bora, Full Face"
+        }
+      }
+    },
+    {
+      "id": "anti-age",
+      "phrases": [
+        "anti age",
+        "anti-age",
+        "antiage",
+        "anti aging",
+        "anti-aging",
+        "antiaging",
+        "anti ejdž",
+        "anti ejdz",
+        "starenje",
+        "znaci starenja",
+        "znakovi starenja",
+        "prvi znaci starenja"
+      ],
+      "targets": {
+        "groupIds": [
+          "protokoli:1",
+          "estetske:3",
+          "lice:5"
+        ],
+        "serviceIds": [
+          "lice:5:0",
+          "lice:5:2",
+          "lice:5:4",
+          "protokoli:1:0",
+          "protokoli:1:1",
+          "protokoli:1:2",
+          "protokoli:1:3",
+          "protokoli:1:4",
+          "protokoli:1:5"
+        ],
+        "articleIds": [
+          "art-5",
+          "art-6",
+          "art-7",
+          "art-12",
+          "art-10",
+          "art-20",
+          "art-14"
+        ],
+        "segmentIds": [
+          "estetske",
+          "kozmetika",
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "The price-list group \"Anti-aging protokoli\" is the direct match; Dermapen lines say \"anti-aging\" in their name or description; the articles use \"anti-aging\" or \"znaci starenja\".",
+      "evidence": {
+        "art-5": {
+          "term": "anti-ag",
+          "in": "block 1",
+          "snippet": "Ova procedura spada u jednu od metoda anti-aging-a koje se najčešće preporučuju svima"
+        },
+        "art-6": {
+          "term": "staren",
+          "in": "block 5",
+          "snippet": "rekciju mimičnih bora kao prvih znakova starenja, pa je idealan za sve koji bi voleli"
+        },
+        "art-7": {
+          "term": "anti-ag",
+          "in": "block 35",
+          "snippet": "n postupak za prevenciju starenja, rani anti-aging ili suptilnu korekciju prvih znakova"
+        },
+        "art-12": {
+          "term": "staren",
+          "in": "block 3",
+          "snippet": "čne kiseline u mišićnom tkivu, a time i starenje i slabljenje mišića."
+        },
+        "art-10": {
+          "term": "antiag",
+          "in": "block 2",
+          "snippet": "im i mladalačkog izgleda kože, dok osim antiage efekta, ovaj tretman predstavlja odlič"
+        },
+        "art-20": {
+          "term": "anti-ag",
+          "in": "block 0",
+          "snippet": "aže u lečenju celulita, koristi se i za anti-aging tretmane lica, vrata i dekoltea."
+        },
+        "art-14": {
+          "term": "staren",
+          "in": "block 0",
+          "snippet": "e predstavlja odličnu prevenciju protiv starenja kože, onda je Venus Glow jedan od pro"
+        },
+        "protokoli:1": {
+          "term": "anti-ag",
+          "in": "group title",
+          "snippet": "Anti-aging protokoli"
+        },
+        "estetske:3": {
+          "term": "anti-ag",
+          "via": "art-5",
+          "in": "linked article (primary link) block 1",
+          "snippet": "Ova procedura spada u jednu od metoda anti-aging-a koje se najčešće preporučuju svima"
+        },
+        "lice:5": {
+          "term": "anti-ag",
+          "in": "service description (lice:5:0)",
+          "snippet": "Mikroubodi za obnovu kolagena, tekstura, pore, anti-aging"
+        },
+        "lice:5:0": {
+          "term": "anti-ag",
+          "in": "description",
+          "snippet": "Mikroubodi za obnovu kolagena, tekstura, pore, anti-aging"
+        },
+        "lice:5:2": {
+          "term": "anti-ag",
+          "in": "name",
+          "snippet": "Dermapen anti-aging, lice, vrat, dekolte"
+        },
+        "lice:5:4": {
+          "term": "anti-ag",
+          "in": "name",
+          "snippet": "DERMAWORLD Dermapen anti-aging, lice, vrat, dekolte"
+        },
+        "protokoli:1:0": {
+          "term": "anti-ag",
+          "in": "group",
+          "snippet": "Anti-aging protokoli"
+        },
+        "protokoli:1:1": {
+          "term": "anti-ag",
+          "in": "group",
+          "snippet": "Anti-aging protokoli"
+        },
+        "protokoli:1:2": {
+          "term": "anti-ag",
+          "in": "group",
+          "snippet": "Anti-aging protokoli"
+        },
+        "protokoli:1:3": {
+          "term": "anti-ag",
+          "in": "group",
+          "snippet": "Anti-aging protokoli"
+        },
+        "protokoli:1:4": {
+          "term": "anti-ag",
+          "in": "group",
+          "snippet": "Anti-aging protokoli"
+        },
+        "protokoli:1:5": {
+          "term": "anti-ag",
+          "in": "group",
+          "snippet": "Anti-aging protokoli"
+        }
+      }
+    },
+    {
+      "id": "podmladjivanje",
+      "phrases": [
+        "podmlađivanje",
+        "podmladjivanje",
+        "podmlađivanje lica",
+        "podmladjivanje lica",
+        "podmlađivanje kože",
+        "podmladjivanje koze",
+        "podmladiti lice",
+        "pomlađivanje",
+        "pomladjivanje",
+        "pomladiti se"
+      ],
+      "targets": {
+        "groupIds": [
+          "lice:5",
+          "lice:2",
+          "estetske:3"
+        ],
+        "serviceIds": [
+          "lice:2:3",
+          "lice:2:4",
+          "lice:5:0"
+        ],
+        "articleIds": [
+          "art-10",
+          "art-13",
+          "art-5",
+          "art-7"
+        ],
+        "segmentIds": [
+          "kozmetika",
+          "estetske"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Dermapen text: \"najdelotvornija metoda za podmlađivanje kože\"; Dermafacial title: \"sofisticirano podmlađivanje kože\"; biorevitalization and fillers use the same word.",
+      "evidence": {
+        "art-10": {
+          "term": "podmlad",
+          "in": "block 0",
+          "snippet": "Tragate za najdelotvornijom metodom za podmlađivanje kože? Isprobajte „holivudski tret"
+        },
+        "art-13": {
+          "term": "podmlad",
+          "in": "subtitle",
+          "snippet": "Napredna tehnologija za sofisticirano podmlađivanje kože"
+        },
+        "art-5": {
+          "term": "podmlad",
+          "in": "block 3 item 0",
+          "snippet": "PRP: tretman sopstvenom krvnom plazmom koji podstiče regeneraciju i podmlađivanje kože;"
+        },
+        "art-7": {
+          "term": "podmlad",
+          "in": "block 22",
+          "snippet": "ena, simetrije, jedrine, senzualnosti i podmlađivanje regije oko usana."
+        },
+        "lice:5": {
+          "term": "podmlad",
+          "via": "art-10",
+          "in": "linked article (primary link) block 0",
+          "snippet": "Tragate za najdelotvornijom metodom za podmlađivanje kože? Isprobajte „holivudski tret"
+        },
+        "lice:2": {
+          "term": "podmlad",
+          "via": "art-13",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Napredna tehnologija za sofisticirano podmlađivanje kože"
+        },
+        "estetske:3": {
+          "term": "podmlad",
+          "via": "art-5",
+          "in": "linked article (primary link) block 3 item 0",
+          "snippet": "PRP: tretman sopstvenom krvnom plazmom koji podstiče regeneraciju i podmlađivanje kože;"
+        },
+        "lice:2:3": {
+          "term": "podmlad",
+          "via": "art-13",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Napredna tehnologija za sofisticirano podmlađivanje kože"
+        },
+        "lice:2:4": {
+          "term": "podmlad",
+          "via": "art-13",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Napredna tehnologija za sofisticirano podmlađivanje kože"
+        },
+        "lice:5:0": {
+          "term": "podmlad",
+          "via": "art-10",
+          "in": "linked article (primary link) block 0",
+          "snippet": "Tragate za najdelotvornijom metodom za podmlađivanje kože? Isprobajte „holivudski tret"
+        }
+      }
+    },
+    {
+      "id": "lifting",
+      "phrases": [
+        "lifting",
+        "lifting lica",
+        "lifting vrata",
+        "lifting niti",
+        "nehirurški lifting",
+        "nehirurski lifting",
+        "zatezanje kože",
+        "zatezanje koze",
+        "zatezanje lica",
+        "zatezanje",
+        "podizanje lica",
+        "podizanje obrva",
+        "mezoniti",
+        "niti"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:4",
+          "lice:6",
+          "telo:0"
+        ],
+        "serviceIds": [
+          "lice:7:9",
+          "estetske:4:0",
+          "estetske:4:1",
+          "estetske:4:2",
+          "protokoli:1:4"
+        ],
+        "articleIds": [
+          "art-8",
+          "art-15",
+          "art-20",
+          "art-12",
+          "art-13"
+        ],
+        "segmentIds": [
+          "estetske",
+          "kozmetika",
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Threads (\"Lifting nitima\") are the surgical-free lifting; Venus Legacy is described as tightening and lifting of face and body; Myolift and Dermafacial (radiowave lifting) also use the word.",
+      "evidence": {
+        "art-8": {
+          "term": "lift",
+          "in": "title",
+          "snippet": "Lifting nitima"
+        },
+        "art-15": {
+          "term": "lift",
+          "in": "block 2 item 0",
+          "snippet": "Zatezanje i lifting lica, podbratka i vrata,"
+        },
+        "art-20": {
+          "term": "zatez",
+          "in": "subtitle",
+          "snippet": "Za preoblikovanje i zatezanje tela"
+        },
+        "art-12": {
+          "term": "lift",
+          "in": "title",
+          "snippet": "7E MyoLift™ MD tretman"
+        },
+        "art-13": {
+          "term": "lift",
+          "in": "block 4 item 3",
+          "snippet": "Collagen+, odnosno radiotalasni lifting za prirodnu stimulaciju kolagena."
+        },
+        "estetske:4": {
+          "term": "lift",
+          "in": "group title",
+          "snippet": "Lifting niti i mezoniti"
+        },
+        "lice:6": {
+          "term": "lift",
+          "via": "art-15",
+          "in": "linked article (primary link) block 2 item 0",
+          "snippet": "Zatezanje i lifting lica, podbratka i vrata,"
+        },
+        "telo:0": {
+          "term": "zatez",
+          "via": "art-20",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Za preoblikovanje i zatezanje tela"
+        },
+        "lice:7:9": {
+          "term": "lift",
+          "in": "name",
+          "snippet": "VENUS LIFT & GLOW"
+        },
+        "estetske:4:0": {
+          "term": "lift",
+          "in": "group",
+          "snippet": "Lifting niti i mezoniti"
+        },
+        "estetske:4:1": {
+          "term": "lift",
+          "in": "name",
+          "snippet": "Plazmalifting, celo lice ili kosa (mezoniti + PRP)"
+        },
+        "estetske:4:2": {
+          "term": "lift",
+          "in": "group",
+          "snippet": "Lifting niti i mezoniti"
+        },
+        "protokoli:1:4": {
+          "term": "zatez",
+          "in": "description",
+          "snippet": "Face Gym masaža, Sublime laser za zatezanje, hemijski piling, maska"
+        }
+      }
+    },
+    {
+      "id": "botoks",
+      "phrases": [
+        "botoks",
+        "botox",
+        "botulin",
+        "botulinski toksin",
+        "botoks tretman",
+        "botox tretman"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:2"
+        ],
+        "serviceIds": [
+          "estetske:1:4",
+          "estetske:1:5",
+          "estetske:1:6",
+          "estetske:2:0",
+          "estetske:2:1",
+          "estetske:2:2",
+          "estetske:2:3",
+          "estetske:2:4",
+          "estetske:2:5"
+        ],
+        "articleIds": [
+          "art-6"
+        ],
+        "segmentIds": [
+          "estetske"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Whole price-list group \"Botox tretman\" plus the three filler-group packages that include Botox.",
+      "evidence": {
+        "art-6": {
+          "term": "botoks",
+          "in": "title",
+          "snippet": "Botulinski toksin tipa A - Botoks tretman"
+        },
+        "estetske:2": {
+          "term": "botox",
+          "in": "group title",
+          "snippet": "Botox tretman"
+        },
+        "estetske:1:4": {
+          "term": "botox",
+          "in": "description",
+          "snippet": "3ml filera + Botox ili 4ml filera"
+        },
+        "estetske:1:5": {
+          "term": "botox",
+          "in": "description",
+          "snippet": "2ml filera + Botox ili 3ml filera"
+        },
+        "estetske:1:6": {
+          "term": "botox",
+          "in": "name",
+          "snippet": "Botox + Profhilo / Jalupro / LOLA / Ejal"
+        },
+        "estetske:2:0": {
+          "term": "botox",
+          "in": "group",
+          "snippet": "Botox tretman"
+        },
+        "estetske:2:1": {
+          "term": "botox",
+          "in": "group",
+          "snippet": "Botox tretman"
+        },
+        "estetske:2:2": {
+          "term": "botox",
+          "in": "group",
+          "snippet": "Botox tretman"
+        },
+        "estetske:2:3": {
+          "term": "botox",
+          "in": "name",
+          "snippet": "LIP FLIP / Gummy smile Botox"
+        },
+        "estetske:2:4": {
+          "term": "botox",
+          "in": "name",
+          "snippet": "Botox lice + vrat"
+        },
+        "estetske:2:5": {
+          "term": "botox",
+          "in": "group",
+          "snippet": "Botox tretman"
+        }
+      }
+    },
+    {
+      "id": "fileri",
+      "phrases": [
+        "fileri",
+        "filer",
+        "hijaluron",
+        "hijaluronski fileri",
+        "hijaluronska kiselina",
+        "hijaluronidaza"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:1"
+        ],
+        "serviceIds": [
+          "estetske:1:0",
+          "estetske:1:1",
+          "estetske:1:2",
+          "estetske:1:3",
+          "estetske:1:4",
+          "estetske:1:5"
+        ],
+        "articleIds": [
+          "art-7"
+        ],
+        "segmentIds": [
+          "estetske"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Price-list group \"Hijaluronski fileri\" (the \"Botox + Profhilo\" line is not a filler and stays out).",
+      "evidence": {
+        "art-7": {
+          "term": "filer",
+          "in": "title",
+          "snippet": "Hijaluronski fileri"
+        },
+        "estetske:1": {
+          "term": "filer",
+          "in": "group title",
+          "snippet": "Hijaluronski fileri"
+        },
+        "estetske:1:0": {
+          "term": "filer",
+          "in": "group",
+          "snippet": "Hijaluronski fileri"
+        },
+        "estetske:1:1": {
+          "term": "filer",
+          "in": "group",
+          "snippet": "Hijaluronski fileri"
+        },
+        "estetske:1:2": {
+          "term": "filer",
+          "in": "group",
+          "snippet": "Hijaluronski fileri"
+        },
+        "estetske:1:3": {
+          "term": "filer",
+          "in": "name",
+          "snippet": "Hijaluronidaza, topljenje filera"
+        },
+        "estetske:1:4": {
+          "term": "filer",
+          "in": "description",
+          "snippet": "3ml filera + Botox ili 4ml filera"
+        },
+        "estetske:1:5": {
+          "term": "filer",
+          "in": "description",
+          "snippet": "2ml filera + Botox ili 3ml filera"
+        }
+      }
+    },
+    {
+      "id": "usne",
+      "phrases": [
+        "usne",
+        "usana",
+        "povećanje usana",
+        "povecanje usana",
+        "volumen usana",
+        "korekcija usana",
+        "punije usne",
+        "lip filler",
+        "lip flip"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:1"
+        ],
+        "serviceIds": [
+          "estetske:1:1",
+          "estetske:2:3",
+          "protokoli:1:2"
+        ],
+        "articleIds": [
+          "art-7"
+        ],
+        "segmentIds": [
+          "estetske"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "\"Hijaluron 0.55ml, usne\" and the article section \"Korekcija usana\" are the direct match. LIP FLIP is a Botox treatment of the upper lip and PLUMP IT UP includes a Myolift of the lips: both only share the body part, no volume is promised.",
+      "evidence": {
+        "art-7": {
+          "term": "usn",
+          "in": "block 24",
+          "snippet": "eporuka je krenuti sa 1ml aplikovanim u usne i regiju oko usana, a ako postoji potr"
+        },
+        "estetske:1": {
+          "term": "usn",
+          "in": "service name (estetske:1:1)",
+          "snippet": "Hijaluron 0.55ml, usne"
+        },
+        "estetske:1:1": {
+          "term": "usn",
+          "in": "name",
+          "snippet": "Hijaluron 0.55ml, usne"
+        },
+        "estetske:2:3": {
+          "term": "lip",
+          "in": "name",
+          "snippet": "LIP FLIP / Gummy smile Botox"
+        },
+        "protokoli:1:2": {
+          "term": "usan",
+          "in": "description",
+          "snippet": "Nano Dermapen, Myolift usana, tretman okoloočne regije, Gua Sha masaža"
+        }
+      }
+    },
+    {
+      "id": "kosa",
+      "phrases": [
+        "kosa",
+        "kose",
+        "kosu",
+        "za kosu",
+        "tretman kose",
+        "rast kose",
+        "skalp",
+        "teme",
+        "vlasište",
+        "vlasiste"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:7",
+          "estetske:4"
+        ],
+        "serviceIds": [
+          "estetske:4:1",
+          "estetske:4:2",
+          "estetske:7:0",
+          "estetske:7:1",
+          "estetske:7:2",
+          "estetske:7:3",
+          "estetske:7:4",
+          "estetske:7:5"
+        ],
+        "articleIds": [
+          "art-4",
+          "art-2"
+        ],
+        "segmentIds": [
+          "dermatologija"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Price-list group \"Rast kose\" plus the two thread/mesotherapy lines that name hair (\"lice ili kosa\"). The dermatologist text lists hair among the things a dermatologist treats.",
+      "evidence": {
+        "art-4": {
+          "term": "kose",
+          "in": "subtitle",
+          "snippet": "Tretmani skalpa za pospešivanje rasta kose"
+        },
+        "art-2": {
+          "term": "kose",
+          "in": "block 0",
+          "snippet": "dijagnostikom i lečenjem bolesti kože, kose, noktiju i vidljivih sluzokoža. Za razl"
+        },
+        "estetske:7": {
+          "term": "kose",
+          "in": "group title",
+          "snippet": "Rast kose"
+        },
+        "estetske:4": {
+          "term": "kosa",
+          "in": "service name (estetske:4:1)",
+          "snippet": "Plazmalifting, celo lice ili kosa (mezoniti + PRP)"
+        },
+        "estetske:4:1": {
+          "term": "kosa",
+          "in": "name",
+          "snippet": "Plazmalifting, celo lice ili kosa (mezoniti + PRP)"
+        },
+        "estetske:4:2": {
+          "term": "kosa",
+          "in": "name",
+          "snippet": "Mezoniti po regiji, lice ili kosa"
+        },
+        "estetske:7:0": {
+          "term": "kose",
+          "in": "name",
+          "snippet": "Egzozomi za rast kose, 1 tretman"
+        },
+        "estetske:7:1": {
+          "term": "kose",
+          "in": "name",
+          "snippet": "Egzozomi za rast kose, ceo protokol"
+        },
+        "estetske:7:2": {
+          "term": "kose",
+          "in": "name",
+          "snippet": "PRP tretman kose"
+        },
+        "estetske:7:3": {
+          "term": "kosa",
+          "in": "name",
+          "snippet": "PRP paket 3× tretmana, kosa"
+        },
+        "estetske:7:4": {
+          "term": "kose",
+          "in": "name",
+          "snippet": "Mezoterapija kose, 1 tretman"
+        },
+        "estetske:7:5": {
+          "term": "kose",
+          "in": "name",
+          "snippet": "Mezoterapija kose, paket 3×"
+        }
+      }
+    },
+    {
+      "id": "opadanje-kose",
+      "phrases": [
+        "opadanje kose",
+        "opada mi kosa",
+        "opadanje kose kod žena",
+        "opadanje kose kod zena",
+        "gubitak kose",
+        "alopecija",
+        "ćelavost",
+        "celavost",
+        "proređena kosa",
+        "proredjena kosa"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:7"
+        ],
+        "serviceIds": [
+          "estetske:5:0",
+          "estetske:7:2",
+          "estetske:7:3",
+          "estetske:7:4",
+          "estetske:7:5"
+        ],
+        "articleIds": [
+          "art-4",
+          "art-2"
+        ],
+        "segmentIds": [
+          "dermatologija"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "PRP and mesotherapy of the scalp are the treatments the article ties to active hair loss; the dermatologist text lists alopecia. The exosome lines are not mapped (the text does not mention them).",
+      "evidence": {
+        "art-4": {
+          "term": "opadanj",
+          "in": "block 7",
+          "snippet": "ri tretmana u nizu, dok se kod aktivnog opadanja kose broj tretmana povećava, a preporu"
+        },
+        "art-2": {
+          "term": "opadanj",
+          "in": "block 7",
+          "snippet": "ermatološki tretirati, ali i alopecija (opadanje kose) i bolesti noktiju."
+        },
+        "estetske:7": {
+          "term": "opadanj",
+          "via": "art-2",
+          "in": "linked article (related link) block 7",
+          "snippet": "ermatološki tretirati, ali i alopecija (opadanje kose) i bolesti noktiju."
+        },
+        "estetske:5:0": {
+          "term": "opadanj",
+          "via": "art-2",
+          "in": "linked article (primary link) block 7",
+          "snippet": "ermatološki tretirati, ali i alopecija (opadanje kose) i bolesti noktiju."
+        },
+        "estetske:7:2": {
+          "term": "opadanj",
+          "via": "art-4",
+          "in": "linked article (primary link) block 7",
+          "snippet": "ri tretmana u nizu, dok se kod aktivnog opadanja kose broj tretmana povećava, a preporu"
+        },
+        "estetske:7:3": {
+          "term": "opadanj",
+          "via": "art-4",
+          "in": "linked article (primary link) block 7",
+          "snippet": "ri tretmana u nizu, dok se kod aktivnog opadanja kose broj tretmana povećava, a preporu"
+        },
+        "estetske:7:4": {
+          "term": "opadanj",
+          "via": "art-4",
+          "in": "linked article (primary link) block 7",
+          "snippet": "ri tretmana u nizu, dok se kod aktivnog opadanja kose broj tretmana povećava, a preporu"
+        },
+        "estetske:7:5": {
+          "term": "opadanj",
+          "via": "art-4",
+          "in": "linked article (primary link) block 7",
+          "snippet": "ri tretmana u nizu, dok se kod aktivnog opadanja kose broj tretmana povećava, a preporu"
+        }
+      }
+    },
+    {
+      "id": "celulit",
+      "phrases": [
+        "celulit",
+        "celulita",
+        "anticelulit",
+        "anti celulit",
+        "anticelulit masaža",
+        "anticelulit masaza",
+        "narandžasta kora",
+        "narandzasta kora",
+        "cellulite"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:3",
+          "telo:4",
+          "telo:0",
+          "telo:2",
+          "estetske:4"
+        ],
+        "serviceIds": [
+          "telo:2:4",
+          "telo:2:5",
+          "telo:3:0",
+          "telo:3:1",
+          "telo:3:2",
+          "telo:3:3",
+          "estetske:4:3",
+          "estetske:4:4"
+        ],
+        "articleIds": [
+          "art-16",
+          "art-17",
+          "art-20",
+          "art-18"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "AWT (\"Anticelulit\" in the group title), Med Contour, Venus Legacy body, the anticelulit massages and the mesotherapy of cellulite all say celulit in their own text.",
+      "evidence": {
+        "art-16": {
+          "term": "celulit",
+          "in": "block 0",
+          "snippet": ". Ovo je proverena metoda za razbijanje celulita, topljenje masnih naslaga i zatezanje"
+        },
+        "art-17": {
+          "term": "celulit",
+          "in": "block 0",
+          "snippet": "tretman za oblikovanje tela, redukciju celulita i zatezanje kože. Kombinuje ultrazvuk"
+        },
+        "art-20": {
+          "term": "celulit",
+          "in": "block 0",
+          "snippet": "e kože. Pored toga što pomaže u lečenju celulita, koristi se i za anti-aging tretmane l"
+        },
+        "art-18": {
+          "term": "celulit",
+          "in": "block 4",
+          "snippet": "Anticelulit tretmani"
+        },
+        "telo:3": {
+          "term": "celulit",
+          "in": "group title",
+          "snippet": "AWT, Anticelulit i preoblikovanje"
+        },
+        "telo:4": {
+          "term": "celulit",
+          "via": "art-17",
+          "in": "linked article (primary link) block 0",
+          "snippet": "tretman za oblikovanje tela, redukciju celulita i zatezanje kože. Kombinuje ultrazvuk"
+        },
+        "telo:0": {
+          "term": "celulit",
+          "via": "art-16",
+          "in": "linked article (related link) block 0",
+          "snippet": ". Ovo je proverena metoda za razbijanje celulita, topljenje masnih naslaga i zatezanje"
+        },
+        "telo:2": {
+          "term": "celulit",
+          "in": "service name (telo:2:4)",
+          "snippet": "Anticelulit masaža I, butine i stomak"
+        },
+        "estetske:4": {
+          "term": "celulit",
+          "in": "service name (estetske:4:3)",
+          "snippet": "Mezoterapija celulita, 1 tretman"
+        },
+        "telo:2:4": {
+          "term": "celulit",
+          "in": "name",
+          "snippet": "Anticelulit masaža I, butine i stomak"
+        },
+        "telo:2:5": {
+          "term": "celulit",
+          "in": "name",
+          "snippet": "Anticelulit masaža II, celo telo"
+        },
+        "telo:3:0": {
+          "term": "celulit",
+          "in": "group",
+          "snippet": "AWT, Anticelulit i preoblikovanje"
+        },
+        "telo:3:1": {
+          "term": "celulit",
+          "in": "group",
+          "snippet": "AWT, Anticelulit i preoblikovanje"
+        },
+        "telo:3:2": {
+          "term": "celulit",
+          "in": "group",
+          "snippet": "AWT, Anticelulit i preoblikovanje"
+        },
+        "telo:3:3": {
+          "term": "celulit",
+          "in": "group",
+          "snippet": "AWT, Anticelulit i preoblikovanje"
+        },
+        "estetske:4:3": {
+          "term": "celulit",
+          "in": "name",
+          "snippet": "Mezoterapija celulita, 1 tretman"
+        },
+        "estetske:4:4": {
+          "term": "celulit",
+          "in": "name",
+          "snippet": "Mezoterapija celulita, paket 6×"
+        }
+      }
+    },
+    {
+      "id": "kako-smanjiti-obim",
+      "phrases": [
+        "kako smanjiti obim",
+        "smanjiti obim",
+        "smanjenje obima",
+        "smanjenje obima tela",
+        "obim butina",
+        "obim struka",
+        "obim stomaka",
+        "skinuti centimetre"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:4",
+          "telo:0",
+          "telo:3"
+        ],
+        "serviceIds": [
+          "telo:4:0",
+          "telo:4:1",
+          "telo:4:2",
+          "telo:4:3",
+          "telo:4:4"
+        ],
+        "articleIds": [
+          "art-17",
+          "art-20",
+          "art-16"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "Site wording: Med Contour \"razbija masne naslage\" (price-list group \"Smanjenje masnih naslaga\"), AWT \"topljenje masnih naslaga\", Venus Legacy \"smanjeni obim\". No centimetre result is promised.",
+      "evidence": {
+        "art-17": {
+          "term": "obim",
+          "in": "block 4",
+          "snippet": "i sprečava opuštanje kože nakon gubitka obima."
+        },
+        "art-20": {
+          "term": "obim",
+          "in": "block 5",
+          "snippet": "nutija koža bolje teksture, uz smanjeni obim i eliminisani celulit."
+        },
+        "art-16": {
+          "term": "masnih naslag",
+          "in": "block 0",
+          "snippet": "etoda za razbijanje celulita, topljenje masnih naslaga i zatezanje kože. Zahvaljujući dokazan"
+        },
+        "telo:4": {
+          "term": "masnih naslag",
+          "in": "group title",
+          "snippet": "MedContour, Smanjenje masnih naslaga"
+        },
+        "telo:0": {
+          "term": "masnih naslag",
+          "via": "art-16",
+          "in": "linked article (related link) block 0",
+          "snippet": "etoda za razbijanje celulita, topljenje masnih naslaga i zatezanje kože. Zahvaljujući dokazan"
+        },
+        "telo:3": {
+          "term": "masnih naslag",
+          "via": "art-16",
+          "in": "linked article (primary link) block 0",
+          "snippet": "etoda za razbijanje celulita, topljenje masnih naslaga i zatezanje kože. Zahvaljujući dokazan"
+        },
+        "telo:4:0": {
+          "term": "masnih naslag",
+          "in": "group",
+          "snippet": "MedContour, Smanjenje masnih naslaga"
+        },
+        "telo:4:1": {
+          "term": "masnih naslag",
+          "in": "group",
+          "snippet": "MedContour, Smanjenje masnih naslaga"
+        },
+        "telo:4:2": {
+          "term": "masnih naslag",
+          "in": "group",
+          "snippet": "MedContour, Smanjenje masnih naslaga"
+        },
+        "telo:4:3": {
+          "term": "masnih naslag",
+          "in": "group",
+          "snippet": "MedContour, Smanjenje masnih naslaga"
+        },
+        "telo:4:4": {
+          "term": "masnih naslag",
+          "in": "group",
+          "snippet": "MedContour, Smanjenje masnih naslaga"
+        }
+      }
+    },
+    {
+      "id": "mrsavljenje",
+      "phrases": [
+        "mršavljenje",
+        "mrsavljenje",
+        "smršati",
+        "smrsati",
+        "gubitak kilograma",
+        "skidanje kilograma",
+        "dijeta",
+        "proces mršavljenja",
+        "proces mrsavljenja"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:1",
+          "telo:5"
+        ],
+        "serviceIds": [
+          "telo:1:0",
+          "telo:1:1",
+          "telo:1:2",
+          "telo:1:3",
+          "telo:1:4",
+          "telo:5:0"
+        ],
+        "articleIds": [
+          "art-19",
+          "art-18"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "Mapped by the site's own wording only (\"pomaže mršavljenje\", \"Kick Start Diet\", \"u procesu mršavljenja\"). Not medical advice, no weight-loss promise.",
+      "evidence": {
+        "art-19": {
+          "term": "mrsav",
+          "in": "block 7",
+          "snippet": "esoterapija ubrzava metabolizam, pomaže mršavljenje, ali i održavanje željene telesne"
+        },
+        "art-18": {
+          "term": "mrsav",
+          "in": "block 9",
+          "snippet": "i čvrstinu kože tela, koje su u procesu mršavljenja, kao i nakon porođaja ili u proce"
+        },
+        "telo:1": {
+          "term": "mrsav",
+          "via": "art-18",
+          "in": "linked article (related link) block 9",
+          "snippet": "i čvrstinu kože tela, koje su u procesu mršavljenja, kao i nakon porođaja ili u proce"
+        },
+        "telo:5": {
+          "term": "diet",
+          "in": "service name (telo:5:0)",
+          "snippet": "KICK START DIET"
+        },
+        "telo:1:0": {
+          "term": "mrsav",
+          "via": "art-19",
+          "in": "linked article (primary link) block 7",
+          "snippet": "esoterapija ubrzava metabolizam, pomaže mršavljenje, ali i održavanje željene telesne"
+        },
+        "telo:1:1": {
+          "term": "mrsav",
+          "via": "art-19",
+          "in": "linked article (primary link) block 7",
+          "snippet": "esoterapija ubrzava metabolizam, pomaže mršavljenje, ali i održavanje željene telesne"
+        },
+        "telo:1:2": {
+          "term": "mrsav",
+          "via": "art-19",
+          "in": "linked article (primary link) block 7",
+          "snippet": "esoterapija ubrzava metabolizam, pomaže mršavljenje, ali i održavanje željene telesne"
+        },
+        "telo:1:3": {
+          "term": "mrsav",
+          "via": "art-19",
+          "in": "linked article (primary link) block 7",
+          "snippet": "esoterapija ubrzava metabolizam, pomaže mršavljenje, ali i održavanje željene telesne"
+        },
+        "telo:1:4": {
+          "term": "mrsav",
+          "via": "art-19",
+          "in": "linked article (primary link) block 7",
+          "snippet": "esoterapija ubrzava metabolizam, pomaže mršavljenje, ali i održavanje željene telesne"
+        },
+        "telo:5:0": {
+          "term": "diet",
+          "in": "name",
+          "snippet": "KICK START DIET"
+        }
+      }
+    },
+    {
+      "id": "oblikovanje-tela",
+      "phrases": [
+        "oblikovanje tela",
+        "preoblikovanje tela",
+        "body contouring",
+        "body contour",
+        "oblikovanje figure",
+        "konture tela",
+        "konturisanje tela"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:4",
+          "telo:3",
+          "telo:0"
+        ],
+        "serviceIds": [
+          "telo:3:0",
+          "telo:3:1",
+          "telo:3:2",
+          "telo:3:3",
+          "telo:4:0",
+          "telo:4:1",
+          "telo:4:2",
+          "telo:4:3",
+          "telo:4:4"
+        ],
+        "articleIds": [
+          "art-17",
+          "art-20",
+          "art-18"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Med Contour is titled \"tretman za oblikovanje tela\", Venus Legacy \"preoblikovanje i zatezanje tela\", the AWT group \"preoblikovanje\"; the care article names \"smanjenje celulita i oblikovanje tela\".",
+      "evidence": {
+        "art-17": {
+          "term": "oblikovan",
+          "in": "title",
+          "snippet": "Med Contour tretman za oblikovanje tela"
+        },
+        "art-20": {
+          "term": "oblikovan",
+          "in": "subtitle",
+          "snippet": "Za preoblikovanje i zatezanje tela"
+        },
+        "art-18": {
+          "term": "oblikovan",
+          "in": "block 10",
+          "snippet": "Tretman za smanjenje celulita i oblikovanje tela"
+        },
+        "telo:4": {
+          "term": "oblikovan",
+          "via": "art-17",
+          "in": "linked article (primary link) title",
+          "snippet": "Med Contour tretman za oblikovanje tela"
+        },
+        "telo:3": {
+          "term": "oblikovan",
+          "in": "group title",
+          "snippet": "AWT, Anticelulit i preoblikovanje"
+        },
+        "telo:0": {
+          "term": "oblikovan",
+          "via": "art-18",
+          "in": "linked article (related link) block 10",
+          "snippet": "Tretman za smanjenje celulita i oblikovanje tela"
+        },
+        "telo:3:0": {
+          "term": "oblikovan",
+          "in": "group",
+          "snippet": "AWT, Anticelulit i preoblikovanje"
+        },
+        "telo:3:1": {
+          "term": "oblikovan",
+          "in": "group",
+          "snippet": "AWT, Anticelulit i preoblikovanje"
+        },
+        "telo:3:2": {
+          "term": "oblikovan",
+          "in": "group",
+          "snippet": "AWT, Anticelulit i preoblikovanje"
+        },
+        "telo:3:3": {
+          "term": "oblikovan",
+          "in": "group",
+          "snippet": "AWT, Anticelulit i preoblikovanje"
+        },
+        "telo:4:0": {
+          "term": "oblikovan",
+          "via": "art-17",
+          "in": "linked article (primary link) title",
+          "snippet": "Med Contour tretman za oblikovanje tela"
+        },
+        "telo:4:1": {
+          "term": "oblikovan",
+          "via": "art-17",
+          "in": "linked article (primary link) title",
+          "snippet": "Med Contour tretman za oblikovanje tela"
+        },
+        "telo:4:2": {
+          "term": "oblikovan",
+          "via": "art-17",
+          "in": "linked article (primary link) title",
+          "snippet": "Med Contour tretman za oblikovanje tela"
+        },
+        "telo:4:3": {
+          "term": "oblikovan",
+          "via": "art-17",
+          "in": "linked article (primary link) title",
+          "snippet": "Med Contour tretman za oblikovanje tela"
+        },
+        "telo:4:4": {
+          "term": "oblikovan",
+          "via": "art-17",
+          "in": "linked article (primary link) title",
+          "snippet": "Med Contour tretman za oblikovanje tela"
+        }
+      }
+    },
+    {
+      "id": "depilacija",
+      "phrases": [
+        "depilacija",
+        "depilirati",
+        "depiliranje",
+        "brijanje",
+        "uklanjanje dlaka",
+        "dlake"
+      ],
+      "targets": {
+        "groupIds": [
+          "laserska:0",
+          "laserska:1",
+          "laserska:2",
+          "laserska:3",
+          "laserska:4"
+        ],
+        "serviceIds": [],
+        "articleIds": [
+          "art-21"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "The site offers no waxing or classic depilation: its only hair removal is laser epilation (Venus Velocity). The article itself compares it with depilation (\"smanjuje troškove depilacije\"). Mapped at group level so the whole laser price list shows.",
+      "evidence": {
+        "art-21": {
+          "term": "depil",
+          "in": "block 1 item 1",
+          "snippet": "smanjuje troškove depilacije i kupovine novih brijača i pruža s"
+        },
+        "laserska:0": {
+          "term": "depil",
+          "via": "art-21",
+          "in": "linked article (primary link) block 1 item 1",
+          "snippet": "smanjuje troškove depilacije i kupovine novih brijača i pruža s"
+        },
+        "laserska:1": {
+          "term": "depil",
+          "via": "art-21",
+          "in": "linked article (primary link) block 1 item 1",
+          "snippet": "smanjuje troškove depilacije i kupovine novih brijača i pruža s"
+        },
+        "laserska:2": {
+          "term": "depil",
+          "via": "art-21",
+          "in": "linked article (primary link) block 1 item 1",
+          "snippet": "smanjuje troškove depilacije i kupovine novih brijača i pruža s"
+        },
+        "laserska:3": {
+          "term": "depil",
+          "via": "art-21",
+          "in": "linked article (primary link) block 1 item 1",
+          "snippet": "smanjuje troškove depilacije i kupovine novih brijača i pruža s"
+        },
+        "laserska:4": {
+          "term": "depil",
+          "via": "art-21",
+          "in": "linked article (primary link) block 1 item 1",
+          "snippet": "smanjuje troškove depilacije i kupovine novih brijača i pruža s"
+        }
+      }
+    },
+    {
+      "id": "trajno-uklanjanje-dlacica",
+      "phrases": [
+        "trajno uklanjanje dlačica",
+        "trajno uklanjanje dlacica",
+        "trajno uklanjanje dlaka",
+        "trajna epilacija",
+        "laserska epilacija",
+        "laser za dlačice",
+        "laser za dlacice",
+        "epilacija",
+        "dlačice",
+        "dlacice",
+        "venus velocity"
+      ],
+      "targets": {
+        "groupIds": [
+          "laserska:0",
+          "laserska:1",
+          "laserska:2",
+          "laserska:3",
+          "laserska:4"
+        ],
+        "serviceIds": [
+          "laserska:0:0",
+          "laserska:0:1",
+          "laserska:0:2",
+          "laserska:0:3",
+          "laserska:0:4",
+          "laserska:1:0",
+          "laserska:1:1",
+          "laserska:1:2",
+          "laserska:1:3",
+          "laserska:1:4",
+          "laserska:1:5",
+          "laserska:2:0",
+          "laserska:2:1",
+          "laserska:2:2",
+          "laserska:2:3",
+          "laserska:2:4",
+          "laserska:3:0",
+          "laserska:3:1",
+          "laserska:3:2",
+          "laserska:3:3",
+          "laserska:3:4",
+          "laserska:3:5",
+          "laserska:3:6",
+          "laserska:4:0",
+          "laserska:4:1",
+          "laserska:4:2",
+          "laserska:4:3",
+          "laserska:4:4"
+        ],
+        "articleIds": [
+          "art-21"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Every row of the price-list tab \"Laserska epilacija\" (28 services) and the Venus Velocity article. The old site maps \"trajno uklanjanje dlačica\" to #laserska-epilacija as well. The article says \"da se zauvek rešite bolnog urastanja dlačica\"; results are never promised as permanent in the text.",
+      "evidence": {
+        "art-21": {
+          "term": "epilac",
+          "in": "subtitle",
+          "snippet": "Laserska epilacija Venus Velocity aparatom"
+        },
+        "laserska:0": {
+          "term": "epilac",
+          "via": "art-21",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Laserska epilacija Venus Velocity aparatom"
+        },
+        "laserska:1": {
+          "term": "epilac",
+          "via": "art-21",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Laserska epilacija Venus Velocity aparatom"
+        },
+        "laserska:2": {
+          "term": "epilac",
+          "via": "art-21",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Laserska epilacija Venus Velocity aparatom"
+        },
+        "laserska:3": {
+          "term": "epilac",
+          "via": "art-21",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Laserska epilacija Venus Velocity aparatom"
+        },
+        "laserska:4": {
+          "term": "epilac",
+          "via": "art-21",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Laserska epilacija Venus Velocity aparatom"
+        },
+        "laserska:0:0": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:0:1": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:0:2": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:0:3": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:0:4": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:1:0": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:1:1": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:1:2": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:1:3": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:1:4": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:1:5": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:2:0": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:2:1": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:2:2": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:2:3": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:2:4": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:3:0": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:3:1": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:3:2": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:3:3": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:3:4": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:3:5": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:3:6": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:4:0": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:4:1": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:4:2": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:4:3": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        },
+        "laserska:4:4": {
+          "term": "epilac",
+          "in": "tab",
+          "snippet": "Laserska epilacija"
+        }
+      }
+    },
+    {
+      "id": "masaza",
+      "phrases": [
+        "masaža",
+        "masaza",
+        "masaže",
+        "masaze",
+        "masirati",
+        "relax masaža",
+        "relax masaza",
+        "anticelulit masaža",
+        "anticelulit masaza",
+        "masaža leđa",
+        "masaza ledja",
+        "masaža lica",
+        "masaza lica",
+        "face gym",
+        "facijalna masaža",
+        "facijalna masaza",
+        "masaža tela",
+        "masaza tela"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:2",
+          "lice:7"
+        ],
+        "serviceIds": [
+          "lice:7:2",
+          "lice:7:3",
+          "lice:7:4",
+          "lice:7:5",
+          "lice:7:9",
+          "telo:2:0",
+          "telo:2:1",
+          "telo:2:2",
+          "telo:2:3",
+          "telo:2:4",
+          "telo:2:5"
+        ],
+        "articleIds": [
+          "art-18",
+          "art-9"
+        ],
+        "segmentIds": [
+          "telo",
+          "kozmetika"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Dedicated massage lines: the group \"Masaže\" (body) and the Face Gym / remodeling / energy massages (face). Many protocols contain a massage step; they are not listed one by one.",
+      "evidence": {
+        "art-18": {
+          "term": "masaz",
+          "in": "block 0",
+          "snippet": "Pored klasičnih masaža lica i tela, nudimo vam čitav niz targ"
+        },
+        "art-9": {
+          "term": "masaz",
+          "in": "block 2",
+          "snippet": "ke, svaki biološki tretman lica počinje masažom kako biste se potpuno opustili i prip"
+        },
+        "telo:2": {
+          "term": "masaz",
+          "in": "group title",
+          "snippet": "Masaže"
+        },
+        "lice:7": {
+          "term": "masaz",
+          "in": "group title",
+          "snippet": "Myolift i masaže lica"
+        },
+        "lice:7:2": {
+          "term": "masaz",
+          "in": "name",
+          "snippet": "FACE GYM masaža lica"
+        },
+        "lice:7:3": {
+          "term": "masaz",
+          "in": "description",
+          "snippet": "Face Gym masaža, piling, maska i nega + presoterapija"
+        },
+        "lice:7:4": {
+          "term": "masaz",
+          "in": "name",
+          "snippet": "Face Gym paket 4× masaže"
+        },
+        "lice:7:5": {
+          "term": "masaz",
+          "in": "name",
+          "snippet": "REMODELING masaža, buccal"
+        },
+        "lice:7:9": {
+          "term": "masaz",
+          "in": "description",
+          "snippet": "Energy masaža, Venus Legacy, Myolift mikrostruje, piling, maska"
+        },
+        "telo:2:0": {
+          "term": "masaz",
+          "in": "name",
+          "snippet": "Masaža tela 60 min, Relax / Antistress / Terapeutska"
+        },
+        "telo:2:1": {
+          "term": "masaz",
+          "in": "name",
+          "snippet": "Parcijalna masaža 30 min"
+        },
+        "telo:2:2": {
+          "term": "masaz",
+          "in": "description",
+          "snippet": "Presoterapija + masaža gornjeg dela"
+        },
+        "telo:2:3": {
+          "term": "masaz",
+          "in": "description",
+          "snippet": "Individualno kreirana masaža"
+        },
+        "telo:2:4": {
+          "term": "masaz",
+          "in": "name",
+          "snippet": "Anticelulit masaža I, butine i stomak"
+        },
+        "telo:2:5": {
+          "term": "masaz",
+          "in": "name",
+          "snippet": "Anticelulit masaža II, celo telo"
+        }
+      }
+    },
+    {
+      "id": "relaks",
+      "phrases": [
+        "relaks",
+        "relax",
+        "relaksacija",
+        "opuštanje",
+        "opustanje",
+        "antistres",
+        "antistress",
+        "stres"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:2",
+          "telo:5"
+        ],
+        "serviceIds": [
+          "telo:2:0",
+          "telo:2:2",
+          "telo:5:1",
+          "telo:5:3"
+        ],
+        "articleIds": [
+          "art-18",
+          "art-9"
+        ],
+        "segmentIds": [
+          "telo",
+          "kozmetika"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "\"Relax / Antistress\" massage, \"Antistress 30\", \"FALL IN RELAXATION\" and SILKY SMOOTH (the article: \"tretmani za opuštanje i negu kože\"); the biological facial treatment starts with a relaxing massage.",
+      "evidence": {
+        "art-18": {
+          "term": "relax",
+          "in": "block 21",
+          "snippet": "Fall in Relaxation tretman"
+        },
+        "art-9": {
+          "term": "opust",
+          "in": "block 2",
+          "snippet": "a počinje masažom kako biste se potpuno opustili i pripremili za naredne korake."
+        },
+        "telo:2": {
+          "term": "relax",
+          "in": "service name (telo:2:0)",
+          "snippet": "Masaža tela 60 min, Relax / Antistress / Terapeutska"
+        },
+        "telo:5": {
+          "term": "relax",
+          "in": "service name (telo:5:3)",
+          "snippet": "FALL IN RELAXATION"
+        },
+        "telo:2:0": {
+          "term": "relax",
+          "in": "name",
+          "snippet": "Masaža tela 60 min, Relax / Antistress / Terapeutska"
+        },
+        "telo:2:2": {
+          "term": "antistress",
+          "in": "name",
+          "snippet": "Antistress 30"
+        },
+        "telo:5:1": {
+          "term": "relax",
+          "via": "art-18",
+          "in": "linked article (primary link) block 21",
+          "snippet": "Fall in Relaxation tretman"
+        },
+        "telo:5:3": {
+          "term": "relax",
+          "in": "name",
+          "snippet": "FALL IN RELAXATION"
+        }
+      }
+    },
+    {
+      "id": "detoks",
+      "phrases": [
+        "detoks",
+        "detox",
+        "detoksikacija",
+        "skin detox",
+        "body detox",
+        "hangover",
+        "hangover detox",
+        "izbacivanje toksina"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:6",
+          "telo:1"
+        ],
+        "serviceIds": [
+          "lice:1:5",
+          "lice:2:4",
+          "estetske:6:0"
+        ],
+        "articleIds": [
+          "art-19",
+          "art-17"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "The site never promises detoxification of the body. \"Detox\"/\"detoks\" appears in service names (Hangover Detox, SKIN DETOX, Skin Detox) and the texts say presoterapija and Med Contour help the body to expel toxins.",
+      "evidence": {
+        "art-19": {
+          "term": "toksin",
+          "in": "block 0",
+          "snippet": "limfne drenaže, koja pomaže izbacivanje toksina i viška tečnosti, razgradnju masnih će"
+        },
+        "art-17": {
+          "term": "toksin",
+          "in": "block 10",
+          "snippet": "tan unos vode kako bi se lakše izbacili toksini i masti."
+        },
+        "estetske:6": {
+          "term": "detox",
+          "in": "service name (estetske:6:0)",
+          "snippet": "Hydromix / Hangover Detox"
+        },
+        "telo:1": {
+          "term": "toksin",
+          "via": "art-19",
+          "in": "linked article (primary link) block 0",
+          "snippet": "limfne drenaže, koja pomaže izbacivanje toksina i viška tečnosti, razgradnju masnih će"
+        },
+        "lice:1:5": {
+          "term": "detox",
+          "in": "name",
+          "snippet": "SKIN DETOX"
+        },
+        "lice:2:4": {
+          "term": "detox",
+          "in": "name",
+          "snippet": "DERMAFACIAL LUX Skin Detox"
+        },
+        "estetske:6:0": {
+          "term": "detox",
+          "in": "name",
+          "snippet": "Hydromix / Hangover Detox"
+        }
+      }
+    },
+    {
+      "id": "presoterapija",
+      "phrases": [
+        "presoterapija",
+        "presoterapiju",
+        "limfna drenaža",
+        "limfna drenaza",
+        "drenaža",
+        "drenaza",
+        "proballancer",
+        "aparaturna limfna drenaža",
+        "aparaturna limfna drenaza"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:1"
+        ],
+        "serviceIds": [
+          "lice:1:10",
+          "lice:7:3",
+          "telo:1:0",
+          "telo:1:1",
+          "telo:1:2",
+          "telo:1:3",
+          "telo:1:4",
+          "telo:2:2",
+          "telo:5:0",
+          "telo:5:6",
+          "protokoli:0:5",
+          "protokoli:2:1",
+          "protokoli:2:4",
+          "protokoli:3:6",
+          "protokoli:3:7"
+        ],
+        "articleIds": [
+          "art-19"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Group \"Presoterapija ProBallancer\" plus every service in other groups whose name or description contains presoterapija.",
+      "evidence": {
+        "art-19": {
+          "term": "presoterap",
+          "in": "title",
+          "snippet": "ProBallancer presoterapija"
+        },
+        "telo:1": {
+          "term": "presoterap",
+          "in": "group title",
+          "snippet": "Presoterapija ProBallancer"
+        },
+        "lice:1:10": {
+          "term": "presoterap",
+          "in": "description",
+          "snippet": "Venus Glow, drenažna masaža, Myolift, presoterapija"
+        },
+        "lice:7:3": {
+          "term": "presoterap",
+          "in": "description",
+          "snippet": "Face Gym masaža, piling, maska i nega + presoterapija"
+        },
+        "telo:1:0": {
+          "term": "presoterap",
+          "in": "group",
+          "snippet": "Presoterapija ProBallancer"
+        },
+        "telo:1:1": {
+          "term": "presoterap",
+          "in": "group",
+          "snippet": "Presoterapija ProBallancer"
+        },
+        "telo:1:2": {
+          "term": "presoterap",
+          "in": "group",
+          "snippet": "Presoterapija ProBallancer"
+        },
+        "telo:1:3": {
+          "term": "presoterap",
+          "in": "group",
+          "snippet": "Presoterapija ProBallancer"
+        },
+        "telo:1:4": {
+          "term": "presoterap",
+          "in": "description",
+          "snippet": "Piling, drenažni krem, presoterapija, mini Face Gym + 3 dodatne presoterapije"
+        },
+        "telo:2:2": {
+          "term": "presoterap",
+          "in": "description",
+          "snippet": "Presoterapija + masaža gornjeg dela"
+        },
+        "telo:5:0": {
+          "term": "presoterap",
+          "in": "description",
+          "snippet": "Suvo četkanje, pakovanje, limfna drenaža, presoterapija"
+        },
+        "telo:5:6": {
+          "term": "presoterap",
+          "in": "description",
+          "snippet": "Venus Glow/Dermafacial, Fresh Up nega, presoterapija i masaža"
+        },
+        "protokoli:0:5": {
+          "term": "presoterap",
+          "in": "description",
+          "snippet": "Uz GRATIS presoterapiju uz svaki tretman"
+        },
+        "protokoli:2:1": {
+          "term": "presoterap",
+          "in": "description",
+          "snippet": "Presoterapija + Dermafacial / Venus Glow + masaža lica, vrata i dekoltea"
+        },
+        "protokoli:2:4": {
+          "term": "presoterap",
+          "in": "description",
+          "snippet": "Presoterapija, piling lica, energy masaža, Gua Sha i Thera Gun"
+        },
+        "protokoli:3:6": {
+          "term": "presoterap",
+          "in": "description",
+          "snippet": "Venus Legacy tela, boosteri + 6× presoterapija"
+        },
+        "protokoli:3:7": {
+          "term": "presoterap",
+          "in": "description",
+          "snippet": "3× Venus Legacy, presoterapija i 6× dodatna presoterapija"
+        }
+      }
+    },
+    {
+      "id": "ledja",
+      "phrases": [
+        "leđa",
+        "ledja",
+        "leđni",
+        "ledjni",
+        "masaža leđa",
+        "masaza ledja",
+        "bol u leđima",
+        "bol u ledjima"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:2",
+          "telo:3"
+        ],
+        "serviceIds": [
+          "telo:2:1",
+          "telo:3:1"
+        ],
+        "articleIds": [
+          "art-16",
+          "art-17"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "No back-pain or physio claim exists anywhere. Mapped to the partial massage that names the back and to the two body devices whose texts list the back among treatable regions.",
+      "evidence": {
+        "art-16": {
+          "term": "ledj",
+          "in": "block 7",
+          "snippet": "tirati stomak, butine, zadnjica, ruke i leđa, dok jedna sesija traje između 30 i 60"
+        },
+        "art-17": {
+          "term": "ledj",
+          "in": "block 6",
+          "snippet": "Najčešćše se tretiraju stomak, bokovi, zadnjica, butine, leđa, kolena i nadlaktice."
+        },
+        "telo:2": {
+          "term": "ledj",
+          "in": "service description (telo:2:1)",
+          "snippet": "Leđa / noge / vrat, ramena, glava"
+        },
+        "telo:3": {
+          "term": "ledj",
+          "in": "service description (telo:3:1)",
+          "snippet": "Butine i zadnjica, stomak i donji deo leđa"
+        },
+        "telo:2:1": {
+          "term": "ledj",
+          "in": "description",
+          "snippet": "Leđa / noge / vrat, ramena, glava"
+        },
+        "telo:3:1": {
+          "term": "ledj",
+          "in": "description",
+          "snippet": "Butine i zadnjica, stomak i donji deo leđa"
+        }
+      }
+    },
+    {
+      "id": "vrat",
+      "phrases": [
+        "vrat",
+        "vrata",
+        "vratu",
+        "dekolte",
+        "dekolteu",
+        "tretman vrata",
+        "masaža vrata",
+        "masaza vrata"
+      ],
+      "targets": {
+        "groupIds": [],
+        "serviceIds": [
+          "lice:1:2",
+          "lice:1:4",
+          "lice:5:2",
+          "lice:5:4",
+          "lice:6:4",
+          "lice:6:5",
+          "telo:2:1",
+          "estetske:2:0",
+          "estetske:2:1",
+          "estetske:2:4",
+          "estetske:3:1",
+          "estetske:3:16",
+          "estetske:5:4",
+          "protokoli:1:0",
+          "protokoli:2:1"
+        ],
+        "articleIds": [
+          "art-5",
+          "art-8",
+          "art-15",
+          "art-20",
+          "art-9"
+        ],
+        "segmentIds": [
+          "estetske",
+          "kozmetika",
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Body-part word: every service that names neck or décolleté (face + neck packages, Dermapen, Venus Legacy, Botox, mesotherapy, the partial massage) and the articles that treat neck and décolleté.",
+      "evidence": {
+        "art-5": {
+          "term": "vrat",
+          "in": "title",
+          "snippet": "Regenerativne procedure i biorevitalizacija lica, vrata i dekoltea"
+        },
+        "art-8": {
+          "term": "vrat",
+          "in": "block 2",
+          "snippet": "rva, nehirurški Cat Eye efekat, lifting vrata i podbratka, a često se primenjuju i n"
+        },
+        "art-15": {
+          "term": "vrat",
+          "in": "block 2 item 0",
+          "snippet": "Zatezanje i lifting lica, podbratka i vrata,"
+        },
+        "art-20": {
+          "term": "vrat",
+          "in": "block 0",
+          "snippet": "risti se i za anti-aging tretmane lica, vrata i dekoltea."
+        },
+        "art-9": {
+          "term": "vrat",
+          "in": "block 0",
+          "snippet": "iču cirkulaciju i vraćaju jedrinu licu, vratu i dekolteu, reč je o tretmanima koji p"
+        },
+        "lice:1:2": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "Biološki tretman lica 2, lice, vrat i dekolte"
+        },
+        "lice:1:4": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "REVIVE & RADIATE, lice, vrat i dekolte"
+        },
+        "lice:5:2": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "Dermapen anti-aging, lice, vrat, dekolte"
+        },
+        "lice:5:4": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "DERMAWORLD Dermapen anti-aging, lice, vrat, dekolte"
+        },
+        "lice:6:4": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "Celo lice i vrat"
+        },
+        "lice:6:5": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "Celo lice, vrat i dekolte"
+        },
+        "telo:2:1": {
+          "term": "vrat",
+          "in": "description",
+          "snippet": "Leđa / noge / vrat, ramena, glava"
+        },
+        "estetske:2:0": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "Korekcija bora, lice ili vrat I"
+        },
+        "estetske:2:1": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "Korekcija bora, lice ili vrat II"
+        },
+        "estetske:2:4": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "Botox lice + vrat"
+        },
+        "estetske:3:1": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "Biorevitalizacija lice i vrat, Jalupro"
+        },
+        "estetske:3:16": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "Mezoterapija, lice, vrat i dekolte"
+        },
+        "estetske:5:4": {
+          "term": "vrat",
+          "in": "name",
+          "snippet": "Candela Nordlys, Fotorejuvenacija lica, vrata i dekoltea"
+        },
+        "protokoli:1:0": {
+          "term": "vrat",
+          "in": "description",
+          "snippet": "Energy masaža, Myolift / Venus Legacy lica i vrata, biorevitalizujući piling, maska"
+        },
+        "protokoli:2:1": {
+          "term": "vrat",
+          "in": "description",
+          "snippet": "Presoterapija + Dermafacial / Venus Glow + masaža lica, vrata i dekoltea"
+        }
+      }
+    },
+    {
+      "id": "ukljesteni-vrat",
+      "phrases": [
+        "uklješteni vrat",
+        "ukljesteni vrat",
+        "uklješten vrat",
+        "ukljesten vrat",
+        "ukočen vrat",
+        "ukocen vrat",
+        "bol u vratu"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:2"
+        ],
+        "serviceIds": [
+          "telo:2:0",
+          "telo:2:1"
+        ],
+        "articleIds": [],
+        "segmentIds": [],
+        "offerIds": []
+      },
+      "strength": "weak",
+      "note": "No article or service claims to treat a stiff neck or pain. Only the massage group is offered as the closest hook (the partial massage names neck, shoulders and head; one massage is called \"Terapeutska\"). Show as a soft suggestion, never as a treatment claim.",
+      "evidence": {
+        "telo:2": {
+          "term": "vrat",
+          "in": "service description (telo:2:1)",
+          "snippet": "Leđa / noge / vrat, ramena, glava"
+        },
+        "telo:2:0": {
+          "term": "terapeuts",
+          "in": "name",
+          "snippet": "Masaža tela 60 min, Relax / Antistress / Terapeutska"
+        },
+        "telo:2:1": {
+          "term": "vrat",
+          "in": "description",
+          "snippet": "Leđa / noge / vrat, ramena, glava"
+        }
+      }
+    },
+    {
+      "id": "rastezanje",
+      "phrases": [
+        "rastezanje",
+        "istezanje",
+        "stretching",
+        "rastezanje mišića",
+        "rastezanje misica",
+        "istezanje mišića",
+        "istezanje misica"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:2"
+        ],
+        "serviceIds": [
+          "telo:2:0",
+          "telo:2:3"
+        ],
+        "articleIds": [],
+        "segmentIds": [],
+        "offerIds": []
+      },
+      "strength": "weak",
+      "note": "The price list and the texts contain no stretching or mobility service (searched \"istez\", \"rastez\", \"stretch\"). The massage group is the closest honest hook only. If the person means stretch marks, see the entry \"strije\".",
+      "evidence": {
+        "telo:2": {
+          "note": "closest hook: no text supports the phrase directly"
+        },
+        "telo:2:0": {
+          "note": "closest hook: no text supports the phrase directly"
+        },
+        "telo:2:3": {
+          "note": "closest hook: no text supports the phrase directly"
+        }
+      },
+      "directEvidence": false
+    },
+    {
+      "id": "strije",
+      "phrases": [
+        "strije",
+        "strija",
+        "strije od rastezanja",
+        "rastezne strije",
+        "rastezanje kože",
+        "rastezanje koze"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:0"
+        ],
+        "serviceIds": [],
+        "articleIds": [
+          "art-20"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "The Venus Legacy body text says the device \"smanjuje vidljivost strija\". No price-list line is named after stretch marks, so only the group is mapped.",
+      "evidence": {
+        "art-20": {
+          "term": "strij",
+          "in": "block 13",
+          "snippet": "dnost ogleda se u smanjenju vidljivosti strija, a može se uspešno koristiti i za podm"
+        },
+        "telo:0": {
+          "term": "strij",
+          "via": "art-20",
+          "in": "linked article (primary link) block 13",
+          "snippet": "dnost ogleda se u smanjenju vidljivosti strija, a može se uspešno koristiti i za podm"
+        }
+      }
+    },
+    {
+      "id": "priprema-za-vencanje",
+      "phrases": [
+        "priprema za venčanje",
+        "priprema za vencanje",
+        "venčanje",
+        "vencanje",
+        "mlada",
+        "mlade",
+        "nevesta",
+        "za mladu",
+        "wedding",
+        "wedding ready",
+        "pred venčanje",
+        "pred vencanje",
+        "svadba"
+      ],
+      "targets": {
+        "groupIds": [
+          "protokoli:2"
+        ],
+        "serviceIds": [
+          "protokoli:2:2",
+          "protokoli:2:3"
+        ],
+        "articleIds": [],
+        "segmentIds": [],
+        "offerIds": [
+          "offer-2",
+          "offer-1"
+        ]
+      },
+      "strength": "strong",
+      "note": "WEDDING READY (single and for two) is the direct match. Instant Glow Up is added only because its own description says \"pre važnog događaja\". No article mentions weddings.",
+      "evidence": {
+        "protokoli:2": {
+          "term": "wedding",
+          "in": "service name (protokoli:2:2)",
+          "snippet": "WEDDING READY"
+        },
+        "protokoli:2:2": {
+          "term": "wedding",
+          "in": "name",
+          "snippet": "WEDDING READY"
+        },
+        "protokoli:2:3": {
+          "term": "wedding",
+          "in": "name",
+          "snippet": "WEDDING READY, paket za 2 osobe"
+        },
+        "offer-2": {
+          "term": "wedding",
+          "in": "offer title",
+          "snippet": "Wedding Ready"
+        },
+        "offer-1": {
+          "term": "dogadjaj",
+          "in": "offer description",
+          "snippet": "Sublime laser + PROFHILO ili LOLA, brz i vidljiv rezultat pre važnog događaja."
+        }
+      }
+    },
+    {
+      "id": "poklon",
+      "phrases": [
+        "poklon",
+        "poklon vaučer",
+        "poklon vaucer",
+        "vaučer",
+        "vaucer",
+        "pokloniti",
+        "za poklon",
+        "poklon za ženu",
+        "poklon za zenu",
+        "poklon za mamu",
+        "gift",
+        "gift card",
+        "poklon kartica"
+      ],
+      "targets": {
+        "groupIds": [
+          "lice:0",
+          "lice:7",
+          "lice:1"
+        ],
+        "serviceIds": [
+          "lice:0:0",
+          "lice:1:10",
+          "lice:7:2",
+          "lice:7:8"
+        ],
+        "articleIds": [],
+        "segmentIds": [],
+        "offerIds": []
+      },
+      "strength": "medium",
+      "note": "Mapped to the four services the old site shows in its \"Tretmani za poklon\" picks. The old source marks that list as a SAMPLE; the final list from the client is pending, so update when it arrives.",
+      "evidence": {
+        "lice:0": {
+          "term": "poklon",
+          "in": "content.json gifts[0] (section \"Tretmani za poklon\") picks the service lice:0:0 of this group",
+          "snippet": "Univerzalni, prijatni tretmani koje najčešće poklanjamo kroz poklon vaučere: pravo uživanje za svaku priliku."
+        },
+        "lice:7": {
+          "term": "poklon",
+          "in": "content.json gifts[1] (section \"Tretmani za poklon\") picks the service lice:7:2 of this group",
+          "snippet": "Univerzalni, prijatni tretmani koje najčešće poklanjamo kroz poklon vaučere: pravo uživanje za svaku priliku."
+        },
+        "lice:1": {
+          "term": "poklon",
+          "in": "content.json gifts[2] (section \"Tretmani za poklon\") picks the service lice:1:10 of this group",
+          "snippet": "Univerzalni, prijatni tretmani koje najčešće poklanjamo kroz poklon vaučere: pravo uživanje za svaku priliku."
+        },
+        "lice:0:0": {
+          "term": "poklon",
+          "in": "content.json gifts[0] (section \"Tretmani za poklon\")",
+          "snippet": "Univerzalni, prijatni tretmani koje najčešće poklanjamo kroz poklon vaučere: pravo uživanje za svaku priliku."
+        },
+        "lice:1:10": {
+          "term": "poklon",
+          "in": "content.json gifts[2] (section \"Tretmani za poklon\")",
+          "snippet": "Univerzalni, prijatni tretmani koje najčešće poklanjamo kroz poklon vaučere: pravo uživanje za svaku priliku."
+        },
+        "lice:7:2": {
+          "term": "poklon",
+          "in": "content.json gifts[1] (section \"Tretmani za poklon\")",
+          "snippet": "Univerzalni, prijatni tretmani koje najčešće poklanjamo kroz poklon vaučere: pravo uživanje za svaku priliku."
+        },
+        "lice:7:8": {
+          "term": "poklon",
+          "in": "content.json gifts[3] (section \"Tretmani za poklon\")",
+          "snippet": "Univerzalni, prijatni tretmani koje najčešće poklanjamo kroz poklon vaučere: pravo uživanje za svaku priliku."
+        }
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-pore",
+      "question": "Kako da smanjim vidljivost pora?",
+      "phrases": [
+        "kako da smanjim vidljivost pora",
+        "kako da smanjim pore",
+        "proširene pore",
+        "prosirene pore",
+        "velike pore",
+        "vidljive pore",
+        "masna koža",
+        "masna koza",
+        "masna koža i pore",
+        "masna koza i pore"
+      ],
+      "targets": {
+        "groupIds": [
+          "lice:0",
+          "lice:2",
+          "lice:3"
+        ],
+        "serviceIds": [
+          "lice:0:0",
+          "lice:0:2",
+          "lice:2:0"
+        ],
+        "articleIds": [
+          "art-11",
+          "art-14",
+          "art-10",
+          "art-13"
+        ],
+        "segmentIds": [
+          "kozmetika"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Hygienic treatment text: \"smanjuju vidljivost pora\"; Venus Glow and Dermafacial \"čisti pore\"; peel text \"čišćenju pora\", \"proširene pore\". The old site maps \"masna koža\" and \"pore\" to #akne.",
+      "evidence": {
+        "art-11": {
+          "term": "pora",
+          "in": "block 2",
+          "snippet": "mitisera i akni, i smanjuju vidljivost pora koje se intenzivira kada se napune neči"
+        },
+        "art-14": {
+          "term": "pore",
+          "in": "block 0",
+          "snippet": "vazivnim tretmanom, koji dubinski čisti pore, pospešuje hidrataciju kože lica, te pr"
+        },
+        "art-10": {
+          "term": "pora",
+          "in": "block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        },
+        "art-13": {
+          "term": "pore",
+          "in": "block 4 item 0",
+          "snippet": "mikrodermoabrazija) koja dubinski čisti pore i uklanja nečistoće vakuumom. Ovo je ko"
+        },
+        "lice:0": {
+          "term": "pora",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": "mitisera i akni, i smanjuju vidljivost pora koje se intenzivira kada se napune neči"
+        },
+        "lice:2": {
+          "term": "pora",
+          "in": "service description (lice:2:0)",
+          "snippet": "Dubinsko čišćenje pora, piling, maska i nega"
+        },
+        "lice:3": {
+          "term": "pora",
+          "via": "art-10",
+          "in": "linked article (primary link) block 7",
+          "snippet": "Veoma su efikasni u čišćenju pora, ublažavanju akni i ožiljaka od akni, hiperpigmentacija i sitnih bora."
+        },
+        "lice:0:0": {
+          "term": "pora",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": "mitisera i akni, i smanjuju vidljivost pora koje se intenzivira kada se napune neči"
+        },
+        "lice:0:2": {
+          "term": "pora",
+          "via": "art-11",
+          "in": "linked article (primary link) block 2",
+          "snippet": "mitisera i akni, i smanjuju vidljivost pora koje se intenzivira kada se napune neči"
+        },
+        "lice:2:0": {
+          "term": "pora",
+          "in": "description",
+          "snippet": "Dubinsko čišćenje pora, piling, maska i nega"
+        }
+      }
+    },
+    {
+      "id": "q-podocnjaci",
+      "question": "Šta mogu da uradim za podočnjake?",
+      "phrases": [
+        "šta mogu da uradim za podočnjake",
+        "sta mogu da uradim za podocnjake",
+        "podočnjaci",
+        "podocnjaci",
+        "tamni podočnjaci",
+        "tamni podocnjaci",
+        "umoran izgled",
+        "umoran pogled"
+      ],
+      "targets": {
+        "groupIds": [
+          "lice:6",
+          "estetske:1"
+        ],
+        "serviceIds": [
+          "lice:6:0"
+        ],
+        "articleIds": [
+          "art-7",
+          "art-15"
+        ],
+        "segmentIds": [
+          "estetske",
+          "kozmetika"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Price-list line \"Predeo oko očiju, podočnjaci\" (Venus Legacy); the filler article has a section on correcting under-eye hollows; the Venus Legacy article lists removal of dark circles.",
+      "evidence": {
+        "art-7": {
+          "term": "podocnjak",
+          "in": "block 9",
+          "snippet": "Korekcija podočnjaka hijaluronskim filerima"
+        },
+        "art-15": {
+          "term": "podocnjak",
+          "in": "block 2 item 2",
+          "snippet": "Uklanjanje podočnjaka."
+        },
+        "lice:6": {
+          "term": "podocnjak",
+          "via": "art-15",
+          "in": "linked article (primary link) block 2 item 2",
+          "snippet": "Uklanjanje podočnjaka."
+        },
+        "estetske:1": {
+          "term": "podocnjak",
+          "via": "art-7",
+          "in": "linked article (primary link) block 9",
+          "snippet": "Korekcija podočnjaka hijaluronskim filerima"
+        },
+        "lice:6:0": {
+          "term": "podocnjak",
+          "via": "art-15",
+          "in": "linked article (primary link) block 2 item 2",
+          "snippet": "Uklanjanje podočnjaka."
+        }
+      }
+    },
+    {
+      "id": "q-bradavice",
+      "question": "Kako da uklonim bradavice ili ciste na koži?",
+      "phrases": [
+        "kako da uklonim bradavice ili ciste na koži",
+        "kako da uklonim bradavice ili ciste na kozi",
+        "bradavice",
+        "viseće bradavice",
+        "visece bradavice",
+        "uklanjanje bradavica",
+        "ciste na koži",
+        "ciste na kozi",
+        "meki fibromi",
+        "uklanjanje promena na koži",
+        "uklanjanje promena na kozi",
+        "radiotalasno uklanjanje"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:5"
+        ],
+        "serviceIds": [
+          "estetske:5:10",
+          "estetske:5:11"
+        ],
+        "articleIds": [
+          "art-3"
+        ],
+        "segmentIds": [
+          "dermatologija"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "The radiowave article lists cysts, soft fibromas and hanging warts. It also says pigmented moles must NOT be removed this way (they need classic surgery), so moles are not a target here.",
+      "evidence": {
+        "art-3": {
+          "term": "bradavic",
+          "in": "block 3",
+          "snippet": "o mogu biti ciste, meki fibromi, viseće bradavice, seboroične keratoze, hemangiomi i dr."
+        },
+        "estetske:5": {
+          "term": "radiotalas",
+          "in": "service name (estetske:5:10)",
+          "snippet": "Radiotalasno uklanjanje promena, lice (do 10)"
+        },
+        "estetske:5:10": {
+          "term": "radiotalas",
+          "in": "name",
+          "snippet": "Radiotalasno uklanjanje promena, lice (do 10)"
+        },
+        "estetske:5:11": {
+          "term": "radiotalas",
+          "in": "name",
+          "snippet": "Radiotalasno uklanjanje promena, telo (po regiji)"
+        }
+      }
+    },
+    {
+      "id": "q-urasle-dlacice",
+      "question": "Imam urasle dlačice posle depilacije, šta da radim?",
+      "phrases": [
+        "imam urasle dlačice posle depilacije, šta da radim",
+        "imam urasle dlacice posle depilacije, sta da radim",
+        "urasle dlačice",
+        "urasle dlacice",
+        "urastanje dlačica",
+        "urastanje dlacica",
+        "guščija koža",
+        "guscija koza"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:5"
+        ],
+        "serviceIds": [
+          "telo:5:1",
+          "telo:5:2"
+        ],
+        "articleIds": [
+          "art-18",
+          "art-21"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "LOSE GOOSE (the article: \"čuščje kože ... urastanja dlačica\") and SILKY SMOOTH (\"posebno kod osoba koje su imale problem sa urastanjem dlačica\"); the laser article says laser epilation helps to get rid of painful ingrown hairs.",
+      "evidence": {
+        "art-18": {
+          "term": "urast",
+          "in": "block 17",
+          "snippet": "e i upala koje su nastale kao posledica urastanja dlačica ili zadebljanja kože na odr"
+        },
+        "art-21": {
+          "term": "urast",
+          "in": "block 1 item 2",
+          "snippet": "pomaže da se zauvek rešite bolnog urastanja dlačica i nastanka iritacija, podli"
+        },
+        "telo:5": {
+          "term": "guscij",
+          "in": "service name (telo:5:2)",
+          "snippet": "LOSE GOOSE, tretman guščije kože"
+        },
+        "telo:5:1": {
+          "term": "urast",
+          "via": "art-18",
+          "in": "linked article (primary link) block 17",
+          "snippet": "e i upala koje su nastale kao posledica urastanja dlačica ili zadebljanja kože na odr"
+        },
+        "telo:5:2": {
+          "term": "guscij",
+          "in": "name",
+          "snippet": "LOSE GOOSE, tretman guščije kože"
+        }
+      }
+    },
+    {
+      "id": "q-tesko-noge",
+      "question": "Šta pomaže kod teških nogu i otoka?",
+      "phrases": [
+        "šta pomaže kod teških nogu i otoka",
+        "sta pomaze kod teskih nogu i otoka",
+        "teške noge",
+        "teske noge",
+        "otok nogu",
+        "osećaj težine u nogama",
+        "osecaj tezine u nogama",
+        "zadržavanje tečnosti",
+        "zadrzavanje tecnosti",
+        "otekle noge"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:1"
+        ],
+        "serviceIds": [
+          "telo:1:0",
+          "telo:1:1",
+          "telo:1:2",
+          "telo:1:3"
+        ],
+        "articleIds": [
+          "art-19"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Presoterapija text: \"smanjenje otoka i osećaja težine\", \"momentalan osećaj lakoće u nogama\", \"problema sa zadržavanjem viška tečnosti\".",
+      "evidence": {
+        "art-19": {
+          "term": "otok",
+          "in": "block 6",
+          "snippet": "mana prati učestalo mokrenje, smanjenje otoka i osećaja težine."
+        },
+        "telo:1": {
+          "term": "otok",
+          "via": "art-19",
+          "in": "linked article (primary link) block 6",
+          "snippet": "mana prati učestalo mokrenje, smanjenje otoka i osećaja težine."
+        },
+        "telo:1:0": {
+          "term": "otok",
+          "via": "art-19",
+          "in": "linked article (primary link) block 6",
+          "snippet": "mana prati učestalo mokrenje, smanjenje otoka i osećaja težine."
+        },
+        "telo:1:1": {
+          "term": "otok",
+          "via": "art-19",
+          "in": "linked article (primary link) block 6",
+          "snippet": "mana prati učestalo mokrenje, smanjenje otoka i osećaja težine."
+        },
+        "telo:1:2": {
+          "term": "otok",
+          "via": "art-19",
+          "in": "linked article (primary link) block 6",
+          "snippet": "mana prati učestalo mokrenje, smanjenje otoka i osećaja težine."
+        },
+        "telo:1:3": {
+          "term": "otok",
+          "via": "art-19",
+          "in": "linked article (primary link) block 6",
+          "snippet": "mana prati učestalo mokrenje, smanjenje otoka i osećaja težine."
+        }
+      }
+    },
+    {
+      "id": "q-posle-letovanja",
+      "question": "Kako da oporavim kožu tela posle letovanja?",
+      "phrases": [
+        "kako da oporavim kožu tela posle letovanja",
+        "kako da oporavim kozu tela posle letovanja",
+        "posle letovanja",
+        "nakon letovanja",
+        "oporavak kože posle letovanja",
+        "oporavak koze posle letovanja"
+      ],
+      "targets": {
+        "groupIds": [
+          "telo:5"
+        ],
+        "serviceIds": [
+          "telo:5:1"
+        ],
+        "articleIds": [
+          "art-18"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "SILKY SMOOTH: the article calls it \"idealan za oporavak kože nakon letovanja (ili kao priprema za novu sezonu)\". Body skin only; no facial treatment says this.",
+      "evidence": {
+        "art-18": {
+          "term": "letovanj",
+          "in": "block 19",
+          "snippet": "kože. Idealan je za oporavak kože nakon letovanja (ili kao priprema za novu sezonu), opu"
+        },
+        "telo:5": {
+          "term": "letovanj",
+          "via": "art-18",
+          "in": "linked article (primary link) block 19",
+          "snippet": "kože. Idealan je za oporavak kože nakon letovanja (ili kao priprema za novu sezonu), opu"
+        },
+        "telo:5:1": {
+          "term": "letovanj",
+          "via": "art-18",
+          "in": "linked article (primary link) block 19",
+          "snippet": "kože. Idealan je za oporavak kože nakon letovanja (ili kao priprema za novu sezonu), opu"
+        }
+      }
+    },
+    {
+      "id": "q-zatezanje-bez-operacije",
+      "question": "Postoji li zatezanje kože bez operacije?",
+      "phrases": [
+        "postoji li zatezanje kože bez operacije",
+        "postoji li zatezanje koze bez operacije",
+        "zatezanje bez operacije",
+        "lifting bez operacije",
+        "nehirurški lifting",
+        "nehirurski lifting",
+        "neinvazivno zatezanje kože",
+        "neinvazivno zatezanje koze",
+        "bez skalpela"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:4",
+          "lice:6",
+          "telo:0"
+        ],
+        "serviceIds": [],
+        "articleIds": [
+          "art-8",
+          "art-15",
+          "art-20"
+        ],
+        "segmentIds": [
+          "estetske",
+          "kozmetika",
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Threads are \"nehirurški lifting\" (title of the article), Venus Legacy is \"potpuno neinvazivan\" and tightens face and body. Groups only: the exact device is chosen at the consultation.",
+      "evidence": {
+        "art-8": {
+          "term": "nehirurs",
+          "in": "subtitle",
+          "snippet": "Nehirurški lifting i konturisanje"
+        },
+        "art-15": {
+          "term": "neinvaziv",
+          "in": "block 13",
+          "snippet": "enjeni su svima koji žele da na potpuno neinvazivan i, pre svega, bezbolan način zategnu"
+        },
+        "art-20": {
+          "term": "neinvaziv",
+          "in": "block 0",
+          "snippet": "arnijih, a svakako najboljih rešenja za neinvazivno preoblikovanje i zatezanje kože. Pore"
+        },
+        "estetske:4": {
+          "term": "nehirurs",
+          "via": "art-8",
+          "in": "linked article (primary link) subtitle",
+          "snippet": "Nehirurški lifting i konturisanje"
+        },
+        "lice:6": {
+          "term": "neinvaziv",
+          "via": "art-15",
+          "in": "linked article (primary link) block 13",
+          "snippet": "enjeni su svima koji žele da na potpuno neinvazivan i, pre svega, bezbolan način zategnu"
+        },
+        "telo:0": {
+          "term": "neinvaziv",
+          "via": "art-20",
+          "in": "linked article (primary link) block 0",
+          "snippet": "arnijih, a svakako najboljih rešenja za neinvazivno preoblikovanje i zatezanje kože. Pore"
+        }
+      }
+    },
+    {
+      "id": "q-znojenje",
+      "question": "Kako da rešim prekomerno znojenje ispod pazuha?",
+      "phrases": [
+        "kako da rešim prekomerno znojenje ispod pazuha",
+        "kako da resim prekomerno znojenje ispod pazuha",
+        "smeta mi prekomerno znojenje ispod pazuha",
+        "znojenje",
+        "prekomerno znojenje",
+        "znojenje pazuha",
+        "hiperhidroza"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:2"
+        ],
+        "serviceIds": [
+          "estetske:2:5"
+        ],
+        "articleIds": [
+          "art-6"
+        ],
+        "segmentIds": [
+          "estetske"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "Price-list line \"Hiperhidroza, pazuh\" and the Botox article section on sweating therapy under the armpits.",
+      "evidence": {
+        "art-6": {
+          "term": "znojen",
+          "in": "block 1",
+          "snippet": "ća lica, glavobolja, škrgutanje zubima, znojenja i dr."
+        },
+        "estetske:2": {
+          "term": "hiperhidroz",
+          "in": "service name (estetske:2:5)",
+          "snippet": "Hiperhidroza, pazuh"
+        },
+        "estetske:2:5": {
+          "term": "hiperhidroz",
+          "in": "name",
+          "snippet": "Hiperhidroza, pazuh"
+        }
+      }
+    },
+    {
+      "id": "q-mladezi",
+      "question": "Kako da proverim mladeže?",
+      "phrases": [
+        "kako da proverim mladeže",
+        "kako da proverim mladeze",
+        "mladeži",
+        "mladezi",
+        "mladež",
+        "mladez",
+        "pregled mladeža",
+        "pregled mladeza",
+        "dermoskopija",
+        "dermatoskopija",
+        "melanom"
+      ],
+      "targets": {
+        "groupIds": [
+          "estetske:5"
+        ],
+        "serviceIds": [
+          "estetske:5:0",
+          "estetske:5:1"
+        ],
+        "articleIds": [
+          "art-2"
+        ],
+        "segmentIds": [
+          "dermatologija"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "\"Specijalistički pregled sa dermoskopijom mladeža\" and the dermatological exam text (dermatoscopy, melanoma, regular checks). The radiowave text is not mapped: it is about removal and excludes moles.",
+      "evidence": {
+        "art-2": {
+          "term": "mladez",
+          "in": "block 4 item 1",
+          "snippet": "Dermatoskopiju, kojom se vrši bezbolna procena mladeža ili drugih promena na koži korišćenjem dermatoskopa;"
+        },
+        "estetske:5": {
+          "term": "mladez",
+          "in": "service name (estetske:5:1)",
+          "snippet": "Specijalistički pregled sa dermoskopijom mladeža"
+        },
+        "estetske:5:0": {
+          "term": "mladez",
+          "via": "art-2",
+          "in": "linked article (primary link) block 4 item 1",
+          "snippet": "Dermatoskopiju, kojom se vrši bezbolna procena mladeža ili drugih promena na koži korišćenjem dermatoskopa;"
+        },
+        "estetske:5:1": {
+          "term": "mladez",
+          "in": "name",
+          "snippet": "Specijalistički pregled sa dermoskopijom mladeža"
+        }
+      }
+    },
+    {
+      "id": "q-trudnoca",
+      "question": "Koji tretmani su bezbedni u trudnoći?",
+      "phrases": [
+        "koji tretmani su bezbedni u trudnoći",
+        "koji tretmani su bezbedni u trudnoci",
+        "trudnoća",
+        "trudnoca",
+        "trudnice",
+        "u trudnoći",
+        "u trudnoci",
+        "za trudnice",
+        "baby glow",
+        "mame",
+        "posle porođaja",
+        "posle porodjaja"
+      ],
+      "targets": {
+        "groupIds": [
+          "protokoli:2"
+        ],
+        "serviceIds": [
+          "protokoli:2:0",
+          "protokoli:2:1"
+        ],
+        "articleIds": [
+          "art-19"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": [
+          "offer-3"
+        ]
+      },
+      "strength": "medium",
+      "note": "Only positive mentions are mapped: BABY GLOW \"za trudnice\", NEW MUM RECHARGE \"za mame\", presoterapija (\"u njemu mogu uživati i trudnice\").",
+      "evidence": {
+        "art-19": {
+          "term": "trudnic",
+          "in": "block 10",
+          "snippet": "allancer aparat, u njemu mogu uživati i trudnice, ali i mame koje su se skoro porodile"
+        },
+        "protokoli:2": {
+          "term": "trudnic",
+          "in": "service name (protokoli:2:0)",
+          "snippet": "BABY GLOW, za trudnice"
+        },
+        "protokoli:2:0": {
+          "term": "trudnic",
+          "in": "name",
+          "snippet": "BABY GLOW, za trudnice"
+        },
+        "protokoli:2:1": {
+          "term": "mum",
+          "in": "name",
+          "snippet": "NEW MUM RECHARGE"
+        },
+        "offer-3": {
+          "term": "mame",
+          "in": "offer tag",
+          "snippet": "Za mame"
+        }
+      },
+      "caution": {
+        "articleIds": [
+          "art-16",
+          "art-3",
+          "art-21"
+        ],
+        "note": "These three texts list pregnancy as an exception or contraindication (AWT \"ne preporučuje se trudnicama\", radiowave \"izuzetak su trudnice\", laser epilation \"trudnoća i dojenje\"). They are NOT mapped; show them only as cautions. Always confirm with the team."
+      }
+    },
+    {
+      "id": "q-priprema-botoks",
+      "question": "Kako da pripremim kožu pre botoksa?",
+      "phrases": [
+        "kako da pripremim kožu pre botoksa",
+        "kako da pripremim kozu pre botoksa",
+        "priprema za botoks",
+        "priprema kože za botoks",
+        "priprema koze za botoks",
+        "pre botoksa"
+      ],
+      "targets": {
+        "groupIds": [
+          "lice:3",
+          "lice:1",
+          "lice:2",
+          "protokoli:0"
+        ],
+        "serviceIds": [],
+        "articleIds": [
+          "art-6"
+        ],
+        "segmentIds": [
+          "estetske"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "The Botox article has a section \"Koji tretmani su dobra priprema za botoks?\" and names chemical peels, biological treatments, Venus Glow and the Glow&Go protocols.",
+      "evidence": {
+        "art-6": {
+          "term": "priprema",
+          "in": "block 20",
+          "snippet": "Koji tretmani su dobra priprema za botoks?"
+        },
+        "lice:3": {
+          "term": "priprema",
+          "via": "art-6",
+          "in": "linked article (related link) block 20",
+          "snippet": "Koji tretmani su dobra priprema za botoks?"
+        },
+        "lice:1": {
+          "term": "priprema",
+          "via": "art-6",
+          "in": "linked article (related link) block 20",
+          "snippet": "Koji tretmani su dobra priprema za botoks?"
+        },
+        "lice:2": {
+          "term": "priprema",
+          "via": "art-6",
+          "in": "linked article (related link) block 20",
+          "snippet": "Koji tretmani su dobra priprema za botoks?"
+        },
+        "protokoli:0": {
+          "term": "priprema",
+          "via": "art-6",
+          "in": "linked article (related link) block 20",
+          "snippet": "Koji tretmani su dobra priprema za botoks?"
+        }
+      }
+    },
+    {
+      "id": "q-laser-bolan",
+      "question": "Da li je laserska epilacija bolna?",
+      "phrases": [
+        "da li je laserska epilacija bolna",
+        "laser boli",
+        "bol kod laserske epilacije",
+        "da li boli laser"
+      ],
+      "targets": {
+        "groupIds": [],
+        "serviceIds": [],
+        "articleIds": [
+          "art-21"
+        ],
+        "segmentIds": [
+          "telo"
+        ],
+        "offerIds": []
+      },
+      "strength": "strong",
+      "note": "The article is titled \"Bezbolna i bezbedna\" and says \"Tretman nije bolan, ali možete osetiti blagu toplotu ili blago peckanje\". Article only; no price-list target needed.",
+      "evidence": {
+        "art-21": {
+          "term": "bolan",
+          "in": "block 11",
+          "snippet": "Da li je tretman bolan i da li je bezbedan?"
+        }
+      }
+    }
+  ],
+  "phraseIndex": {
+    "glass skin": [
+      "glass-skin"
+    ],
+    "glasskin": [
+      "glass-skin"
+    ],
+    "glas skin": [
+      "glass-skin"
+    ],
+    "staklena koza": [
+      "glass-skin"
+    ],
+    "staklasta koza": [
+      "glass-skin"
+    ],
+    "blistava koza": [
+      "blistava-koza"
+    ],
+    "blistav ten": [
+      "blistava-koza"
+    ],
+    "sjajna koza": [
+      "blistava-koza"
+    ],
+    "sjaj koze": [
+      "blistava-koza"
+    ],
+    "glow": [
+      "blistava-koza"
+    ],
+    "glow koza": [
+      "blistava-koza"
+    ],
+    "glow efekat": [
+      "blistava-koza"
+    ],
+    "instant glow": [
+      "blistava-koza"
+    ],
+    "ciscenje lica": [
+      "ciscenje-lica"
+    ],
+    "dubinsko ciscenje": [
+      "ciscenje-lica"
+    ],
+    "dubinsko ciscenje lica": [
+      "ciscenje-lica"
+    ],
+    "ciscenje pora": [
+      "ciscenje-lica"
+    ],
+    "ciscenje koze": [
+      "ciscenje-lica"
+    ],
+    "higijenski tretman": [
+      "ciscenje-lica"
+    ],
+    "higijenski tretman lica": [
+      "ciscenje-lica"
+    ],
+    "higijenski": [
+      "ciscenje-lica"
+    ],
+    "komedoekspresija": [
+      "ciscenje-lica"
+    ],
+    "cista koza": [
+      "cista-koza"
+    ],
+    "clear skin": [
+      "cista-koza"
+    ],
+    "bistra koza": [
+      "cista-koza"
+    ],
+    "cist ten": [
+      "cista-koza"
+    ],
+    "akne": [
+      "akne"
+    ],
+    "akni": [
+      "akne"
+    ],
+    "akna": [
+      "akne"
+    ],
+    "bubuljice": [
+      "akne"
+    ],
+    "bubuljica": [
+      "akne"
+    ],
+    "mitiseri": [
+      "akne"
+    ],
+    "mitisera": [
+      "akne"
+    ],
+    "problematicna koza": [
+      "akne"
+    ],
+    "lecenje akni": [
+      "lecenje-akni"
+    ],
+    "lecenje akni na licu": [
+      "lecenje-akni"
+    ],
+    "kako da se resim akni": [
+      "lecenje-akni"
+    ],
+    "kako se lece akne": [
+      "lecenje-akni"
+    ],
+    "tretman akni": [
+      "lecenje-akni"
+    ],
+    "tretman akne": [
+      "lecenje-akni"
+    ],
+    "oziljci od akni": [
+      "oziljci-od-akni"
+    ],
+    "oziljci posle akni": [
+      "oziljci-od-akni"
+    ],
+    "ozilci od akni": [
+      "oziljci-od-akni"
+    ],
+    "oziljci": [
+      "oziljci"
+    ],
+    "oziljak": [
+      "oziljci"
+    ],
+    "oziljaka": [
+      "oziljci"
+    ],
+    "ozilci": [
+      "oziljci"
+    ],
+    "pigmentacija": [
+      "pigmentacija"
+    ],
+    "pigmentacije": [
+      "pigmentacija"
+    ],
+    "hiperpigmentacija": [
+      "pigmentacija"
+    ],
+    "hiperpigmentacije": [
+      "pigmentacija"
+    ],
+    "pigmentne mrlje": [
+      "pigmentacija"
+    ],
+    "pigmentne fleke": [
+      "pigmentacija",
+      "flekice"
+    ],
+    "flekice": [
+      "flekice"
+    ],
+    "flekica": [
+      "flekice"
+    ],
+    "fleke": [
+      "flekice"
+    ],
+    "fleka": [
+      "flekice"
+    ],
+    "bore": [
+      "bore"
+    ],
+    "bora": [
+      "bore"
+    ],
+    "borice": [
+      "bore"
+    ],
+    "bore na licu": [
+      "bore"
+    ],
+    "fine linije": [
+      "bore"
+    ],
+    "sitne bore": [
+      "bore"
+    ],
+    "mimicne bore": [
+      "bore"
+    ],
+    "nazolabijalne bore": [
+      "bore"
+    ],
+    "anti age": [
+      "anti-age"
+    ],
+    "anti-age": [
+      "anti-age"
+    ],
+    "antiage": [
+      "anti-age"
+    ],
+    "anti aging": [
+      "anti-age"
+    ],
+    "anti-aging": [
+      "anti-age"
+    ],
+    "antiaging": [
+      "anti-age"
+    ],
+    "anti ejdz": [
+      "anti-age"
+    ],
+    "starenje": [
+      "anti-age"
+    ],
+    "znaci starenja": [
+      "anti-age"
+    ],
+    "znakovi starenja": [
+      "anti-age"
+    ],
+    "prvi znaci starenja": [
+      "anti-age"
+    ],
+    "podmladjivanje": [
+      "podmladjivanje"
+    ],
+    "podmladjivanje lica": [
+      "podmladjivanje"
+    ],
+    "podmladjivanje koze": [
+      "podmladjivanje"
+    ],
+    "podmladiti lice": [
+      "podmladjivanje"
+    ],
+    "pomladjivanje": [
+      "podmladjivanje"
+    ],
+    "pomladiti se": [
+      "podmladjivanje"
+    ],
+    "lifting": [
+      "lifting"
+    ],
+    "lifting lica": [
+      "lifting"
+    ],
+    "lifting vrata": [
+      "lifting"
+    ],
+    "lifting niti": [
+      "lifting"
+    ],
+    "nehirurski lifting": [
+      "lifting",
+      "q-zatezanje-bez-operacije"
+    ],
+    "zatezanje koze": [
+      "lifting"
+    ],
+    "zatezanje lica": [
+      "lifting"
+    ],
+    "zatezanje": [
+      "lifting"
+    ],
+    "podizanje lica": [
+      "lifting"
+    ],
+    "podizanje obrva": [
+      "lifting"
+    ],
+    "mezoniti": [
+      "lifting"
+    ],
+    "niti": [
+      "lifting"
+    ],
+    "botoks": [
+      "botoks"
+    ],
+    "botox": [
+      "botoks"
+    ],
+    "botulin": [
+      "botoks"
+    ],
+    "botulinski toksin": [
+      "botoks"
+    ],
+    "botoks tretman": [
+      "botoks"
+    ],
+    "botox tretman": [
+      "botoks"
+    ],
+    "fileri": [
+      "fileri"
+    ],
+    "filer": [
+      "fileri"
+    ],
+    "hijaluron": [
+      "fileri"
+    ],
+    "hijaluronski fileri": [
+      "fileri"
+    ],
+    "hijaluronska kiselina": [
+      "fileri"
+    ],
+    "hijaluronidaza": [
+      "fileri"
+    ],
+    "usne": [
+      "usne"
+    ],
+    "usana": [
+      "usne"
+    ],
+    "povecanje usana": [
+      "usne"
+    ],
+    "volumen usana": [
+      "usne"
+    ],
+    "korekcija usana": [
+      "usne"
+    ],
+    "punije usne": [
+      "usne"
+    ],
+    "lip filler": [
+      "usne"
+    ],
+    "lip flip": [
+      "usne"
+    ],
+    "kosa": [
+      "kosa"
+    ],
+    "kose": [
+      "kosa"
+    ],
+    "kosu": [
+      "kosa"
+    ],
+    "za kosu": [
+      "kosa"
+    ],
+    "tretman kose": [
+      "kosa"
+    ],
+    "rast kose": [
+      "kosa"
+    ],
+    "skalp": [
+      "kosa"
+    ],
+    "teme": [
+      "kosa"
+    ],
+    "vlasiste": [
+      "kosa"
+    ],
+    "opadanje kose": [
+      "opadanje-kose"
+    ],
+    "opada mi kosa": [
+      "opadanje-kose"
+    ],
+    "opadanje kose kod zena": [
+      "opadanje-kose"
+    ],
+    "gubitak kose": [
+      "opadanje-kose"
+    ],
+    "alopecija": [
+      "opadanje-kose"
+    ],
+    "celavost": [
+      "opadanje-kose"
+    ],
+    "proredjena kosa": [
+      "opadanje-kose"
+    ],
+    "celulit": [
+      "celulit"
+    ],
+    "celulita": [
+      "celulit"
+    ],
+    "anticelulit": [
+      "celulit"
+    ],
+    "anti celulit": [
+      "celulit"
+    ],
+    "anticelulit masaza": [
+      "celulit",
+      "masaza"
+    ],
+    "narandzasta kora": [
+      "celulit"
+    ],
+    "cellulite": [
+      "celulit"
+    ],
+    "kako smanjiti obim": [
+      "kako-smanjiti-obim"
+    ],
+    "smanjiti obim": [
+      "kako-smanjiti-obim"
+    ],
+    "smanjenje obima": [
+      "kako-smanjiti-obim"
+    ],
+    "smanjenje obima tela": [
+      "kako-smanjiti-obim"
+    ],
+    "obim butina": [
+      "kako-smanjiti-obim"
+    ],
+    "obim struka": [
+      "kako-smanjiti-obim"
+    ],
+    "obim stomaka": [
+      "kako-smanjiti-obim"
+    ],
+    "skinuti centimetre": [
+      "kako-smanjiti-obim"
+    ],
+    "mrsavljenje": [
+      "mrsavljenje"
+    ],
+    "smrsati": [
+      "mrsavljenje"
+    ],
+    "gubitak kilograma": [
+      "mrsavljenje"
+    ],
+    "skidanje kilograma": [
+      "mrsavljenje"
+    ],
+    "dijeta": [
+      "mrsavljenje"
+    ],
+    "proces mrsavljenja": [
+      "mrsavljenje"
+    ],
+    "oblikovanje tela": [
+      "oblikovanje-tela"
+    ],
+    "preoblikovanje tela": [
+      "oblikovanje-tela"
+    ],
+    "body contouring": [
+      "oblikovanje-tela"
+    ],
+    "body contour": [
+      "oblikovanje-tela"
+    ],
+    "oblikovanje figure": [
+      "oblikovanje-tela"
+    ],
+    "konture tela": [
+      "oblikovanje-tela"
+    ],
+    "konturisanje tela": [
+      "oblikovanje-tela"
+    ],
+    "depilacija": [
+      "depilacija"
+    ],
+    "depilirati": [
+      "depilacija"
+    ],
+    "depiliranje": [
+      "depilacija"
+    ],
+    "brijanje": [
+      "depilacija"
+    ],
+    "uklanjanje dlaka": [
+      "depilacija"
+    ],
+    "dlake": [
+      "depilacija"
+    ],
+    "trajno uklanjanje dlacica": [
+      "trajno-uklanjanje-dlacica"
+    ],
+    "trajno uklanjanje dlaka": [
+      "trajno-uklanjanje-dlacica"
+    ],
+    "trajna epilacija": [
+      "trajno-uklanjanje-dlacica"
+    ],
+    "laserska epilacija": [
+      "trajno-uklanjanje-dlacica"
+    ],
+    "laser za dlacice": [
+      "trajno-uklanjanje-dlacica"
+    ],
+    "epilacija": [
+      "trajno-uklanjanje-dlacica"
+    ],
+    "dlacice": [
+      "trajno-uklanjanje-dlacica"
+    ],
+    "venus velocity": [
+      "trajno-uklanjanje-dlacica"
+    ],
+    "masaza": [
+      "masaza"
+    ],
+    "masaze": [
+      "masaza"
+    ],
+    "masirati": [
+      "masaza"
+    ],
+    "relax masaza": [
+      "masaza"
+    ],
+    "masaza ledja": [
+      "masaza",
+      "ledja"
+    ],
+    "masaza lica": [
+      "masaza"
+    ],
+    "face gym": [
+      "masaza"
+    ],
+    "facijalna masaza": [
+      "masaza"
+    ],
+    "masaza tela": [
+      "masaza"
+    ],
+    "relaks": [
+      "relaks"
+    ],
+    "relax": [
+      "relaks"
+    ],
+    "relaksacija": [
+      "relaks"
+    ],
+    "opustanje": [
+      "relaks"
+    ],
+    "antistres": [
+      "relaks"
+    ],
+    "antistress": [
+      "relaks"
+    ],
+    "stres": [
+      "relaks"
+    ],
+    "detoks": [
+      "detoks"
+    ],
+    "detox": [
+      "detoks"
+    ],
+    "detoksikacija": [
+      "detoks"
+    ],
+    "skin detox": [
+      "detoks"
+    ],
+    "body detox": [
+      "detoks"
+    ],
+    "hangover": [
+      "detoks"
+    ],
+    "hangover detox": [
+      "detoks"
+    ],
+    "izbacivanje toksina": [
+      "detoks"
+    ],
+    "presoterapija": [
+      "presoterapija"
+    ],
+    "presoterapiju": [
+      "presoterapija"
+    ],
+    "limfna drenaza": [
+      "presoterapija"
+    ],
+    "drenaza": [
+      "presoterapija"
+    ],
+    "proballancer": [
+      "presoterapija"
+    ],
+    "aparaturna limfna drenaza": [
+      "presoterapija"
+    ],
+    "ledja": [
+      "ledja"
+    ],
+    "ledjni": [
+      "ledja"
+    ],
+    "bol u ledjima": [
+      "ledja"
+    ],
+    "vrat": [
+      "vrat"
+    ],
+    "vrata": [
+      "vrat"
+    ],
+    "vratu": [
+      "vrat"
+    ],
+    "dekolte": [
+      "vrat"
+    ],
+    "dekolteu": [
+      "vrat"
+    ],
+    "tretman vrata": [
+      "vrat"
+    ],
+    "masaza vrata": [
+      "vrat"
+    ],
+    "ukljesteni vrat": [
+      "ukljesteni-vrat"
+    ],
+    "ukljesten vrat": [
+      "ukljesteni-vrat"
+    ],
+    "ukocen vrat": [
+      "ukljesteni-vrat"
+    ],
+    "bol u vratu": [
+      "ukljesteni-vrat"
+    ],
+    "rastezanje": [
+      "rastezanje"
+    ],
+    "istezanje": [
+      "rastezanje"
+    ],
+    "stretching": [
+      "rastezanje"
+    ],
+    "rastezanje misica": [
+      "rastezanje"
+    ],
+    "istezanje misica": [
+      "rastezanje"
+    ],
+    "strije": [
+      "strije"
+    ],
+    "strija": [
+      "strije"
+    ],
+    "strije od rastezanja": [
+      "strije"
+    ],
+    "rastezne strije": [
+      "strije"
+    ],
+    "rastezanje koze": [
+      "strije"
+    ],
+    "priprema za vencanje": [
+      "priprema-za-vencanje"
+    ],
+    "vencanje": [
+      "priprema-za-vencanje"
+    ],
+    "mlada": [
+      "priprema-za-vencanje"
+    ],
+    "mlade": [
+      "priprema-za-vencanje"
+    ],
+    "nevesta": [
+      "priprema-za-vencanje"
+    ],
+    "za mladu": [
+      "priprema-za-vencanje"
+    ],
+    "wedding": [
+      "priprema-za-vencanje"
+    ],
+    "wedding ready": [
+      "priprema-za-vencanje"
+    ],
+    "pred vencanje": [
+      "priprema-za-vencanje"
+    ],
+    "svadba": [
+      "priprema-za-vencanje"
+    ],
+    "poklon": [
+      "poklon"
+    ],
+    "poklon vaucer": [
+      "poklon"
+    ],
+    "vaucer": [
+      "poklon"
+    ],
+    "pokloniti": [
+      "poklon"
+    ],
+    "za poklon": [
+      "poklon"
+    ],
+    "poklon za zenu": [
+      "poklon"
+    ],
+    "poklon za mamu": [
+      "poklon"
+    ],
+    "gift": [
+      "poklon"
+    ],
+    "gift card": [
+      "poklon"
+    ],
+    "poklon kartica": [
+      "poklon"
+    ],
+    "kako da smanjim vidljivost pora": [
+      "q-pore"
+    ],
+    "kako da smanjim pore": [
+      "q-pore"
+    ],
+    "prosirene pore": [
+      "q-pore"
+    ],
+    "velike pore": [
+      "q-pore"
+    ],
+    "vidljive pore": [
+      "q-pore"
+    ],
+    "masna koza": [
+      "q-pore"
+    ],
+    "masna koza i pore": [
+      "q-pore"
+    ],
+    "sta mogu da uradim za podocnjake": [
+      "q-podocnjaci"
+    ],
+    "podocnjaci": [
+      "q-podocnjaci"
+    ],
+    "tamni podocnjaci": [
+      "q-podocnjaci"
+    ],
+    "umoran izgled": [
+      "q-podocnjaci"
+    ],
+    "umoran pogled": [
+      "q-podocnjaci"
+    ],
+    "kako da uklonim bradavice ili ciste na kozi": [
+      "q-bradavice"
+    ],
+    "bradavice": [
+      "q-bradavice"
+    ],
+    "visece bradavice": [
+      "q-bradavice"
+    ],
+    "uklanjanje bradavica": [
+      "q-bradavice"
+    ],
+    "ciste na kozi": [
+      "q-bradavice"
+    ],
+    "meki fibromi": [
+      "q-bradavice"
+    ],
+    "uklanjanje promena na kozi": [
+      "q-bradavice"
+    ],
+    "radiotalasno uklanjanje": [
+      "q-bradavice"
+    ],
+    "imam urasle dlacice posle depilacije, sta da radim": [
+      "q-urasle-dlacice"
+    ],
+    "urasle dlacice": [
+      "q-urasle-dlacice"
+    ],
+    "urastanje dlacica": [
+      "q-urasle-dlacice"
+    ],
+    "guscija koza": [
+      "q-urasle-dlacice"
+    ],
+    "sta pomaze kod teskih nogu i otoka": [
+      "q-tesko-noge"
+    ],
+    "teske noge": [
+      "q-tesko-noge"
+    ],
+    "otok nogu": [
+      "q-tesko-noge"
+    ],
+    "osecaj tezine u nogama": [
+      "q-tesko-noge"
+    ],
+    "zadrzavanje tecnosti": [
+      "q-tesko-noge"
+    ],
+    "otekle noge": [
+      "q-tesko-noge"
+    ],
+    "kako da oporavim kozu tela posle letovanja": [
+      "q-posle-letovanja"
+    ],
+    "posle letovanja": [
+      "q-posle-letovanja"
+    ],
+    "nakon letovanja": [
+      "q-posle-letovanja"
+    ],
+    "oporavak koze posle letovanja": [
+      "q-posle-letovanja"
+    ],
+    "postoji li zatezanje koze bez operacije": [
+      "q-zatezanje-bez-operacije"
+    ],
+    "zatezanje bez operacije": [
+      "q-zatezanje-bez-operacije"
+    ],
+    "lifting bez operacije": [
+      "q-zatezanje-bez-operacije"
+    ],
+    "neinvazivno zatezanje koze": [
+      "q-zatezanje-bez-operacije"
+    ],
+    "bez skalpela": [
+      "q-zatezanje-bez-operacije"
+    ],
+    "kako da resim prekomerno znojenje ispod pazuha": [
+      "q-znojenje"
+    ],
+    "smeta mi prekomerno znojenje ispod pazuha": [
+      "q-znojenje"
+    ],
+    "znojenje": [
+      "q-znojenje"
+    ],
+    "prekomerno znojenje": [
+      "q-znojenje"
+    ],
+    "znojenje pazuha": [
+      "q-znojenje"
+    ],
+    "hiperhidroza": [
+      "q-znojenje"
+    ],
+    "kako da proverim mladeze": [
+      "q-mladezi"
+    ],
+    "mladezi": [
+      "q-mladezi"
+    ],
+    "mladez": [
+      "q-mladezi"
+    ],
+    "pregled mladeza": [
+      "q-mladezi"
+    ],
+    "dermoskopija": [
+      "q-mladezi"
+    ],
+    "dermatoskopija": [
+      "q-mladezi"
+    ],
+    "melanom": [
+      "q-mladezi"
+    ],
+    "koji tretmani su bezbedni u trudnoci": [
+      "q-trudnoca"
+    ],
+    "trudnoca": [
+      "q-trudnoca"
+    ],
+    "trudnice": [
+      "q-trudnoca"
+    ],
+    "u trudnoci": [
+      "q-trudnoca"
+    ],
+    "za trudnice": [
+      "q-trudnoca"
+    ],
+    "baby glow": [
+      "q-trudnoca"
+    ],
+    "mame": [
+      "q-trudnoca"
+    ],
+    "posle porodjaja": [
+      "q-trudnoca"
+    ],
+    "kako da pripremim kozu pre botoksa": [
+      "q-priprema-botoks"
+    ],
+    "priprema za botoks": [
+      "q-priprema-botoks"
+    ],
+    "priprema koze za botoks": [
+      "q-priprema-botoks"
+    ],
+    "pre botoksa": [
+      "q-priprema-botoks"
+    ],
+    "da li je laserska epilacija bolna": [
+      "q-laser-bolan"
+    ],
+    "laser boli": [
+      "q-laser-bolan"
+    ],
+    "bol kod laserske epilacije": [
+      "q-laser-bolan"
+    ],
+    "da li boli laser": [
+      "q-laser-bolan"
+    ]
+  }
+}

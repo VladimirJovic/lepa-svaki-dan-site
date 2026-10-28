@@ -1,0 +1,169 @@
+{
+  "_comment": "Single source of truth for the content fixes. Read by _tools/content-fixes.js and _tools/lsd_common.py. Dash characters are written as JSON unicode escapes on purpose.",
+  "version": 1,
+  "owner": {
+    "titleRule": {
+      "pattern": "\\b[Dd]r\\.?\\s+(?=Tamara\\s+Ćosić\\b)",
+      "flags": "g",
+      "replace": "",
+      "why": "The founder is Tamara Ćosić (osnivačica) and is not a doctor: the title \"Dr\"/\"dr\" is removed when it stands directly before her name. Tamara Vujačić is a DIFFERENT person and IS a doctor: her title \"dr\" stays wherever she is named."
+    },
+    "signature": "Tamara Ćosić, osnivačica Lepe Svaki Dan",
+    "exactStrings": {
+      "Tamara - Lepa Svaki Dan": "Tamara Ćosić, osnivačica Lepe Svaki Dan",
+      "Tamara Ćosić, Lepa Svaki Dan": "Tamara Ćosić, osnivačica Lepe Svaki Dan",
+      "Tamara Vujačić, Lepa Svaki Dan": "Tamara Ćosić, osnivačica Lepe Svaki Dan"
+    },
+    "exactWhy": "Signature line under the founder quote: use founder.signature (client feedback 3, about 3: the founder is Tamara Ćosić, osnivačica Lepe Svaki Dan; Tamara Vujačić is a doctor and a different person).",
+    "founder": {
+      "name": "Tamara Ćosić",
+      "role": "Osnivačica",
+      "signature": "Tamara Ćosić, osnivačica Lepe Svaki Dan",
+      "signatureShort": "Tamara Ćosić, osnivačica",
+      "signatureMeta": "15+ godina prakse",
+      "imageAlt": "Tamara Ćosić, osnivačica Lepe Svaki Dan",
+      "imageUsage": "Founder portrait (Tamara Ćosić, osnivačica); also blog post image",
+      "homeDescriptionTo": "Osnivačica Tamara Ćosić i tim.",
+      "why": "Client feedback 3 (about 3): everywhere the founder is named she is Tamara Ćosić, osnivačica Lepe Svaki Dan. These fields are forced after extraction so a regeneration from the old site (which still says Tamara Vujačić) keeps them. Tamara Vujačić stays only inside the two price-list lines where she is the doctor (\"dr\"))."
+    }
+  },
+  "dash": {
+    "exactEmDashToHyphen": true,
+    "exactWhy": "A string that is only an em dash is the \"not offered here\" placeholder in the laser price columns: plain hyphen.",
+    "numericRangeEnDash": "allowed only when the previous non-space character is a digit or the euro sign and the next non-space character is a digit",
+    "rules": [
+      {
+        "find": "Pon \u2014 Sub · 9\u201421h",
+        "replace": "Pon-Sub, 9-21h",
+        "why": "hours: day range and hour range use a plain hyphen, the separator dot becomes a comma"
+      },
+      {
+        "find": " \u2014 u kešu",
+        "replace": ": u kešu",
+        "why": "payment note: the dash introduces the payment methods, so a colon"
+      },
+      {
+        "find": " \u2014 provereni favoriti",
+        "replace": ": provereni favoriti",
+        "why": "favorites intro: dash introduces an elaboration, so a colon"
+      },
+      {
+        "find": " \u2014 pravo uživanje",
+        "replace": ": pravo uživanje",
+        "why": "gifts intro: dash introduces an elaboration, so a colon"
+      },
+      {
+        "find": "problema \u2013 uklanjanje kapilara",
+        "replace": "problema: uklanjanje kapilara",
+        "why": "enumeration after a dash, so a colon"
+      },
+      {
+        "find": "tipa A \u2013 Botoks tretman",
+        "replace": "tipa A - Botoks tretman",
+        "why": "title: plain spaced hyphen (the source title has no colon, so the title/subtitle split stays unchanged)"
+      },
+      {
+        "find": "zdravstvenim stanjem \u2013 eventualne",
+        "replace": "zdravstvenim stanjem: eventualne",
+        "why": "enumeration after a dash, so a colon"
+      },
+      {
+        "find": "PRP \u2013 tretman",
+        "replace": "PRP: tretman",
+        "why": "list item definition, so a colon"
+      },
+      {
+        "find": "Mezoterapija \u2013 aplikovanje",
+        "replace": "Mezoterapija: aplikovanje",
+        "why": "list item definition, so a colon"
+      },
+      {
+        "find": "Skin boosters \u2013 preparati",
+        "replace": "Skin boosters: preparati",
+        "why": "list item definition, so a colon"
+      },
+      {
+        "find": "hiperhidroze \u2013 prekomernog",
+        "replace": "hiperhidroze, prekomernog",
+        "why": "appositive (gloss of a term), so a comma"
+      },
+      {
+        "find": "regije \u2013 slepoočnica",
+        "replace": "regije - slepoočnica",
+        "why": "heading with a gloss: plain spaced hyphen"
+      },
+      {
+        "find": "dodatni užitak \u2013 presoterapiju",
+        "replace": "dodatni užitak: presoterapiju",
+        "why": "names the extra pleasure, so a colon"
+      },
+      {
+        "find": "naše telo \u2013 zatežu",
+        "replace": "naše telo: zatežu",
+        "why": "explanation of the comparison, so a colon"
+      },
+      {
+        "find": "MYOLIFT tretman \u2013 drenaža",
+        "replace": "MYOLIFT tretman: drenaža",
+        "why": "protocol list item, so a colon"
+      },
+      {
+        "find": "RED CARPET READY \u2013 Myolift",
+        "replace": "RED CARPET READY: Myolift",
+        "why": "protocol list item, so a colon"
+      },
+      {
+        "find": "NON-SMOKER GLOW \u2013 Myolift",
+        "replace": "NON-SMOKER GLOW: Myolift",
+        "why": "protocol list item, so a colon"
+      },
+      {
+        "find": "MYOLIFT TRY ME OUT \u2013 piling",
+        "replace": "MYOLIFT TRY ME OUT: piling",
+        "why": "protocol list item, so a colon"
+      },
+      {
+        "find": "PREP ME UP \u2013 Myolift",
+        "replace": "PREP ME UP: Myolift",
+        "why": "protocol list item, so a colon"
+      },
+      {
+        "find": "FACE GYM PROTOKOL \u2013 6 Myolift",
+        "replace": "FACE GYM PROTOKOL: 6 Myolift",
+        "why": "protocol list item, so a colon"
+      },
+      {
+        "find": "zapostavljene \u2013 u predelu oko očiju, na vratu i šakama \u2013 zbog čega",
+        "replace": "zapostavljene, u predelu oko očiju, na vratu i šakama, zbog čega",
+        "why": "parenthetical pair of dashes, so a pair of commas"
+      },
+      {
+        "find": "medicinski laser \u2013 on je",
+        "replace": "medicinski laser, on je",
+        "why": "parenthetical clause, so a comma"
+      },
+      {
+        "find": "dva moda \u2013 slide i stamp",
+        "replace": "dva moda: slide i stamp",
+        "why": "names the two modes, so a colon"
+      },
+      {
+        "find": "svi \u2013 i muškarci i žene \u2013 ukoliko",
+        "replace": "svi, i muškarci i žene, ukoliko",
+        "why": "parenthetical pair of dashes, so a pair of commas"
+      }
+    ]
+  },
+  "typos": [
+    {
+      "find": "orjentacionog",
+      "replace": "orijentacionog",
+      "why": "typo in the payment note of the old site (\"orijentacionog\")"
+    },
+    {
+      "find": "konsultacije dr Tamara mi je",
+      "replace": "konsultacije Tamara mi je",
+      "why": "placeholder testimonial (Jovana M.): wording as delivered in stage 1 (no \"dr\" before Tamara); the client still has to say whom it names, see _meta.warnings"
+    }
+  ]
+}

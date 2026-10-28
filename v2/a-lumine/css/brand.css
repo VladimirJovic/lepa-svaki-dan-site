@@ -1,0 +1,213 @@
+/* =====================================================================================================
+   LEPA SVAKI DAN  /  BEAUTY CONCEPT  -  brand tokens
+   Pripremio ECHOSYSTEM-MOTHER AGENCY  ·  2026-10-07
+
+   Source: brandbook "!!!BeautyConceptBRAND BOOK.pdf" (13 pp, 2021).
+   Colour values below were SAMPLED as pixel medians from the swatches of the PDF rendered at 200 dpi
+   (not copied from the printed specs, which are Pantone/CMYK only), then cross-checked against the vector fills.
+
+   BRANDBOOK NOTES
+   - PANTONE 2635 C is the master lila (CMYK 20/30/0/0). PANTONE 2645 C (CMYK 31/43/0/0) is the second, deeper lila
+     used for the lila LEPA SVAKI DAN marks on white (brandbook p5).
+   - "RGB R88 G89 B91" printed beside the lila swatch on pp 3-4 does NOT describe lila; it is the 75% black.
+     The sampled lila is 198 / 180 / 227.
+   - Gold appears two ways: a flat "GOLD" (--gold, 2-colour logo) and the real gold FOIL (zlatna folija) which is
+     a rose/copper metallic and only exists as a texture; --gold-foil* are sampled from that texture.
+   - Typography (brandbook p12): the Galano Grotesque family in LIGHT, REGULAR and MEDIUM; the CONCEPT wordmark and all running
+     text are Light (pp 7-8, 12). This pack only has Regular and Bold: Light and Medium are missing (see note below).
+
+   75% BLACK  (brandbook p5, swatch "75% BLACK", sampled #5A5758 from the 200-300 dpi render)
+   TEXT ONLY since the October 2026 palette decision (feedback 3): the site is IVORY / BEIGE + GOLD with small details in the two centre colours.
+   No dark fills, no heavy dark gradients, no white-on-dark: buttons, cards, chips, CTA blocks, nav, overlays and the footer are tonal
+   (lighter and darker shades of the same warm ivory family). The 75% black is the text colour; #403C3D is the same grey one step deeper,
+   used where a tonal surface is darker than the page (AA).
+   --black-75        #5A5758   vs ivory #F4F2E9 6.37:1   vs #EDEBE2 5.98:1   vs #E5E2D9 5.52:1   vs #DDD9CF 5.07:1   vs lila-200 5.62:1
+   --black-75-deep   #4A4647   the grey one step darker (kept for lila surfaces): 7.2:1 on #E5E2D9
+   --ink-deep        #403C3D   deepest text step: 8.4:1 on #E5E2D9, 6.3:1 on the taupe #CCC5B9 (where #5A5758 would only reach 4.2:1)
+
+   ZLATNA FOLIJA (brandbook p5 swatch and p11 texture): a rose/copper metallic. The swatch was sampled along its diagonal,
+   dark copper #B67851 (bottom left) to light champagne #F5CE9E (top right). --foil is a 6 stop gradient made of samples from that range
+   (hairlines, dots, corner brackets). Text in foil needs a darker copper to stay legible: --foil-ink (>= 4.5:1 on white, lila-50,
+   lila-100 and lila-200) and --foil-on-dark (>= 5:1 on the 75% black).
+
+   CONTRAST of the lila scale (WCAG 2.x)
+   --lila               #C6B4E3   vs black-75-deep 4.89:1   vs white 1.90:1
+   --lila-200           #E8E1F4   vs black-75 5.62:1
+   --lila-300           #D7CAEB   vs black-75 4.61:1
+   Reading the table:
+   - White on lila is only 1.90:1, so the brandbook's white-on-lila lockups are fine for the large logo but must NOT be used for small
+     text or UI labels. Lila (--lila) as text on white is 1.90:1: decorative only, use --lila-700 or the 75% black.
+   ===================================================================================================== */
+
+/* ---- Galano Grotesque (self-hosted) -------------------------------------------------------------- */
+@font-face {
+  font-family: "Galano Grotesque";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/GalanoGrotesqueRegular.woff2") format("woff2"),
+       url("../assets/fonts/GalanoGrotesqueRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "Galano Grotesque";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/GalanoGrotesqueBold.woff2") format("woff2"),
+       url("../assets/fonts/GalanoGrotesqueBold.woff") format("woff");
+}
+/* Note (designer): Galano Grotesque LIGHT (text weight) and MEDIUM (brandbook p12) are NOT in this pack.
+   Once supplied, drop GalanoGrotesqueLight.woff2/.woff into ../assets/fonts/ and un-comment:
+@font-face {
+  font-family: "Galano Grotesque";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../assets/fonts/GalanoGrotesqueLight.woff2") format("woff2"),
+       url("../assets/fonts/GalanoGrotesqueLight.woff") format("woff");
+}
+   Same for Medium (500). Until then weight 300 resolves to Regular (400) and 500 resolves to Regular (400): browsers pick
+   the nearest available face, so var(--font-weight-light) and var(--font-weight-medium) are safe to use today and
+   upgrade automatically later. (Bold 700 is in the project but is not one of the three brandbook weights.) */
+
+:root {
+  /* ---- brand colours (sampled) ---- */
+  --lila: #C6B4E3;               /* PANTONE 2635 C - master lila */
+  --lila-70: #D7CAEB;            /* 70% of 2635 C (brandbook p2/p7 tint) */
+  --lila-deep: #AF96DB;          /* PANTONE 2645 C - deeper lila (LSD marks) */
+  --gold: #C18F16;               /* flat GOLD of the 2-colour logo */
+  --gold-foil: #D1A671;          /* gold foil, mean of the swatch texture */
+  --gold-foil-light: #F7E5B9;
+  --gold-foil-dark: #AD7547;
+  --black-75: #5A5758;           /* 75% BLACK, brandbook p5 swatch (sampled). Fills, dark blocks, overlays, text */
+  --black-75-deep: #4A4647;      /* same grey, one step darker: text on lila surfaces only (AA) */
+  --white: #FFFFFF;
+
+  /* ---- ZLATNA FOLIJA as print: gradient built from the swatch samples (no glitter, 6 soft stops) ---- */
+  --foil-1: #B67851;             /* dark copper (swatch, bottom left) */
+  --foil-2: #D29A6C;
+  --foil-3: #E0A878;             /* the highlight of the swatch, kept on the warm side so a hairline stays visible on lila as well */
+  --foil-4: #C98E62;
+  --foil-5: #B67851;
+  --foil-6: #D59E6F;
+  --foil: linear-gradient(105deg, var(--foil-1) 0%, var(--foil-2) 22%, var(--foil-3) 40%, var(--foil-4) 60%, var(--foil-5) 80%, var(--foil-6) 100%);
+  --foil-v: linear-gradient(180deg, var(--foil-1) 0%, var(--foil-2) 22%, var(--foil-3) 40%, var(--foil-4) 60%, var(--foil-5) 80%, var(--foil-6) 100%);
+  --foil-on-dark-solid: #F8D7AE; /* the pale champagne highlight of the foil: 5.2:1 on the 75% black, still >= 4.5:1 over a photo under a .9 panel */
+  --foil-on-dark: linear-gradient(100deg, #F8D7AE 0%, #FBE1C0 48%, #F8D7AE 100%);
+
+  /* ---- generated lila scale: 50-300 = white mixed with 2635 C at 10/20/40/70%  (20/40/70 match the
+          brandbook tints); 400 = 85%; 500 = base; 600 = 2645 C; 700/800/900 = hue of 2645 C darkened to 4.6 / 7.5 / 12:1 on white ---- */
+  --lila-50: #F9F8FC;
+  --lila-100: #F4F0F9;
+  --lila-200: #E8E1F4;
+  --lila-300: #D7CAEB;
+  --lila-400: #CFBFE7;
+  --lila-500: #C6B4E3;
+  --lila-600: #AF96DB;
+  --lila-700: #8466BA;
+  --lila-800: #61478F;
+  --lila-900: #3E2F57;
+  /* tints of 2645 C as printed on brandbook p11 (80/40/20%) */
+  --lila-deep-80: #BFABE2;
+  --lila-deep-40: #DFD5F1;
+  --lila-deep-20: #EFEAF8;
+
+  /* ---- semantic aliases ---- */
+  --color-bg: var(--white);
+  --color-bg-tint: var(--lila-50);
+  --color-surface-lila: var(--lila);
+  --color-surface-dark: var(--black-75);
+  --color-text: var(--black-75);
+  --color-text-muted: var(--black-75);
+  --color-text-on-lila: var(--black-75-deep);  /* 4.89:1 on lila - white on lila is 1.90:1, keep it for big logo only */
+  --color-text-lila: var(--lila-700);          /* smallest lila step that reaches 4.5:1 on white */
+  --color-accent: var(--lila);
+  --color-accent-strong: var(--lila-deep);
+  --color-rule: var(--lila-200);
+  --color-gold: var(--gold);
+  --gradient-gold-foil: var(--foil);
+
+  /* ---- type ---- */
+  --font-sans: "Galano Grotesque", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-weight-light: 300;     /* brandbook text weight; renders as Regular until the Light font is supplied */
+  --font-weight-medium: 500;    /* brandbook weight; renders as Regular until the Medium font is supplied */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --tracking-wordmark: 0.5em;   /* wide LEPA - SVAKI - DAN spacing; use on small caps labels */
+  --tracking-label: 0.18em;
+  --measure: 62ch;
+
+  /* ---- bracket / hairline motif ---- */
+  --hairline: 0.5px;
+  --bracket-stroke: 1.5px;
+  --bracket-arm: 22.7%;          /* arm length as share of frame width (brandbook logo block) */
+  --bracket-offset: 0.75rem;     /* gap between content and bracket frame */
+}
+
+/* =====================================================================================================
+   PALETTE v3  (client feedback 3, October 2026): IVORY / BEIGE + GOLD, with LILA and GREEN as details
+   The ivory family is sampled from the published site lepasvakidan.rs (the background of its offers sections) and the brandbook ivory.
+   LILA  = Beauty Concept   (#C6B4E3 master, stronger accent #9471D3 / --lila-700 #8466BA for lines and icons)
+   GREEN = Wellbeing Concept (#3F6E5E, soft #E1ECE6, sage #6B9080)
+   Big surfaces are ivory; lila and green only appear as small details in every section (chips, icons, eyebrow dots, bracket corners,
+   underlines, card accents). Contrast (WCAG 2.x), text #5A5758 unless noted:
+     iv-0 #F4F2E9 6.37  |  iv-1 #EDEBE2 5.98  |  iv-2 #E5E2D9 5.52  |  iv-3 #DDD9CF 5.07  |  taupe #CCC5B9 4.17 (use #403C3D: 6.34)
+     green #3F6E5E on iv-0 5.20, iv-1 4.88, iv-2 4.50 (text and icons)   |   lila-800 #61478F on iv-0 6.67 (lila TEXT)
+     foil-ink #7A4B2E on iv-0 6.52, iv-2 5.64, iv-3 5.19 (foil text)   |   sage #6B9080 and lila-600/700 are decorative or icon-only (>= 3:1 only on iv-0)
+   ===================================================================================================== */
+:root {
+  --iv-lift: #FAF9F4;               /* lifted ivory: input fields, glass (no pure white anywhere) */
+  --iv-0: #F4F2E9;               /* CANVAS, sampled from lepasvakidan.rs */
+  --iv-1: #EDEBE2;              /* surface (cards) */
+  --iv-2: #E5E2D9;               /* deeper surface (alt cards, tonal buttons, footer) */
+  --iv-3: #DDD9CF;               /* deepest tonal step (feature cards, pressed) */
+  --iv-4: #CCC5B9;               /* taupe 1 */
+  --iv-5: #B4AFA7;               /* taupe 2 */
+  --iv-6: #9C918C;               /* taupe 3 (decorative lines only) */
+  --ink-deep3: #403C3D;          /* deeper text */
+
+  --green: #3F6E5E;              /* Wellbeing Concept */
+  --green-soft: #E1ECE6;
+  --green-sage: #6B9080;
+  --green-100: #EEF4F0;
+  --green-200: #E1ECE6;
+  --green-300: #CFE0D7;
+  --green-700: #2F5B4B;          /* green TEXT on ivory: 7.0:1 on iv-0 */
+
+  --lila-accent: #9471D3;        /* stronger Beauty Concept accent for lines, dots and icons */
+
+  /* gold foil: label ink recomputed for the tonal surfaces (>= 4.5:1 down to iv-3) */
+  --foil-ink-solid: #7A4B2E;
+  --foil-ink: linear-gradient(100deg, #6F4428 0%, #7A4B2E 40%, #74482B 66%, #7A4B2E 100%);
+
+  /* the tonal button / ring system */
+  --ring: 1px solid transparent;
+  --paper: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .33 0 0 0 0 .3 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  /* semantic aliases follow the ivory palette */
+  --color-bg: var(--iv-0);
+  --color-bg-tint: var(--iv-1);
+  --color-surface-lila: var(--lila);
+  --color-surface-dark: var(--iv-2);
+  --color-text-on-lila: var(--ink-deep3);
+  --color-rule: var(--iv-4);
+}
+
+/* ---- optional helper: open corner-bracket frame around any box (pure CSS, tints with `color`) -------
+   <div class="bc-brackets" style="color: var(--lila)"> ... </div>
+   Matches graphics/corner-bracket.svg (side brackets with open top/bottom centres). */
+.bc-brackets { position: relative; }
+.bc-brackets::before {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * var(--bracket-offset));
+  pointer-events: none;
+  background:
+    linear-gradient(currentColor, currentColor) 0 0 / var(--bracket-arm) var(--bracket-stroke),
+    linear-gradient(currentColor, currentColor) 0 100% / var(--bracket-arm) var(--bracket-stroke),
+    linear-gradient(currentColor, currentColor) 0 0 / var(--bracket-stroke) 100%,
+    linear-gradient(currentColor, currentColor) 100% 0 / var(--bracket-arm) var(--bracket-stroke),
+    linear-gradient(currentColor, currentColor) 100% 100% / var(--bracket-arm) var(--bracket-stroke),
+    linear-gradient(currentColor, currentColor) 100% 0 / var(--bracket-stroke) 100%;
+  background-repeat: no-repeat;
+}

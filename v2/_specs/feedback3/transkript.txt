@@ -1,0 +1,117 @@
+A vezrzija sajta je glavna, iz verzije C se uzimaju pojedini delovi za dodavanje u A.
+
+HEADER MENU:
+  1.​ Kartice treba da budu: Nase usluge, o nama, posebna ponuda, cenovnik, lokacije, blog
+      redom.
+
+HERO SEKCIJA:
+
+
+
+
+   1.​ Kontrasti tamno-svetlo treba da se izbegavaju (npr. Dugmici “Pogledaj tretmane” i
+       “Cenovnik usluga” u hero sekciji). Potrebno je da sve bude “sliveno”, bez jakih kontrasta,
+       sve u istoj nijansi sa svetlijim i tamnijim bojama.
+   2.​ Pozadina iza Tamarine slike, svetlije linije na ljubicastoj pozadini treba da budu jasnijeg
+       porekla, trenutno izgleda kao da su nepotpune iako je to izvedeno iz logoa, a trebalo bi
+       da se ili ta “silueta” logoa vidi potpuno, ili da bude malo manje sakrivena i isecena.
+   3.​ Ljubicasta lila boja koja je na pozadini hero sekcije treba da bude tu u detaljima, a ne da
+       cela boji pozadinu hero sekcije jer je to boja samo jednog centra, pa bi pogodna boja za
+       hero sekciju bila bež, ili slonova kost boja kao iz brandbook-a, sa highlightovima zlatne i
+       lila boje u detaljima da bi sve bilo malo otmenije. Konkretnu boju uzeti sa
+       lepasvakidan.rs koja se nalazi na pozadini sekcija sa ponudama (desni link na linku)
+   4.​ Sto se tice logoa gore desno u headeru, uzeti layout iz njihovog glavnog objavljenog
+       sajta (slika ispod)
+5.​ Sto se tice tekstova, “2 lokacije 1 filozofija” ostaje, header navbar takodje ostaje izuzev
+    logoa koji je u koraku 4, a tekst ispod natpisa “2 lokacije 1 filozofija” treba da se promeni
+    da pise kao kod njih na sajtu (verovatno se ceka na tekstove koje Tamara treba da
+    precizira i posalje)
+6.​ Ispod search bar-a na prvoj verziji sajta treba da se doda deo za odabir sekcije koju
+    trazimo, odnosno predlozi za search kojih ima u verziji C (slika ispod), ali sa izmenom
+    velicine tabova sa predlozima za search da budu znatno manji nego na verziji sajta C.
+
+
+
+
+7.​ Dugmici POGLEDAJ TRETMANE i CENOVNIK USLUGA da ostanu ali da se premeste
+    na desnu stranu hero sekcije odmah pored tamarine slike gde su sada 2 prozora sa
+    radnim vremenom i “15+ godina prakse”, uz izmene iz koraka 1 i takodje Tamarina slika
+    ostaje na centru.
+8.​ Tekst koji se menja u hero sekciji - linija ispod podvucenog dela treba da prati duzinu reci
+    koja izlazi nakon svake promene teksta (“budi lepa, srecna…” itd.)
+SEKCIJA O NAMA:
+
+
+
+
+  1.​ Traka sa informacijama sa slike ispod treba da ostane, ali sa izmenom teksta koji ce
+      tamara da posalje sa njihovom statistikom, informacijama i radnim vremenom
+
+
+
+
+  2.​ Izmena tekstova: REC OSNIVACA I POSEBNE POGODNOSTI levo, pored slike sa
+      tekstom koji treba precizirati sa Tamarom, a desno, ispod slike, tekst NASA
+      PREPORUKA TRETMANA ZA POKLONE sa svojim tekstom Sekcija tretmana za
+      poklone je malo nize na istoj verziji sajta. Uzeti to odatle i smestiti u deo u ovoj sekciji
+      ispod slike tako da bude kompaktno i vidljivo. Umesto naziva TRETMANI ZA POKLON,
+      nazvati ovaj deo BESTSELLER TRETMANI (slika ispod)
+   3.​ Izmena teksta “Tamara Vujacic, Lepa Svaki Dan” svuda na sajtu. Tamara Vujacic je
+       lekar, a Tamara Cosic je osnivacica Lepe Svaki Dan. Zameniti svuda gde treba.
+
+Ispod sekcije O NAMA sa svim izmenama treba da ide sekcija NASE USLUGE, pa onda ispod
+toga sekcija PREDLOZI TRETMANA (NASI OMILJENI TRETMANI)
+
+SEKIJA USLUGE:
+
+
+
+
+   1.​ Izmena boja i kontrasta, sa zlatnim i bez nijansama, bez tamnih kontrasta, ali sa dodatim
+       detaljima zelene i lila boje posto su 2 centra koje Lepa Svaki Dan ima predstavljeni kroz
+       zelenu i lila boju. Generalno prozimanje zlatnih i bez nijansi uz detalje te dve boje u
+       svakoj sekciji kao i ovde. Resenje ove sekcije u drugom smislu je okej
+   2.​ U delu sa brojevima telefona i mailovima - treba da postoje 2 broja telefona i 2 maila
+       (precizirati sa tamarom koji su brojevi i mailovi). Prvi telefon pa prvi mail i drugi telefon
+       pa drugi mail.
+SEKCIJA CENOVNIK:
+
+
+
+
+  1.​ Kada se skroluje ili dodje do cenovnika prvi put na sajtu treba da se pojavi popup prozor
+      koji sadrzi informacije da je placanje iskljucivo u dinarima i reminder da za pronalazak i
+      lakse kretanje kroz sajt koriste search bar pretrazivac za svaku uslugu koja je potrebna
+      korisnicima. Precizirati tekst sa Tamarom za ovo kao i za celu sekciju Usluge i Cene
+SEKCIJA NASI OMILJENI TRETMANI:
+
+
+
+
+  1.​ Deo sa cenama - Prvo vecim fontom napisati cenu u dinarima, a ispod manjim brojevima
+      cenu u evrima za sve tretmane. Samo im zameniti mesta, kao i u cenovniku. Ostalo je
+      okej.
+
+SEARCH BAR:
+
+  1.​ Kada se otkuca konkretni tretman, po hashtagovima treba prikazivati relevantne usluge,
+      sa izlistavanjem koje treba podesiti takodje po relevantnosti.
+
+TEKSTOVI NA SAJTU:
+
+  1.​ Obratiti paznju na opisne tekstove sekcija - bez prelamanja tekstova, organizovati ih da
+      nema prelamanja, ili da prelomi budu normalno rasporedjeni u zavisnosti od redova
+      tekstova o kojima se radi
+DODATNE FUNKCIONALNOSTI:
+
+   1.​ Personalizovati korisnicko iskustvo na osnovu pretrage korisnika: Korisnik koji dodje na
+       sajt i tu pretrazi neke usluge koje se nude treba da dobije personalizovano iskustvo, kao
+       neka vrsta nagradne igre koja predstavlja ponudu sa popustima za odredjene tretmane
+       koje je korisnik trazio na sajtu i na kojima se najvise zadrzao i posecivao. (Ukoliko trazi ili
+       udje na tekst ili pregled usluga o recimo aknama - treba da se pojavi personalizovana
+       ponuda za tog korisnika takva da mu se nudi 10 posto popusta za tretmane protiv akni).
+       Precizirati sa Tamarom odrzavanje i deljenje tih popusta naknadno
+
+Sve izmene oko tekstova i natpisa potraziti od Tamare. Ona treba da posalje materijal za
+izmenu svih tih sekcija koje mi nemamo, ukljucujuci i slike.
+

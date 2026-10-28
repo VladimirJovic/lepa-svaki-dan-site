@@ -1,0 +1,2202 @@
+{
+ "name": "Lepa Svaki Dan v2 - media pack",
+ "generatedBy": "ECHOSYSTEM-MOTHER AGENCY",
+ "generated": "2026-10-07",
+ "folder": "_shared/img/",
+ "settings": {
+  "photoWidths": [
+   480,
+   800,
+   1200,
+   1800
+  ],
+  "quality": 78,
+  "format": "webp (cwebp 1.6.0, -m 6 -sharp_yuv, metadata stripped)",
+  "cutout": {
+   "widths": [
+    600,
+    900,
+    1300
+   ],
+   "quality": 85,
+   "alphaQuality": 95
+  },
+  "logos": "webp lossless (native 350px)",
+  "placeholder": "24px wide, blurred, base64 webp data-URI"
+ },
+ "usage": {
+  "srcset": "<img src=\"about-800.webp\" srcset=\"about-480.webp 480w, about-800.webp 800w, about-1200.webp 1200w, about-1800.webp 1800w\" sizes=\"100vw\" width=\"2000\" height=\"1333\" alt=\"...\">",
+  "placeholder": "style=\"background:center/cover url(<placeholder>)\""
+ },
+ "cutoutQA": {
+  "sourceFacts": "2688x3024 RGBA, alfa max 254 (nijedan piksel potpuno neproziran), ~75k piksela alfa-šuma (1-8) razbacanih po celom platnu, 3.6M potpuno providnih",
+  "steps": [
+   "alfa nivoi: <=6 -> 0, >=250 -> 255 (uklonjen šum i \"1/255 curenje\" pozadine)",
+   "izolovane flekice: 27 komponenti, 0 uklonjeno (nema plutajućih fleka > 20px od figure)",
+   "defringe/color-bleed: RGB piksela sa alfa<130 i potpuno providnih povučen ka najbližem neprozirnom pikselu (nema tamnog RGB-a ispod providnog pa nema oboda ni pri skaliranju)",
+   "trim: bbox alfa>8 + 4px margina -> 2031x3001 (ravan donji rez je original)",
+   "izvoz: resize LANCZOS, cwebp -q 85 -alpha_q 95 -m 6 -sharp_yuv"
+  ],
+  "fringe": {
+   "before": "alfa 8-40: dLum -7.0; 40-100: +4.9; 100-200: +10.8 (svetlija ivica, blago desaturisana)",
+   "after": "alfa 8-40: -1.7; 40-100: +2.4; 100-200: +9.1",
+   "verdict": "nema tamnog oboda; blagi svetli pomak je realno prelomljena kosa"
+  },
+  "composites": [
+   "lila #C7B5D8",
+   "charcoal #454340",
+   "white #FFFFFF"
+  ],
+  "result": "ivica čista na sve tri podloge (pregledano 1:1 na kosi levo, desno, teme)"
+ },
+ "images": [
+  {
+   "id": "hero-cutout",
+   "type": "cutout",
+   "source": "Higgsfield hf.png (AI-generated) - kopija u source/hero-cutout-higgsfield-original.png",
+   "sourceSize": [
+    2688,
+    3024
+   ],
+   "sourceKB": 9632.5,
+   "trimmedSize": [
+    2031,
+    3001
+   ],
+   "trimBox": [
+    246,
+    23,
+    2277,
+    3024
+   ],
+   "hasAlpha": true,
+   "variants": [
+    {
+     "w": 600,
+     "h": 887,
+     "file": "hero-cutout-600.webp",
+     "kb": 70.8
+    },
+    {
+     "w": 900,
+     "h": 1330,
+     "file": "hero-cutout-900.webp",
+     "kb": 135.6
+    },
+    {
+     "w": 1300,
+     "h": 1921,
+     "file": "hero-cutout-1300.webp",
+     "kb": 244.5
+    }
+   ],
+   "srcset": "hero-cutout-600.webp 600w, hero-cutout-900.webp 900w, hero-cutout-1300.webp 1300w",
+   "placeholder": "data:image/webp;base64,UklGRnQCAABXRUJQVlA4WAoAAAAQAAAAFwAAIgAAQUxQSGUBAAANkGBbmyFJX/yRbtu2tYLxImafngXYtlk2IiL/QWoJETEBiHdGL1ycoU83Lr1rITEF24u5Vji+Zm7/7CQR3tJ+TjGcya3ag5pOIEePC10A0p7YfPVNcQx5i2NNBgDyFgafNUxc/843jUgaWnlbAkdhYLYWxnjjraKOIqvX63KUoF6v3I0C+aFB/ODSh0qMcFQYJ4P1H7/DCOH2VRTFCDmIqv5P2BPzRYNY5rYOxH9ycK/ZRVJJJgRA9vRM2SQQ9vju858A2aObOYWkNLhXfQMZzC+IFieC1ecVyd081WowEgv2BzrSX6M2I6XVe6CEN5NTSG0ND6B/uBGmA3fsUaE4i24wVlIiA6vfH81pZGgP9o9VTAbkTCyiwxlABidfNDLxjwuZCNmz2eRMhNvTyQQw+QFLZMC6/H3YlhmY9qen0/1E6bj08po9PRNQmrD7rXDnpji/YFOa0ovpZjkYZUbyUP/62gsAVlA4IOgAAACwBgCdASoYACMAPtVcpEyoJaOiNVgIAQAaiWQAtsswiR2OOBAeezI4liRduV633Naile+kgdWrN6fz9sWJAAD+6/XDMKvSOvWSjV+0/a9CL/CBOlnM5Y87zJrK+uAbwSAVtbrNKHPdV5lAq+0OHyMB4zJ8NkUroGGn1xY6VY2P9jJbKaJh96Q3tvFa7Jgq/56XhpQr3WKpyfgqTCeREhx8P/mOwmF9iLQ8uw89sUoDBYqiviiKfGFdT3oijGTxBL7/bPTwtxA2VMkmuMLgLhurYZm5o7ANa8XqC6uQ8NeT9xAmFSKgAAAA",
+   "placeholderBytes": 636,
+   "avgColor": "#67514c",
+   "luminance": 0.334,
+   "tone": "mid",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.42,
+      "detail": 0.053
+     },
+     {
+      "lum": 0.49,
+      "detail": 0.218
+     },
+     {
+      "lum": 0.33,
+      "detail": 0.144
+     }
+    ],
+    [
+     {
+      "lum": 0.19,
+      "detail": 0.133
+     },
+     {
+      "lum": 0.46,
+      "detail": 0.196
+     },
+     {
+      "lum": 0.39,
+      "detail": 0.141
+     }
+    ],
+    [
+     {
+      "lum": 0.18,
+      "detail": 0.188
+     },
+     {
+      "lum": 0.34,
+      "detail": 0.318
+     },
+     {
+      "lum": 0.23,
+      "detail": 0.196
+     }
+    ]
+   ],
+   "alt": "Nasmejana žena duge talasaste kose u tamnoplavom sakou, prekrštenih ruku.",
+   "shows": "AI-generisana (Higgsfield) žena: široki osmeh, duga ombre/balayage kosa, tamnoplavi sako, bela majica, prekrštene ruke. Providna pozadina, isečen na tamnoplav sako na dnu.",
+   "bestUse": "Hero isečak desno od naslova (lila #C7B5D8 / charcoal #454340 / bela). Dno slike je ravan rez - sidriti ga na dno sekcije ili ispod gradijenta.",
+   "fits": {
+    "verticals": [
+     "brand",
+     "hero"
+    ],
+    "themes": [
+     "lila",
+     "light",
+     "dark"
+    ]
+   },
+   "faces": [
+    [
+     0.39,
+     0.06,
+     0.71,
+     0.4
+    ]
+   ],
+   "faceCount": 1,
+   "hasFace": true,
+   "avoidOverlay": [
+    [
+     0.39,
+     0.06,
+     0.71,
+     0.4
+    ]
+   ],
+   "safeZones": "Providna pozadina: cela leva i desna strana kadra su slobodne za tekst. Lice je u gornjih 40% - nikad ne pokrivati.",
+   "cropNotes": "Ne seći lice; za mobilni drži gornjih 70% (do struka) i ravno dno.",
+   "warnings": [
+    "AI-GENERISANA OSOBA: zameniti pravom fotografijom (osnivač/tim) pre lansiranja ili jasno ne predstavljati kao stvarnu osobu/zaposlenu.",
+    "Kadar je \"korporativan\" (sako + bela majica) - deluje kao konsultant/agent za nekretnine; za salon lepote bolje bi radila kosa/ten + blazer u krem/lila.",
+    "Donja ivica je ravan rez originalne slike (sako) - ne lebdi u vazduhu."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)"
+  },
+  {
+   "id": "hero-orhideja",
+   "type": "photo",
+   "source": "lepasvakidrugidan/assets/images/hero-orhideja.jpg",
+   "sourceSize": [
+    1920,
+    1080
+   ],
+   "sourceKB": 187.3,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 480,
+     "h": 270,
+     "file": "hero-orhideja-480.webp",
+     "kb": 5.1
+    },
+    {
+     "w": 800,
+     "h": 450,
+     "file": "hero-orhideja-800.webp",
+     "kb": 10.6
+    },
+    {
+     "w": 1200,
+     "h": 675,
+     "file": "hero-orhideja-1200.webp",
+     "kb": 19.0
+    },
+    {
+     "w": 1800,
+     "h": 1012,
+     "file": "hero-orhideja-1800.webp",
+     "kb": 33.5
+    }
+   ],
+   "srcset": "hero-orhideja-480.webp 480w, hero-orhideja-800.webp 800w, hero-orhideja-1200.webp 1200w, hero-orhideja-1800.webp 1800w",
+   "placeholder": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAABwAwCdASoYAA4APt1apkyopSOiMAgBEBuJZQC7ACHc/AHzIAAA/uqEpPkX8VuGyBCQ8APXHn3xrFucwcndwQAA",
+   "placeholderBytes": 84,
+   "avgColor": "#efe2d9",
+   "luminance": 0.895,
+   "tone": "bright",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.86,
+      "detail": 0.083
+     },
+     {
+      "lum": 0.95,
+      "detail": 0.032
+     },
+     {
+      "lum": 0.97,
+      "detail": 0.004
+     }
+    ],
+    [
+     {
+      "lum": 0.76,
+      "detail": 0.192
+     },
+     {
+      "lum": 0.96,
+      "detail": 0.007
+     },
+     {
+      "lum": 0.97,
+      "detail": 0.004
+     }
+    ],
+    [
+     {
+      "lum": 0.69,
+      "detail": 0.233
+     },
+     {
+      "lum": 0.93,
+      "detail": 0.033
+     },
+     {
+      "lum": 0.95,
+      "detail": 0.009
+     }
+    ]
+   ],
+   "alt": "Bele orhideje sa ljubičasto-ružičastim središtem i latice koje lebde na toplo krem pozadini.",
+   "shows": "Grozd belih orhideja levo (sa magenta/ljubičastim središtem), nekoliko latica u letu, ogromna glatka krem površina desno.",
+   "bestUse": "HERO svetlih tema (luksuz/editorial) - naslov desno. Dobro se slaže sa lila + zlatnim akcentom. Bez lica - preklop se sme staviti bilo gde.",
+   "fits": {
+    "verticals": [
+     "brand",
+     "beauty",
+     "esthetic"
+    ],
+    "themes": [
+     "light",
+     "lila-tint",
+     "champagne"
+    ]
+   },
+   "faces": [],
+   "faceCount": 0,
+   "hasFace": false,
+   "avoidOverlay": [
+    [
+     0.0,
+     0.08,
+     0.36,
+     1.0
+    ],
+    [
+     0.2,
+     0.0,
+     0.58,
+     0.4
+    ]
+   ],
+   "safeZones": "Desno (x 42-100%, y 8-95%): potpuno glatka krem površina - tamni (charcoal) tekst ili lila. Najčistija zona u celom paketu.",
+   "cropNotes": "Za mobilni (portrait) kadar drži orhideje (x 0-45%) i stavi tekst ispod njih ili preko krem dela uz svetli preklop; za 1:1 kadar uzmi x 0-60%.",
+   "warnings": [
+    "Glatki gradijent: provereno (MAE 0.7/255) - nema vidljivog bandinga pri 78 kvalitetu."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "about",
+   "type": "photo",
+   "source": "lepasvakidrugidan/assets/images/about.jpg",
+   "sourceSize": [
+    2000,
+    1333
+   ],
+   "sourceKB": 312.4,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 480,
+     "h": 320,
+     "file": "about-480.webp",
+     "kb": 8.8
+    },
+    {
+     "w": 800,
+     "h": 533,
+     "file": "about-800.webp",
+     "kb": 17.9
+    },
+    {
+     "w": 1200,
+     "h": 800,
+     "file": "about-1200.webp",
+     "kb": 31.2
+    },
+    {
+     "w": 1800,
+     "h": 1200,
+     "file": "about-1800.webp",
+     "kb": 60.0
+    }
+   ],
+   "srcset": "about-480.webp 480w, about-800.webp 800w, about-1200.webp 1200w, about-1800.webp 1800w",
+   "placeholder": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAwBACdASoYABAAPt1ep00opSOiMAgBEBuJYwBTAAYvsZfvBWUrH+W5S4gA/FAMvE454r5Gbs6uVmz699b7NUgyrOqI3CEHej+T1XCTmWmOSP92v304QHJ6CbUJ5yNBt5pEGMhcsv7lbqP31k+5C8wA",
+   "placeholderBytes": 132,
+   "avgColor": "#988d8a",
+   "luminance": 0.561,
+   "tone": "bright",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.59,
+      "detail": 0.035
+     },
+     {
+      "lum": 0.31,
+      "detail": 0.232
+     },
+     {
+      "lum": 0.69,
+      "detail": 0.269
+     }
+    ],
+    [
+     {
+      "lum": 0.44,
+      "detail": 0.206
+     },
+     {
+      "lum": 0.65,
+      "detail": 0.156
+     },
+     {
+      "lum": 0.7,
+      "detail": 0.097
+     }
+    ],
+    [
+     {
+      "lum": 0.34,
+      "detail": 0.234
+     },
+     {
+      "lum": 0.65,
+      "detail": 0.244
+     },
+     {
+      "lum": 0.68,
+      "detail": 0.157
+     }
+    ]
+   ],
+   "alt": "Žena zatvorenih očiju opušteno leži na tretmanskom stolu dok joj terapeut masira vrat i rame, na belim peškirima.",
+   "shows": "Bočni profil žene zatvorenih očiju (biserna mindjuša), ruka terapeuta masira vrat/trapez. Bela posteljina, sivi zid, tamni nameštaj gore levo.",
+   "bestUse": "Sekcija \"O nama\" / filozofija, tretmani vrata i ramena, masaža. Dobar za svetle (white/lila) teme; široki 3:2 kadar.",
+   "fits": {
+    "verticals": [
+     "body",
+     "wellbeing"
+    ],
+    "themes": [
+     "light",
+     "lila-tint"
+    ]
+   },
+   "faces": [
+    [
+     0.21,
+     0.24,
+     0.5,
+     0.62
+    ]
+   ],
+   "faceCount": 1,
+   "hasFace": true,
+   "avoidOverlay": [
+    [
+     0.43,
+     0.5,
+     0.64,
+     0.88
+    ]
+   ],
+   "safeZones": "Gore levo (x 0-33%, y 0-45%): mirni sivi zid, tamni tekst ili beli sa blagim preklopom. Dole desno (x 55-100%, y 78-100%): bela posteljina - tamni tekst.",
+   "cropNotes": "Za 16:9 kadriraj y 15-80%; za 4:5 drži x 15-70% (lice + ruka).",
+   "warnings": [],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "cta-bg",
+   "type": "photo",
+   "source": "lepasvakidrugidan/assets/images/cta-bg.png",
+   "sourceSize": [
+    1920,
+    1279
+   ],
+   "sourceKB": 713.3,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 480,
+     "h": 320,
+     "file": "cta-bg-480.webp",
+     "kb": 14.6
+    },
+    {
+     "w": 800,
+     "h": 533,
+     "file": "cta-bg-800.webp",
+     "kb": 26.2
+    },
+    {
+     "w": 1200,
+     "h": 799,
+     "file": "cta-bg-1200.webp",
+     "kb": 42.6
+    },
+    {
+     "w": 1800,
+     "h": 1199,
+     "file": "cta-bg-1800.webp",
+     "kb": 78.3
+    }
+   ],
+   "srcset": "cta-bg-480.webp 480w, cta-bg-800.webp 800w, cta-bg-1200.webp 1200w, cta-bg-1800.webp 1800w",
+   "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoYABAAPt1cpkyopSOiMAgBEBuJQBOgBDwGEOzhndNTwTsD5AAA/uy1aKnc5ivF8HGrT8yIWjg6M/1EXhm2WB4A5mLV3pf3X4CCB7y9P+rtn+SZAXeRtd1/5gnwFwAA",
+   "placeholderBytes": 120,
+   "avgColor": "#5d4132",
+   "luminance": 0.275,
+   "tone": "dark",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.19,
+      "detail": 0.131
+     },
+     {
+      "lum": 0.27,
+      "detail": 0.168
+     },
+     {
+      "lum": 0.3,
+      "detail": 0.171
+     }
+    ],
+    [
+     {
+      "lum": 0.17,
+      "detail": 0.105
+     },
+     {
+      "lum": 0.39,
+      "detail": 0.241
+     },
+     {
+      "lum": 0.3,
+      "detail": 0.205
+     }
+    ],
+    [
+     {
+      "lum": 0.31,
+      "detail": 0.165
+     },
+     {
+      "lum": 0.38,
+      "detail": 0.143
+     },
+     {
+      "lum": 0.17,
+      "detail": 0.172
+     }
+    ]
+   ],
+   "alt": "Terapeutkinja masira glavu i vrat klijentkinje u toplo osvetljenom prostoru sa svećama, biljkom i drvenim policama.",
+   "shows": "Terapeutkinja u krem košulji (spuštenog pogleda) masira glavu klijentkinje koja leži; drvene police, zelena biljka, sveće i lampa daju toplu jantarnu atmosferu.",
+   "bestUse": "Pozadina CTA trake / footera ispod tamnog ili lila preklopa (u trenutnom sajtu: opacity .4 + lila gradient). Dekorativno: alt=\"\" ako je čista pozadina.",
+   "fits": {
+    "verticals": [
+     "wellbeing",
+     "face"
+    ],
+    "themes": [
+     "dark",
+     "warm",
+     "lila-overlay"
+    ]
+   },
+   "faces": [
+    [
+     0.56,
+     0.16,
+     0.73,
+     0.44
+    ],
+    [
+     0.38,
+     0.63,
+     0.48,
+     0.72
+    ]
+   ],
+   "faceCount": 2,
+   "hasFace": true,
+   "avoidOverlay": [
+    [
+     0.3,
+     0.6,
+     0.62,
+     0.78
+    ]
+   ],
+   "safeZones": "Nema čiste zone bez preklopa (police + sveće svuda). Uvek koristi preklop min. 55% tamne/lila boje; levu trećinu (x 0-30%) možeš koristiti za tekst uz preklop - tamo nema lica.",
+   "cropNotes": "Za uski kadar drži x 35-75% (oba lica). Širok 3:2 kadar.",
+   "warnings": [
+    "Izvor je 8-bitni PNG sa 256 boja (paleta/dither), mekan i kompresovan - na velikim ekranima bez preklopa deluje loše. Koristiti samo zatamnjen/zamućen ili zameniti pravom fotografijom.",
+    "Poreklo/licenca nepoznati (izgleda kao stock/screenshot) - proveriti pre produkcije."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "founder-portrait",
+   "type": "photo",
+   "source": "lepasvakidrugidan/assets/images/founder-portrait.jpg",
+   "sourceSize": [
+    1000,
+    1500
+   ],
+   "sourceKB": 243.1,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 480,
+     "h": 720,
+     "file": "founder-portrait-480.webp",
+     "kb": 16.6
+    },
+    {
+     "w": 800,
+     "h": 1200,
+     "file": "founder-portrait-800.webp",
+     "kb": 31.7
+    }
+   ],
+   "srcset": "founder-portrait-480.webp 480w, founder-portrait-800.webp 800w",
+   "placeholder": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAAAQBwCdASoYACQAPtFYo0yoJaMiNVgMAQAaCUAYc/qQdAY8+cdkakGdG+67xhZh0OuuytMRre3cEidJjdWVCnn/AAD+aPnw2FLbhvLFfC7qMHg0p4KWoDdOdsu0OOlOXvrqYH5wkOPRB2XImHK8TSdQcr3iQTDsLS8KSNY8fv3LCKIMb5WCwzp36kVKHyCbXtf8bRSva2MRqD4zIQNeFd3JOQeW3EzjdUxiFNbb5/hHMTRQvthF+GaaYWpmbIUVvd9muAAA",
+   "placeholderBytes": 216,
+   "avgColor": "#a68f7e",
+   "luminance": 0.575,
+   "tone": "bright",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.77,
+      "detail": 0.132
+     },
+     {
+      "lum": 0.92,
+      "detail": 0.092
+     },
+     {
+      "lum": 0.77,
+      "detail": 0.23
+     }
+    ],
+    [
+     {
+      "lum": 0.67,
+      "detail": 0.175
+     },
+     {
+      "lum": 0.48,
+      "detail": 0.227
+     },
+     {
+      "lum": 0.56,
+      "detail": 0.343
+     }
+    ],
+    [
+     {
+      "lum": 0.4,
+      "detail": 0.177
+     },
+     {
+      "lum": 0.37,
+      "detail": 0.171
+     },
+     {
+      "lum": 0.23,
+      "detail": 0.164
+     }
+    ]
+   ],
+   "alt": "Nanošenje tamne maske za lice četkicom na čelo žene koja opušteno leži, u svetlom prostoru sa biljkama.",
+   "shows": "Profil žene zatvorenih očiju, na čelo joj se četkicom nanosi tamna maska; druga ruka pridržava drvenu posudu sa kristalima i lišćem. Zamućena svetla pozadina sa biljkama i svećama.",
+   "bestUse": "Tretmani lica / maske / nega kože, vertikalni 2:3 ili 4:5 kadar. NIJE portret osnivača.",
+   "fits": {
+    "verticals": [
+     "face",
+     "esthetic"
+    ],
+    "themes": [
+     "light",
+     "lila-tint"
+    ]
+   },
+   "faces": [
+    [
+     0.28,
+     0.4,
+     0.8,
+     0.68
+    ]
+   ],
+   "faceCount": 1,
+   "hasFace": true,
+   "avoidOverlay": [
+    [
+     0.64,
+     0.24,
+     1.0,
+     0.47
+    ],
+    [
+     0.28,
+     0.4,
+     0.92,
+     0.7
+    ],
+    [
+     0.44,
+     0.78,
+     1.0,
+     0.96
+    ]
+   ],
+   "safeZones": "Gornjih 38% (y 0-38%) je zamućena svetla pozadina - idealno za naslov/bedž. Levo dole (x 0-30%, y 55-100%) koža/rame - bez teksta.",
+   "cropNotes": "4:5 (kao na sajtu) drži y 20-85%. Za kvadrat y 25-75%.",
+   "warnings": [
+    "SADRŽAJ NE ODGOVARA IMENU: ovo je stock fotografija maske za lice, ne portret osnivača. Na trenutnom sajtu je alt=\"Dr Tamara Vujačić, osnivač\" - netačno. Zameniti pravom fotografijom osnivača ili preimenovati u \"tretman-lica-maska\".",
+    "Tamna maska na čelu i \"mokra\" kosa - može delovati medicinski/blatno u luksuznom izdanju."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "location-novi-beograd",
+   "type": "photo",
+   "source": "lepasvakidrugidan/assets/images/location-novi-beograd.jpg",
+   "sourceSize": [
+    2000,
+    2000
+   ],
+   "sourceKB": 411.6,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 480,
+     "h": 480,
+     "file": "location-novi-beograd-480.webp",
+     "kb": 15.4
+    },
+    {
+     "w": 800,
+     "h": 800,
+     "file": "location-novi-beograd-800.webp",
+     "kb": 28.6
+    },
+    {
+     "w": 1200,
+     "h": 1200,
+     "file": "location-novi-beograd-1200.webp",
+     "kb": 48.3
+    },
+    {
+     "w": 1800,
+     "h": 1800,
+     "file": "location-novi-beograd-1800.webp",
+     "kb": 84.7
+    }
+   ],
+   "srcset": "location-novi-beograd-480.webp 480w, location-novi-beograd-800.webp 800w, location-novi-beograd-1200.webp 1200w, location-novi-beograd-1800.webp 1800w",
+   "placeholder": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABQBQCdASoYABgAPt1kp0+opaMiKAqpEBuJZACdMtVEIBIidtEpFMbXD3tM2+bvksW/YgAA/reF+Zr5PfYHgdUKmbVswnufY1vuN2aQvsaZt6+GjZR1jEJPXeO8U3/er2SOLqDZNpIL8Mxj1/QQV1sxL01qeYh4dnsqDCwMU2XaWGIBkOJCCUzYyj4ybVFMFmxq+Dqe70ae2Fzw8ObP9axny1gAAA==",
+   "placeholderBytes": 184,
+   "avgColor": "#8a6a5b",
+   "luminance": 0.439,
+   "tone": "mid",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.51,
+      "detail": 0.298
+     },
+     {
+      "lum": 0.37,
+      "detail": 0.262
+     },
+     {
+      "lum": 0.49,
+      "detail": 0.144
+     }
+    ],
+    [
+     {
+      "lum": 0.67,
+      "detail": 0.198
+     },
+     {
+      "lum": 0.56,
+      "detail": 0.22
+     },
+     {
+      "lum": 0.23,
+      "detail": 0.136
+     }
+    ],
+    [
+     {
+      "lum": 0.54,
+      "detail": 0.151
+     },
+     {
+      "lum": 0.36,
+      "detail": 0.19
+     },
+     {
+      "lum": 0.22,
+      "detail": 0.202
+     }
+    ]
+   ],
+   "alt": "Terapeut masira leđa klijentkinje toplim biljnim jastučićima u svetlom salonu sa zelenim zidom.",
+   "shows": "Ruke u bordo majici drže dva topla biljna jastučića (kese sa biljem) na leđima klijentkinje; treći jastučić u prvom planu. Zeleno-tirkizni zid, drvo i narandžasta vaza.",
+   "bestUse": "Kartica lokacije (Novi Beograd/Beauty) ili \"tretmani tela\" - topla masaža. Kvadrat 1:1, dobro se seče u 4:5 i 3:4.",
+   "fits": {
+    "verticals": [
+     "body",
+     "wellbeing"
+    ],
+    "themes": [
+     "mid",
+     "warm"
+    ]
+   },
+   "faces": [],
+   "faceCount": 0,
+   "hasFace": false,
+   "avoidOverlay": [
+    [
+     0.18,
+     0.18,
+     0.66,
+     0.58
+    ],
+    [
+     0.18,
+     0.55,
+     0.42,
+     0.82
+    ]
+   ],
+   "safeZones": "Nema velike mirne zone. Gore desno (x 72-100%, y 0-30%) zeleni zid - samo za mali bedž/oznaku lokacije. Za naslov koristiti donji gradijent (donjih 25% je ruka/koža - preklop).",
+   "cropNotes": "Za 16:9 drži y 15-62%. Za 4:5 drži x 5-85%.",
+   "warnings": [
+    "Intenzivna bordo majica + zeleni zid: jaka, zasićena paleta koja se tuče sa lila temom - razmisliti o blagom desaturisanju ili tamnom preklopu.",
+    "Ime fajla \"location-...\" je zavaravajuće - slika prikazuje tretman, ne lokaciju/enterijer."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "location-waterfront",
+   "type": "photo",
+   "source": "lepasvakidrugidan/assets/images/location-waterfront.jpg",
+   "sourceSize": [
+    2000,
+    1142
+   ],
+   "sourceKB": 252.1,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 480,
+     "h": 274,
+     "file": "location-waterfront-480.webp",
+     "kb": 9.8
+    },
+    {
+     "w": 800,
+     "h": 457,
+     "file": "location-waterfront-800.webp",
+     "kb": 18.3
+    },
+    {
+     "w": 1200,
+     "h": 685,
+     "file": "location-waterfront-1200.webp",
+     "kb": 30.4
+    },
+    {
+     "w": 1800,
+     "h": 1028,
+     "file": "location-waterfront-1800.webp",
+     "kb": 51.1
+    }
+   ],
+   "srcset": "location-waterfront-480.webp 480w, location-waterfront-800.webp 800w, location-waterfront-1200.webp 1200w, location-waterfront-1800.webp 1800w",
+   "placeholder": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoYAA4APt1cpkyopSOiMAgBEBuJQBOmUABNBKde4rWTjcoAAP4Th/wLSl9DnhVhac7MG5pFMWB18xQT73RXpuLVuanUYHhXAiEptp7CKpePfHytuRVCpXTgssM4AA==",
+   "placeholderBytes": 118,
+   "avgColor": "#9c775a",
+   "luminance": 0.489,
+   "tone": "mid",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.43,
+      "detail": 0.056
+     },
+     {
+      "lum": 0.53,
+      "detail": 0.12
+     },
+     {
+      "lum": 0.61,
+      "detail": 0.106
+     }
+    ],
+    [
+     {
+      "lum": 0.45,
+      "detail": 0.149
+     },
+     {
+      "lum": 0.5,
+      "detail": 0.151
+     },
+     {
+      "lum": 0.6,
+      "detail": 0.122
+     }
+    ],
+    [
+     {
+      "lum": 0.39,
+      "detail": 0.191
+     },
+     {
+      "lum": 0.41,
+      "detail": 0.151
+     },
+     {
+      "lum": 0.49,
+      "detail": 0.157
+     }
+    ]
+   ],
+   "alt": "Žena zatvorenih očiju meditira u sedećem položaju na krznenom tepihu, okružena upaljenim svećama u toplo osvetljenoj sobi.",
+   "shows": "Žena u svilenom bež kompletu sedi u lotos položaju, zatvorenih očiju i blagog osmeha; mnogo sveća, krem kauč levo, osušeno cveće i vaza desno, sunčeve senke na zidu.",
+   "bestUse": "Wellbeing / meditacija / Waterfront kartica lokacije, topli tamniji hero. Široki 16:9.",
+   "fits": {
+    "verticals": [
+     "wellbeing"
+    ],
+    "themes": [
+     "warm",
+     "mid",
+     "dark-overlay"
+    ]
+   },
+   "faces": [
+    [
+     0.46,
+     0.11,
+     0.62,
+     0.31
+    ]
+   ],
+   "faceCount": 1,
+   "hasFace": true,
+   "avoidOverlay": [
+    [
+     0.31,
+     0.09,
+     0.78,
+     0.95
+    ]
+   ],
+   "safeZones": "Levo (x 0-28%, y 0-45%) i gore (y 0-8%): topli zid - svetao tekst uz blagi preklop. Centar (figura) ne pokrivati.",
+   "cropNotes": "Figura je centrirana: za 4:5 drži x 28-80%. Za split layout tekst ide levo.",
+   "warnings": [
+    "Izgleda kao AI-generisana slika (glatka koža, artefakt - zelena tačka na nosu, besprekorne sveće). Ne predstavljati kao stvarni salon/stvarnu klijentkinju; zameniti stvarnom fotografijom pre lansiranja.",
+    "Ime \"location-waterfront\" je zavaravajuće - nije fotografija lokacije."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "vertical-body",
+   "type": "photo",
+   "source": "lepasvakidrugidan/assets/images/vertical-body.jpg",
+   "sourceSize": [
+    2000,
+    1333
+   ],
+   "sourceKB": 236.6,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 480,
+     "h": 320,
+     "file": "vertical-body-480.webp",
+     "kb": 10.0
+    },
+    {
+     "w": 800,
+     "h": 533,
+     "file": "vertical-body-800.webp",
+     "kb": 18.3
+    },
+    {
+     "w": 1200,
+     "h": 800,
+     "file": "vertical-body-1200.webp",
+     "kb": 29.6
+    },
+    {
+     "w": 1800,
+     "h": 1200,
+     "file": "vertical-body-1800.webp",
+     "kb": 50.4
+    }
+   ],
+   "srcset": "vertical-body-480.webp 480w, vertical-body-800.webp 800w, vertical-body-1200.webp 1200w, vertical-body-1800.webp 1800w",
+   "placeholder": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAACQBACdASoYABAAPt1apkyopSOiMAgBEBuJaACdMoRwAB5mj+ExnfO4dJqZMrAA9VdIxCDBk7Xwexsm6agklPqrfQ8Zig3DUlBNce/gqzT2L0JkPYXDlahjujvKljBiGSNi3/V7Hp4V3nAA",
+   "placeholderBytes": 126,
+   "avgColor": "#c4a580",
+   "luminance": 0.663,
+   "tone": "bright",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.61,
+      "detail": 0.178
+     },
+     {
+      "lum": 0.62,
+      "detail": 0.183
+     },
+     {
+      "lum": 0.85,
+      "detail": 0.018
+     }
+    ],
+    [
+     {
+      "lum": 0.54,
+      "detail": 0.145
+     },
+     {
+      "lum": 0.55,
+      "detail": 0.169
+     },
+     {
+      "lum": 0.75,
+      "detail": 0.178
+     }
+    ],
+    [
+     {
+      "lum": 0.78,
+      "detail": 0.127
+     },
+     {
+      "lum": 0.65,
+      "detail": 0.16
+     },
+     {
+      "lum": 0.62,
+      "detail": 0.179
+     }
+    ]
+   ],
+   "alt": "Staklene bočice sa uljima za masažu, sveće, kamenje i biljni jastučić na drvenom poslužavniku, a u pozadini zamućena žena odmara.",
+   "shows": "Prvi plan u fokusu: bočice ulja (žuto/zlatno), kapaljka, dve čajne sveće, beli kamenčići, jastučić sa biljem. Pozadina jako zamućena: žena zatvorenih očiju oslonjena na ruke.",
+   "bestUse": "Aromaterapija / ulja / tretmani tela, prodaja proizvoda (retail). 3:2.",
+   "fits": {
+    "verticals": [
+     "body",
+     "wellbeing"
+    ],
+    "themes": [
+     "light",
+     "warm"
+    ]
+   },
+   "faces": [
+    [
+     0.29,
+     0.12,
+     0.56,
+     0.52
+    ]
+   ],
+   "faceCount": 1,
+   "hasFace": true,
+   "avoidOverlay": [
+    [
+     0.46,
+     0.36,
+     1.0,
+     1.0
+    ]
+   ],
+   "safeZones": "Dole levo (x 0-42%, y 68-100%) bela posteljina, i gore desno (x 60-100%, y 0-32%) bela roletna: tamni tekst. Lice je zamućeno (nije prepoznatljivo) pa preklop sme preko njega.",
+   "cropNotes": "Za 4:5 drži x 25-100%. Za 16:9 y 5-80%.",
+   "warnings": [
+    "Dominantna žuta boja ulja - jak žut cast koji ne ide uz lila paletu; razmotriti blago hladnije toniranje ili korišćenje samo kao detalj.",
+    "Ime fajla \"vertical-body\" - sadržaj je aromaterapija/ulja, ne telesni tretman."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "vertical-esthetic",
+   "type": "photo",
+   "source": "lepasvakidrugidan/assets/images/vertical-esthetic.jpg",
+   "sourceSize": [
+    2000,
+    1334
+   ],
+   "sourceKB": 299.5,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 480,
+     "h": 320,
+     "file": "vertical-esthetic-480.webp",
+     "kb": 13.9
+    },
+    {
+     "w": 800,
+     "h": 534,
+     "file": "vertical-esthetic-800.webp",
+     "kb": 27.4
+    },
+    {
+     "w": 1200,
+     "h": 800,
+     "file": "vertical-esthetic-1200.webp",
+     "kb": 46.2
+    },
+    {
+     "w": 1800,
+     "h": 1201,
+     "file": "vertical-esthetic-1800.webp",
+     "kb": 79.1
+    }
+   ],
+   "srcset": "vertical-esthetic-480.webp 480w, vertical-esthetic-800.webp 800w, vertical-esthetic-1200.webp 1200w, vertical-esthetic-1800.webp 1800w",
+   "placeholder": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAACQAwCdASoYABAAPt1apkyopSOiMAgBEBuJYwAAHJZvMY120x8wAPa1q9EIjvpCjZG8tXh9VkCTfMo4SixIOYHyW6FQJMbcieHVgvBKEaqthYdwkzEpOjk0AaEqblu2rEYsIVy3BL9RLRAA",
+   "placeholderBytes": 126,
+   "avgColor": "#a29b98",
+   "luminance": 0.613,
+   "tone": "bright",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.56,
+      "detail": 0.18
+     },
+     {
+      "lum": 0.56,
+      "detail": 0.101
+     },
+     {
+      "lum": 0.35,
+      "detail": 0.145
+     }
+    ],
+    [
+     {
+      "lum": 0.69,
+      "detail": 0.229
+     },
+     {
+      "lum": 0.71,
+      "detail": 0.222
+     },
+     {
+      "lum": 0.72,
+      "detail": 0.213
+     }
+    ],
+    [
+     {
+      "lum": 0.79,
+      "detail": 0.178
+     },
+     {
+      "lum": 0.67,
+      "detail": 0.199
+     },
+     {
+      "lum": 0.46,
+      "detail": 0.116
+     }
+    ]
+   ],
+   "alt": "Dvoje gostiju u belim bademantilima opušteno leži na masažnim stolovima, a u prvom planu su cvet plumerije, ulja, so i peškir.",
+   "shows": "Par u belim bademantilima na susednim stolovima (lica zamućena, bočni profili); prvi plan oštar: plumerija, crni kamenčići, ružičasta so, bočice, rolovan peškir na pletenoj korpi.",
+   "bestUse": "Spa ambijent, paketi za dvoje / poklon vaučeri, opšti wellbeing. Svetao, vazdušast kadar 3:2.",
+   "fits": {
+    "verticals": [
+     "wellbeing",
+     "protocols"
+    ],
+    "themes": [
+     "light",
+     "lila-tint"
+    ]
+   },
+   "faces": [
+    [
+     0.4,
+     0.3,
+     0.58,
+     0.53
+    ],
+    [
+     0.16,
+     0.34,
+     0.31,
+     0.5
+    ]
+   ],
+   "faceCount": 2,
+   "hasFace": true,
+   "avoidOverlay": [
+    [
+     0.07,
+     0.7,
+     0.72,
+     1.0
+    ]
+   ],
+   "safeZones": "Dole desno (x 72-100%, y 62-100%): bež posteljina - tamni tekst. Gornjih 25% levo je zauzeto policom (detaljno). Lica su zamućena.",
+   "cropNotes": "Za 4:5 drži x 5-65% (plumerija + par). Za 16:9 y 20-85%.",
+   "warnings": [
+    "Ne prikazuje estetske procedure (botoks, hijaluron, PRP) kako je na sajtu mapirano - nego spa/masažu za dvoje. Na kartici \"Estetske procedure\" je pogrešna slika.",
+    "Prikazuje muškarca i ženu - proveriti da li pozicioniranje salona uključuje i muške goste pre nego što se koristi kao glavni vizual."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "vertical-face",
+   "type": "photo",
+   "source": "lepasvakidrugidan/assets/images/vertical-face.jpg",
+   "sourceSize": [
+    2000,
+    2000
+   ],
+   "sourceKB": 452.0,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 480,
+     "h": 480,
+     "file": "vertical-face-480.webp",
+     "kb": 20.5
+    },
+    {
+     "w": 800,
+     "h": 800,
+     "file": "vertical-face-800.webp",
+     "kb": 38.3
+    },
+    {
+     "w": 1200,
+     "h": 1200,
+     "file": "vertical-face-1200.webp",
+     "kb": 61.7
+    },
+    {
+     "w": 1800,
+     "h": 1800,
+     "file": "vertical-face-1800.webp",
+     "kb": 101.8
+    }
+   ],
+   "srcset": "vertical-face-480.webp 480w, vertical-face-800.webp 800w, vertical-face-1200.webp 1200w, vertical-face-1800.webp 1800w",
+   "placeholder": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAwBQCdASoYABgAPt1irU6opaSiKAqpEBuJQBdgAaGpoDJpO0cpJPha49+eo9rvcxyjoAD+tmye/eRAohZmywTIDrZ1ROt5b4Qscz7/+HVsszj18B/36szr9Z14gIglgGF7yWaTMwA631v9weND1T+ikLbFYPpFvtDHgwmZLPL6FTQ7q6Ctm4l4GCCygF/2gSx/yolwAAA=",
+   "placeholderBytes": 170,
+   "avgColor": "#977653",
+   "luminance": 0.479,
+   "tone": "mid",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.54,
+      "detail": 0.192
+     },
+     {
+      "lum": 0.38,
+      "detail": 0.145
+     },
+     {
+      "lum": 0.37,
+      "detail": 0.109
+     }
+    ],
+    [
+     {
+      "lum": 0.48,
+      "detail": 0.199
+     },
+     {
+      "lum": 0.42,
+      "detail": 0.226
+     },
+     {
+      "lum": 0.48,
+      "detail": 0.246
+     }
+    ],
+    [
+     {
+      "lum": 0.65,
+      "detail": 0.2
+     },
+     {
+      "lum": 0.6,
+      "detail": 0.265
+     },
+     {
+      "lum": 0.39,
+      "detail": 0.227
+     }
+    ]
+   ],
+   "alt": "Pogled odozgo na mirisnu sveću u ćilibarnom staklu sa suvim travama i senkama biljaka na bež podlozi.",
+   "shows": "Top-down kadar: sveća (vosak u kremastim nijansama) u tamnom ćilibar staklenom tegli, suva trava/gipsofila gore levo, jake senke lišća na bež/čokoladnoj podlozi.",
+   "bestUse": "Ambijent / brend raspoloženje / razdelnik sekcija / pozadina uz tamni preklop. Kvadrat 1:1.",
+   "fits": {
+    "verticals": [
+     "brand",
+     "wellbeing"
+    ],
+    "themes": [
+     "warm",
+     "mid",
+     "editorial"
+    ]
+   },
+   "faces": [],
+   "faceCount": 0,
+   "hasFace": false,
+   "avoidOverlay": [
+    [
+     0.3,
+     0.4,
+     0.72,
+     0.82
+    ]
+   ],
+   "safeZones": "Donji levi ugao (x 0-35%, y 70-100%) i gornji desni (x 55-100%, y 0-30%) - senke i tekstura, tekst uz preklop. Sredina (sveća) je žarište.",
+   "cropNotes": "Dobro se seče u 4:5 i 3:2 (zadrži sveću u centru).",
+   "warnings": [
+    "SADRŽAJ NE ODGOVARA IMENU: na sajtu je mapirano na \"Tretmani lica\", a slika je sveća - nema nikakve veze sa tretmanima lica.",
+    "Vidljivi artefakti AI/upscalinga (preoštreno, \"halo\" oko suvog cveća kad se gleda 1:1) - koristiti u manjem formatu ili zamućeno."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "vertical-laser",
+   "type": "photo",
+   "source": "lepasvakidrugidan/assets/images/vertical-laser.jpg",
+   "sourceSize": [
+    2000,
+    1333
+   ],
+   "sourceKB": 322.4,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 480,
+     "h": 320,
+     "file": "vertical-laser-480.webp",
+     "kb": 11.4
+    },
+    {
+     "w": 800,
+     "h": 533,
+     "file": "vertical-laser-800.webp",
+     "kb": 21.7
+    },
+    {
+     "w": 1200,
+     "h": 800,
+     "file": "vertical-laser-1200.webp",
+     "kb": 36.1
+    },
+    {
+     "w": 1800,
+     "h": 1200,
+     "file": "vertical-laser-1800.webp",
+     "kb": 64.9
+    }
+   ],
+   "srcset": "vertical-laser-480.webp 480w, vertical-laser-800.webp 800w, vertical-laser-1200.webp 1200w, vertical-laser-1800.webp 1800w",
+   "placeholder": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAwBACdASoYABAAPt1cp00opSOiMAgBEBuJYwCsACP4iEqkPG/JcwjH1wAA/oIFdgT0o7KZZTFeIuGbnKhqLkbbqSCvI4ZcsVrq/bZWOxJ9Jtn9ml6zY2Fgt7hYD1WGIc6qoAAA",
+   "placeholderBytes": 120,
+   "avgColor": "#8d746d",
+   "luminance": 0.475,
+   "tone": "mid",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.37,
+      "detail": 0.104
+     },
+     {
+      "lum": 0.58,
+      "detail": 0.173
+     },
+     {
+      "lum": 0.6,
+      "detail": 0.161
+     }
+    ],
+    [
+     {
+      "lum": 0.45,
+      "detail": 0.174
+     },
+     {
+      "lum": 0.44,
+      "detail": 0.194
+     },
+     {
+      "lum": 0.4,
+      "detail": 0.168
+     }
+    ],
+    [
+     {
+      "lum": 0.53,
+      "detail": 0.167
+     },
+     {
+      "lum": 0.65,
+      "detail": 0.152
+     },
+     {
+      "lum": 0.28,
+      "detail": 0.115
+     }
+    ]
+   ],
+   "alt": "Terapeut u sivoj uniformi masira leđa žene koja leži na stolu, uz upaljene sveće u mekom svetlu.",
+   "shows": "Dve ruke u sivo-lila uniformi masiraju leđa i rame žene (lice okrenuto nadole, vidi se samo mindjuša i punđa); sveće u pozadini, velika zamućena sveća desno u prvom planu.",
+   "bestUse": "Masaža leđa / tretmani tela / wellbeing. Topla roze-krem paleta lepo se slaže sa lila temom. 3:2.",
+   "fits": {
+    "verticals": [
+     "body",
+     "wellbeing"
+    ],
+    "themes": [
+     "light",
+     "lila-tint",
+     "warm"
+    ]
+   },
+   "faces": [
+    [
+     0.6,
+     0.4,
+     0.8,
+     0.6
+    ]
+   ],
+   "faceCount": 1,
+   "hasFace": true,
+   "avoidOverlay": [
+    [
+     0.18,
+     0.28,
+     0.56,
+     0.68
+    ],
+    [
+     0.78,
+     0.0,
+     1.0,
+     0.6
+    ]
+   ],
+   "safeZones": "Dole levo (x 0-48%, y 75-100%): krem krevet/peškir - tamni tekst. Gore levo je uniforma (mekano sivo-lila) - svetao tekst moguć uz blagi preklop.",
+   "cropNotes": "Za 4:5 drži x 5-80%. Za 16:9 y 10-85%.",
+   "warnings": [
+    "Ime fajla \"vertical-laser\" je pogrešno: slika prikazuje masažu leđa, ne lasersku epilaciju. Za laser koristiti zasebnu fotografiju."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "vertical-protocols",
+   "type": "photo",
+   "source": "lepasvakidrugidan/assets/images/vertical-protocols.jpg",
+   "sourceSize": [
+    2000,
+    2000
+   ],
+   "sourceKB": 427.1,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 480,
+     "h": 480,
+     "file": "vertical-protocols-480.webp",
+     "kb": 16.8
+    },
+    {
+     "w": 800,
+     "h": 800,
+     "file": "vertical-protocols-800.webp",
+     "kb": 35.2
+    },
+    {
+     "w": 1200,
+     "h": 1200,
+     "file": "vertical-protocols-1200.webp",
+     "kb": 61.8
+    },
+    {
+     "w": 1800,
+     "h": 1800,
+     "file": "vertical-protocols-1800.webp",
+     "kb": 105.7
+    }
+   ],
+   "srcset": "vertical-protocols-480.webp 480w, vertical-protocols-800.webp 800w, vertical-protocols-1200.webp 1200w, vertical-protocols-1800.webp 1800w",
+   "placeholder": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAACQBQCdASoYABgAPtVaoUyoJSMiMAwBABqJaACsMoACtW59Cmwr1/gEKgLeTsf7KbLGfBzeAADN2FtDTw5AYoffXjV7SGr6jSfwZn/Ad9fV72b+pWidE4Gv/0FJ/7dvqOHaI0uVA+dCPdUZT6gMA5gtseqFcR9Ug2e56x4Np010SQ7ZLfzMBbgAAvPwE+InlmghY7AELiYFgAAA",
+   "placeholderBytes": 174,
+   "avgColor": "#96847b",
+   "luminance": 0.531,
+   "tone": "mid",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.54,
+      "detail": 0.169
+     },
+     {
+      "lum": 0.14,
+      "detail": 0.133
+     },
+     {
+      "lum": 0.35,
+      "detail": 0.254
+     }
+    ],
+    [
+     {
+      "lum": 0.63,
+      "detail": 0.137
+     },
+     {
+      "lum": 0.63,
+      "detail": 0.165
+     },
+     {
+      "lum": 0.33,
+      "detail": 0.325
+     }
+    ],
+    [
+     {
+      "lum": 0.79,
+      "detail": 0.124
+     },
+     {
+      "lum": 0.66,
+      "detail": 0.122
+     },
+     {
+      "lum": 0.7,
+      "detail": 0.075
+     }
+    ]
+   ],
+   "alt": "Terapeutkinja nežno masira lice žene čija je glava umotana belim peškirom, tokom tretmana lica.",
+   "shows": "Krupan kadar lica klijentkinje (zatvorene oči, peškir oko glave) i ruku terapeutkinje koje masiraju vilicu/obraz; terapeutkinja u tamnoplavoj majici sa priveskom na vrhu kadra.",
+   "bestUse": "NAJBOLJI izbor za \"Tretmani lica\" / negu lica / facijalnu masažu. Tamno plavi gornji deo je dobra podloga za beli tekst. Kvadrat 1:1.",
+   "fits": {
+    "verticals": [
+     "face",
+     "protocols"
+    ],
+    "themes": [
+     "mid",
+     "lila-tint"
+    ]
+   },
+   "faces": [
+    [
+     0.36,
+     0.33,
+     0.66,
+     0.6
+    ]
+   ],
+   "faceCount": 1,
+   "hasFace": true,
+   "avoidOverlay": [
+    [
+     0.09,
+     0.28,
+     0.78,
+     0.8
+    ]
+   ],
+   "safeZones": "Gore desno (x 38-100%, y 0-32%): tamnoplava majica - beli tekst bez preklopa. Gore levo (x 0-32%, y 0-40%) zamućeno zeleno-belo.",
+   "cropNotes": "Za 4:5 drži x 5-80% i y 15-90%. Za 16:9 y 25-70%.",
+   "warnings": [
+    "Ime fajla \"vertical-protocols\": sadržaj je tretman lica, ne \"posebni protokoli\"."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "woman-portrait",
+   "type": "cutout",
+   "source": "lepasvakidrugidan/assets/images/woman-portrait.png",
+   "sourceSize": [
+    1500,
+    1675
+   ],
+   "sourceKB": 2684.6,
+   "hasAlpha": true,
+   "variants": [
+    {
+     "w": 480,
+     "h": 536,
+     "file": "woman-portrait-480.webp",
+     "kb": 22.3
+    },
+    {
+     "w": 800,
+     "h": 893,
+     "file": "woman-portrait-800.webp",
+     "kb": 45.7
+    },
+    {
+     "w": 1200,
+     "h": 1340,
+     "file": "woman-portrait-1200.webp",
+     "kb": 83.0
+    }
+   ],
+   "srcset": "woman-portrait-480.webp 480w, woman-portrait-800.webp 800w, woman-portrait-1200.webp 1200w",
+   "placeholder": "data:image/webp;base64,UklGRiYCAABXRUJQVlA4WAoAAAAQAAAAFwAAGgAAQUxQSFYBAAANkG1be9pG3y/LMZSZuR1mhst5dqY7ZiyDawgJ/gHJzSNExATAmczffzBffHjyarON2tHMraHNLJ2b3nm63akjR+81KmVEOrNRPs20T4SLa4UFiMLpjQ+/FfvSxVzhfxFNp9/axoNoak87QP3Tv1vsoXAoN55w5LgNv9WBIFc0WpWWPWCCW8jRZKtrHcTxUG5dwND8t5aLYbsRkYub2YSEN/+6OOyyne0yJY+p3k/MhOK/zuanOQkv4ejr8oAEoA4fRhG8Qo6Nv8zjWII5+9BPHiHIRIvfywCEQBoDdsh4dDLdK1WXAeJouFTGMoDxs5cn881SMQDQyI2jX5XSbPjWtf1WV1s4g74bl/PN/f2s0jfLDqOmHFw/vxAff3j9e31Ho7Zs9PcPzy+ZR0nX1AMFJJLRxTAbCE4AgAKRjm+PhnQiAIHaH5bope7kaaMnJm+HgnrRLQBWUDggqgAAANAFAJ0BKhgAGwA+3WitUSilpCKoCAEQG4lkALEfWP10Hgyi5rnox/0CVsQK1aRtDlI6+15cxQAA/hZoSkvRh5bxMokVxmVIWcCROoBZunjjliMpZN2S221YgkYYzBMMzQ+A8Yx3VMu6lfSVny8wOLvv6SYqYjVbU3agM44OFrgUXcdTh0QqSYNeXyhGqLQRVMmY9lxiQx31X7YexNHRhokFbRzQpfSMsXAA",
+   "placeholderBytes": 558,
+   "avgColor": "#a97e67",
+   "luminance": 0.525,
+   "tone": "mid",
+   "grid3x3": [
+    [
+     {
+      "lum": 0.63,
+      "detail": 0.182
+     },
+     {
+      "lum": 0.34,
+      "detail": 0.263
+     },
+     {
+      "lum": 0.21,
+      "detail": 0.199
+     }
+    ],
+    [
+     {
+      "lum": 0.66,
+      "detail": 0.105
+     },
+     {
+      "lum": 0.57,
+      "detail": 0.151
+     },
+     {
+      "lum": 0.11,
+      "detail": 0.111
+     }
+    ],
+    [
+     {
+      "lum": 0.6,
+      "detail": 0.135
+     },
+     {
+      "lum": 0.57,
+      "detail": 0.118
+     },
+     {
+      "lum": 0.51,
+      "detail": 0.078
+     }
+    ]
+   ],
+   "alt": "Portret žene sa zategnutom punđom i blistavim tenom, pogleda skrenutog u stranu, ruka joj počiva na ramenu.",
+   "shows": "Beauty portret: žena tamne kose u punđi, sjajan ten, ruka na ramenu, gola ramena. Isečena (providna pozadina), 1500x1675.",
+   "bestUse": "Hero isečak za estetske/kozmetičke teme (kao alternativa AI isečku). Ivica čista na lila, beloj i charcoal podlozi; na charcoal se tamna kosa slabije odvaja (nizak kontrast) pa je lila/svetla podloga bolja.",
+   "fits": {
+    "verticals": [
+     "esthetic",
+     "face",
+     "brand"
+    ],
+    "themes": [
+     "lila",
+     "light",
+     "dark"
+    ]
+   },
+   "faces": [
+    [
+     0.2,
+     0.05,
+     0.76,
+     0.55
+    ]
+   ],
+   "faceCount": 1,
+   "hasFace": true,
+   "avoidOverlay": [
+    [
+     0.2,
+     0.0,
+     0.76,
+     0.58
+    ]
+   ],
+   "safeZones": "Providna pozadina. Pogled ide ulevo, pa isečak postavi desno a tekst levo (gleda ka tekstu). Slobodan prostor oko glave: x 0-18% i 78-100% u gornjih 50%.",
+   "cropNotes": "Lice u gornjih 55%; dno (ramena) se seče ravno u donjem delu sekcije.",
+   "warnings": [
+    "Provereno na lila, beloj i charcoal: ivica čista, bez tamnog oboda.",
+    "Stock model (nije stvarna klijentkinja/tim) - ne prikazivati kao tim ili svedočenje."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "logo",
+   "type": "logo",
+   "source": "lepasvakidrugidan/assets/images/logo.png",
+   "sourceSize": [
+    350,
+    225
+   ],
+   "sourceKB": 35.2,
+   "hasAlpha": false,
+   "variants": [
+    {
+     "w": 350,
+     "h": 225,
+     "file": "logo-350.webp",
+     "kb": 15.3
+    }
+   ],
+   "srcset": "logo-350.webp 350w",
+   "placeholder": null,
+   "avgColor": "#ededed",
+   "luminance": 0.93,
+   "tone": "bright",
+   "grid3x3": null,
+   "alt": "Logotip Lepa Svaki Dan - Beauty & Wellbeing Concept.",
+   "shows": "Crni serifni logotip \"Beauty & Wellbeing Concept / LEPA • SVAKI • DAN\" na BELOJ neprozirnoj pozadini.",
+   "bestUse": "Samo na beloj podlozi. Za lila/charcoal koristiti logo-transparent.",
+   "fits": {
+    "verticals": [
+     "brand"
+    ],
+    "themes": [
+     "light"
+    ]
+   },
+   "faces": [],
+   "faceCount": 0,
+   "hasFace": false,
+   "avoidOverlay": [],
+   "safeZones": "-",
+   "cropNotes": "-",
+   "warnings": [
+    "Rasterski logo 350px - na retina ekranima mekan. Treba vektor (SVG) iz brand booka (!!!BeautyConceptBRAND BOOK.pdf)."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  },
+  {
+   "id": "logo-transparent",
+   "type": "logo",
+   "source": "lepasvakidrugidan/assets/images/logo-transparent.png",
+   "sourceSize": [
+    350,
+    219
+   ],
+   "sourceKB": 33.8,
+   "hasAlpha": true,
+   "variants": [
+    {
+     "w": 350,
+     "h": 219,
+     "file": "logo-transparent-350.webp",
+     "kb": 17.1
+    }
+   ],
+   "srcset": "logo-transparent-350.webp 350w",
+   "placeholder": null,
+   "avgColor": "#524f50",
+   "luminance": 0.313,
+   "tone": "dark",
+   "grid3x3": null,
+   "alt": "Logotip Lepa Svaki Dan - Beauty & Wellbeing Concept.",
+   "shows": "Isti logotip, sivi tamni tekst sa providnom pozadinom (alfa max 234 - blago providan).",
+   "bestUse": "Header/footer na svetlim i lila podlogama. Na charcoal pozadini NE koristiti (tamno na tamnom) - treba svetla (negativ) verzija.",
+   "fits": {
+    "verticals": [
+     "brand"
+    ],
+    "themes": [
+     "light",
+     "lila"
+    ]
+   },
+   "faces": [],
+   "faceCount": 0,
+   "hasFace": false,
+   "avoidOverlay": [],
+   "safeZones": "-",
+   "cropNotes": "-",
+   "warnings": [
+    "Rasterski 350px; alfa kanal nikad ne dostiže 255 (max 234) pa je tekst vizuelno \"isprano\" sivo. Treba vektor + svetla verzija za tamne pozadine."
+   ],
+   "coordsNote": "fractions [x0,y0,x1,y1] of the image (for hero-cutout: of the TRIMMED cutout, same as the exported variants)",
+   "path": "_shared/img/"
+  }
+ ],
+ "files": [
+  {
+   "file": "hero-cutout-600.webp",
+   "id": "hero-cutout",
+   "w": 600,
+   "h": 887,
+   "kb": 70.8,
+   "bytes": 72544
+  },
+  {
+   "file": "hero-cutout-900.webp",
+   "id": "hero-cutout",
+   "w": 900,
+   "h": 1330,
+   "kb": 135.6,
+   "bytes": 138896
+  },
+  {
+   "file": "hero-cutout-1300.webp",
+   "id": "hero-cutout",
+   "w": 1300,
+   "h": 1921,
+   "kb": 244.5,
+   "bytes": 250392
+  },
+  {
+   "file": "hero-orhideja-480.webp",
+   "id": "hero-orhideja",
+   "w": 480,
+   "h": 270,
+   "kb": 5.1,
+   "bytes": 5246
+  },
+  {
+   "file": "hero-orhideja-800.webp",
+   "id": "hero-orhideja",
+   "w": 800,
+   "h": 450,
+   "kb": 10.6,
+   "bytes": 10874
+  },
+  {
+   "file": "hero-orhideja-1200.webp",
+   "id": "hero-orhideja",
+   "w": 1200,
+   "h": 675,
+   "kb": 19.0,
+   "bytes": 19466
+  },
+  {
+   "file": "hero-orhideja-1800.webp",
+   "id": "hero-orhideja",
+   "w": 1800,
+   "h": 1012,
+   "kb": 33.5,
+   "bytes": 34258
+  },
+  {
+   "file": "about-480.webp",
+   "id": "about",
+   "w": 480,
+   "h": 320,
+   "kb": 8.8,
+   "bytes": 9014
+  },
+  {
+   "file": "about-800.webp",
+   "id": "about",
+   "w": 800,
+   "h": 533,
+   "kb": 17.9,
+   "bytes": 18312
+  },
+  {
+   "file": "about-1200.webp",
+   "id": "about",
+   "w": 1200,
+   "h": 800,
+   "kb": 31.2,
+   "bytes": 32000
+  },
+  {
+   "file": "about-1800.webp",
+   "id": "about",
+   "w": 1800,
+   "h": 1200,
+   "kb": 60.0,
+   "bytes": 61416
+  },
+  {
+   "file": "cta-bg-480.webp",
+   "id": "cta-bg",
+   "w": 480,
+   "h": 320,
+   "kb": 14.6,
+   "bytes": 14910
+  },
+  {
+   "file": "cta-bg-800.webp",
+   "id": "cta-bg",
+   "w": 800,
+   "h": 533,
+   "kb": 26.2,
+   "bytes": 26836
+  },
+  {
+   "file": "cta-bg-1200.webp",
+   "id": "cta-bg",
+   "w": 1200,
+   "h": 799,
+   "kb": 42.6,
+   "bytes": 43598
+  },
+  {
+   "file": "cta-bg-1800.webp",
+   "id": "cta-bg",
+   "w": 1800,
+   "h": 1199,
+   "kb": 78.3,
+   "bytes": 80230
+  },
+  {
+   "file": "founder-portrait-480.webp",
+   "id": "founder-portrait",
+   "w": 480,
+   "h": 720,
+   "kb": 16.6,
+   "bytes": 16990
+  },
+  {
+   "file": "founder-portrait-800.webp",
+   "id": "founder-portrait",
+   "w": 800,
+   "h": 1200,
+   "kb": 31.7,
+   "bytes": 32454
+  },
+  {
+   "file": "location-novi-beograd-480.webp",
+   "id": "location-novi-beograd",
+   "w": 480,
+   "h": 480,
+   "kb": 15.4,
+   "bytes": 15754
+  },
+  {
+   "file": "location-novi-beograd-800.webp",
+   "id": "location-novi-beograd",
+   "w": 800,
+   "h": 800,
+   "kb": 28.6,
+   "bytes": 29262
+  },
+  {
+   "file": "location-novi-beograd-1200.webp",
+   "id": "location-novi-beograd",
+   "w": 1200,
+   "h": 1200,
+   "kb": 48.3,
+   "bytes": 49510
+  },
+  {
+   "file": "location-novi-beograd-1800.webp",
+   "id": "location-novi-beograd",
+   "w": 1800,
+   "h": 1800,
+   "kb": 84.7,
+   "bytes": 86748
+  },
+  {
+   "file": "location-waterfront-480.webp",
+   "id": "location-waterfront",
+   "w": 480,
+   "h": 274,
+   "kb": 9.8,
+   "bytes": 9984
+  },
+  {
+   "file": "location-waterfront-800.webp",
+   "id": "location-waterfront",
+   "w": 800,
+   "h": 457,
+   "kb": 18.3,
+   "bytes": 18740
+  },
+  {
+   "file": "location-waterfront-1200.webp",
+   "id": "location-waterfront",
+   "w": 1200,
+   "h": 685,
+   "kb": 30.4,
+   "bytes": 31090
+  },
+  {
+   "file": "location-waterfront-1800.webp",
+   "id": "location-waterfront",
+   "w": 1800,
+   "h": 1028,
+   "kb": 51.1,
+   "bytes": 52336
+  },
+  {
+   "file": "vertical-body-480.webp",
+   "id": "vertical-body",
+   "w": 480,
+   "h": 320,
+   "kb": 10.0,
+   "bytes": 10284
+  },
+  {
+   "file": "vertical-body-800.webp",
+   "id": "vertical-body",
+   "w": 800,
+   "h": 533,
+   "kb": 18.3,
+   "bytes": 18768
+  },
+  {
+   "file": "vertical-body-1200.webp",
+   "id": "vertical-body",
+   "w": 1200,
+   "h": 800,
+   "kb": 29.6,
+   "bytes": 30328
+  },
+  {
+   "file": "vertical-body-1800.webp",
+   "id": "vertical-body",
+   "w": 1800,
+   "h": 1200,
+   "kb": 50.4,
+   "bytes": 51660
+  },
+  {
+   "file": "vertical-esthetic-480.webp",
+   "id": "vertical-esthetic",
+   "w": 480,
+   "h": 320,
+   "kb": 13.9,
+   "bytes": 14260
+  },
+  {
+   "file": "vertical-esthetic-800.webp",
+   "id": "vertical-esthetic",
+   "w": 800,
+   "h": 534,
+   "kb": 27.4,
+   "bytes": 28014
+  },
+  {
+   "file": "vertical-esthetic-1200.webp",
+   "id": "vertical-esthetic",
+   "w": 1200,
+   "h": 800,
+   "kb": 46.2,
+   "bytes": 47264
+  },
+  {
+   "file": "vertical-esthetic-1800.webp",
+   "id": "vertical-esthetic",
+   "w": 1800,
+   "h": 1201,
+   "kb": 79.1,
+   "bytes": 81022
+  },
+  {
+   "file": "vertical-face-480.webp",
+   "id": "vertical-face",
+   "w": 480,
+   "h": 480,
+   "kb": 20.5,
+   "bytes": 21024
+  },
+  {
+   "file": "vertical-face-800.webp",
+   "id": "vertical-face",
+   "w": 800,
+   "h": 800,
+   "kb": 38.3,
+   "bytes": 39250
+  },
+  {
+   "file": "vertical-face-1200.webp",
+   "id": "vertical-face",
+   "w": 1200,
+   "h": 1200,
+   "kb": 61.7,
+   "bytes": 63170
+  },
+  {
+   "file": "vertical-face-1800.webp",
+   "id": "vertical-face",
+   "w": 1800,
+   "h": 1800,
+   "kb": 101.8,
+   "bytes": 104248
+  },
+  {
+   "file": "vertical-laser-480.webp",
+   "id": "vertical-laser",
+   "w": 480,
+   "h": 320,
+   "kb": 11.4,
+   "bytes": 11722
+  },
+  {
+   "file": "vertical-laser-800.webp",
+   "id": "vertical-laser",
+   "w": 800,
+   "h": 533,
+   "kb": 21.7,
+   "bytes": 22212
+  },
+  {
+   "file": "vertical-laser-1200.webp",
+   "id": "vertical-laser",
+   "w": 1200,
+   "h": 800,
+   "kb": 36.1,
+   "bytes": 36928
+  },
+  {
+   "file": "vertical-laser-1800.webp",
+   "id": "vertical-laser",
+   "w": 1800,
+   "h": 1200,
+   "kb": 64.9,
+   "bytes": 66472
+  },
+  {
+   "file": "vertical-protocols-480.webp",
+   "id": "vertical-protocols",
+   "w": 480,
+   "h": 480,
+   "kb": 16.8,
+   "bytes": 17224
+  },
+  {
+   "file": "vertical-protocols-800.webp",
+   "id": "vertical-protocols",
+   "w": 800,
+   "h": 800,
+   "kb": 35.2,
+   "bytes": 36058
+  },
+  {
+   "file": "vertical-protocols-1200.webp",
+   "id": "vertical-protocols",
+   "w": 1200,
+   "h": 1200,
+   "kb": 61.8,
+   "bytes": 63284
+  },
+  {
+   "file": "vertical-protocols-1800.webp",
+   "id": "vertical-protocols",
+   "w": 1800,
+   "h": 1800,
+   "kb": 105.7,
+   "bytes": 108266
+  },
+  {
+   "file": "woman-portrait-480.webp",
+   "id": "woman-portrait",
+   "w": 480,
+   "h": 536,
+   "kb": 22.3,
+   "bytes": 22808
+  },
+  {
+   "file": "woman-portrait-800.webp",
+   "id": "woman-portrait",
+   "w": 800,
+   "h": 893,
+   "kb": 45.7,
+   "bytes": 46828
+  },
+  {
+   "file": "woman-portrait-1200.webp",
+   "id": "woman-portrait",
+   "w": 1200,
+   "h": 1340,
+   "kb": 83.0,
+   "bytes": 84950
+  },
+  {
+   "file": "logo-350.webp",
+   "id": "logo",
+   "w": 350,
+   "h": 225,
+   "kb": 15.3,
+   "bytes": 15714
+  },
+  {
+   "file": "logo-transparent-350.webp",
+   "id": "logo-transparent",
+   "w": 350,
+   "h": 219,
+   "kb": 17.1,
+   "bytes": 17504
+  }
+ ],
+ "totals": {
+  "files": 50,
+  "kb": 2168.1
+ }
+}

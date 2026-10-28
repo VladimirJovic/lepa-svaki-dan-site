@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<title>Lepa Svaki Dan, predlozi dizajna novog sajta</title>
+<style>
+@font-face{font-family:Galano;src:url(galano.woff2) format("woff2");font-weight:400}
+@font-face{font-family:Galano;src:url(galano-bold.woff2) format("woff2");font-weight:700}
+@page{size:A4;margin:0}
+:root{--lila:#C6B4E3;--lila-100:#EFE9F8;--lila-50:#F8F5FC;--ink:#5A5758;--ink-deep:#403C3D;--char:#5A5758;--gold:#B67851;--muted:#6a6567}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:Galano,system-ui,sans-serif;color:var(--ink);font-size:10.4pt;line-height:1.55;background:#fff}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;break-after:page;padding:16mm 16mm 20mm}
+.page:last-child{page-break-after:auto;break-after:auto}
+.pf{position:absolute;left:16mm;right:16mm;bottom:9mm;display:flex;justify-content:space-between;font-size:7.4pt;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);border-top:.3mm solid rgba(90,87,88,.2);padding-top:3mm}
+.eyebrow{display:flex;align-items:center;gap:3.5mm;font-size:8pt;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.eyebrow::before{content:"";width:9mm;height:.3mm;background:var(--gold)}
+h1{font-weight:400;font-size:34pt;line-height:1.04;letter-spacing:-.02em}
+h2{font-weight:400;font-size:20pt;line-height:1.1;letter-spacing:-.015em;margin-top:3mm}
+h3{font-weight:700;font-size:8.6pt;letter-spacing:.2em;text-transform:uppercase;margin:5.5mm 0 1.8mm}
+p{margin-top:2mm}
+p.lead{font-size:11.6pt;line-height:1.5;margin-top:3.5mm}
+ul{margin:1.5mm 0 0 0;list-style:none}
+li{position:relative;padding-left:5.5mm;margin-top:1.6mm}
+li::before{content:"";position:absolute;left:0;top:2.5mm;width:2.4mm;height:.3mm;background:var(--gold)}
+b,strong{font-weight:700}
+.muted{color:var(--muted)}
+.brandchip{display:inline-block;font-size:8.5pt;letter-spacing:.32em;text-transform:uppercase;border:.3mm solid var(--ink);padding:2.2mm 4mm}
+.cover{background:linear-gradient(165deg,#e4dbf3 0%,var(--lila) 100%);display:flex;flex-direction:column;justify-content:space-between;padding:18mm 18mm 16mm}
+.cover .frame{position:absolute;inset:11mm;pointer-events:none}
+.cover .frame i{position:absolute;width:16mm;height:16mm;border:.35mm solid var(--gold)}
+.cover .frame i:nth-child(1){left:0;top:0;border-right:0;border-bottom:0}
+.cover .frame i:nth-child(2){right:0;top:0;border-left:0;border-bottom:0}
+.cover .frame i:nth-child(3){left:0;bottom:0;border-right:0;border-top:0}
+.cover .frame i:nth-child(4){right:0;bottom:0;border-left:0;border-top:0}
+.cover img.logo{width:74mm;display:block}
+.cover h1{font-size:44pt;margin-top:8mm;max-width:140mm}
+.cover .sub{font-size:14pt;margin-top:6mm;max-width:120mm}
+.links{display:grid;gap:2.2mm;font-size:10pt;margin-top:8mm}
+.links div{display:flex;gap:4mm;align-items:baseline}
+.links span.k{font-size:8pt;letter-spacing:.24em;text-transform:uppercase;min-width:22mm}
+.cover .meta{display:flex;justify-content:space-between;align-items:end;font-size:8pt;letter-spacing:.2em;text-transform:uppercase}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:9mm}
+.card{background:var(--lila-50);border-radius:4mm;padding:5.5mm 6.5mm}
+.num{font-size:24pt;line-height:1;color:#8466BA;font-weight:400}
+.shot{border-radius:3mm;overflow:hidden;box-shadow:0 .3mm 0 rgba(90,87,88,.08),0 4mm 10mm -6mm rgba(90,87,88,.45);background:#fff}
+.shot img{display:block;width:100%}
+.phone{border-radius:6mm;border:1.1mm solid var(--ink);overflow:hidden;background:#fff;box-shadow:0 4mm 10mm -6mm rgba(90,87,88,.5)}
+.phone img{display:block;width:100%}
+.cap{font-size:7.6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:2mm}
+.vhead{display:flex;align-items:baseline;gap:5mm}
+.vtag{font-size:8pt;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.vname{font-size:38pt;line-height:1;letter-spacing:-.02em;font-weight:400}
+.quote{font-size:13pt;line-height:1.42;margin-top:4mm;padding-left:5mm;border-left:.5mm solid var(--gold);max-width:150mm}
+table{width:100%;border-collapse:collapse;margin-top:4mm;font-size:9pt}
+th{font-weight:700;font-size:7.8pt;letter-spacing:.18em;text-transform:uppercase;text-align:left;padding:2.6mm 3mm;background:var(--lila-100)}
+td{padding:2.5mm 3mm;border-bottom:.25mm solid rgba(90,87,88,.18);vertical-align:top}
+td:first-child{font-weight:700;width:34mm}
+table.fb td:first-child{width:62mm;font-weight:400}
+table.fb td{padding:2.1mm 3mm;font-size:8.7pt;line-height:1.4}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm}
+.dark{background:var(--char);color:#fff;border-radius:4mm;padding:5mm 7mm}
+.dark h3{color:#fff}
+.dark li::before{background:#e9c395}
+.tight{font-size:9.7pt;line-height:1.5}
+.tight .card{padding:4mm 5.5mm}.tight .card p{margin-top:1mm}
+.tight h3{margin:4.5mm 0 1.5mm}
+.tight li{margin-top:1.3mm}
+</style>
+</head>
+<body>
+
+<!-- 1 NASLOVNA -->
+<section class="page cover">
+  <div class="frame"><i></i><i></i><i></i><i></i></div>
+  <div>
+    <img class="logo" src="logo-white.svg" alt="Beauty Concept, Lepa Svaki Dan">
+    <h1>Predlozi dizajna novog sajta</h1>
+    <p class="sub">Tri pravca, jedan brend. Svaki je potpuno funkcionalan sajt koji možete da otvorite na telefonu i na računaru.</p>
+    <div class="links">
+      <div><span class="k">Pregled</span><span>lepa-svaki-dan-predlozi.vercel.app</span></div>
+      <div><span class="k">Predlog A</span><span>lepa-svaki-dan-predlozi.vercel.app/a/</span></div>
+      <div><span class="k">Predlog B</span><span>lepa-svaki-dan-predlozi.vercel.app/b/</span></div>
+      <div><span class="k">Predlog C</span><span>lepa-svaki-dan-predlozi.vercel.app/c/</span></div>
+    </div>
+  </div>
+  <div class="meta"><span class="brandchip">ECHOSYSTEM-MOTHER AGENCY</span><span>Oktobar 2026</span></div>
+</section>
+
+<!-- 2 POLAZISTE -->
+<section class="page tight">
+  <div class="eyebrow">Polazna tačka</div>
+  <h2>Sajt koji deluje kao nastavak vašeg brenda.</h2>
+  <p class="lead">Vaš brendbook je jasan i prefinjen: lila Pantone 2635 C, zlatna folija kao tanak akcenat, pismo Galano Grotesque i logo u okviru sa otvorenim uglovima. Zato smo krenuli iz početka, sa jednim pravilom: kada posetilac otvori sajt, treba da oseti istu stvar kao kada u ruke uzme vašu vizit kartu ili poklon kesu.</p>
+  <p>Brendbook nije dodatak na gotov dizajn, već temelj na kome su sva tri predloga izgrađena. Razlikuju se po raspoloženju i rasporedu, a ne po identitetu. Svi vaši komentari su uključeni (sledeća strana).</p>
+
+  <h3>Šta je zajedničko za sva tri predloga</h3>
+  <div class="cols" style="margin-top:3mm">
+    <div class="card"><div class="num">1</div><p><b>Brend je zakon.</b> Boje su uzorkovane direktno iz brendbooka, a kao tamna boja koristi se vaša meka tamno siva (75% crna). Zlato je samo tanka linija ili ugao okvira, sa izgledom zlatotiska. Koristi se samo vaše pismo i samo odobrene varijante logotipa.</p></div>
+    <div class="card"><div class="num">2</div><p><b>Vaši motivi.</b> Okvir sa uglovima i linija LEPA • SVAKI • DAN ponavljaju se kao potpis na karticama, fotografijama i naslovima. Lila krivulja iz logotipa je diskretan ukras.</p></div>
+    <div class="card"><div class="num">3</div><p><b>Isti sadržaj, jedan cenovnik.</b> Ceo cenovnik (210 usluga u 5 kategorija) je objedinjen i bez podele po lokacijama. Uz njega su obe lokacije, utisci, posebne ponude i poklon vaučeri.</p></div>
+    <div class="card"><div class="num">4</div><p><b>Telefon na prvom mestu.</b> Svaki predlog je prvo osmišljen za ekran telefona, a tek onda proširen za računar. Detalji su na posebnoj strani u nastavku.</p></div>
+  </div>
+
+  <h3>Šta je novo u odnosu na prethodnu verziju</h3>
+  <ul>
+    <li>Blog sa vašim tekstovima (21 tekst u 4 segmenta), stranice segmenata i posebna stranica Posebna ponuda.</li>
+    <li>Naslov „Budi ______ svaki dan.“ u kome se reči „smirena“, „srećna“ i „lepa“ smenjuju na crti kao u valjku.</li>
+    <li>Pretraga pri vrhu strane koja razume kako žene pitaju („ožiljci od akni“, „kako smanjiti obim“, „glass skin“).</li>
+    <li>Oba telefona u zaglavlju, a ispod svakog dela telefoni i mejl.</li>
+    <li>Komentari sa oznakom: dodajte <b>?komentari</b> na kraj adrese bilo koje strane i pojaviće se oznake delova (na primer A-3).</li>
+  </ul>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Lepa Svaki Dan · Predlozi dizajna</span></div>
+</section>
+
+<!-- 3 KOMENTARI -->
+<section class="page">
+  <div class="eyebrow">Vaši komentari</div>
+  <h2>Šta ste tražili i šta smo uradili.</h2>
+  <table class="fb">
+    <thead><tr><th>Vaš komentar</th><th>Šta smo uradili</th></tr></thead>
+    <tbody>
+      <tr><td>Jedan objedinjen cenovnik, bez razdvajanja po lokacijama</td><td>Sve oznake lokacije su uklonjene sa tretmana, ponuda i rezultata pretrage, a filter po lokaciji ne postoji. Lokacije su samo u delu Lokacije. Prethodnu verziju sa podelom čuvamo za buduće izmene.</td></tr>
+      <tr><td>Usklađenost sa brendbookom, bez spoja crne i ljubičaste u jednoj rečenici</td><td>Naslovi su jednobojni, tamna boja je vaša meka tamno siva, a lila je podloga, ne boja teksta.</td></tr>
+      <tr><td>Zlatni delovi neka više liče na tisak</td><td>Zlato ima metalni izgled uzet iz vaše zlatne folije, i dalje samo kao tanka linija i okvir.</td></tr>
+      <tr><td>Naslovni deo: 2 lokacije, 1 filozofija</td><td>Prvi ekran počinje rečenicom „2 lokacije, 1 filozofija“ i opisom o spoju moderne medicine i tradicionalne nege.</td></tr>
+      <tr><td>Dva telefona u zaglavlju</td><td>Oba broja su u zaglavlju. Na telefonu dugmad „Pozovi“ i „WhatsApp“ nude izbor između dva broja.</td></tr>
+      <tr><td>Slika ili video na naslovnoj</td><td>Naslovna je sa slikom (brže se otvara). Zaglavlja segmenata su već spremna za video.</td></tr>
+      <tr><td>Segment „Reč osnivača“ zameniti, potpis bez „dr“</td><td>Zamenjeno je delom „Posebnosti i pogodnosti našeg centra“, a potpis je „Tamara Vujačić, Lepa Svaki Dan“, svuda bez titule.</td></tr>
+      <tr><td>1 filozofija, 2 lokacije i slika split</td><td>Lokacije su dva dodirna polja sa fotografijama, a na telefonu se prelazi dodirom.</td></tr>
+      <tr><td>Bez oznaka koje liče na emoji</td><td>Nema emoji ikonica. Sve oznake su jednostavne linijske ili prazni okviri u bojama sajta.</td></tr>
+      <tr><td>Pretraga pri vrhu, kao u Google-u, po segmentima, sa vezom ka tekstu; # se ne vide</td><td>Traka je na vrhu početne, a ikonica pretrage u zaglavlju svake strane. Rezultati su podeljeni na tretmane i tekstove, svaki vodi na cenovnik ili tekst. Oznake (#) se nigde ne prikazuju.</td></tr>
+      <tr><td>Naziv dela sa uslugama i „Reč klijenata i pacijenata“</td><td>Preuzeto: „Od tradicionalne nege i tretmana do moderne estetske medicine i aparaturnih procedura“.</td></tr>
+      <tr><td>Završni deo i footer</td><td>„Vaše uživanje i briga o lepoti počinju ovde“ vodi na pozive, mejl i Instagram, a opis u footeru je isti kao na naslovnoj.</td></tr>
+      <tr><td>Blog stranica sa tekstovima i stranica Posebna ponuda</td><td>Napravljeno: blog sa 21 tekstom i posebna stranica za ponude, koje se menjaju na jednom mestu.</td></tr>
+      <tr><td>Manji razmak između naslova i podnaslova</td><td>Razmak je 8 do 10 piksela i podešava se jednom vrednošću za ceo sajt.</td></tr>
+      <tr><td>Telefoni i mejlovi ispod svakog dela</td><td>Dodata je jedna tiha linija sa kontaktima ispod svakog dela.</td></tr>
+      <tr><td>Kako slati komentare da bude jasno na šta se odnose</td><td>Dodajte ?komentari na adresu i svaki deo dobija oznaku, na primer A-3 ili B-blog-2.</td></tr>
+    </tbody>
+  </table>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Lepa Svaki Dan · Predlozi dizajna</span></div>
+</section>
+
+<!-- 4 A / 1 -->
+<section class="page">
+  <div class="vhead"><span class="vtag">Predlog A</span><span class="vname">Svetlost</span></div>
+  <p class="quote">Sajt koji se oseća kao topao pozdrav: lila svetlost, lice u središtu i meke, zaobljene kartice.</p>
+  <div class="shot" style="margin-top:6mm"><img src="img/a_d_home.jpg" alt=""></div>
+  <div class="cap">Početni ekran na računaru</div>
+  <div class="cols" style="margin-top:4mm">
+    <div>
+      <h3>Šta želimo da postignemo</h3>
+      <ul>
+        <li><b>Poverenje kroz ljude.</b> U oblasti lepote i nege ljudi prvo biraju osobu, pa tek onda uslugu. Zato je lice prva stvar koju posetilac vidi.</li>
+        <li><b>Odmah prepoznatljiv brend.</b> Prvi ekran je u celini lila, kao lila blok sa belim logotipom iz brendbooka.</li>
+        <li><b>Lakoća.</b> Naslov, pretraga, dva dugmeta i najvažniji podaci na jednom ekranu.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Zašto baš ovako</h3>
+      <p>Lila je glavna boja vašeg brenda, pa u ovom predlogu ima najviše prostora. Natpis LEPA • SVAKI • DAN preko portreta preuzima ulogu potpisa. Staklene kartice sa podacima koje novi klijent prvo traži (dve lokacije, godine prakse, radno vreme) odgovaraju na pitanja pre nego što ih neko postavi.</p>
+      <p>Zaobljeni oblici i meke senke prenose osećaj nege i pažnje, što odgovara tonu „Budi smirena, srećna, lepa, svaki dan“.</p>
+    </div>
+  </div>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Predlog A · Svetlost · 1/2</span></div>
+</section>
+
+<!-- 5 A / 2 -->
+<section class="page">
+  <div class="vhead"><span class="vtag">Predlog A</span><span class="vname">Svetlost</span></div>
+  <div class="cols" style="margin-top:4mm">
+    <div>
+      <h3>Kako se to vidi na sajtu</h3>
+      <ul>
+        <li>Plutajuća navigacija u obliku pilule, oba telefona i pretraga u zaglavlju.</li>
+        <li>Tretmani su u mreži zaobljenih kartica sa fotografijama.</li>
+        <li>Tamna kartica poziva na akciju koristi vašu meku tamno sivu iz brendbooka.</li>
+        <li>Lokacije su dva dodirna polja (split) sa zlatnim šavom.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Najbolji izbor ako</h3>
+      <ul>
+        <li>želite da sajt bude blizak, topao i pristupačan,</li>
+        <li>vaša snaga su ljudi i odnos sa klijentima,</li>
+        <li>lila identitet treba da bude najjače izražen.</li>
+      </ul>
+      <h3>Na šta treba obratiti pažnju</h3>
+      <p>Portret u predlogu je privremen. Za završnu verziju idealna je fotografija osnivača ili tima, jer ovaj pravac najviše zavisi od lica.</p>
+    </div>
+  </div>
+  <div class="three" style="margin-top:6mm;align-items:start">
+    <div><div class="phone"><img src="img/a_m_home.jpg" alt=""></div><div class="cap">Telefon, početni ekran</div></div>
+    <div><div class="phone"><img src="img/a_m_search.jpg" alt=""></div><div class="cap">Telefon, pretraga</div></div>
+    <div><div class="phone"><img src="img/a_m_segment.jpg" alt=""></div><div class="cap">Telefon, segment Telo</div></div>
+  </div>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Predlog A · Svetlost · 2/2</span></div>
+</section>
+
+<!-- 6 B / 1 -->
+<section class="page">
+  <div class="vhead"><span class="vtag">Predlog B</span><span class="vname">Staklo</span></div>
+  <p class="quote">Filmski uvod i fotografije viđene kroz rebrasto staklo, koje se izoštre kada im se približite. Luksuz kroz mirnoću.</p>
+  <div class="shot" style="margin-top:6mm"><img src="img/b_d_home.jpg" alt=""></div>
+  <div class="cap">Početni ekran na računaru</div>
+  <div class="cols" style="margin-top:4mm">
+    <div>
+      <h3>Šta želimo da postignemo</h3>
+      <ul>
+        <li><b>Premium pozicija.</b> Centar treba da deluje kao mesto koje se ceni, a ne kao jedno od mnogih.</li>
+        <li><b>Osećaj ulaska u spa.</b> Miran uvod sa svećama i toplim svetlom priprema posetioca za ostatak strane.</li>
+        <li><b>Pažnja bez buke.</b> Zanimljiva interakcija bez bannera i šarenila.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Zašto baš ovako</h3>
+      <p>Brendbook poznaje i tamnu stranu: tamni blok sa belim logotipom i okvirom, i zlatotisak na papiru sa teksturom. Uvod ovog predloga to prevodi u pokret: mekana tamna površina, beli logo i tanki zlatni okvir.</p>
+      <p>Rebrasto staklo je digitalni pandan štampanoj teksturi vaših materijala. Daje fotografijama dubinu bez dodavanja boja. Kada posetilac dođe do fotografije ili je dotakne, staklo se „razbistri“, pa pažnju vodi pokret, a ne reklama.</p>
+    </div>
+  </div>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Predlog B · Staklo · 1/2</span></div>
+</section>
+
+<!-- 7 B / 2 -->
+<section class="page">
+  <div class="vhead"><span class="vtag">Predlog B</span><span class="vname">Staklo</span></div>
+  <div class="cols" style="margin-top:4mm">
+    <div>
+      <h3>Kako se to vidi na sajtu</h3>
+      <ul>
+        <li>Tamni uvod sa fotografijom i pretragom, zatim svetao i vazdušast ostatak strane.</li>
+        <li>Tretmani su numerisani od 1 do 5, kao poglavlja jedne knjige.</li>
+        <li>Cenovnik ima bočni spisak grupa i pretragu, za brzo snalaženje u velikoj ponudi.</li>
+        <li>Stranice segmenata imaju veliko zaglavlje spremno za video.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Najbolji izbor ako</h3>
+      <ul>
+        <li>želite luksuzniji, dramatičniji utisak,</li>
+        <li>komunikacija vodi fotografijom i atmosferom,</li>
+        <li>cilj je da centar odskače od konkurencije.</li>
+      </ul>
+      <h3>Na šta treba obratiti pažnju</h3>
+      <p>Ovaj pravac traži kvalitetne fotografije: što su bolje, to je efekat jači. Na telefonu je razbistravanje vezano za pomeranje strane, a ne za miša, pa radi podjednako dobro.</p>
+    </div>
+  </div>
+  <div class="three" style="margin-top:6mm;align-items:start">
+    <div><div class="phone"><img src="img/b_m_home.jpg" alt=""></div><div class="cap">Telefon, početni ekran</div></div>
+    <div><div class="phone"><img src="img/b_m_search.jpg" alt=""></div><div class="cap">Telefon, pretraga</div></div>
+    <div><div class="phone"><img src="img/b_m_segment.jpg" alt=""></div><div class="cap">Telefon, segment Telo</div></div>
+  </div>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Predlog B · Staklo · 2/2</span></div>
+</section>
+
+<!-- 8 C / 1 -->
+<section class="page">
+  <div class="vhead"><span class="vtag">Predlog C</span><span class="vname">Tišina</span></div>
+  <p class="quote">Beo, galerijski prostor sa dovoljno vazduha da usluge i cene dišu.</p>
+  <div class="shot" style="margin-top:6mm"><img src="img/c_d_home.jpg" alt=""></div>
+  <div class="cap">Početni ekran na računaru</div>
+  <div class="cols" style="margin-top:4mm">
+    <div>
+      <h3>Šta želimo da postignemo</h3>
+      <ul>
+        <li><b>Maksimalna jasnoća.</b> Ponuda je velika (210 usluga), pa je preglednost najvažnija vrednost.</li>
+        <li><b>Mir kao poruka.</b> Smirena strana prenosi smirenost samog centra.</li>
+        <li><b>Najlakše održavanje.</b> Čista osnova na koju se lako dodaju nove fotografije, usluge i ponude.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Zašto baš ovako</h3>
+      <p>Vaš brendbook je pre svega vazdušast: beo papir, tanke linije, lila blokovi i zlatna folija. Ovaj predlog je najbliži njemu: bela površina, lila kao blok boje, zlato kao linija.</p>
+      <p>Krupna rečenica kao naslov i sitne oznake velikim slovima sa širokim razmakom nasleđuju karakter natpisa LEPA • SVAKI • DAN. Kada je sadržaj bogat, kao ovde, minimalistički okvir mu pomaže da se pročita bez napora.</p>
+    </div>
+  </div>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Predlog C · Tišina · 1/2</span></div>
+</section>
+
+<!-- 9 C / 2 -->
+<section class="page">
+  <div class="vhead"><span class="vtag">Predlog C</span><span class="vname">Tišina</span></div>
+  <div class="cols" style="margin-top:4mm">
+    <div>
+      <h3>Kako se to vidi na sajtu</h3>
+      <ul>
+        <li>Bela osnova, lila blokovi i krupan portret u okviru sa zlatnim uglovima.</li>
+        <li>Ukrasna lila krivulja iz logotipa, bleda i isečena na ivici.</li>
+        <li>Pretraga odmah ispod naslova, sa predlozima poput „akne“ i „glass skin“.</li>
+        <li>Cenovnik sa tabovima, pretragom i grupama koje se otvaraju jednim dodirom.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Najbolji izbor ako</h3>
+      <ul>
+        <li>je prioritet jasnoća i lako zakazivanje,</li>
+        <li>želite da sajt bude što bliži štampanom brendbooku,</li>
+        <li>planirate često da menjate ponudu i fotografije.</li>
+      </ul>
+      <h3>Na šta treba obratiti pažnju</h3>
+      <p>Ovo je najsmireniji pravac. Ako želite više drame ili više boje, bolje su varijante A ili B. Fotografije su ovde posebno važne, jer se na beloj podlozi odmah vidi njihov kvalitet.</p>
+    </div>
+  </div>
+  <div class="three" style="margin-top:6mm;align-items:start">
+    <div><div class="phone"><img src="img/c_m_home.jpg" alt=""></div><div class="cap">Telefon, početni ekran</div></div>
+    <div><div class="phone"><img src="img/c_m_search.jpg" alt=""></div><div class="cap">Telefon, pretraga</div></div>
+    <div><div class="phone"><img src="img/c_m_segment.jpg" alt=""></div><div class="cap">Telefon, segment Telo</div></div>
+  </div>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Predlog C · Tišina · 2/2</span></div>
+</section>
+
+<!-- 10 NOVE STRANICE -->
+<section class="page">
+  <div class="eyebrow">Nove stranice</div>
+  <h2>Blog, segmenti i posebna ponuda.</h2>
+  <p class="lead">Vaši tekstovi su ubačeni onako kako ste ih poslali, bez izmena. Svaki tekst ima svoju stranicu, a uz njega je okvir „U cenovniku“ koji vodi na odgovarajuće usluge.</p>
+  <div class="three" style="margin-top:6mm;align-items:start">
+    <div><div class="shot"><img src="img/a_d_blog.jpg" alt=""></div><div class="cap">Blog</div></div>
+    <div><div class="shot"><img src="img/b_d_segment.jpg" alt=""></div><div class="cap">Stranica segmenta</div></div>
+    <div><div class="shot"><img src="img/c_d_article.jpg" alt=""></div><div class="cap">Tekst o tretmanu</div></div>
+  </div>
+  <div class="cols" style="margin-top:3mm">
+    <div>
+      <h3>Blog i tekstovi</h3>
+      <ul>
+        <li>21 tekst u 4 segmenta: Dermatologija, Estetske procedure, Kozmetički tretmani i Telo.</li>
+        <li>Prazna polja iz vaših dokumenata (ime lekara i naziv lasera, u 4 teksta o dermatologiji) su istaknuta u tekstu, da se vidi šta treba dopuniti.</li>
+      </ul>
+      <h3>Pretraga</h3>
+      <ul>
+        <li>Traži po tretmanima, tekstovima i ponudama i razume pitanja kao „ožiljci od akni“ ili „blistava koža“.</li>
+        <li>Svaki rezultat vodi na tekst ili na grupu usluga u cenovniku, pa posetilac ostaje i istražuje.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Stranice segmenata</h3>
+      <ul>
+        <li>Veliko zaglavlje spremno za video: sada je slika, a kada video postoji, dodaje se bez izmene dizajna.</li>
+        <li>Uvod, tekstovi segmenta i veza ka cenovniku na jednom mestu.</li>
+      </ul>
+      <h3>Posebna ponuda</h3>
+      <ul>
+        <li>Posebna stranica sa svim paketima. Ponude i cene se dodaju ili menjaju na jednom mestu, bez dodira dizajna.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Lepa Svaki Dan · Predlozi dizajna</span></div>
+</section>
+
+<!-- 11 POREDJENJE -->
+<section class="page">
+  <div class="eyebrow">Poređenje</div>
+  <h2>Tri pravca jedan pored drugog.</h2>
+  <table>
+    <thead><tr><th></th><th>A · Svetlost</th><th>B · Staklo</th><th>C · Tišina</th></tr></thead>
+    <tbody>
+      <tr><td>Raspoloženje</td><td>Toplo, prijateljski, pristupačno</td><td>Luksuzno, filmski, tiho</td><td>Čisto, galerijski, smireno</td></tr>
+      <tr><td>Dominantna boja</td><td>Lila, na prvom ekranu u celini</td><td>Topla tamna u uvodu, zatim svetla podloga i lila akcenti</td><td>Bela, sa lila blokovima</td></tr>
+      <tr><td>Fotografija</td><td>Portret u središtu, mreža kartica sa fotografijama</td><td>Velike fotografije kroz rebrasto staklo</td><td>Portret u okviru, ostalo u blokovima</td></tr>
+      <tr><td>Pokret</td><td>Meke pojave kartica, brojači, karusel utisaka</td><td>Razbistravanje stakla pri pomeranju ili dodiru</td><td>Najmanje efekata, suptilne pojave</td></tr>
+      <tr><td>Cenovnik</td><td>Tabovi, harmonike, pretraga</td><td>Bočni spisak grupa, pretraga, tabovi</td><td>Tabovi, harmonike, pretraga</td></tr>
+      <tr><td>Najbolje za</td><td>Odnos i poverenje</td><td>Premium pozicioniranje</td><td>Jasnoća i lako zakazivanje</td></tr>
+    </tbody>
+  </table>
+  <h3>Kako birati</h3>
+  <p>Jedno pitanje pomaže: <b>kako želimo da nas posetilac doživi u prvih deset sekundi?</b> Kao ljude kojima može da veruje (A), kao mesto vrhunskog doživljaja (B) ili kao mirnu, preglednu adresu na kojoj lako dolazi do onoga što traži (C). Elementi se mogu kombinovati, na primer uvod iz predloga B sa cenovnikom iz predloga C.</p>
+  <div class="three" style="margin-top:6mm;align-items:start">
+    <div class="shot"><img src="img/a_d_split.jpg" alt=""></div>
+    <div class="shot"><img src="img/b_d_split.jpg" alt=""></div>
+    <div class="shot"><img src="img/c_d_split.jpg" alt=""></div>
+  </div>
+  <div class="cap" style="display:grid;grid-template-columns:repeat(3,1fr);gap:6mm"><span>A · Lokacije</span><span>B · Lokacije</span><span>C · Lokacije</span></div>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Lepa Svaki Dan · Predlozi dizajna</span></div>
+</section>
+
+<!-- 12 MOBILNA -->
+<section class="page">
+  <div class="eyebrow">Mobilna verzija</div>
+  <h2>Većina vaših klijenata će vas prvo otvoriti na telefonu.</h2>
+  <p class="lead">Zato nijedan predlog nije „smanjen“ sa računara, već je prvo osmišljen za ekran telefona.</p>
+  <div class="cols" style="margin-top:6mm">
+    <div class="card">
+      <h3 style="margin-top:0">Akcija je uvek na dohvat palca</h3>
+      <p>Na dnu ekrana stoji fiksna traka: <b>Pozovi</b>, <b>WhatsApp</b> i <b>Zakaži</b>. Pošto imate dva broja, „Pozovi“ i „WhatsApp“ otvaraju izbor između njih.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Pretraga odmah vidljiva</h3>
+      <p>Traka za pretragu je na prvom ekranu početne strane, a ikonica pretrage u zaglavlju svake strane. Rezultati se otvaraju preko celog ekrana.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Cenovnik koji se čita na telefonu</h3>
+      <p>Pet kategorija su tabovi koje prevlačite prstom, grupe se otvaraju kao harmonike, a cene i opisi nikad nisu skraćeni.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">Brzo učitavanje, bez miša</h3>
+      <p>Prvo učitavanje početne je oko 0,3 do 0,6 MB. Sve što se na računaru dešava prelaskom miša, na telefonu radi pomeranjem ili dodirom.</p>
+    </div>
+  </div>
+  <h3>Šta je provereno</h3>
+  <ul>
+    <li>Prikaz na širinama od 320 do 1440 piksela, na svih 28 stranica svakog predloga, bez horizontalnog pomeranja strane.</li>
+    <li>Dugmad i linkovi su dovoljno veliki za prst (najmanje 44 piksela).</li>
+    <li>Tekst je čitljiv bez uvećavanja, a kontrast teksta je proveren.</li>
+    <li>Meni preko celog ekrana sa velikim linkovima i oba broja telefona.</li>
+  </ul>
+  <p class="muted" style="font-size:9pt;margin-top:4mm">Napomena: testiranje je rađeno u emuliranom okruženju. Preporučujemo da sajt otvorite i na stvarnom telefonu, a mi ćemo pre objave uraditi završnu proveru na stvarnim uređajima.</p>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Lepa Svaki Dan · Predlozi dizajna</span></div>
+</section>
+
+<!-- 13 SLEDECI KORACI -->
+<section class="page tight">
+  <div class="eyebrow">Sledeći koraci</div>
+  <h2>Odgovori i šta nam je potrebno od vas.</h2>
+  <h3>Vaša pitanja</h3>
+  <ul>
+    <li><b>Gde ide video segmenta?</b> Preporučujemo zaglavlje stranice segmenta, a ne naslovnu: tamo posetilac već zna šta ga zanima, a naslovna ostaje brza. Video je kratka petlja bez zvuka, 6 do 10 sekundi, po jedan za svaki od 4 segmenta. U predlozima je zaglavlje već spremno, a trenutno prikazuje sliku.</li>
+    <li><b>Da li nam treba live chat?</b> Za sada preporučujemo da ne. Klijenti već mogu da kucaju preko WhatsApp-a, bez obaveze da neko odgovori u istom trenutku, a van radnog vremena može da se podesi automatski odgovor. Live chat ima smisla tek kada neko stalno može da odgovara.</li>
+  </ul>
+
+  <h3>Šta nam treba od vas</h3>
+  <div class="cols" style="margin-top:2.5mm;gap:6mm">
+    <div class="card"><div class="num">1</div><h3 style="margin-top:1mm">Izbor pravca</h3><p>Izaberite jedan od tri predloga ili recite koje elemente da kombinujemo, uz primedbe na pojedinosti.</p></div>
+    <div class="card"><div class="num">2</div><h3 style="margin-top:1mm">Prave fotografije</h3><p>Fotografije u predlozima su privremene. Trebaju nam fotografije osnivača i tima, enterijera oba prostora i tretmana, posebno laserskih i estetskih.</p></div>
+    <div class="card"><div class="num">3</div><h3 style="margin-top:1mm">Pismo Galano Light</h3><p>Brendbook traži Galano Grotesque Light, a mi imamo Regular. Potrebna nam je datoteka (i web licenca) od dizajnera brenda.</p></div>
+    <div class="card"><div class="num">4</div><h3 style="margin-top:1mm">Dopune u tekstovima</h3><p>Ime lekara i naziv lasera u 4 teksta o dermatologiji. Zeleno za Wellbeing Concept, čim ga pošaljete.</p></div>
+  </div>
+
+  <h3>Pitanja za potvrdu</h3>
+  <ul>
+    <li><b>Brojke u delu O nama.</b> Predlozi prikazuju brojke iz prethodnog sajta (15+ godina prakse, 2 koncepta). Pošaljite tačne vrednosti.</li>
+    <li><b>Dve stavke u cenovniku</b> imaju titulu u nazivu („Specijalistički pregled Tamara Vujačić“, „Hijaluron 1ml, dr spec. Vujačić“). Potvrdite kako treba da glase.</li>
+    <li><b>Brojevi uz tretmane.</b> U starom sajtu piše npr. „18 tretmana“, a cenovnik ima 58 usluga u toj kategoriji. Prikazujemo stvarne brojeve iz cenovnika.</li>
+    <li><b>Kviz „Pronađi svoj ritual“</b> nije u predlozima. Možemo da ga vratimo u izabranu varijantu.</li>
+    <li><b>Detalji koji nedostaju:</b> link ka YouTube kanalu, mape i radno vreme po lokaciji, i ispravka u tekstu o plaćanju („orjentacionog“, „Banca Intesa“).</li>
+  </ul>
+  <div class="dark" style="margin-top:4mm">
+    <h3 style="margin-top:0">Šta sledi posle izbora</h3>
+    <ul>
+      <li>Ugrađujemo vaše fotografije i završna podešavanja teksta.</li>
+      <li>Povezujemo domen lepasvakidan.rs, merenje posećenosti i poruke za zakazivanje.</li>
+      <li>Proveravamo sajt na stvarnim telefonima i objavljujemo.</li>
+    </ul>
+  </div>
+  <div class="pf"><span>Pripremio ECHOSYSTEM-MOTHER AGENCY</span><span>Oktobar 2026</span></div>
+</section>
+</body>
+</html>

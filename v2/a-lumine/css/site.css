@@ -1,0 +1,973 @@
+/* =====================================================================================================
+   LEPA SVAKI DAN · "A" preview · bento layout in the ivory + gold palette
+   Pripremio ECHOSYSTEM-MOTHER AGENCY
+   Tokens come from brand.css (ivory scale --iv-*, lila, green, 75% black, foil, Galano Grotesque). Mobile first.
+
+   COLOUR RULE (client feedback 3, October 2026): IVORY / BEIGE + GOLD with small details in the two centre colours.
+   - Page and cards are the warm ivory family sampled from lepasvakidan.rs (#F4F2E9 canvas, #EDEBE2 / #E5E2D9 / #DDD9CF surfaces). No dark fills,
+     no heavy dark gradients, no white-on-dark: buttons, cards, chips, nav, overlays, CTA blocks and the footer are tonal, "sliveno".
+   - Text is the brandbook 75% black #5A5758 (the deeper #403C3D where a surface is darker than the page). No near-black, no two-colour headings.
+   - GOLD = the foil gradient: fine rings around buttons, hairlines, labels, corner brackets.
+   - LILA (Beauty Concept) and GREEN (Wellbeing Concept) are DETAILS in every section: eyebrow dots, chip hairlines, small icons, numbered
+     squares, bracket accents, the soft halo behind the portrait. They are never a large background.
+   ===================================================================================================== */
+
+@property --fill{syntax:'<color>';inherits:false;initial-value:#E5E2D9}
+
+:root{
+  --canvas:var(--iv-0);
+  --surf:var(--iv-1);              /* card */
+  --surf-2:var(--iv-2);            /* alternate card, tonal button */
+  --surf-3:var(--iv-3);            /* feature card, pressed state */
+  --field:var(--iv-lift);          /* input fields and nested rows: ivory lifted a little, never pure white */
+  --r:20px;
+  --r-sm:12px;
+  --gut:20px;
+  --wrap:1200px;
+  --ease:cubic-bezier(.44,0,.56,1);
+  --ease-out:cubic-bezier(.4,0,.2,1);
+  --ink:var(--black-75);           /* text: 6.4:1 on the canvas, 5.5:1 on #E5E2D9 */
+  --ink-deep:var(--ink-deep3);     /* deeper text step (#403C3D) for tonal buttons and small labels on darker surfaces */
+  --mute:var(--black-75);          /* secondary text is the same grey: hierarchy comes from size, weight and tracking */
+  --acc-ink:var(--black-75);
+  --em-band:rgba(198,180,227,.46); /* soft lila band behind an accent word (text colour unchanged) */
+  /* HEADING GAP: the ONE number that sets the space between a heading and its sub-line / lead / first paragraph on every page
+     (hero, section heads, cards, text pages, sheets). Client wish: tight. Mobile 8px, from 768px 10px. Change it here only. */
+  --head-gap:8px;
+  --gutx:max(var(--gut),env(safe-area-inset-left,0px),env(safe-area-inset-right,0px));  /* inline gutter, keeps content out of a landscape notch */
+  --focus:var(--ink-deep);
+  --fw-l:var(--font-weight-light); /* renders as Regular until Galano Light is supplied (see brand.css) */
+  --nav-h:60px;
+  --sticky-top:0px;
+  --abar-h:0px;
+  --sec-gap:clamp(56px,8vw,104px);
+  --glass:linear-gradient(145deg,rgba(250,249,244,.86) 14%,rgba(244,242,233,.76) 52%,rgba(237,235,226,.66) 90%);
+  --line:rgba(90,87,88,.13);
+  --ring-foil:rgba(182,120,81,.38); /* the copper of the foil as a fine ring colour */
+  --swash-img:url(../assets/graphics/swash-foil.svg);   /* the T and Y mark of the logotype: soft lila fill, hairline gold edge (hero, page headers) */
+  --swash-soft:url(../assets/graphics/swash.svg);       /* the same mark in plain lila, used faintly and cropped inside cards */
+  /* the feature surface (what used to be the dark card): the deepest tonal step of the ivory family */
+  --feat:var(--iv-3);
+  /* photo veil: a warm beige multiply that calms every photograph into the palette (no lila cast) */
+  --veil:var(--iv-4);
+  --veil-o:.2;
+}
+@media (max-width:359px){:root{--gut:16px}}
+@media (min-width:768px){:root{--head-gap:10px}}
+@media (min-width:480px){:root{--nav-h:72px}}
+@media (max-width:1023.98px){:root{--abar-h:calc(76px + env(safe-area-inset-bottom))}}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:20px;scroll-padding-bottom:var(--abar-h);background:var(--canvas)}
+body{margin:0;background:var(--canvas);color:var(--ink);font:var(--font-weight-regular) 17px/1.55 var(--font-sans);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:clip;
+  font-synthesis:none;text-rendering:optimizeLegibility}
+h1,h2,h3,h4,p,ul,ol,figure,blockquote{margin:0;padding:0}
+h1,h2,h3,h4{font-weight:inherit;font-size:inherit}
+ul,ol{list-style:none}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+strong,b{font-weight:var(--font-weight-regular)}
+em{font-style:normal}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:6px}
+/* the whole card is the click target, so the whole card shows the keyboard focus (inset: the swipe rows clip anything outside) */
+.vt:has(.arrow:focus-visible),.fav:has(.arrow:focus-visible){outline:2px solid var(--focus);outline-offset:-6px}
+[tabindex="-1"]:focus,[tabindex="-1"]:focus-visible{outline:none}
+::selection{background:var(--lila);color:var(--ink-deep)}
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:fixed;left:12px;top:-80px;z-index:1000;background:var(--surf-2);color:var(--ink-deep);padding:12px 18px;border-radius:999px;text-decoration:none;box-shadow:inset 0 0 0 1px var(--ring-foil);transition:top .2s}
+.skip:focus{top:12px}
+.wrap{width:min(var(--wrap),100% - 2*var(--gutx));margin-inline:auto}
+
+svg.i{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- type helpers ---------- */
+.h2{font-weight:var(--fw-l);font-size:clamp(28px,4.2vw,48px);line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+/* accent word: ONE text colour, only a soft lila band behind it (no recoloured spans, no faded halves) */
+.h2 em,.hero__h1 em,.about__qt em{color:inherit;padding-inline:.07em;margin-inline:-.07em;-webkit-box-decoration-break:clone;box-decoration-break:clone;
+  background:linear-gradient(transparent 62%,var(--em-band) 62%,var(--em-band) 92%,transparent 92%)}
+/* eyebrow: small label in foil (background-clip text, solid copper fallback), led by a foil hairline and closed by the two-dot motif
+   (lila dot = Beauty Concept, green dot = Wellbeing Concept). Never wider than its text, so the gradient spans the words */
+.eyebrow{display:flex;width:fit-content;max-width:100%;align-items:center;gap:12px;font-size:12px;line-height:1.2;letter-spacing:.18em;text-transform:uppercase;color:var(--foil-ink-solid)}
+@supports (-webkit-background-clip:text) or (background-clip:text){
+  .eyebrow{background-image:var(--foil-ink);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+}
+.eyebrow::before{content:"";flex:none;width:28px;height:1px;background:var(--foil);-webkit-text-fill-color:initial}
+.eyebrow::after{content:"";flex:none;width:15px;height:6px;margin-left:-2px;-webkit-text-fill-color:initial;
+  background:radial-gradient(circle at 3px 3px,var(--dot-a,var(--lila-accent)) 0 2.7px,transparent 3.1px) 0 0/6px 6px no-repeat,
+             radial-gradient(circle at 3px 3px,var(--dot-b,var(--green-sage)) 0 2.7px,transparent 3.1px) 9px 0/6px 6px no-repeat}
+/* the other small foil labels (plain text, no children): same gradient on text, solid copper as the fallback */
+.cline__t,.pbox__sub,.menu__h{width:fit-content;color:var(--foil-ink-solid)}
+@supports (-webkit-background-clip:text) or (background-clip:text){
+  .cline__t,.pbox__sub,.menu__h{background-image:var(--foil-ink);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+}
+/* TEXT WRAPPING (client feedback 3: no awkward breaks in the descriptive texts). Running text never ends on a one-word line (pretty); headings, leads, card texts
+   and short notes are balanced, so their lines are of similar length. Layout only: the wording is never touched (check: node _tools/a/check-wrap.mjs). */
+p,li,blockquote,figcaption{text-wrap:pretty}
+h1,h2,h3,h4{text-wrap:balance}
+.sec__intro,.hero__sub,.cta__p,.phead__sub,.sban__s,.seg__s,.vt__s,.fav__d,.pt__d,.po__d,.po__n,.bs__d,.about__bp,.nc__tx p,.sheet p,.foot__brand p,.foot__copy,
+.sa__x,.pbox__s,.price__foot p,.pnote,.tabnote,.rs__empty,.srch__empty p,.about__sig b{text-wrap:balance}
+.eyebrow--inv{color:var(--foil-ink-solid)}
+/* a long label (two or three words more than usual): it may wrap, and then the closing dots stay with the last word instead of floating at the far edge */
+.eyebrow--wrap{display:block;text-wrap:balance}
+.eyebrow--wrap::before{display:inline-block;vertical-align:middle;margin:-.1em 12px 0 0}
+.eyebrow--wrap::after{display:inline-block;vertical-align:middle;margin:-.1em 0 0 10px}
+.sec{padding-top:var(--sec-gap)}
+.sec__head{display:block;margin-bottom:clamp(24px,3.4vw,40px);max-width:880px;scroll-margin-top:104px}
+.sec__head>*+*{margin-top:var(--head-gap)}
+.sec__head>.price__chips{margin-top:16px}
+.sec__intro{max-width:62ch;color:var(--mute);font-size:clamp(16px,1.3vw,18px)}
+.sec__intro a{text-underline-offset:3px;display:inline-block;padding:11px 0;margin:-11px 0}
+
+/* ---------- buttons, chips, arrow circle ---------- */
+/* TONAL buttons: an opaque ivory/beige fill (--fill) inside a fine foil ring (a gradient border via the padding-box / border-box trick).
+   Text is the deeper grey, never white; hover and press only move to the next tonal step. No dark fill anywhere. */
+.btn{--fill:var(--iv-2);display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;border:1px solid transparent;
+  font-size:16px;line-height:1.1;text-decoration:none;white-space:nowrap;color:var(--ink-deep);
+  background:linear-gradient(var(--fill),var(--fill)) padding-box,var(--foil) border-box;
+  transition:--fill .25s var(--ease),color .2s var(--ease),opacity .2s var(--ease)}
+.btn--ink{--fill:var(--iv-2)}
+.btn--lila{--fill:#E7E0F2}
+.btn--green{--fill:var(--green-200)}
+.btn--line,.btn--line-inv{--fill:var(--iv-0)}
+.btn--sm{min-height:44px;padding:0 20px;font-size:15px}
+.btn .i{width:20px;height:20px}
+@media (hover:hover){
+  .btn:hover{--fill:var(--iv-3)}
+  .btn--lila:hover{--fill:#DDD3EE}
+  .btn--green:hover{--fill:var(--green-300)}
+  .btn--line:hover,.btn--line-inv:hover{--fill:var(--iv-2)}
+}
+.btn:active{--fill:var(--iv-3)}
+.btn--lila:active{--fill:#DDD3EE}
+
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:30px;padding:0 14px;border-radius:999px;font-size:12px;line-height:1;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.chip--lila{background:var(--lila-200);color:var(--ink-deep)}
+.chip--green{background:var(--green-200);color:var(--ink-deep)}
+.chip--btn{background:var(--field);color:var(--ink-deep);box-shadow:inset 0 0 0 1px var(--ring-foil);min-height:44px;padding:0 18px;letter-spacing:.08em;cursor:pointer}
+.chip--btn .i{width:18px;height:18px;color:var(--green)}
+@media (hover:hover){.chip--btn:hover{background:var(--iv-2)}}
+.chip--ghost{background:rgba(250,249,244,.74);box-shadow:inset 0 0 0 1px rgba(182,120,81,.5);color:var(--ink-deep)}
+.chip--line{box-shadow:inset 0 0 0 1px rgba(148,113,211,.6);color:var(--ink-deep)}
+.chip--sale{background:var(--lila-200);color:var(--ink-deep);min-height:26px;padding:0 10px 0 8px;letter-spacing:.1em;font-size:12px}
+.chip--sale .i{width:14px;height:14px;stroke-width:1.6}   /* line icon, one colour: no emoji-like filled heart */
+.chip--dur{box-shadow:inset 0 0 0 1px var(--line);min-height:26px;padding:0 10px;font-size:12px;letter-spacing:.1em;color:var(--mute)}
+
+.arrow{position:relative;flex:none;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--field);color:var(--ink-deep);box-shadow:inset 0 0 0 1px var(--ring-foil);
+  text-decoration:none;transition:background-color .3s ease-in-out}
+.arrow svg{width:24px;height:24px;transition:transform .3s ease-in-out}
+.arrow::after{content:"";position:absolute;inset:-6px;border-radius:50%} /* 68px touch area */
+.arrow--ghost{background:var(--surf)}
+.arrow--ghost.arrow--prev svg{transform:rotate(180deg)}
+@media (hover:hover){
+  .arrow:hover{background:var(--iv-2)}
+  .arrow:hover svg{transform:rotate(-45deg)}
+  .arrow--ghost.arrow--prev:hover svg{transform:rotate(135deg)}
+}
+.arrow:active{background:var(--iv-3)}
+/* stretched link: the arrow stops being the positioning context, so its ::after covers the whole card (.vt/.fav are position:relative) */
+.vt .arrow,.fav .arrow{position:static}
+.vt .arrow::after,.fav .arrow::after{inset:0;border-radius:var(--r)}
+.arrow:active svg{transform:rotate(-45deg)}
+.arrow--ghost.arrow--prev:active svg{transform:rotate(135deg)}
+.arrow[disabled]{opacity:.4;pointer-events:none}
+
+/* ---------- tiles ---------- */
+.tile{position:relative;border-radius:var(--r);overflow:hidden}
+.tile--pale{background:var(--surf)}
+.tile--lilac{background:var(--surf-2);--em-band:rgba(198,180,227,.6)}
+.tile--feat{background:var(--surf-2);color:var(--ink-deep)}   /* the closing contact block: a tonal ivory tile, never dark */
+.tile img{width:100%;height:100%;object-fit:cover}
+/* one soft, warm grade for every photograph: saturation pulled back, a beige multiply veil (no lila cast, no dark gradient) */
+.about__img img,.testi__fig img,.vt>img{filter:saturate(.68) contrast(.97) brightness(1.04)}
+.about__img,.testi__fig{isolation:isolate}
+.about__img::after,.testi__fig::after,.vt::before{content:"";position:absolute;inset:0;pointer-events:none;background:var(--veil);mix-blend-mode:multiply;opacity:var(--veil-o)}
+.vt::before{z-index:-1}
+/* the services tiles: the photos are lifted into the ivory family (a soft ivory wash over the upper part, no dark areas); lila / green details alternate per tile */
+.vt>img{filter:saturate(.6) contrast(.9) brightness(1.1)}
+.vt::before{background:linear-gradient(180deg,rgba(244,242,233,.34) 0%,rgba(244,242,233,.14) 52%,rgba(244,242,233,0) 100%);mix-blend-mode:normal;opacity:1}
+.about__img img,.testi__fig img{position:absolute;inset:0}
+
+/* open bracket frame (brandbook motif): two side brackets, open top/bottom centres, printed in foil.
+   The six strokes are a mask; the foil gradient shows through it (colour comes from --foil, size from --arm / --s) */
+.bk::before{content:"";position:absolute;inset:14px;pointer-events:none;--arm:min(22.7%,64px);--s:1px;z-index:1;background:var(--foil);
+  -webkit-mask:
+   linear-gradient(#000,#000) 0 0/var(--arm) var(--s) no-repeat,
+   linear-gradient(#000,#000) 0 100%/var(--arm) var(--s) no-repeat,
+   linear-gradient(#000,#000) 0 0/var(--s) 100% no-repeat,
+   linear-gradient(#000,#000) 100% 0/var(--arm) var(--s) no-repeat,
+   linear-gradient(#000,#000) 100% 100%/var(--arm) var(--s) no-repeat,
+   linear-gradient(#000,#000) 100% 0/var(--s) 100% no-repeat;
+  mask:
+   linear-gradient(#000,#000) 0 0/var(--arm) var(--s) no-repeat,
+   linear-gradient(#000,#000) 0 100%/var(--arm) var(--s) no-repeat,
+   linear-gradient(#000,#000) 0 0/var(--s) 100% no-repeat,
+   linear-gradient(#000,#000) 100% 0/var(--arm) var(--s) no-repeat,
+   linear-gradient(#000,#000) 100% 100%/var(--arm) var(--s) no-repeat,
+   linear-gradient(#000,#000) 100% 0/var(--s) 100% no-repeat}
+/* the colour accent of a bracket frame: a second, shorter bracket pair in lila (left) / green (right) sits on the foil frame */
+.bk--accent::after{content:"";position:absolute;inset:14px;pointer-events:none;z-index:1;--arm:min(11%,32px);--s:2px;background:linear-gradient(90deg,var(--lila-accent) 0 50%,var(--green) 50% 100%);
+  -webkit-mask:
+   linear-gradient(#000,#000) 0 0/var(--arm) var(--s) no-repeat,
+   linear-gradient(#000,#000) 100% 100%/var(--arm) var(--s) no-repeat;
+  mask:
+   linear-gradient(#000,#000) 0 0/var(--arm) var(--s) no-repeat,
+   linear-gradient(#000,#000) 100% 100%/var(--arm) var(--s) no-repeat}
+
+/* ---------- reveal (progressive enhancement) ---------- */
+html.rv-on .rv{opacity:0;translate:0 26px;transition:opacity .7s var(--ease),translate .7s var(--ease);transition-delay:calc(var(--i,0)*80ms)}
+html.rv-on .rv.is-in{opacity:1;translate:0 0}
+/* swipe rows on phones: the cards sit off-screen to the right, so they are never held back by the reveal (they would pop in mid-swipe) */
+@media (max-width:767.98px){html.rv-on .snap>.rv{opacity:1;translate:none;transition:none}}
+@media print{html.rv-on .rv{opacity:1!important;translate:none!important}}
+
+/* ---------- horizontal snap rows (mobile) ---------- */
+.snap{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;
+  margin-inline:calc(-1*var(--gutx));padding-inline:var(--gutx);scroll-padding-inline:var(--gutx);-webkit-overflow-scrolling:touch}
+.snap::-webkit-scrollbar{display:none}
+.snap>*{flex:0 0 min(84%,340px);scroll-snap-align:start}
+
+/* =====================================================================================================
+   NAV  (burger header up to 1239px; from 1240px the full header: logo, nav pill, both phones, search, Zakaži)
+   Menu order (client): Naše usluge, O nama, Posebna ponuda, Cenovnik, Lokacije, Blog.
+   Logo: the stacked lockup of the published site (BEAUTY & WELLBEING CONCEPT / LEPA . SVAKI . DAN), 46px tall on phones, 54px in the desktop pill.
+   ===================================================================================================== */
+.nav{position:fixed;inset:0 0 auto;z-index:200;padding:max(12px,env(safe-area-inset-top)) var(--gutx) 0;pointer-events:none;transition:transform .4s var(--ease-out)}
+.nav.is-hidden{transform:translateY(-120%)}
+.nav__row{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;max-width:var(--wrap);margin-inline:auto;
+  min-height:var(--nav-h);padding:8px 8px 8px 18px;border-radius:999px;background:rgba(244,242,233,.95);box-shadow:inset 0 0 0 1px rgba(204,197,185,.7),0 6px 22px rgba(90,87,88,.07)}
+.nav__logo{display:flex;align-items:center;flex:none;min-height:44px}
+.nav__logo .logo-wb{display:block;width:auto;height:46px}
+@media (min-width:480px){.nav__logo .logo-wb{height:48px}}
+.nav__pill,.nav__phones{display:none}
+.nav__actions{display:flex;align-items:center;gap:8px}
+.nav__cta{min-height:44px;padding:0 20px}
+.nav__search{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--surf);color:var(--ink-deep);box-shadow:inset 0 0 0 1px var(--ring-foil);transition:background-color .25s var(--ease)}
+.nav__search .i{width:22px;height:22px}
+.no-js .nav__search{display:none}
+.burger{width:44px;height:44px;border-radius:50%;display:grid;place-content:center;gap:5px;background:var(--surf);box-shadow:inset 0 0 0 1px var(--ring-foil)}
+.burger span{display:block;width:20px;height:1.5px;background:var(--ink-deep);border-radius:2px;transition:transform .2s var(--ease)}
+.burger span:nth-child(2){width:14px;margin-left:auto}
+@media (max-width:359.98px){.nav__cta{display:none}}
+@media (min-width:1240px){
+  .nav{padding-top:16px}
+  .nav__row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;column-gap:14px;max-width:min(1380px,100%);padding:0;background:transparent;box-shadow:none;border-radius:999px;
+    transition:background-color .3s ease,padding .3s ease,box-shadow .3s ease}
+  .nav__logo{justify-self:start;padding:4px 18px;border-radius:999px;background:rgba(244,242,233,.95);box-shadow:inset 0 0 0 1px rgba(204,197,185,.7),0 6px 22px rgba(90,87,88,.07)}
+  .nav__logo .logo-wb{height:52px}
+  .nav__pill{display:block;justify-self:center;border-radius:999px;padding:6px;background:rgba(244,242,233,.92);box-shadow:inset 0 0 0 1px rgba(204,197,185,.7);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+  .nav__pill ul{display:flex;gap:2px}
+  .nav__pill a{position:relative;display:flex;align-items:center;min-height:44px;padding:0 8px;border-radius:999px;font-size:15px;white-space:nowrap;text-decoration:none;transition:background-color .3s ease,color .3s ease}
+  .nav__pill a.is-active{background:var(--iv-2);color:var(--ink-deep);box-shadow:inset 0 0 0 1px var(--ring-foil)}
+  .nav__pill a.is-active::after{content:"";position:absolute;left:50%;bottom:5px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--lila-accent)}
+  .nav__actions{justify-self:end;gap:10px}
+  /* both phones, side by side, one quiet glass pill: a foil hairline between them, a lila dot (Beauty Concept) and a green dot (Wellbeing Concept) lead the numbers */
+  .nav__phones{display:flex;align-items:center;gap:0;height:52px;padding:0 4px 0 12px;border-radius:999px;background:rgba(244,242,233,.92);box-shadow:inset 0 0 0 1px rgba(204,197,185,.7);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+  .nav__phones>.i{width:20px;height:20px;margin-right:4px}
+  .nav__phones a{position:relative;display:flex;align-items:center;gap:6px;min-height:44px;padding:0 7px;border-radius:999px;font-size:14px;letter-spacing:0;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums;transition:background-color .3s ease}
+  .nav__phones a::after{content:"";flex:none;order:-1;width:6px;height:6px;border-radius:50%;background:var(--lila-accent)}
+  .nav__phones a+a::after{background:var(--green-sage)}
+  .nav__phones a+a::before{content:"";position:absolute;left:-1px;top:12px;bottom:12px;width:1px;background:var(--foil-v)}
+  .nav__search{width:52px;height:52px;background:rgba(244,242,233,.92);box-shadow:inset 0 0 0 1px rgba(204,197,185,.7);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+  .burger{display:none}
+  .nav.is-stuck .nav__row{background:rgba(244,242,233,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);padding:6px 8px 6px 14px;box-shadow:inset 0 0 0 1px rgba(204,197,185,.8),0 8px 26px rgba(90,87,88,.08)}
+  .nav.is-stuck .nav__logo{background:transparent;box-shadow:none;padding:2px 14px 2px 6px}
+  .nav.is-stuck .nav__logo .logo-wb{height:48px}
+  .nav.is-stuck .nav__pill,.nav.is-stuck .nav__phones,.nav.is-stuck .nav__search{background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .nav.is-stuck .nav__search{width:44px;height:44px}
+  .nav.is-stuck .nav__phones{height:44px}
+}
+@media (min-width:1360px){
+  .nav__logo{padding:4px 22px}
+  .nav__logo .logo-wb{height:58px}
+  .nav__pill a{padding:0 11px}
+  .nav__phones{height:56px;padding:0 4px 0 14px}
+  .nav__phones a{gap:7px;padding:0 9px;font-size:14.5px}
+  .nav__search{width:56px;height:56px}
+}
+@media (min-width:1420px){.nav__logo{padding:4px 26px}.nav__pill a{padding:0 13px}}
+@media (hover:hover){
+  .nav__pill a:hover,.nav__phones a:hover{background:var(--iv-2)}
+  .nav__search:hover,.burger:hover{background:var(--iv-2)}
+}
+.nav__pill a:active,.nav__phones a:active{background:var(--iv-2)}
+
+/* ---------- mobile menu ---------- */
+.menu{position:fixed;inset:0;z-index:400;background:var(--iv-0);display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain;
+  padding:12px var(--gutx) calc(28px + env(safe-area-inset-bottom));opacity:0;transform:translateX(100%);visibility:hidden;
+  transition:transform .4s var(--ease-out),opacity .4s var(--ease-out),visibility 0s linear .4s}
+.menu.is-open{opacity:1;transform:none;visibility:visible;transition-delay:0s}
+.menu__top{display:flex;align-items:center;justify-content:space-between;min-height:var(--nav-h)}
+.menu__logo{width:auto;height:60px}
+.menu__close{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--surf);box-shadow:inset 0 0 0 1px var(--ring-foil)}
+.menu__search{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;margin-top:8px;padding:0 20px;border-radius:999px;background:var(--field);box-shadow:inset 0 0 0 1px var(--iv-4);font-size:16px;text-align:left}
+.menu__search .i{width:22px;height:22px}
+.no-js .menu__search{display:none}
+.menu__nav{margin-top:12px}
+.menu__nav li{opacity:0;translate:-20px 0;transition:opacity .3s var(--ease-out),translate .3s var(--ease-out);transition-delay:0s}
+.menu.is-open .menu__nav li{opacity:1;translate:0 0;transition-delay:calc(var(--i)*80ms + .15s)}
+.menu__nav a{display:flex;align-items:center;justify-content:space-between;min-height:64px;font-size:clamp(26px,7.4vw,34px);font-weight:var(--fw-l);letter-spacing:-.01em;text-decoration:none;border-bottom:1px solid var(--line)}
+.menu__nav a::after{content:"";width:10px;height:10px;border-top:1.5px solid var(--foil-1);border-right:1.5px solid var(--foil-1);rotate:45deg;margin-right:6px}
+.menu__nav a[aria-current]{box-shadow:inset 3px 0 0 var(--lila-accent);padding-left:14px}
+.menu__contact{margin-top:auto;padding-top:28px;display:grid;gap:10px}
+.menu__h{font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.menu__phone{display:flex;align-items:center;gap:14px;min-height:56px;padding:8px 18px;border-radius:var(--r);background:var(--surf);text-decoration:none}
+.menu__phone b{display:block;font-weight:var(--font-weight-regular);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.menu__phone span{font-size:19px;line-height:1.3}
+.menu__phone .i{color:var(--lila-accent)}
+.menu__phone+.menu__phone .i{color:var(--green)}
+.menu__wa{width:100%}
+@media (max-height:700px){
+  .menu__nav a{min-height:52px;font-size:clamp(24px,6.6vw,30px)}
+  .menu__contact{padding-top:18px;gap:8px}
+  .menu__phone{min-height:52px}
+}
+
+/* =====================================================================================================
+   HERO  (ivory with a paper feel; lila only as a soft halo behind the portrait, gold as hairlines; lead line, rotating headline, the sentence,
+   the search bar with its small suggestion chips, the two tonal buttons, the cut-out portrait (always centred), the LEPA . SVAKI . DAN lockup)
+   Mobile first: the copy block comes first (lead, h1, sentence, search, chips, buttons), the portrait follows in the flow, so nothing can overlap
+   whatever the text wrap. From 768px the buttons stand to the right of the portrait. From 1024px the hero is one composed screen.
+   ===================================================================================================== */
+.hero{--b0:calc(var(--abar-h) + 6px);position:relative;isolation:isolate;overflow:clip;display:flex;flex-direction:column;min-height:100vh;border-radius:0 0 var(--r) var(--r);
+  background:
+    radial-gradient(70% 44% at 92% 0%,rgba(250,249,244,.95) 0%,rgba(250,249,244,0) 72%),
+    radial-gradient(64% 46% at 4% 66%,rgba(229,226,217,.78) 0%,rgba(229,226,217,0) 72%),
+    linear-gradient(172deg,#F6F4EC 0%,#F2F0E6 46%,#EBE8DD 100%)}
+@supports (height:100svh){.hero{min-height:100svh}}
+.hero__bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero__bg::before{content:"";position:absolute;inset:0;background:var(--paper);opacity:.05;mix-blend-mode:multiply}   /* paper grain */
+.hero__bg::after{content:"";position:absolute;left:var(--gutx);right:var(--gutx);bottom:0;height:1px;background:var(--foil);opacity:.55}   /* fine gold line on the lower edge */
+/* the stage carries the portrait with its soft lila halo and the complete logo mark behind her; it is the only thing that is centred */
+.hero__stage{position:relative;z-index:1;flex:none;align-self:center;width:min(86vw,400px);margin:6px auto 0;padding-top:clamp(84px,28vw,112px)}   /* the padding is the room of the logo mark above her shoulder */
+.hero__halo{position:absolute;z-index:0;left:50%;top:40%;width:150%;aspect-ratio:1;translate:-50% -50%;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(198,180,227,.62) 0%,rgba(198,180,227,.3) 52%,rgba(198,180,227,0) 100%)}
+/* the logo mark (the T and Y of the logotype, soft lila with a hairline gold edge), WHOLE and uncropped at every width: it sits above her right shoulder
+   (phones), to the right of the portrait (tablet, desktop). It is never cut by an edge and never hidden behind her. */
+.hero__swash{position:absolute;z-index:1;right:1%;top:0;width:clamp(120px,40%,168px);aspect-ratio:961/794;pointer-events:none;
+  background:var(--swash-img) center/contain no-repeat}
+.hero__inner{position:relative;z-index:2;flex:none;display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding:calc(var(--nav-h) + max(12px,env(safe-area-inset-top)) + 22px) var(--gutx) 0}
+.hero__copy{display:grid;justify-items:center;width:100%;max-width:540px;color:var(--ink-deep)}
+/* the lead line: "2 lokacije, 1 filozofija", flanked by two foil hairlines; text stays in the deep grey (foil text keeps AA on ivory too, but this reads calmer) */
+.hero .eyebrow{justify-content:center;font-size:13px;letter-spacing:.2em;color:var(--ink-deep);background-image:none;-webkit-text-fill-color:currentColor}
+.hero .eyebrow::before,.hero .eyebrow::after{content:"";width:22px;height:1px;margin:0;background:var(--foil);flex:none}
+.hero__lead{margin-bottom:var(--head-gap)}
+.hero__h1{font-weight:var(--fw-l);font-size:clamp(34px,10vw,52px);line-height:1.04;letter-spacing:-.02em;text-wrap:balance}
+.hero__sub{margin-top:var(--head-gap);max-width:42ch;color:var(--ink-deep);font-size:15px;line-height:1.45;text-wrap:balance}
+@media (max-width:359.98px){.hero .eyebrow{letter-spacing:.12em;gap:8px}.hero .eyebrow::before,.hero .eyebrow::after{width:14px}}
+
+/* the search bar of the home page (shared look with the search overlay's field) */
+.hsearch{position:relative;display:flex;align-items:center;width:100%;max-width:560px;margin-top:16px}
+.hsearch__ico{position:absolute;left:20px;width:22px;height:22px;color:var(--ink-deep);pointer-events:none}
+.hsearch input{width:100%;min-height:60px;padding:0 64px 0 54px;border:0;border-radius:999px;background:var(--field);color:var(--ink);font:inherit;font-size:17px;text-overflow:ellipsis;
+  box-shadow:inset 0 0 0 1px var(--iv-4),0 10px 28px rgba(90,87,88,.09);-webkit-appearance:none;appearance:none}
+.hsearch input::placeholder{color:var(--ink);opacity:1}
+.hsearch input::-webkit-search-cancel-button{display:none}
+.hsearch input:focus{outline:none;box-shadow:inset 0 0 0 2px var(--ink),0 10px 28px rgba(90,87,88,.09)}
+.hsearch__go{--fill:var(--iv-2);position:absolute;right:8px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ink-deep);border:1px solid transparent;
+  background:linear-gradient(var(--fill),var(--fill)) padding-box,var(--foil) border-box;transition:--fill .2s var(--ease)}
+.hsearch__go .i{width:22px;height:22px}
+@media (hover:hover){.hsearch__go:hover{--fill:var(--iv-3)}}
+/* "Pokušajte:" + the suggestion chips, much smaller than on version C (12.5px text, 28px chips). The 44px touch area is an invisible expansion
+   (8px above and below each chip; the 16px row gap keeps the areas of two rows from overlapping). */
+.hsearch__try{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 6px;width:100%;max-width:560px;margin-top:16px;font-size:12.5px;line-height:1.2;color:var(--ink-deep)}
+.hsearch__lbl{padding-right:3px}
+.hsearch__try button{position:relative;display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border-radius:999px;background:var(--iv-1);color:var(--ink-deep);font-size:12.5px;line-height:1;white-space:nowrap;
+  box-shadow:inset 0 0 0 1px rgba(132,102,186,.5);transition:background-color .2s var(--ease)}
+.hsearch__try button:nth-of-type(even){box-shadow:inset 0 0 0 1px rgba(63,110,94,.5)}
+.hsearch__try button::after{content:"";position:absolute;inset:-8px -3px}
+@media (hover:hover){.hsearch__try button:hover{background:var(--iv-2)}}
+.hsearch__try button:active{background:var(--iv-3)}
+.no-js .hsearch,.no-js .hsearch__try{display:none}
+@media (max-width:359.98px){.hsearch input{font-size:16px;padding-left:50px}.hsearch__ico{left:16px}}
+
+/* the two buttons: tonal, same family, a fine foil ring; each ends in a small round arrow */
+.hero__ctas{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:560px;margin-top:14px}
+.hero__ctas .btn{min-height:50px;padding:0 8px 0 18px;justify-content:space-between;gap:8px;font-size:15px;white-space:normal;text-align:left;line-height:1.15}
+.btn__go{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--iv-lift);box-shadow:inset 0 0 0 1px var(--ring-foil)}
+.btn__go .i{width:16px;height:16px}
+.hero__ctas .btn--ink .btn__go{color:var(--lila-800)}
+.hero__ctas .btn--line .btn__go{color:var(--green)}
+@media (max-width:389.98px){.hero__ctas{gap:8px}.hero__ctas .btn{padding:0 6px 0 14px;font-size:14px}.btn__go{width:28px;height:28px}}
+@media (max-width:339.98px){.btn__go{display:none}.hero__ctas .btn{padding:0 10px;justify-content:center;text-align:center}}
+
+.hero__portrait{position:relative;z-index:2;display:block;width:100%;height:auto;max-width:none;
+  filter:saturate(.86) drop-shadow(0 20px 30px rgba(90,87,88,.14));
+  -webkit-mask-image:linear-gradient(to bottom,#000 74%,transparent 100%);mask-image:linear-gradient(to bottom,#000 74%,transparent 100%)}
+/* brand lockup LEPA . SVAKI . DAN between its two hairlines (the real supplied file, recoloured to the 75% black); in the flow under the faded portrait
+   on phones and tablets, laid across the faded lower edge of the portrait on desktop */
+.hero__ghost{position:relative;z-index:3;display:flex;justify-content:center;pointer-events:none;margin:-34px 0 30px}
+.hero__ghost img{width:min(calc(100% - 2*var(--gutx)),520px);height:auto;opacity:.85}
+
+/* hero entrance (1.3 s staggered, opacity/translate only) */
+@keyframes lm-in{from{opacity:0;translate:0 var(--dy,0)}to{opacity:1;translate:0 0}}
+.a-photo{animation:lm-photo .8s var(--ease) 0s both}
+@keyframes lm-photo{from{opacity:.001}to{opacity:1}}
+.a-head{animation:lm-in .4s var(--ease) .2s both}
+.a-book{--dy:40px;animation:lm-in .6s var(--ease) .3s both}
+.a-ghost{--dy:40px;animation:lm-in .4s var(--ease) .5s both}
+
+/* tablet: copy centred (the two buttons stay in a row under the search, a stack beside the portrait would not fit between her shoulders and the
+   screen edge at 768px), portrait below with the logo mark to the right of her head, the lockup in the flow under her */
+@media (min-width:768px) and (max-width:1023.98px){
+  .hero__inner{padding-top:calc(var(--nav-h) + max(12px,env(safe-area-inset-top)) + 40px)}
+  .hero__copy{max-width:640px}
+  .hero__h1{font-size:clamp(46px,7.2vw,64px)}
+  .hero__sub{font-size:17px;max-width:46ch}
+  .hero__ctas{max-width:520px}
+  .hero__ctas .btn{min-height:54px;font-size:16px;padding:0 10px 0 22px}
+  .hero__stage{width:min(50vw,400px);margin-top:14px;padding-top:0}
+  .hero__swash{right:auto;left:calc(100% - 18px);top:6%;width:calc(25vw - 30px)}
+}
+
+/* desktop: one composed screen. Copy left (grid), portrait centre, the two buttons right, lockup across the bottom */
+@media (min-width:1024px){
+  .hero{--hero-h:clamp(680px,calc(100vh + 19px),960px);--lk-w:min(66vw,860px);--lk-h:calc(var(--lk-w)*.1005);--ghost-bot:clamp(20px,6vh,56px);
+    --ph:min(calc(var(--hero-h)*.93),calc(var(--hero-h) - 108px),59vw);display:block;height:var(--hero-h);min-height:0}
+  .hero__inner{position:absolute;inset:0;width:min(var(--wrap),100% - 2*var(--gutx));margin-inline:auto;padding:104px 0 calc(var(--ghost-bot) + var(--lk-h) + 30px);
+    display:grid;grid-template-columns:minmax(0,1.05fr) minmax(200px,.7fr) 250px;grid-template-rows:1fr;column-gap:20px;
+    align-items:end;text-align:left}
+  .hero__copy{grid-column:1;justify-items:start;max-width:none}
+  .hero .eyebrow{justify-content:flex-start;font-size:14px}
+  .hero .eyebrow::after{display:none}
+  .hero__h1{font-size:clamp(44px,min(5vw,7.4vh),70px);line-height:1.04}
+  .hero__sub{max-width:36ch;font-size:clamp(15px,1.15vw,17px)}
+  .hsearch{margin-top:clamp(14px,2.4vh,24px);max-width:480px}
+  .hsearch__try{justify-content:flex-start;max-width:none;margin-top:12px}
+  .hero__ctas{grid-column:3;grid-row:1;align-self:end;grid-template-columns:1fr;gap:12px;width:100%;max-width:none;margin:0}
+  .hero__ctas .btn{min-height:58px;padding:0 12px 0 24px;font-size:16px}
+  .btn__go{width:34px;height:34px}
+  .btn__go .i{width:17px;height:17px}
+  /* the stage takes the exact box the portrait had: bottom of the hero, centre at 50% + 56px; the halo and the whole swash are centred on it */
+  .hero__stage{position:absolute;z-index:1;bottom:0;left:calc(50% + 56px);margin:0 0 0 calc(var(--ph)*-.3384);height:var(--ph);width:calc(var(--ph)*.6767);padding-top:0}
+  .hero__portrait{position:absolute;inset:0;width:100%;height:100%;filter:saturate(.86) drop-shadow(0 20px 30px rgba(90,87,88,.12));
+    /* the portrait melts into the ivory under the lockup, so the line never cuts across her arms or cuff */
+    -webkit-mask-image:linear-gradient(to bottom,#000 calc(100% - var(--ghost-bot) - var(--lk-h) - 96px),transparent calc(100% - var(--ghost-bot) - var(--lk-h) + 8px));
+    mask-image:linear-gradient(to bottom,#000 calc(100% - var(--ghost-bot) - var(--lk-h) - 96px),transparent calc(100% - var(--ghost-bot) - var(--lk-h) + 8px))}
+  .hero__halo{top:34%;width:150%}
+  /* THE COMPLETE MARK: to the right of the portrait, fully inside the hero (never cut by an edge, never hidden behind her): it takes all the room that is free
+     between her shoulder and the right edge of the screen, at most 440px, and sits above the two buttons */
+  .hero__swash{left:calc(100% - 26px);right:auto;top:4%;width:min(calc(50vw - var(--ph)*.3384 - 52px),440px)}
+  .hero__ghost{position:absolute;left:0;right:0;bottom:var(--ghost-bot);margin:0}
+  .hero__ghost img{width:var(--lk-w);opacity:.82}
+}
+@supports (height:100svh){@media (min-width:1024px){.hero{--hero-h:clamp(680px,calc(100svh + 19px),960px)}}}
+
+/* landscape phones (wide but short, below desktop): the hero is exactly one screen with the copy on the left and the portrait on the right,
+   no buttons, no chips, no lockup; a slim action bar that stays out of the notch */
+@media (orientation:landscape) and (max-height:520px) and (max-width:1023.98px){
+  :root{--abar-h:calc(58px + env(safe-area-inset-bottom));--nav-h:60px}
+  .hero{display:block;height:max(380px,100svh);min-height:0}
+  .hero__inner{height:100%;align-items:flex-start;text-align:left;padding-top:calc(var(--nav-h) + 34px)}
+  .hero__copy{max-width:min(54%,470px);justify-items:start}
+  .hero .eyebrow{justify-content:flex-start}
+  .hero .eyebrow::after{display:none}
+  .hero__h1{font-size:clamp(28px,4.4vw,40px)}
+  .hero__sub,.hero__ctas,.hero__ghost,.hsearch__try,.hero__halo,.hero__swash{display:none}
+  .hsearch{margin-top:14px}
+  .hsearch input{min-height:52px}
+  .hero__stage{position:absolute;bottom:0;left:auto;right:max(var(--gutx),5%);margin:0;padding:0;height:calc(100% - var(--nav-h) - 24px);width:auto}
+  .hero__portrait{position:static;height:100%;width:auto}
+}
+
+/* =====================================================================================================
+   O NAMA: trust strip + bento
+   ===================================================================================================== */
+.sec--about{padding-top:20px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 10px;padding:18px 0 4px}
+.strip__it{display:grid;justify-items:center;align-content:start;text-align:center;gap:8px}
+.strip__it>span:last-child{display:grid;gap:2px}
+.strip__ico{width:48px;height:48px;border-radius:50%;background:var(--lila-200);display:grid;place-items:center;color:var(--lila-800);box-shadow:inset 0 0 0 1px rgba(148,113,211,.35)}
+.strip__it:nth-child(2) .strip__ico{background:var(--green-200);color:var(--green);box-shadow:inset 0 0 0 1px rgba(63,110,94,.3)}
+.strip__ico .i{width:26px;height:26px}
+.strip__num{font-weight:var(--fw-l);font-size:clamp(26px,7vw,34px);line-height:1;letter-spacing:-.02em}
+.strip__lbl{font-size:14px;line-height:1.25;color:var(--mute)}
+.strip__chip{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:var(--r);background:var(--surf-2);box-shadow:inset 0 0 0 1px var(--ring-foil);
+  font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-deep)}
+.strip__chip .i{width:20px;height:20px;color:var(--green)}
+@media (min-width:768px){
+  .strip{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:center;padding:20px 0 0}
+  .strip__it{grid-auto-flow:column;justify-content:start;justify-items:start;text-align:left;gap:16px}
+  .strip__ico{width:60px;height:60px}
+  .strip__chip{min-height:64px;font-size:14px;text-align:center}
+  .strip__num{font-size:clamp(28px,3vw,38px)}
+  .strip__lbl{font-size:14px}
+}
+@media (min-width:1024px){.strip{grid-template-columns:repeat(3,minmax(0,1fr)) minmax(220px,.9fr)}.strip__chip{grid-column:auto}}
+
+.about{display:grid;gap:var(--gut);margin-top:var(--gut)}
+/* LEFT: the card "Reč osnivača i posebne pogodnosti" (About copy, the founder quote in its own bracket panel, the signature, the framed LEPA SVAKI DAN mark) */
+.about__copy{display:flex;flex-direction:column;align-items:flex-start;padding:clamp(24px,3.4vw,44px)}
+.about__copy .h2{font-size:clamp(30px,4.2vw,48px);margin-top:var(--head-gap)}
+.about__p{color:var(--mute);max-width:58ch;margin-top:var(--head-gap);text-wrap:pretty}
+.about__p~.about__p{margin-top:14px}
+.about__quote{position:relative;align-self:stretch;margin:clamp(24px,3vw,34px) 0 0;padding:clamp(34px,4vw,44px) clamp(28px,3.6vw,44px) clamp(26px,3vw,34px);border-radius:var(--r-sm);background:var(--surf-2);isolation:isolate}
+.about__qt{font-weight:var(--fw-l);font-size:clamp(22px,2.3vw,30px);line-height:1.2;letter-spacing:-.01em}
+.qs{display:block;text-wrap:balance}
+.about__qp{margin-top:16px;max-width:50ch;font-size:16px;color:var(--mute);text-wrap:pretty}
+.about__sig{display:grid;gap:2px;margin-top:18px;padding-top:14px;border-top:1px solid rgba(90,87,88,.16)}
+.about__sig b{font-weight:var(--font-weight-regular);font-size:17px;line-height:1.3;text-wrap:balance}
+.about__sig span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.tile .about__mark{width:112px;height:auto;margin-top:auto;padding-top:28px;opacity:.95;object-fit:contain}
+/* RIGHT: the photo, and BELOW it the compact block "Bestseller tretmani" (the former gift section) */
+.about__img{aspect-ratio:3/2;margin:0}
+.about__best{background:var(--surf-2);padding:clamp(22px,3vw,32px);--px-n:21px;--px-u:13px;--px-s:13px}
+.about__best .eyebrow{--dot-a:var(--lila-accent);--dot-b:var(--green-sage)}
+.about__bt{margin-top:var(--head-gap);font-weight:var(--fw-l);font-size:clamp(26px,3vw,34px);line-height:1.1;letter-spacing:-.015em}
+.about__bp{margin-top:var(--head-gap);max-width:48ch;font-size:15px;line-height:1.45;color:var(--mute);text-wrap:pretty}
+.bs{display:grid;gap:8px;margin-top:18px}
+.bs__a{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px 14px;min-height:64px;padding:12px 16px;border-radius:14px;background:var(--field);color:inherit;text-decoration:none;
+  box-shadow:inset 3px 0 0 var(--lila-accent);transition:background-color .25s var(--ease)}
+.bs__li:nth-child(even) .bs__a{box-shadow:inset 3px 0 0 var(--green)}
+.bs__tx{display:grid;gap:2px;min-width:0}
+.bs__n{font-weight:var(--font-weight-regular);font-size:17px;line-height:1.2;text-wrap:balance;overflow-wrap:break-word}
+.bs__d{font-size:13.5px;line-height:1.35;color:var(--mute);text-wrap:balance}
+.bs .px{justify-items:end;text-align:right}
+.bs__go{display:none;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--iv-1);box-shadow:inset 0 0 0 1px var(--ring-foil);color:var(--ink-deep)}
+.bs__go svg{width:18px;height:18px;transition:transform .3s ease-in-out}
+@media (hover:hover){.bs__a:hover{background:var(--iv-lift)}.bs__a:hover .bs__go svg{transform:rotate(-45deg)}}
+.bs__a:active{background:var(--iv-1)}
+.bs__a:focus-visible{outline-offset:-3px}
+@media (min-width:480px){.bs__a{grid-template-columns:minmax(0,1fr) auto auto}.bs__go{display:grid}}
+@media (min-width:640px) and (max-width:1023.98px){.about__img{aspect-ratio:16/8}}
+@media (min-width:1024px){
+  .about{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:1fr auto;align-items:stretch}   /* the photo takes what the bestsellers do not need */
+  .about__copy{grid-row:1/3}
+  .about__img{aspect-ratio:auto;min-height:260px}
+}
+
+/* =====================================================================================================
+   TRETMANI: photo tiles. The copy sits on a frosted ivory panel that grows with the text and feathers into the photo (no dark gradient)
+   ===================================================================================================== */
+.vgrid{display:grid;gap:var(--gut);grid-template-columns:1fr}
+.vt{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:16px;min-height:236px;padding:20px;color:var(--ink-deep);isolation:isolate;
+  border-radius:var(--r);overflow:hidden;background:var(--iv-3);transition:opacity .4s cubic-bezier(.2,.8,.2,1)}
+.vt>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+.vt::after{content:"";position:absolute;inset:14px;z-index:0;pointer-events:none;border-radius:calc(var(--r) - 6px);box-shadow:inset 0 0 0 1px rgba(250,249,244,.62)}
+.vt__top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.vt__top .chip{background:rgba(250,249,244,.9);color:var(--ink-deep);box-shadow:inset 0 0 0 1px rgba(148,113,211,.4)}
+.vt:nth-child(even) .vt__top .chip{box-shadow:inset 0 0 0 1px rgba(63,110,94,.4)}
+.vt__bot{display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+.vt:not(.vt--plain) .vt__bot{margin:0 -20px -20px;padding:56px 20px 20px;
+  background:linear-gradient(to top,rgba(244,242,233,.95) 0,rgba(244,242,233,.92) calc(100% - 50px),rgba(244,242,233,.55) calc(100% - 28px),rgba(244,242,233,0) 100%)}
+.vt__t{font-weight:var(--fw-l);font-size:clamp(24px,2.3vw,32px);line-height:1.08;letter-spacing:-.01em}
+.vt__s{margin-top:var(--head-gap);font-size:16px;line-height:1.4;color:var(--ink);max-width:36ch}
+.vt .arrow{width:52px;height:52px;background:var(--field);box-shadow:inset 0 0 0 1px rgba(148,113,211,.6)}
+.vt:nth-child(even) .arrow{box-shadow:inset 0 0 0 1px rgba(63,110,94,.6)}
+.vt--plain{background:linear-gradient(160deg,var(--iv-1),var(--iv-3));color:var(--ink-deep);box-shadow:inset 0 0 0 1px var(--ring-foil)}
+.vt--plain::after{display:none}
+.vt--plain .vt__s{color:var(--ink)}
+.vt--plain .vt__top .chip{background:var(--lila-200);box-shadow:none}
+.vt__swash{position:absolute;z-index:-1;right:-6%;bottom:-18%;width:84%;aspect-ratio:961/794;opacity:.42;
+  background:var(--swash-soft) center/contain no-repeat}
+.vt__big{color:var(--ink-deep);margin-bottom:var(--head-gap);--px-n:clamp(32px,3.2vw,44px);--px-s:15px}
+.vt__big .px__s{margin-top:2px}
+@media (hover:hover){.vt:hover{opacity:.92}}
+.vt:active{opacity:.88}
+@media (min-width:640px) and (max-width:1023.98px){
+  .vgrid{grid-template-columns:1fr 1fr}
+  .vt--lica{grid-column:1/-1;min-height:320px}
+}
+@media (min-width:1024px){
+  .vgrid{grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(2,minmax(250px,1fr))}
+  .vt--lica{grid-column:1/6;grid-row:1/3}
+  .vt--tela{grid-column:6/10}
+  .vt--estetske{grid-column:10/13}
+  .vt--laserska{grid-column:6/9}
+  .vt--protokoli{grid-column:9/13}
+  .vt--lica .vt__t{font-size:clamp(30px,3vw,42px)}
+}
+
+/* =====================================================================================================
+   FAVORITI  (the former gift section is the "Bestseller tretmani" block of the About section)
+   ===================================================================================================== */
+.fav{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:20px;border-radius:var(--r);overflow:hidden;padding:22px;min-height:260px;background:var(--surf);--px-n:clamp(32px,3.4vw,46px);--px-s:15px}
+.fav:nth-child(3n+2){background:var(--surf-2)}
+.fav__top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.fav__t{font-weight:var(--fw-l);font-size:clamp(22px,2.2vw,30px);line-height:1.12;letter-spacing:-.01em;text-wrap:balance}
+.fav__d{margin-top:var(--head-gap);font-size:16px;line-height:1.4;color:var(--mute);max-width:46ch;text-wrap:pretty}
+.fav__bot{display:flex;align-items:flex-end;justify-content:space-between;gap:14px}
+/* PRICE (js/price.js): DINARS FIRST. The primary line is the dinar price: the number large, "od" and "rsd" small beside it; the euro price is smaller, below.
+   Where only one currency exists, it is shown alone in the primary line. Each context sets --px-n (number), --px-u ("od" / "rsd"), --px-s (euro line). */
+.px{display:grid;gap:3px;justify-items:start;font-variant-numeric:tabular-nums}
+.px__p{display:inline-flex;align-items:baseline;white-space:nowrap;font-weight:var(--fw-l);line-height:1;color:var(--ink-deep)}
+.px__n{font-size:var(--px-n,clamp(30px,3.2vw,44px));letter-spacing:-.025em}
+.px__o,.px__u{font-size:var(--px-u,max(12px,calc(var(--px-n,30px)*.46)));letter-spacing:0}
+.px__o{margin-right:.4em}
+.px__u{margin-left:.28em}
+.px__s{font-size:var(--px-s,14px);line-height:1.25;color:var(--mute)}
+.fav--dark{color:var(--ink-deep);background:var(--feat);isolation:isolate}   /* the feature card is the deepest ivory step with a lila swash detail, no longer dark */
+.fav--dark::after{content:"";position:absolute;z-index:-1;right:-14%;bottom:-24%;width:90%;aspect-ratio:961/794;pointer-events:none;opacity:.4;
+  background:var(--swash-soft) center/contain no-repeat}
+.fav--dark .fav__d,.fav--dark .px__s{color:var(--ink-deep)}
+@media (min-width:768px){
+  .favs.snap{display:grid;grid-template-columns:1fr 1fr;overflow:visible;margin-inline:0;padding-inline:0;gap:var(--gut)}
+  .favs.snap>*{flex:initial}
+}
+
+/* =====================================================================================================
+   CENOVNIK
+   ===================================================================================================== */
+.price__chips{display:flex;flex-wrap:wrap;gap:10px}
+.price__tools{display:grid;gap:14px;margin-bottom:12px}
+.search{position:relative;display:flex;align-items:center}
+.search__ico{position:absolute;left:20px;color:var(--ink-deep);pointer-events:none;width:22px;height:22px}
+.search input{width:100%;min-height:56px;padding:0 56px 0 52px;border:0;border-radius:999px;background:var(--field);color:var(--ink);font:inherit;font-size:16px;
+  box-shadow:inset 0 0 0 1px var(--iv-4);-webkit-appearance:none;appearance:none}
+.search input::placeholder{color:var(--mute);opacity:1}
+.search input:focus{outline:none;box-shadow:inset 0 0 0 2px var(--ink)}
+.search input::-webkit-search-cancel-button{display:none}
+.search__clear{position:absolute;right:6px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--surf)}
+.search__clear .i{width:20px;height:20px}
+.price__suggest{font-size:14px;line-height:36px;color:var(--mute)}   /* 36 px line pitch: when the suggestions wrap, a tap on the lower half of a link in line 1 no longer lands on the link of line 2 */
+.price__suggest .nb{white-space:nowrap}   /* a comma never starts a line: it stays with the suggestion before it */
+.price__suggest button{position:relative;padding:0;text-decoration:underline;text-underline-offset:3px;color:var(--ink-deep)}
+.price__suggest button::after{content:"";position:absolute;inset:-4px -8px}  /* 44 px touch area (the 36 px line plus 4 px each side); the lines do not steal each other's area, the text stays tight with its comma */
+/* filter chips (blog categories): same pill as the tabs, tonal when active */
+.fchip{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--field);box-shadow:inset 0 0 0 1px rgba(148,113,211,.5);font-size:13px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;
+  transition:background-color .25s var(--ease),color .25s var(--ease)}
+
+.tabs-bar{position:sticky;top:var(--sticky-top);z-index:30;margin-inline:calc(-1*var(--gutx));background:rgba(244,242,233,.97);
+  padding-block:8px;transition:top .4s var(--ease-out)}
+.tabs{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;padding:2px var(--gutx);scroll-padding-inline:var(--gutx);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 var(--gutx),#000 calc(100% - var(--gutx)),transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 var(--gutx),#000 calc(100% - var(--gutx)),transparent 100%)}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;scroll-snap-align:center;min-height:48px;padding:0 20px;border-radius:999px;background:var(--surf);font-size:16px;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;
+  transition:background-color .25s var(--ease),color .25s var(--ease)}
+.tab sup{font-size:13px;line-height:1;color:var(--mute);top:-.3em;position:relative;letter-spacing:.04em}
+.tab[aria-selected="true"]{background:linear-gradient(var(--iv-3),var(--iv-3)) padding-box,var(--foil) border-box;border:1px solid transparent;color:var(--ink-deep)}
+.tab[aria-selected="true"] sup{color:var(--lila-800)}
+@media (hover:hover){.tab:not([aria-selected="true"]):hover{background:var(--iv-2)}}
+.tabs-hint{font-size:14px;color:var(--mute);text-align:center;margin-top:4px;transition:opacity .3s}
+.tabs-hint.is-gone{opacity:0;pointer-events:none;height:0;margin:0;overflow:hidden}
+@media (min-width:1024px){.tabs-bar{margin-inline:0;border-radius:999px;background:rgba(244,242,233,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}.tabs{justify-content:center;-webkit-mask-image:none;mask-image:none}.tabs-hint{display:none}}
+@media (min-width:1240px){.tabs-bar{margin-inline:0}}
+
+.price__status.is-search{position:sticky;top:var(--sticky-top);z-index:30;margin-inline:calc(-1*var(--gutx));padding:8px calc(var(--gutx) + 4px);background:rgba(244,242,233,.97);transition:top .4s var(--ease-out)}
+@media (min-width:1024px){.price__status.is-search{margin-inline:0;padding-inline:20px;border-radius:999px;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}}
+.price__status{min-height:28px;padding:10px 4px 6px;font-size:14px;color:var(--mute);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px}
+.price__all{min-height:44px;padding:0 4px;text-decoration:underline;text-underline-offset:3px;color:var(--ink-deep);font-size:14px}
+.tabnote{margin-bottom:12px;padding:16px 20px;border-radius:var(--r);background:var(--surf);box-shadow:inset 3px 0 0 var(--green-sage);font-size:16px;color:var(--ink)}
+
+.grp{margin-bottom:12px;border-radius:var(--r);background:var(--surf);overflow:hidden;scroll-margin-top:calc(var(--sticky-top) + 84px)}
+.grp__h{display:block}
+.grp__btn{width:100%;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:14px;min-height:68px;padding:12px 16px;text-align:left}
+.grp__no{width:44px;height:44px;border-radius:12px;background:var(--lila-200);display:grid;place-items:center;font-size:14px;letter-spacing:.04em;color:var(--ink-deep)}
+.grp:nth-of-type(even) .grp__no{background:var(--green-200)}   /* the numbered squares alternate lila / green */
+.grp__t{font-size:clamp(17px,2vw,20px);line-height:1.2;letter-spacing:-.005em;text-wrap:balance}
+.grp__c{display:block;margin-top:2px;font-size:14px;color:var(--mute)}
+.grp__tog{display:inline-flex;align-items:center;gap:12px}
+.grp__show{display:none;font-size:14px;color:var(--mute)}
+.grp__ch{width:40px;height:40px;border-radius:50%;background:var(--field);display:grid;place-items:center;box-shadow:inset 0 0 0 1px var(--ring-foil);transition:transform .3s ease-in-out,background-color .3s ease-in-out}
+.grp__ch .i{width:20px;height:20px}
+.grp.is-open .grp__ch{transform:rotate(180deg);background:var(--iv-3)}
+@media (hover:hover){.grp__btn:hover .grp__ch{background:var(--iv-2)}}
+.grp__body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s var(--ease-out)}
+.grp.is-open .grp__body{grid-template-rows:1fr}
+.grp__in{min-height:0;overflow:hidden;visibility:hidden;transition:visibility 0s linear .3s}
+.grp.is-open .grp__in{visibility:visible;transition-delay:0s}
+.grp__panel{margin:0 8px 8px;border-radius:14px;background:var(--field);overflow:hidden}
+.grp__list{display:block}
+.price__results .grp__list{border-radius:var(--r);overflow:hidden;background:var(--field)}
+.lh{display:flex;justify-content:space-between;padding:12px 14px 8px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.svc{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:14px 14px;background:var(--field)}
+.svc+.svc{border-top:1px solid var(--line)}
+.svc__name{font-size:16px;line-height:1.3;overflow-wrap:break-word;hyphens:auto}
+.svc__desc{margin-top:3px;font-size:15px;line-height:1.4;color:var(--mute)}
+.svc__meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.svc__meta:empty{display:none}
+.svc__p{grid-column:2;grid-row:1;text-align:right;display:grid;align-content:start;justify-items:end;gap:2px;font-variant-numeric:tabular-nums;min-width:78px;--px-n:17px;--px-u:14px;--px-s:13.5px}
+.svc .px{justify-items:end;gap:2px}
+.svc__q{display:inline-flex;align-items:center;min-height:28px;padding:0 12px;border-radius:999px;background:var(--lila-200);color:var(--ink-deep);font-size:12px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
+.svc__src{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--black-75);margin-bottom:2px}
+.svc__more{position:relative;display:block;width:fit-content;margin-top:8px;padding:0;font-size:14px;color:var(--ink-deep);text-decoration:underline;text-underline-offset:3px}
+.svc__more::after{content:"";position:absolute;inset:-14px -10px}   /* 44px touch area */
+.svc.is-flash{animation:flash 2.2s var(--ease) 1}
+@keyframes flash{0%,35%{background:var(--lila-200)}100%{background:var(--field)}}
+.rs{margin-bottom:12px}
+.rs__g{display:flex;align-items:center;gap:10px;margin-top:22px;margin-bottom:10px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc-ink)}
+.rs__g span{display:inline-grid;place-items:center;min-width:26px;height:26px;padding:0 8px;border-radius:999px;background:var(--lila-200);color:var(--ink-deep);letter-spacing:.04em}
+.rs-grp:nth-child(even) .rs__g span{background:var(--green-200)}
+.rs-grp:first-child .rs__g{margin-top:6px}
+.rs__more{display:grid;justify-items:center;gap:10px;margin:8px 0 4px;font-size:14px;color:var(--mute)}
+.rs__empty{padding:28px 20px;border-radius:var(--r);background:var(--surf);text-align:center;color:var(--mute)}
+.price__foot{display:grid;gap:10px;margin-top:22px;padding:20px;border-radius:var(--r);background:var(--surf);box-shadow:inset 3px 0 0 var(--lila-accent);font-size:15px;color:var(--mute);max-width:none}
+.price__foot strong{color:var(--ink-deep)}
+@media (max-width:420px){
+  .svc{grid-template-columns:minmax(0,1fr) auto;padding:14px 12px}
+  .svc__p{min-width:70px;--px-n:16px;--px-u:13px}
+}
+@media (min-width:768px){
+  .grp__btn{padding:14px 22px;min-height:76px}
+  .grp__show{display:block}
+  .grp__panel{margin:0 12px 12px}
+  .svc{padding:16px 20px}
+  .lh{padding:6px 20px 8px}
+  .svc__name{font-size:17px}
+}
+
+/* =====================================================================================================
+   LOKACIJE: "1 filozofija, 2 lokacije" as a SPLIT. Two photos side by side as two halves that touch.
+   Beauty Concept is the LILA half, Wellbeing Concept the GREEN half (accent colour = icons, small concept label, eyebrow dot, bracket corners).
+   The info card is a frosted ivory panel under the photo, never a dark one.
+   Desktop (hover + fine pointer, from 1024px): both halves show their contact card, hovering / focusing one widens it.
+   Touch and small screens: one half is open (wide), the other is a narrow strip with its name; a tap on the strip or a swipe switches.
+   Without JS the halves are simply stacked and fully readable.
+   ===================================================================================================== */
+.split{position:relative;display:flex;flex-direction:column;border-radius:var(--r);overflow:hidden;background:var(--iv-2);color:var(--ink-deep);isolation:isolate;box-shadow:inset 0 0 0 1px var(--ring-foil)}
+.split__h{--sp:clamp(22px,3vw,40px);--acc:var(--lila-accent);--acc-ink:var(--lila-800);--dot-a:var(--lila-accent);--dot-b:var(--lila-accent);
+  position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;min-height:440px;padding:var(--sp);overflow:hidden;--focus:var(--ink-deep)}
+.split__h[data-split="1"]{--acc:var(--green);--acc-ink:var(--green-700);--dot-a:var(--green);--dot-b:var(--green)}
+.split__img{position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;object-position:var(--pos,50% 50%);filter:saturate(.68) contrast(.97) brightness(1.04)}
+.split__h::before{content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;background:var(--veil);mix-blend-mode:multiply;opacity:var(--veil-o)}
+.split__h+.split__h::after{content:"";position:absolute;z-index:2;left:0;top:0;right:0;height:1px;background:var(--foil)}   /* the seam where the halves touch: one foil hairline */
+.split__info{position:relative;display:grid;margin-inline:calc(-1*var(--sp));padding-inline:var(--sp)}
+.split__info>*{max-width:440px}
+/* the frosted ivory panel under the card spans the whole half, grows with its text and feathers into the photo above it */
+.split__info::before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:-72px 0 calc(-1*var(--sp)) 0;background:linear-gradient(to top,rgba(244,242,233,.96) 0,rgba(244,242,233,.93) calc(100% - 76px),rgba(244,242,233,.55) calc(100% - 42px),rgba(244,242,233,0) 100%)}
+.split__t{margin-top:var(--head-gap);font-weight:var(--fw-l);font-size:clamp(28px,3.4vw,40px);line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+.split__t span{display:block;margin-bottom:var(--head-gap);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc-ink)}   /* the concept name in the accent ink (lila-800 / green-700, both >= 6:1) */
+.split__rows{margin-top:var(--head-gap)}
+.split__rows li{display:flex;align-items:center;gap:14px;min-height:52px;border-top:1px solid rgba(90,87,88,.18);font-size:17px}
+.split__rows li>a{display:flex;align-items:center;gap:14px;min-height:52px;width:100%;text-decoration:none}
+.split__rows .i{width:22px;height:22px;color:var(--acc)}
+@media (hover:hover){.split__rows a:hover{text-decoration:underline;text-underline-offset:4px}}
+.split__pick{display:none}
+
+/* script on: the halves sit side by side */
+html.js .split{flex-direction:row;height:clamp(480px,74svh,620px);touch-action:pan-y}   /* pan-y: a horizontal swipe belongs to the split (see setupSplit), the page still scrolls vertically */
+html.js .split__h{--sp:clamp(18px,3vw,40px);flex:1 1 0;min-width:0;min-height:0}
+html.js .split__h+.split__h::after{right:auto;left:0;top:0;bottom:0;width:1px;height:auto;background:var(--foil-v)}
+html.js .split__h.is-on{flex-grow:3.2}
+html.js .split__pick{position:absolute;inset:0;z-index:3;display:grid;grid-template-rows:auto 1fr;justify-items:center;padding:20px 0 24px;color:var(--ink-deep);text-align:center}
+html.js .split__pick::before{content:"";position:absolute;z-index:-1;inset:auto 0 0 0;height:78%;background:linear-gradient(to top,rgba(244,242,233,.95) 0,rgba(244,242,233,.9) 62%,rgba(244,242,233,0) 100%)}
+html.js .split__pick .i{width:22px;height:22px;color:var(--acc)}
+html.js .split__vt{align-self:end;writing-mode:vertical-rl;rotate:180deg;font-size:14px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;color:var(--acc-ink)}
+html.js .split__h.is-on .split__pick{display:none}
+html.js .split__h:not(.is-on) .split__info{visibility:hidden;opacity:0}
+html.js .split__h.is-on .split__info{animation:split-in .45s var(--ease) both}
+@keyframes split-in{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+@media (max-width:359.98px){html.js .split__h.is-on{flex-grow:2.6}.split__rows li{font-size:15px;gap:10px}.split__rows li>a,.split__rows li>a{gap:10px}}
+.split__rows li>a span{white-space:nowrap}   /* a phone number is never broken across two lines */
+
+/* desktop: both cards visible, hover or keyboard focus widens a half (layout animation on two elements only, never on touch) */
+@media (min-width:1024px) and (hover:hover) and (pointer:fine){
+  html.js .split{height:clamp(500px,66vh,600px)}
+  html.js .split__h.is-on{flex-grow:1}
+  html.js .split__pick{display:none}
+  html.js .split__h:not(.is-on) .split__info{visibility:visible;opacity:1}
+  html.js .split__h.is-on .split__info{animation:none}
+  .split__h{transition:flex-grow .5s var(--ease)}
+  html.js .split__h:hover,html.js .split__h:focus-within{flex-grow:1.5}
+  .split__img{transition:scale .6s var(--ease)}
+  .split__h:hover .split__img,.split__h:focus-within .split__img{scale:1.04}
+}
+
+/* =====================================================================================================
+   UTISCI
+   ===================================================================================================== */
+.testi{display:grid;gap:var(--gut)}
+.testi__main{display:grid;gap:22px;align-content:space-between;min-width:0}
+.testi__track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.testi__track::-webkit-scrollbar{display:none}
+.testi__s{flex:0 0 100%;scroll-snap-align:start;display:grid;gap:22px;align-content:start;padding-right:2px}
+.testi__q{font-weight:var(--fw-l);font-size:clamp(22px,2.9vw,38px);line-height:1.22;letter-spacing:-.012em;text-wrap:pretty}
+.testi__q{position:relative;padding-left:clamp(22px,2.6vw,36px)}
+.testi__q::before{content:"";position:absolute;left:0;top:.2em;bottom:.2em;width:14px;border:1px solid transparent;border-right:0;border-image:var(--foil-v) 1}
+.testi__a{display:grid;gap:2px}
+.testi__s{margin:0}
+.testi__a b{font-weight:var(--font-weight-regular);font-size:18px}
+.testi__a span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.testi__ctl{display:flex;align-items:center;gap:6px;max-width:100%}
+.testi__ctl .arrow{width:52px;height:52px}
+.testi__dots{display:flex;align-items:center;margin-inline:2px;min-width:0}
+.testi__ctl .arrow::after{display:none}
+@media (max-width:389.98px){.testi__ctl{gap:2px}.testi__ctl .arrow{width:44px;height:44px}.testi__dots{margin-inline:0}}
+.td{width:44px;height:44px;display:grid;place-items:center}
+.td::before{content:"";width:8px;height:8px;border-radius:99px;background:var(--iv-4);transition:width .3s var(--ease),background-color .3s var(--ease)}
+.td[aria-current="true"]::before{width:24px;background:var(--lila-accent)}
+.td:nth-child(even)[aria-current="true"]::before{background:var(--green)}
+.testi__fig{display:none;margin:0}
+.testi__fig img{object-position:50% 18%}
+@media (min-width:768px){
+  .testi{grid-template-columns:minmax(0,1fr) minmax(220px,300px);gap:clamp(24px,4vw,56px);align-items:stretch}
+  .testi__fig{display:block;min-height:340px}
+}
+
+/* =====================================================================================================
+   BLOG (teaser link; the cards are .bp in pages.css)
+   ===================================================================================================== */
+.blog__more{display:flex;justify-content:center;margin-top:var(--gut)}
+
+/* =====================================================================================================
+   CLOSING CONTACT BLOCK (swash, heading and paragraph shared with .cblock in pages.css) + FOOTER
+   The closing block is a tonal ivory tile with the foil bracket frame; the two location cards carry the lila / green details.
+   The footer is the deepest ivory step with the stacked lockup of the published site.
+   ===================================================================================================== */
+.sec--cta{padding-top:calc(var(--sec-gap)*.9)}
+.cta__swash{position:absolute;z-index:-1;right:-12%;bottom:-36%;width:min(620px,110%);aspect-ratio:961/794;opacity:.4;
+  background:var(--swash-soft) center/contain no-repeat}
+.cta__h{font-weight:var(--fw-l);font-size:clamp(28px,3.1vw,42px);line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+.cta__p{font-size:clamp(16px,1.3vw,18px);color:var(--ink);max-width:42ch}
+
+.foot{position:relative;margin-top:var(--sec-gap);background:var(--iv-2);color:var(--ink-deep);border-radius:var(--r) var(--r) 0 0;padding:clamp(44px,6vw,72px) 0 calc(28px + 0px);box-shadow:inset 0 1px 0 var(--ring-foil)}
+.foot__grid{display:grid;gap:34px}
+.foot__mark{display:inline-block;padding:0}
+.foot__mark img{width:auto;height:84px}
+.foot__brand p{margin-top:18px;max-width:34ch;color:var(--ink);font-size:16px}
+.foot h3{font-size:12px;font-weight:var(--font-weight-regular);letter-spacing:.18em;text-transform:uppercase;color:var(--foil-ink-solid);margin-bottom:var(--head-gap);width:fit-content}
+@supports (-webkit-background-clip:text) or (background-clip:text){.foot h3{background-image:var(--foil-ink);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}}
+.foot__col li>a,.foot__col li>span,.foot__col li>em{display:flex;align-items:center;gap:12px;min-height:44px;color:var(--ink-deep);text-decoration:none;font-style:normal;font-size:16px}
+.foot__col li>em{min-height:0;color:var(--ink);font-size:15px;padding-bottom:8px}
+.foot__col li>span{min-height:0;padding-top:6px}
+@media (hover:hover){.foot__col a:hover{text-decoration:underline;text-underline-offset:4px}}
+.foot .i{width:20px;height:20px;color:var(--lila-accent)}
+.foot__col li:nth-child(even) .i{color:var(--green)}
+.foot__ph::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--lila-accent)}
+.foot__ph--2::before{background:var(--green)}   /* pair 1 (phone + mail) = lila, pair 2 = green */
+@media (max-width:767.98px){.foot__col--nav ul{grid-template-columns:1fr 1fr;column-gap:16px}}   /* the six menu links in two columns on phones: a shorter footer */
+.foot__loc{display:flex;align-items:center;gap:10px}
+.foot__loc::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--lila-accent)}
+.foot__col li:nth-child(even) .foot__loc::before{background:var(--green)}
+.foot__line{width:min(259px,70%);height:auto;margin:44px auto 26px;opacity:.85}
+.foot__bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding-top:20px;border-top:1px solid rgba(90,87,88,.2);font-size:14px;color:var(--ink)}
+.foot__credit{order:3;flex-basis:100%;color:var(--ink-deep);letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+.foot__top{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--field);box-shadow:inset 0 0 0 1px var(--ring-foil);margin-left:auto;color:var(--ink-deep)}
+@media (max-width:767.98px){
+  .foot__bottom{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px 16px}
+  .foot__copy{grid-column:1;grid-row:1}
+  .foot__credit{grid-column:1/-1;grid-row:2;order:0;flex-basis:auto;letter-spacing:.1em;white-space:nowrap}
+  .foot__top{grid-column:2;grid-row:1}
+}
+@media (max-width:359.98px){.foot__credit{letter-spacing:.05em}}
+.foot__top .i{color:var(--ink-deep)}
+.js .foot__top{display:none}
+.js .foot{padding-bottom:calc(76px + env(safe-area-inset-bottom))}   /* with scripts the floating back-to-top button (js/shell.js, 48 px, 14 px from the corner) is always there; the footer's own one only serves a page without scripts. The extra room keeps the last line of the footer clear of the floating button at the end of every page */
+@media (min-width:768px){
+  .foot__grid{grid-template-columns:1fr 1fr;gap:34px 28px}
+  .foot__brand{grid-column:1/-1}
+  .foot__credit{order:0;flex-basis:auto}
+}
+@media (min-width:1024px){
+  .foot__grid{grid-template-columns:1.5fr 1fr 1.1fr 1fr 1.1fr;gap:28px}
+  .foot__brand{grid-column:auto}
+}
+@media (max-width:1023.98px){.foot{padding-bottom:calc(28px + env(safe-area-inset-bottom))}.js .foot{padding-bottom:calc(76px + env(safe-area-inset-bottom))}} /* the action bar slides away while the footer is on screen */
+
+/* =====================================================================================================
+   MOBILE ACTION BAR + SHEETS
+   ===================================================================================================== */
+.abar{position:fixed;z-index:150;left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:8px;padding:8px;
+  border-radius:999px;background:rgba(244,242,233,.97);box-shadow:inset 0 0 0 1px rgba(204,197,185,.8),0 6px 24px rgba(90,87,88,.1);
+  transition:transform .4s var(--ease-out),opacity .3s}
+.abar.is-off,html.is-typing .abar{transform:translateY(140%);opacity:0;pointer-events:none}
+.abar__b{--fill:var(--surf);display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:999px;font-size:15px;text-decoration:none;color:var(--ink-deep);
+  border:1px solid transparent;background:linear-gradient(var(--fill),var(--fill)) padding-box,linear-gradient(var(--iv-4),var(--iv-4)) border-box}
+.abar__b .i{width:20px;height:20px}
+.abar__b:first-child .i{color:var(--lila-800)}
+.abar__b:nth-child(2) .i{color:var(--green)}
+.abar__b--main{--fill:var(--iv-3);background:linear-gradient(var(--fill),var(--fill)) padding-box,var(--foil) border-box}
+.abar__b:active{--fill:var(--iv-3)}
+.abar__b--main:active{--fill:var(--iv-4)}
+@media (min-width:1024px){.abar{display:none}}
+@media (max-width:340px){.abar__b span{font-size:14px}.abar__b .i{display:none}}
+/* landscape phone: a centred slim bar inside the safe area instead of a full-width slab over the content */
+@media (orientation:landscape) and (max-height:520px) and (max-width:1023.98px){
+  .abar{left:50%;right:auto;width:min(560px,100% - 2*var(--gutx));translate:-50% 0;padding:5px;bottom:calc(6px + env(safe-area-inset-bottom))}
+  .abar__b{min-height:42px}
+}
+
+.sheet{position:fixed;inset:0;z-index:500;display:flex;align-items:flex-end;justify-content:center;visibility:hidden;opacity:0;transition:opacity .3s var(--ease-out),visibility 0s linear .3s}
+.sheet.is-open{visibility:visible;opacity:1;transition-delay:0s}
+.sheet__scrim{position:absolute;inset:0;background:rgba(229,226,217,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}   /* frosted ivory, not a dark veil */
+.sheet__panel{position:relative;width:min(560px,100%);max-height:92svh;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;background:var(--canvas);border-radius:var(--r) var(--r) 0 0;
+  box-shadow:inset 0 0 0 1px var(--ring-foil),0 -10px 40px rgba(90,87,88,.12);
+  padding:30px 24px calc(26px + env(safe-area-inset-bottom));display:grid;gap:14px;translate:0 40px;transition:translate .35s var(--ease-out)}
+.sheet.is-open .sheet__panel{translate:0 0}
+.sheet__t{font-weight:var(--fw-l);font-size:28px;line-height:1.1;padding-right:48px}
+.sheet__t+.sheet__s{margin-top:calc(var(--head-gap) - 14px)}   /* the panel grid has a 14px gap: pull the sub-line to the heading gap */
+.sheet__s{color:var(--mute);font-size:14px;letter-spacing:.12em;text-transform:uppercase}
+.sheet__x{position:absolute;right:12px;top:12px;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--surf);box-shadow:inset 0 0 0 1px var(--ring-foil)}
+.sheet__panel .btn{justify-self:start;margin-top:6px}
+.sheet__pkg{padding:10px 14px;border-radius:var(--r-sm);background:var(--lila-200);font-size:15px}
+/* the booking / phone sheet: both numbers as big buttons. Modes: "" both actions per number, "call" two phone buttons, "wa" two WhatsApp buttons */
+.book{display:grid;gap:12px;margin-top:4px}
+.book li{display:grid;gap:10px}
+.book__n{display:grid;gap:2px}
+.book__n b{font-weight:var(--font-weight-regular);font-size:20px}
+.book__n span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.bbtn{--fill:var(--iv-2);display:flex;align-items:center;gap:14px;min-height:68px;padding:10px 20px;border-radius:var(--r);text-decoration:none;color:var(--ink-deep);border:1px solid transparent;
+  background:linear-gradient(var(--fill),var(--fill)) padding-box,var(--foil) border-box;transition:--fill .2s var(--ease)}
+.bbtn--wa{--fill:var(--green-200)}
+.bbtn .i{width:26px;height:26px}
+.bbtn--tel .i{color:var(--lila-800)}
+.bbtn--wa .i{color:var(--green)}
+.bbtn__t{display:grid;gap:2px;min-width:0}
+.bbtn__m{font-size:21px;line-height:1.15;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.bbtn__s{font-size:12px;letter-spacing:.06em;text-transform:uppercase;line-height:1.25}
+@media (hover:hover){.bbtn:hover{--fill:var(--iv-3)}.bbtn--wa:hover{--fill:var(--green-300)}}
+.bbtn:active{--fill:var(--iv-3)}
+.bbtn--wa:active{--fill:var(--green-300)}
+.book[data-mode=""] li{grid-template-columns:repeat(2,minmax(0,1fr));padding:16px;border-radius:var(--r);background:var(--surf)}
+.book[data-mode=""] li:nth-child(1){box-shadow:inset 3px 0 0 var(--lila-accent)}
+.book[data-mode=""] li:nth-child(2){box-shadow:inset 3px 0 0 var(--green)}
+.book[data-mode=""] .book__n{grid-column:1/-1}
+.book[data-mode=""] .bbtn{min-height:56px;padding:8px 14px;gap:10px;border-radius:999px;justify-content:center}
+.book[data-mode=""] .bbtn .i{width:22px;height:22px}
+.book[data-mode=""] .bbtn__m{font-size:16px}
+.book[data-mode=""] .bbtn__s{display:none}
+.book[data-mode="call"] .bbtn--wa,.book[data-mode="wa"] .bbtn--tel,.book[data-mode="call"] .book__n,.book[data-mode="wa"] .book__n{display:none}
+@media (max-width:359.98px){.sheet__panel{padding-inline:16px}.book[data-mode=""] li{padding:12px;gap:8px}.book[data-mode=""] .bbtn{gap:6px;padding-inline:8px}.book[data-mode=""] .bbtn__m{font-size:14px}.bbtn__m{font-size:19px}}
+@media (min-width:768px){.sheet{align-items:center}.sheet__panel{border-radius:var(--r);translate:0 20px}}
+
+/* =====================================================================================================
+   REDUCED MOTION
+   ===================================================================================================== */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  html.rv-on .rv{opacity:1;translate:none}
+  .a-photo,.a-head,.a-book,.a-ghost{opacity:1!important;translate:none!important}
+  .menu,.sheet__panel{transform:none;translate:none}
+  .menu__nav li{opacity:1;translate:none}
+  .arrow:hover svg,.arrow:active svg{transform:none}
+}
+
+/* HERO ROTATOR: "Budi ______ svaki dan." with smirena / srećna / lepa rolling on the line like a drum.
+   Pure CSS (3 words x 2.3s = 6.9s loop). The full sentence stays in the h1 for screen readers and search engines (.rot-sr).
+   Tune the speed with --rot-t on .rot (seconds per word). Reduced motion: the first word stays still.
+   THE FOIL UNDERLINE FOLLOWS THE CURRENT WORD: every word is its own shrink-wrapped box (width:max-content) and carries its own underline
+   (.rot__w::after, width:max-content, justify-self:start so the word hugs "Budi"), so the line is exactly as long as "smirena", "srećna" or "lepa" and rolls in and out together with its word. The container
+   (.rot) is still as wide as the widest word, so the sentence never jumps. */
+.rot-sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.rot{--rot-t:2.3s;position:relative;display:inline-grid;perspective:.9em;clip-path:inset(-.14em -.6em -.24em -.05em);white-space:nowrap}
+.rot__w{grid-area:1/1;justify-self:start;width:max-content;position:relative;display:block;opacity:0;transform:translateY(105%) rotateX(-75deg);transform-origin:50% 60%;
+  animation:rot-roll calc(var(--rot-t)*3) cubic-bezier(.45,.05,.2,1) infinite both;animation-delay:calc(var(--i)*var(--rot-t));will-change:transform,opacity}
+.rot__w::after{content:"";position:absolute;left:0;right:0;bottom:.02em;height:max(1px,.04em);background:var(--foil,currentColor);pointer-events:none}
+/* HEADLINE LINES: "Budi ______" is line 1 and "svaki dan." is always line 2 (at every width), so a short word never leaves a hole in the middle of the sentence.
+   THE SLOT FOLLOWS THE WORD: js/app.js (setupRotator) measures the three words once the font is ready and writes their widths in em as --w0..--w2 on .rot (class .is-m).
+   The slot width then glides from word to word together with the roll (first pass: keyframes rot-w1 holds the first word, from the second pass on rot-w loops), so on phones the
+   centred line "Budi lepa" is centred over "svaki dan." for every word. Without scripts the slot simply stays as wide as the widest word. */
+.hero__l2{display:block}
+.rot.is-m{width:var(--w0);animation:rot-w1 calc(var(--rot-t)*3) cubic-bezier(.45,.05,.2,1) forwards,rot-w calc(var(--rot-t)*3) cubic-bezier(.45,.05,.2,1) calc(var(--rot-t)*3) infinite}
+@keyframes rot-w1{0%,33.3%{width:var(--w0)}39.8%,66.6%{width:var(--w1)}73.1%,100%{width:var(--w2)}}
+@keyframes rot-w{0%{width:var(--w2)}6.5%,33.3%{width:var(--w0)}39.8%,66.6%{width:var(--w1)}73.1%,100%{width:var(--w2)}}
+@keyframes rot-roll{
+  0%{transform:translateY(105%) rotateX(-75deg);opacity:0}
+  6.5%{transform:translateY(0) rotateX(0);opacity:1}
+  33.3%{transform:translateY(0) rotateX(0);opacity:1}
+  39.8%{transform:translateY(-105%) rotateX(75deg);opacity:0}
+  39.81%,100%{transform:translateY(105%) rotateX(-75deg);opacity:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .rot.is-m{animation:none;width:var(--w0)}
+  .rot__w{animation:none;transform:none;will-change:auto}
+  .rot__w:first-child{opacity:1}
+}

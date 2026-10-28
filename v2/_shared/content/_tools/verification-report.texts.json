@@ -1,0 +1,517 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "A articles.json holds 21 articles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A ids are art-1 ... art-21 in order (no zero padding)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A slugs unique, ASCII kebab-case",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A per segment 4 / 4 / 7 / 6 (dermatologija, estetske, kozmetika, telo)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A every article has the required fields",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A block types are h2|h3|p|ul|ol, lists have items, others have text",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A the 21 .docx files of procedure/ are each used exactly once",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A document structure: block counts and list grouping equal the .docx XML",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A block types equal the .docx styles (Heading 2/3, lists, bullets vs decimal)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A order and text of every paragraph/list item equal the .docx XML (after the reviewed fixes)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A title and subtitle = first line split at the first colon",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A word counts agree: XML == python-docx == textutil == pack (title + blocks)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A readMinutes = ceil(words / 200), minimum 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A placeholders: blanks in the source == tokens == placeholders[] == hasPlaceholders",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A 6 blanks in 4 articles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A placeholder kinds: 5 x ime lekara, 1 x naziv lasera (only in the Candela text)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A no underscore blank left, no name invented after \"dr\" (only the token follows it)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A excerpts: prefix of the first paragraph, <= 170 chars, cut on a word boundary, no ellipsis",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A all hyperlinks (59) and Word comments (17) of the documents are in the pack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A every link text occurs in its block",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A every link has a legacyHref and a target type",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A target article ids of links and hints exist",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A legacy blog index/title/wordCount refer to content.json blog[] (same order)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A legacy titleMatch: 20 exact, 1 by order (the dermatological exam text was renamed)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B no em dash (U+2014) anywhere in the shared content folder (26 files scanned)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B en dashes only inside numeric ranges (whole folder)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B no \"Dr\"/\"dr\" directly before \"Tamara\" anywhere in the shared content folder",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B founder.signature = \"Tamara Vujačić, Lepa Svaki Dan\", used as founder.signatureName, founder.name has no title",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B testimonial 1 says \"Tamara\", not a doctor",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B services still 210 (182 standard + 28 laser)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B sha256 of the SOURCE lines (old names) == checksums.serviceLinesSha256 in the new content.json and in MANIFEST.md",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B sha256 of the lines after the fixes == checksums.serviceLinesSha256AfterFixes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B id|price|priceEur|priceRsd of all 210 services identical to the backup (prices untouched)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B name-independent checksums.priceLinesSha256 identical before/after",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B every checksum of the old pack is unchanged (sums and the source sha)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B counts unchanged (_meta.counts)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B MANIFEST.md price checksum table: all 10 original rows are present unchanged (12 rows now, the new ones are additions)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B content.json differs from the backup ONLY by the reviewed fixes (every other string, value and key is identical)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B hours without leading zero (\"9:00\"), no zero-padded numbering in data",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B content.js (window.LSD_CONTENT) equals content.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B articles.js (window.LSD_ARTICLES) equals articles.json (21 items)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C 4 segments with the exact names (diacritics) in folder order",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C segment ids equal the old blog category keys; slugs ASCII",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C ordered article ids per segment equal the articles (4 / 4 / 7 / 6) and cover all 21 once",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C hero images exist in the media pack and their files are on disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C every intro quote (and its alternative) is a verbatim string of the articles or of content.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C price-list tabs/groups of every segment exist and are non-empty",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "D all 21 articles have price-list groups, unmatched list is empty (and said so explicitly)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "D every group id and service id in service-links.json exists in content.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "D every linked service sits inside a linked group of the same article",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "D reverse index group -> articles equals the article -> groups lists, covers all 31 groups",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "D old SERVICE_BLOG_LINKS (higijenski -> art-11, dermafacial -> art-13) are reproduced, 7 services",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "D services linked to an article agree with serviceToArticles",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E 36 entries + 12 invented questions",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E all 35 phrases of the brief are covered (folded)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E phrases are lowercase and every phrase exists with and without diacritics",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E every entry has a note, a strength and evidence for every target",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E every target id exists (groups, services, articles, offers, segments)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E independent re-check: every target is supported by its own text or by a targeted linked article",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E the two weak entries say so (ukljesteni vrat, rastezanje) and rastezanje is marked directEvidence:false",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "E pregnancy question keeps AWT, radiowave and laser as cautions, not as targets",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F no zero-padded numbering in the new data files (ids art-1 ... art-21, order 1 ... 4)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F files present: articles.json/js, segments.json, service-links.json, search-synonyms.json, CHANGES.md",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "F MANIFEST-ARTICLES.md present and names every new file",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "wordTable": [
+    {
+      "n": 1,
+      "file": "Candela - Laserska dermatologija.docx",
+      "xml": 211,
+      "pydocx": 211,
+      "textutil": 211,
+      "pack": 211,
+      "legacy": 207
+    },
+    {
+      "n": 2,
+      "file": "Klasična dermatologija.docx",
+      "xml": 363,
+      "pydocx": 363,
+      "textutil": 363,
+      "pack": 363,
+      "legacy": 365
+    },
+    {
+      "n": 3,
+      "file": "Radiotalasi i uklanjanje promena.docx",
+      "xml": 330,
+      "pydocx": 330,
+      "textutil": 330,
+      "pack": 330,
+      "legacy": 325
+    },
+    {
+      "n": 4,
+      "file": "Tretmani skalpa i rast kose.docx",
+      "xml": 451,
+      "pydocx": 451,
+      "textutil": 451,
+      "pack": 451,
+      "legacy": 444
+    },
+    {
+      "n": 5,
+      "file": "Biorevitalizacija i regenerativne procedure.docx",
+      "xml": 505,
+      "pydocx": 505,
+      "textutil": 505,
+      "pack": 505,
+      "legacy": 501
+    },
+    {
+      "n": 6,
+      "file": "Botulin toksin tipa A - Botoks.docx",
+      "xml": 571,
+      "pydocx": 571,
+      "textutil": 571,
+      "pack": 571,
+      "legacy": 566
+    },
+    {
+      "n": 7,
+      "file": "Hijaluronski fileri.docx",
+      "xml": 1229,
+      "pydocx": 1229,
+      "textutil": 1229,
+      "pack": 1229,
+      "legacy": 1228
+    },
+    {
+      "n": 8,
+      "file": "Lifting niti.docx",
+      "xml": 401,
+      "pydocx": 401,
+      "textutil": 401,
+      "pack": 401,
+      "legacy": 397
+    },
+    {
+      "n": 9,
+      "file": "Biološki tretmani.docx",
+      "xml": 442,
+      "pydocx": 442,
+      "textutil": 442,
+      "pack": 442,
+      "legacy": 435
+    },
+    {
+      "n": 10,
+      "file": "Dermapen i hemijski pilinzi.docx",
+      "xml": 462,
+      "pydocx": 462,
+      "textutil": 462,
+      "pack": 462,
+      "legacy": 456
+    },
+    {
+      "n": 11,
+      "file": "Higijenski tretmani.docx",
+      "xml": 408,
+      "pydocx": 408,
+      "textutil": 408,
+      "pack": 408,
+      "legacy": 403
+    },
+    {
+      "n": 12,
+      "file": "Myolift MD.docx",
+      "xml": 504,
+      "pydocx": 504,
+      "textutil": 504,
+      "pack": 504,
+      "legacy": 502
+    },
+    {
+      "n": 13,
+      "file": "Preime Dermafacial protokoli.docx",
+      "xml": 289,
+      "pydocx": 289,
+      "textutil": 289,
+      "pack": 289,
+      "legacy": 269
+    },
+    {
+      "n": 14,
+      "file": "Venus Glow protokoli.docx",
+      "xml": 405,
+      "pydocx": 405,
+      "textutil": 405,
+      "pack": 405,
+      "legacy": 397
+    },
+    {
+      "n": 15,
+      "file": "Venus Legacy.docx",
+      "xml": 428,
+      "pydocx": 428,
+      "textutil": 428,
+      "pack": 428,
+      "legacy": 422
+    },
+    {
+      "n": 16,
+      "file": "AWT Storz tretman.docx",
+      "xml": 340,
+      "pydocx": 340,
+      "textutil": 340,
+      "pack": 340,
+      "legacy": 332
+    },
+    {
+      "n": 17,
+      "file": "Med Contour.docx",
+      "xml": 292,
+      "pydocx": 292,
+      "textutil": 292,
+      "pack": 292,
+      "legacy": 288
+    },
+    {
+      "n": 18,
+      "file": "Negujući tretmani tela.docx",
+      "xml": 524,
+      "pydocx": 524,
+      "textutil": 524,
+      "pack": 524,
+      "legacy": 521
+    },
+    {
+      "n": 19,
+      "file": "ProBallancer presoterapija.docx",
+      "xml": 337,
+      "pydocx": 337,
+      "textutil": 337,
+      "pack": 337,
+      "legacy": 335
+    },
+    {
+      "n": 20,
+      "file": "Venus Legacy protokoli.docx",
+      "xml": 544,
+      "pydocx": 544,
+      "textutil": 544,
+      "pack": 544,
+      "legacy": 541
+    },
+    {
+      "n": 21,
+      "file": "Venus Velocity laserska epilacija.docx",
+      "xml": 783,
+      "pydocx": 783,
+      "textutil": 783,
+      "pack": 783,
+      "legacy": 779
+    }
+  ],
+  "nonTextFilesSkipped": 0
+}

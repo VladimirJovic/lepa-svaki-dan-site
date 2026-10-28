@@ -1,0 +1,1405 @@
+{
+  "ok": true,
+  "failures": [],
+  "checks": [
+    {
+      "name": "content.js window.LSD_CONTENT deep-equals content.json",
+      "ok": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "A raw: tabs",
+      "ok": true,
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "name": "A raw: groups",
+      "ok": true,
+      "expected": 31,
+      "actual": 31
+    },
+    {
+      "name": "A raw: standard services",
+      "ok": true,
+      "expected": 182,
+      "actual": 182
+    },
+    {
+      "name": "A raw: laser services",
+      "ok": true,
+      "expected": 28,
+      "actual": 28
+    },
+    {
+      "name": "A raw: total services",
+      "ok": true,
+      "expected": 210,
+      "actual": 210
+    },
+    {
+      "name": "A raw: highlighted standard",
+      "ok": true,
+      "expected": 44,
+      "actual": 44
+    },
+    {
+      "name": "A raw: standardEurMinSum",
+      "ok": true,
+      "expected": 37957,
+      "actual": 37957
+    },
+    {
+      "name": "A raw: standardEurMaxSum",
+      "ok": true,
+      "expected": 38082,
+      "actual": 38082
+    },
+    {
+      "name": "A raw: standardRsdMinSum",
+      "ok": true,
+      "expected": 4437700,
+      "actual": 4437700
+    },
+    {
+      "name": "A raw: standardRsdMaxSum",
+      "ok": true,
+      "expected": 4452500,
+      "actual": 4452500
+    },
+    {
+      "name": "A raw: laserNbEurMinSum",
+      "ok": true,
+      "expected": 3355,
+      "actual": 3355
+    },
+    {
+      "name": "A raw: laserBwEurMinSum",
+      "ok": true,
+      "expected": 5541,
+      "actual": 5541
+    },
+    {
+      "name": "A raw: offers count",
+      "ok": true,
+      "expected": 4,
+      "actual": 4
+    },
+    {
+      "name": "A raw: offers EUR sum",
+      "ok": true,
+      "expected": 1610,
+      "actual": 1610
+    },
+    {
+      "name": "A raw: offers RSD sum",
+      "ok": true,
+      "expected": 188700,
+      "actual": 188700
+    },
+    {
+      "name": "A raw: blog posts",
+      "ok": true,
+      "expected": 21,
+      "actual": 21
+    },
+    {
+      "name": "A raw: testimonials",
+      "ok": true,
+      "expected": 4,
+      "actual": 4
+    },
+    {
+      "name": "A raw: verticals",
+      "ok": true,
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "name": "A raw: quiz questions",
+      "ok": true,
+      "expected": 3,
+      "actual": 3
+    },
+    {
+      "name": "A raw: tag rules",
+      "ok": true,
+      "expected": 34,
+      "actual": 34
+    },
+    {
+      "name": "tree services == allServices.length",
+      "ok": true,
+      "expected": 210,
+      "actual": 210
+    },
+    {
+      "name": "serviceLines sha256 after fixes",
+      "ok": true,
+      "expected": "a201827295d3990d3b9b19691c9e7655d7651a1c27cafe73c38ebe7bd0530483",
+      "actual": "a201827295d3990d3b9b19691c9e7655d7651a1c27cafe73c38ebe7bd0530483"
+    },
+    {
+      "name": "priceLines sha256 (id|price|priceEur|priceRsd, name independent)",
+      "ok": true,
+      "expected": "1e3fb27e38790ba2806cafd1310d09b14352b5fef16ea8eabc24df9f30dd7e2e",
+      "actual": "1e3fb27e38790ba2806cafd1310d09b14352b5fef16ea8eabc24df9f30dd7e2e"
+    },
+    {
+      "name": "serviceLines sha256 of the SOURCE names (logged edits reverted) == MANIFEST checksum",
+      "ok": true,
+      "expected": "b45b4b30a55758ef833b3e1f0c0863cfa97c5206daf90816f004186547e0f53e",
+      "actual": "b45b4b30a55758ef833b3e1f0c0863cfa97c5206daf90816f004186547e0f53e"
+    },
+    {
+      "name": "per-tab services sum",
+      "ok": true,
+      "expected": 210,
+      "actual": 210
+    },
+    {
+      "name": "stat display godina prakse",
+      "ok": true,
+      "expected": "15+",
+      "actual": "15+"
+    },
+    {
+      "name": "stat display koncepta u Beogradu",
+      "ok": true,
+      "expected": "2",
+      "actual": "2"
+    },
+    {
+      "name": "stat display klijenata godišnje",
+      "ok": true,
+      "expected": "1.000+",
+      "actual": "1.000+"
+    },
+    {
+      "name": "stat targets/suffix vs raw",
+      "ok": true,
+      "expected": [
+        [
+          15,
+          "+"
+        ],
+        [
+          2,
+          ""
+        ],
+        [
+          1000,
+          "+"
+        ]
+      ],
+      "actual": [
+        [
+          15,
+          "+"
+        ],
+        [
+          2,
+          ""
+        ],
+        [
+          1000,
+          "+"
+        ]
+      ]
+    },
+    {
+      "name": "validFromISO derived from raw date",
+      "ok": true,
+      "expected": "2026-03-15",
+      "actual": "2026-03-15"
+    },
+    {
+      "name": "payment/valid date vs raw",
+      "ok": true,
+      "expected": "15.03.2026.",
+      "actual": "15.03.2026."
+    },
+    {
+      "name": "founder.signature is the reviewed signature",
+      "ok": true,
+      "expected": "Tamara Vujačić, Lepa Svaki Dan",
+      "actual": "Tamara Vujačić, Lepa Svaki Dan"
+    },
+    {
+      "name": "founder.signatureName uses founder.signature",
+      "ok": true,
+      "expected": "Tamara Vujačić, Lepa Svaki Dan",
+      "actual": "Tamara Vujačić, Lepa Svaki Dan"
+    },
+    {
+      "name": "owner is not a doctor: no \"dr\"/\"Dr\" directly before \"Tamara\" in any string",
+      "ok": true,
+      "expected": [],
+      "actual": []
+    },
+    {
+      "name": "no em dash and no non-numeric en dash in content.json",
+      "ok": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "B provenance: verbatim strings checked",
+      "ok": true,
+      "expected": null,
+      "actual": 2986
+    },
+    {
+      "name": "B provenance: strings NOT found in source",
+      "ok": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "E new-copy strings that already exist in old site",
+      "ok": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "E new copy count within 8..12",
+      "ok": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "E COPY_NOTES.md lists every new string",
+      "ok": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "C dom: tabs",
+      "ok": true,
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "name": "C dom: groups",
+      "ok": true,
+      "expected": 31,
+      "actual": 31
+    },
+    {
+      "name": "C dom: standard services",
+      "ok": true,
+      "expected": 182,
+      "actual": 182
+    },
+    {
+      "name": "C dom: laser services",
+      "ok": true,
+      "expected": 28,
+      "actual": 28
+    },
+    {
+      "name": "C dom: highlighted",
+      "ok": true,
+      "expected": 44,
+      "actual": 44
+    },
+    {
+      "name": "C dom: standard EUR min sum",
+      "ok": true,
+      "expected": 37957,
+      "actual": 37957
+    },
+    {
+      "name": "C dom: standard RSD min sum",
+      "ok": true,
+      "expected": 4437700,
+      "actual": 4437700
+    },
+    {
+      "name": "C dom: laser unified EUR min sum",
+      "ok": true,
+      "expected": 5935,
+      "actual": 5935
+    },
+    {
+      "name": "C dom: row-by-row mismatches (name/desc/price/highlight/blog link/unified laser price)",
+      "ok": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "C dom: testimonial dots",
+      "ok": true,
+      "expected": 4,
+      "actual": 4
+    },
+    {
+      "name": "C dom: bento cards",
+      "ok": true,
+      "expected": 5,
+      "actual": 5
+    },
+    {
+      "name": "C dom: bento titles+counts",
+      "ok": true,
+      "expected": [
+        [
+          "Tretmani lica",
+          "18 tretmana",
+          "Novi Beograd",
+          "#usluge"
+        ],
+        [
+          "Tretmani tela",
+          "12 tretmana",
+          "Belgrade Waterfront",
+          "#usluge"
+        ],
+        [
+          "Estetske procedure",
+          "22 procedure",
+          "Novi Beograd",
+          "#usluge"
+        ],
+        [
+          "Laserska epilacija",
+          "od 16 €",
+          "Belgrade Waterfront",
+          "#usluge"
+        ],
+        [
+          "Posebni protokoli",
+          "10 paketa",
+          "Obe lokacije",
+          "posebna-ponuda.html"
+        ]
+      ],
+      "actual": [
+        [
+          "Tretmani lica",
+          "18 tretmana",
+          "Novi Beograd",
+          "#usluge"
+        ],
+        [
+          "Tretmani tela",
+          "12 tretmana",
+          "Belgrade Waterfront",
+          "#usluge"
+        ],
+        [
+          "Estetske procedure",
+          "22 procedure",
+          "Novi Beograd",
+          "#usluge"
+        ],
+        [
+          "Laserska epilacija",
+          "od 16 €",
+          "Belgrade Waterfront",
+          "#usluge"
+        ],
+        [
+          "Posebni protokoli",
+          "10 paketa",
+          "Obe lokacije",
+          "posebna-ponuda.html"
+        ]
+      ]
+    },
+    {
+      "name": "C dom: favorites",
+      "ok": true,
+      "expected": [
+        [
+          "CINDERELLA GLOW",
+          "Face Gym masaža, hemijski piling, glow maska",
+          "77€ / 9.000 rsd"
+        ],
+        [
+          "Biorevitalizacija lica, Jalupro",
+          "",
+          "150€ / 17.600 rsd"
+        ],
+        [
+          "VENUS LIFT & GLOW",
+          "Energy masaža, Venus Legacy, Myolift mikrostruje, piling, maska",
+          "115€ / 13.500 rsd"
+        ],
+        [
+          "NO FILTER NEEDED",
+          "Biorevitalizujući hemijski piling, nano Dermapen, maska sa egzozomima",
+          "107€ / 12.500 rsd"
+        ]
+      ],
+      "actual": [
+        [
+          "CINDERELLA GLOW",
+          "Face Gym masaža, hemijski piling, glow maska",
+          "77€ / 9.000 rsd"
+        ],
+        [
+          "Biorevitalizacija lica, Jalupro",
+          "",
+          "150€ / 17.600 rsd"
+        ],
+        [
+          "VENUS LIFT & GLOW",
+          "Energy masaža, Venus Legacy, Myolift mikrostruje, piling, maska",
+          "115€ / 13.500 rsd"
+        ],
+        [
+          "NO FILTER NEEDED",
+          "Biorevitalizujući hemijski piling, nano Dermapen, maska sa egzozomima",
+          "107€ / 12.500 rsd"
+        ]
+      ]
+    },
+    {
+      "name": "C dom: gifts",
+      "ok": true,
+      "expected": [
+        [
+          "Higijenski tretman lica 1",
+          "Klasičan piling, čišćenje, maska",
+          "51€ / 6.000 rsd"
+        ],
+        [
+          "FACE GYM masaža lica",
+          "",
+          "55€ / 6.500 rsd"
+        ],
+        [
+          "READY TO GLOW",
+          "Venus Glow, drenažna masaža, Myolift, presoterapija",
+          "85€ / 10.000 rsd"
+        ],
+        [
+          "EYE ZONE Classic",
+          "Tretman predela oko očiju, drenaža, masaža, maska",
+          "60€ / 7.000 rsd"
+        ]
+      ],
+      "actual": [
+        [
+          "Higijenski tretman lica 1",
+          "Klasičan piling, čišćenje, maska",
+          "51€ / 6.000 rsd"
+        ],
+        [
+          "FACE GYM masaža lica",
+          "",
+          "55€ / 6.500 rsd"
+        ],
+        [
+          "READY TO GLOW",
+          "Venus Glow, drenažna masaža, Myolift, presoterapija",
+          "85€ / 10.000 rsd"
+        ],
+        [
+          "EYE ZONE Classic",
+          "Tretman predela oko očiju, drenaža, masaža, maska",
+          "60€ / 7.000 rsd"
+        ]
+      ]
+    },
+    {
+      "name": "C dom: quiz question 1",
+      "ok": true,
+      "expected": [
+        "Šta je tvoj primarni cilj?",
+        [
+          "Trenutni sjaj",
+          "Anti-aging",
+          "Dubinska nega",
+          "Telo i kontura"
+        ]
+      ],
+      "actual": [
+        "Šta je tvoj primarni cilj?",
+        [
+          "Trenutni sjaj",
+          "Anti-aging",
+          "Dubinska nega",
+          "Telo i kontura"
+        ]
+      ]
+    },
+    {
+      "name": "C dom: stat labels",
+      "ok": true,
+      "expected": [
+        "godina prakse",
+        "koncepta u Beogradu",
+        "klijenata godišnje"
+      ],
+      "actual": [
+        "godina prakse",
+        "koncepta u Beogradu",
+        "klijenata godišnje"
+      ]
+    },
+    {
+      "name": "C dom: testimonial authors/tags",
+      "ok": true,
+      "expected": [
+        [
+          "Jovana M.",
+          "Klijent · 2 godine"
+        ],
+        [
+          "Marija K.",
+          "Klijent · 3 godine"
+        ],
+        [
+          "Ana T.",
+          "Klijent · 1 godina"
+        ],
+        [
+          "Mirjana V.",
+          "Klijent · 6 meseci"
+        ]
+      ],
+      "actual": [
+        [
+          "Jovana M.",
+          "Klijent · 2 godine"
+        ],
+        [
+          "Marija K.",
+          "Klijent · 3 godine"
+        ],
+        [
+          "Ana T.",
+          "Klijent · 1 godina"
+        ],
+        [
+          "Mirjana V.",
+          "Klijent · 6 meseci"
+        ]
+      ]
+    },
+    {
+      "name": "C dom: nav links",
+      "ok": true,
+      "expected": [
+        [
+          "Tretmani",
+          "#tretmani"
+        ],
+        [
+          "O nama",
+          "#o-nama"
+        ],
+        [
+          "Lokacije",
+          "#lokacije"
+        ],
+        [
+          "Cenovnik",
+          "#usluge"
+        ],
+        [
+          "Posebna ponuda",
+          "posebna-ponuda.html"
+        ],
+        [
+          "Blog",
+          "blog.html"
+        ]
+      ],
+      "actual": [
+        [
+          "Tretmani",
+          "#tretmani"
+        ],
+        [
+          "O nama",
+          "#o-nama"
+        ],
+        [
+          "Lokacije",
+          "#lokacije"
+        ],
+        [
+          "Cenovnik",
+          "#usluge"
+        ],
+        [
+          "Posebna ponuda",
+          "posebna-ponuda.html"
+        ],
+        [
+          "Blog",
+          "blog.html"
+        ]
+      ]
+    },
+    {
+      "name": "C dom: footer social",
+      "ok": true,
+      "expected": [
+        [
+          "Instagram",
+          "https://instagram.com/bclepasvakidan"
+        ],
+        [
+          "Facebook",
+          "https://facebook.com/lepasvakidan"
+        ],
+        [
+          "YouTube",
+          "#"
+        ]
+      ],
+      "actual": [
+        [
+          "Instagram",
+          "https://instagram.com/bclepasvakidan"
+        ],
+        [
+          "Facebook",
+          "https://facebook.com/lepasvakidan"
+        ],
+        [
+          "YouTube",
+          "#"
+        ]
+      ]
+    },
+    {
+      "name": "C dom: offers count",
+      "ok": true,
+      "expected": 4,
+      "actual": 4
+    },
+    {
+      "name": "C dom: offers rows",
+      "ok": true,
+      "expected": [
+        [
+          "Sezonski paket",
+          "Instant Glow Up",
+          "Sublime laser + PROFHILO ili LOLA, brz i vidljiv rezultat pre važnog događaja.",
+          null,
+          "385€ / 45.000 rsd",
+          "Zakaži ovaj paket",
+          "https://wa.me/381648239439"
+        ],
+        [
+          "Za venčanje",
+          "Wedding Ready",
+          "Venus Legacy čitavog tela, Fresh Up tretman lica, limfna drenaža, Myolift masaža.",
+          "Dostupan i paket za 2 osobe, 428€ / 50.000 rsd.",
+          "255€ / 30.000 rsd",
+          "Zakaži ovaj paket",
+          "https://wa.me/381648239439"
+        ],
+        [
+          "Za mame",
+          "New Mum Recharge",
+          "Presoterapija + Dermafacial / Venus Glow + masaža lica, vrata i dekoltea.",
+          null,
+          "85€ / 10.000 rsd",
+          "Zakaži ovaj paket",
+          "https://wa.me/381648239439"
+        ],
+        [
+          "Summer Body Ready",
+          "Celo telo",
+          "Venus Legacy tela, boosteri + 6× presoterapija.",
+          null,
+          "885€ / 103.700 rsd",
+          "Zakaži ovaj paket",
+          "https://wa.me/381648239439"
+        ]
+      ],
+      "actual": [
+        [
+          "Sezonski paket",
+          "Instant Glow Up",
+          "Sublime laser + PROFHILO ili LOLA, brz i vidljiv rezultat pre važnog događaja.",
+          null,
+          "385€ / 45.000 rsd",
+          "Zakaži ovaj paket",
+          "https://wa.me/381648239439"
+        ],
+        [
+          "Za venčanje",
+          "Wedding Ready",
+          "Venus Legacy čitavog tela, Fresh Up tretman lica, limfna drenaža, Myolift masaža.",
+          "Dostupan i paket za 2 osobe, 428€ / 50.000 rsd.",
+          "255€ / 30.000 rsd",
+          "Zakaži ovaj paket",
+          "https://wa.me/381648239439"
+        ],
+        [
+          "Za mame",
+          "New Mum Recharge",
+          "Presoterapija + Dermafacial / Venus Glow + masaža lica, vrata i dekoltea.",
+          null,
+          "85€ / 10.000 rsd",
+          "Zakaži ovaj paket",
+          "https://wa.me/381648239439"
+        ],
+        [
+          "Summer Body Ready",
+          "Celo telo",
+          "Venus Legacy tela, boosteri + 6× presoterapija.",
+          null,
+          "885€ / 103.700 rsd",
+          "Zakaži ovaj paket",
+          "https://wa.me/381648239439"
+        ]
+      ]
+    },
+    {
+      "name": "C dom: offers EUR sum",
+      "ok": true,
+      "expected": 1610,
+      "actual": 1610
+    },
+    {
+      "name": "C dom: blog posts",
+      "ok": true,
+      "expected": 21,
+      "actual": 21
+    },
+    {
+      "name": "C dom: blog cards title/excerpt/image/category",
+      "ok": true,
+      "expected": [
+        [
+          "Laserska dermatologija Candela laserima",
+          "Candela medicinski laseri predstavljaju zlatan standard u dermatologiji za rešavanje konkretnih problema: uklanjanje kapilara, hiperpigmentacija, ožiljaka,...",
+          "assets/images/vertical-laser.jpg",
+          "Dermatologija"
+        ],
+        [
+          "Klasična dermatologija: Šta obuhvata dermatološki pregled?",
+          "Klasična (klinička) dermatologija bavi se prevencijom, dijagnostikom i lečenjem bolesti kože, kose, noktiju i vidljivih sluzokoža. Za razliku od estetske,...",
+          "assets/images/founder-portrait.jpg",
+          "Dermatologija"
+        ],
+        [
+          "Radiotalasno uklanjanje promena na koži",
+          "Radiotalasno uklanjanje promena na koži predstavlja vrstu dermatološkog zahvata, odnosno radiofrekventne elektrohirurgije koja je razvijena kako bi se...",
+          "assets/images/vertical-laser.jpg",
+          "Dermatologija"
+        ],
+        [
+          "PRP i mezoterapija: Tretmani skalpa za pospešivanje rasta kose",
+          "Tretmani skalpa, koji imaju za cilj pospešivanje rasta kose, veoma su zastupljeni u dermatologiji, jer su fokusirani na stimulaciju folikula, poboljšanje...",
+          "assets/images/founder-portrait.jpg",
+          "Dermatologija"
+        ],
+        [
+          "Regenerativne procedure i biorevitalizacija lica, vrata i dekoltea",
+          "Ukoliko želite da svojoj koži pružite dubinsku hidrataciju, podizanje prirodnog sjaja i elastičnosti, uz obnavljanje kolagena, onda je biorevitalizacija...",
+          "assets/images/vertical-esthetic.jpg",
+          "Estetske procedure"
+        ],
+        [
+          "Botulinski toksin tipa A - Botoks tretman",
+          "Tretman botulinskim toksinom tipa A, poznatiji kao botoks tretman, definitivno je najtraženija estetska procedura protiv bora. Iako je njegova popularnost...",
+          "assets/images/about.jpg",
+          "Estetske procedure"
+        ],
+        [
+          "Hijaluronski fileri",
+          "Aplikacija hijaluronskih filera spada u najzastupljenije estetske procedure. Zahvaljujući rezultatima koji se njima postižu, činjenici da imaju široku...",
+          "assets/images/vertical-esthetic.jpg",
+          "Estetske procedure"
+        ],
+        [
+          "Lifting nitima: Nehirurški lifting i konturisanje",
+          "Da li ste čuli za lifting nitima? Reč je o minimalno invazivnoj estetskoj proceduri kojom se, specijalnim biorazgradivim nitima, zateže koža lica i tela.",
+          "assets/images/about.jpg",
+          "Estetske procedure"
+        ],
+        [
+          "Biološki tretmani lica: Užitak koji sebi morate priuštiti",
+          "Ako se za neki od tretmana lica može reći da predstavlja svojevrsno uživanje koje sebi treba redovno priuštiti, onda su to biološki tretmani lica. Pored...",
+          "assets/images/vertical-face.jpg",
+          "Kozmetički tretmani"
+        ],
+        [
+          "Dermapen i hemijski pilinzi za „holivudski tretman“",
+          "Tragate za najdelotvornijom metodom za podmlađivanje kože? Isprobajte „holivudski tretman“ Dermapenom i hemijskim pilinzima.",
+          "assets/images/about.jpg",
+          "Kozmetički tretmani"
+        ],
+        [
+          "Higijenski tretmani lica: Za dubinsko čišćenje i regeneraciju kože",
+          "Nema boljeg načina za dubinsko čišćenje, hidrataciju i regeneraciju kože od higijenskog tretmana lica. Uz biološke tretmane, ovo je jedan od najboljih...",
+          "assets/images/woman-portrait.png",
+          "Kozmetički tretmani"
+        ],
+        [
+          "7E MyoLift™ MD tretman: Neinvazivni trening vašeg lica",
+          "Da li želite da osetite efekat „prave mikrostruje“? Predstavljamo vam 7E MyoLift™ MD, mikrostrujni uređaj za nehirurške, kozmetičke tretmane.",
+          "assets/images/vertical-face.jpg",
+          "Kozmetički tretmani"
+        ],
+        [
+          "Preime Dermafacial: Napredna tehnologija za sofisticirano podmlađivanje kože",
+          "U samom vrhu savremene estetske kozmetologije nalazi se Preime Dermafacial tretman, koji kroz kombinaciju naprednih tehnologija postiže sofisticirano...",
+          "assets/images/about.jpg",
+          "Kozmetički tretmani"
+        ],
+        [
+          "Venus Glow: Za dubinsko čišćenje i hidrataciju kože",
+          "Ukoliko ste u potrazi za vrhunskim neinvazivnim tretmanom, koji dubinski čisti pore, pospešuje hidrataciju kože lica, te predstavlja odličnu prevenciju...",
+          "assets/images/woman-portrait.png",
+          "Kozmetički tretmani"
+        ],
+        [
+          "Venus Legacy: Revolucija u zatezanju kože lica",
+          "Sigurni smo da ste, barem jednom do sada, čuli za benefite Venus Legacy tretmana u nezi lica. Ukoliko niste imali priliku da vidite rezultate koji se njime...",
+          "assets/images/vertical-face.jpg",
+          "Kozmetički tretmani"
+        ],
+        [
+          "AWT (Acoustic Wave Therapy) Storz tretman za telo",
+          "AWT, odnosno Acoustic Wave Therapy ili Shockwave Storz tretman, neinvazivna je švajcarska metoda koja koristi zvučne (akustične) talase frekvencije do 5...",
+          "assets/images/vertical-body.jpg",
+          "Telo"
+        ],
+        [
+          "Med Contour tretman za oblikovanje tela",
+          "Med Contour je neinvazivni tretman za oblikovanje tela, redukciju celulita i zatezanje kože. Kombinuje ultrazvuk i radiofrekvenciju kako bi potpuno bezbolno...",
+          "assets/images/vertical-laser.jpg",
+          "Telo"
+        ],
+        [
+          "Tretmani tela za opuštanje i negu",
+          "Pored klasičnih masaža lica i tela, nudimo vam čitav niz targetiranih tretmana koji su tu da vam pomognu u smanjenju i korigovanju konkretnih nesavršenosti.",
+          "assets/images/vertical-body.jpg",
+          "Telo"
+        ],
+        [
+          "ProBallancer presoterapija: Aparaturna limfna drenaža",
+          "Presoterapija predstavlja standardizovanu, najbržu i najkomforniju opciju limfne drenaže, koja pomaže izbacivanje toksina i viška tečnosti, razgradnju...",
+          "assets/images/vertical-laser.jpg",
+          "Telo"
+        ],
+        [
+          "Venus Legacy tretmani: Za preoblikovanje i zatezanje tela",
+          "Venus Legacy aparat predstavlja jedan od najpopularnijih, a svakako najboljih rešenja za neinvazivno preoblikovanje i zatezanje kože. Pored toga što pomaže...",
+          "assets/images/vertical-body.jpg",
+          "Telo"
+        ],
+        [
+          "Bezbolna i bezbedna: Laserska epilacija Venus Velocity aparatom",
+          "Laserska epilacija jedan je od najtraženijih tretmana tela na svetu, naročito poslednjih godina, jer sa sobom nosi čitav niz prednosti:",
+          "assets/images/vertical-laser.jpg",
+          "Telo"
+        ]
+      ],
+      "actual": [
+        [
+          "Laserska dermatologija Candela laserima",
+          "Candela medicinski laseri predstavljaju zlatan standard u dermatologiji za rešavanje konkretnih problema: uklanjanje kapilara, hiperpigmentacija, ožiljaka,...",
+          "assets/images/vertical-laser.jpg",
+          "Dermatologija"
+        ],
+        [
+          "Klasična dermatologija: Šta obuhvata dermatološki pregled?",
+          "Klasična (klinička) dermatologija bavi se prevencijom, dijagnostikom i lečenjem bolesti kože, kose, noktiju i vidljivih sluzokoža. Za razliku od estetske,...",
+          "assets/images/founder-portrait.jpg",
+          "Dermatologija"
+        ],
+        [
+          "Radiotalasno uklanjanje promena na koži",
+          "Radiotalasno uklanjanje promena na koži predstavlja vrstu dermatološkog zahvata, odnosno radiofrekventne elektrohirurgije koja je razvijena kako bi se...",
+          "assets/images/vertical-laser.jpg",
+          "Dermatologija"
+        ],
+        [
+          "PRP i mezoterapija: Tretmani skalpa za pospešivanje rasta kose",
+          "Tretmani skalpa, koji imaju za cilj pospešivanje rasta kose, veoma su zastupljeni u dermatologiji, jer su fokusirani na stimulaciju folikula, poboljšanje...",
+          "assets/images/founder-portrait.jpg",
+          "Dermatologija"
+        ],
+        [
+          "Regenerativne procedure i biorevitalizacija lica, vrata i dekoltea",
+          "Ukoliko želite da svojoj koži pružite dubinsku hidrataciju, podizanje prirodnog sjaja i elastičnosti, uz obnavljanje kolagena, onda je biorevitalizacija...",
+          "assets/images/vertical-esthetic.jpg",
+          "Estetske procedure"
+        ],
+        [
+          "Botulinski toksin tipa A - Botoks tretman",
+          "Tretman botulinskim toksinom tipa A, poznatiji kao botoks tretman, definitivno je najtraženija estetska procedura protiv bora. Iako je njegova popularnost...",
+          "assets/images/about.jpg",
+          "Estetske procedure"
+        ],
+        [
+          "Hijaluronski fileri",
+          "Aplikacija hijaluronskih filera spada u najzastupljenije estetske procedure. Zahvaljujući rezultatima koji se njima postižu, činjenici da imaju široku...",
+          "assets/images/vertical-esthetic.jpg",
+          "Estetske procedure"
+        ],
+        [
+          "Lifting nitima: Nehirurški lifting i konturisanje",
+          "Da li ste čuli za lifting nitima? Reč je o minimalno invazivnoj estetskoj proceduri kojom se, specijalnim biorazgradivim nitima, zateže koža lica i tela.",
+          "assets/images/about.jpg",
+          "Estetske procedure"
+        ],
+        [
+          "Biološki tretmani lica: Užitak koji sebi morate priuštiti",
+          "Ako se za neki od tretmana lica može reći da predstavlja svojevrsno uživanje koje sebi treba redovno priuštiti, onda su to biološki tretmani lica. Pored...",
+          "assets/images/vertical-face.jpg",
+          "Kozmetički tretmani"
+        ],
+        [
+          "Dermapen i hemijski pilinzi za „holivudski tretman“",
+          "Tragate za najdelotvornijom metodom za podmlađivanje kože? Isprobajte „holivudski tretman“ Dermapenom i hemijskim pilinzima.",
+          "assets/images/about.jpg",
+          "Kozmetički tretmani"
+        ],
+        [
+          "Higijenski tretmani lica: Za dubinsko čišćenje i regeneraciju kože",
+          "Nema boljeg načina za dubinsko čišćenje, hidrataciju i regeneraciju kože od higijenskog tretmana lica. Uz biološke tretmane, ovo je jedan od najboljih...",
+          "assets/images/woman-portrait.png",
+          "Kozmetički tretmani"
+        ],
+        [
+          "7E MyoLift™ MD tretman: Neinvazivni trening vašeg lica",
+          "Da li želite da osetite efekat „prave mikrostruje“? Predstavljamo vam 7E MyoLift™ MD, mikrostrujni uređaj za nehirurške, kozmetičke tretmane.",
+          "assets/images/vertical-face.jpg",
+          "Kozmetički tretmani"
+        ],
+        [
+          "Preime Dermafacial: Napredna tehnologija za sofisticirano podmlađivanje kože",
+          "U samom vrhu savremene estetske kozmetologije nalazi se Preime Dermafacial tretman, koji kroz kombinaciju naprednih tehnologija postiže sofisticirano...",
+          "assets/images/about.jpg",
+          "Kozmetički tretmani"
+        ],
+        [
+          "Venus Glow: Za dubinsko čišćenje i hidrataciju kože",
+          "Ukoliko ste u potrazi za vrhunskim neinvazivnim tretmanom, koji dubinski čisti pore, pospešuje hidrataciju kože lica, te predstavlja odličnu prevenciju...",
+          "assets/images/woman-portrait.png",
+          "Kozmetički tretmani"
+        ],
+        [
+          "Venus Legacy: Revolucija u zatezanju kože lica",
+          "Sigurni smo da ste, barem jednom do sada, čuli za benefite Venus Legacy tretmana u nezi lica. Ukoliko niste imali priliku da vidite rezultate koji se njime...",
+          "assets/images/vertical-face.jpg",
+          "Kozmetički tretmani"
+        ],
+        [
+          "AWT (Acoustic Wave Therapy) Storz tretman za telo",
+          "AWT, odnosno Acoustic Wave Therapy ili Shockwave Storz tretman, neinvazivna je švajcarska metoda koja koristi zvučne (akustične) talase frekvencije do 5...",
+          "assets/images/vertical-body.jpg",
+          "Telo"
+        ],
+        [
+          "Med Contour tretman za oblikovanje tela",
+          "Med Contour je neinvazivni tretman za oblikovanje tela, redukciju celulita i zatezanje kože. Kombinuje ultrazvuk i radiofrekvenciju kako bi potpuno bezbolno...",
+          "assets/images/vertical-laser.jpg",
+          "Telo"
+        ],
+        [
+          "Tretmani tela za opuštanje i negu",
+          "Pored klasičnih masaža lica i tela, nudimo vam čitav niz targetiranih tretmana koji su tu da vam pomognu u smanjenju i korigovanju konkretnih nesavršenosti.",
+          "assets/images/vertical-body.jpg",
+          "Telo"
+        ],
+        [
+          "ProBallancer presoterapija: Aparaturna limfna drenaža",
+          "Presoterapija predstavlja standardizovanu, najbržu i najkomforniju opciju limfne drenaže, koja pomaže izbacivanje toksina i viška tečnosti, razgradnju...",
+          "assets/images/vertical-laser.jpg",
+          "Telo"
+        ],
+        [
+          "Venus Legacy tretmani: Za preoblikovanje i zatezanje tela",
+          "Venus Legacy aparat predstavlja jedan od najpopularnijih, a svakako najboljih rešenja za neinvazivno preoblikovanje i zatezanje kože. Pored toga što pomaže...",
+          "assets/images/vertical-body.jpg",
+          "Telo"
+        ],
+        [
+          "Bezbolna i bezbedna: Laserska epilacija Venus Velocity aparatom",
+          "Laserska epilacija jedan je od najtraženijih tretmana tela na svetu, naročito poslednjih godina, jer sa sobom nosi čitav niz prednosti:",
+          "assets/images/vertical-laser.jpg",
+          "Telo"
+        ]
+      ]
+    },
+    {
+      "name": "C dom: blog tab labels/counts",
+      "ok": true,
+      "expected": [
+        "Sve tekstove (21)",
+        "Dermatologija (4)",
+        "Estetske procedure (4)",
+        "Kozmetički tretmani (7)",
+        "Telo (6)"
+      ],
+      "actual": [
+        "Sve tekstove (21)",
+        "Dermatologija (4)",
+        "Estetske procedure (4)",
+        "Kozmetički tretmani (7)",
+        "Telo (6)"
+      ]
+    },
+    {
+      "name": "C dom: blog tag pills == derived tags (first 4)",
+      "ok": true,
+      "expected": [
+        [
+          "#akne",
+          "#antiaging",
+          "#dermatologija",
+          "#pigmentacije"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#pilinzi",
+          "#botoks"
+        ],
+        [
+          "#lifting-niti",
+          "#laserska-epilacija",
+          "#dermatologija",
+          "#trudnoca"
+        ],
+        [
+          "#glow",
+          "#dermapen",
+          "#mezoterapija",
+          "#dermatologija"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#hidratacija",
+          "#glow"
+        ],
+        [
+          "#antiaging",
+          "#glow",
+          "#pilinzi",
+          "#botoks"
+        ],
+        [
+          "#antiaging",
+          "#botoks",
+          "#hijaluron",
+          "#lifting-niti"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#lifting",
+          "#dermapen"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#hidratacija",
+          "#pilinzi"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#pilinzi",
+          "#dermapen"
+        ],
+        [
+          "#akne",
+          "#hidratacija",
+          "#pilinzi",
+          "#lice"
+        ],
+        [
+          "#antiaging",
+          "#lifting",
+          "#glow",
+          "#pilinzi"
+        ],
+        [
+          "#antiaging",
+          "#lifting",
+          "#hidratacija",
+          "#glow"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#hidratacija",
+          "#glow"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#lifting",
+          "#telo"
+        ],
+        [
+          "#antiaging",
+          "#lifting",
+          "#lifting-niti",
+          "#celulit"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#lifting",
+          "#celulit"
+        ],
+        [
+          "#akne",
+          "#lifting",
+          "#hidratacija",
+          "#pilinzi"
+        ],
+        [
+          "#akne",
+          "#glow",
+          "#mezoterapija",
+          "#telo"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#lifting",
+          "#celulit"
+        ],
+        [
+          "#laserska-epilacija",
+          "#dermatologija",
+          "#telo",
+          "#trudnoca"
+        ]
+      ],
+      "actual": [
+        [
+          "#akne",
+          "#antiaging",
+          "#dermatologija",
+          "#pigmentacije"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#pilinzi",
+          "#botoks"
+        ],
+        [
+          "#lifting-niti",
+          "#laserska-epilacija",
+          "#dermatologija",
+          "#trudnoca"
+        ],
+        [
+          "#glow",
+          "#dermapen",
+          "#mezoterapija",
+          "#dermatologija"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#hidratacija",
+          "#glow"
+        ],
+        [
+          "#antiaging",
+          "#glow",
+          "#pilinzi",
+          "#botoks"
+        ],
+        [
+          "#antiaging",
+          "#botoks",
+          "#hijaluron",
+          "#lifting-niti"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#lifting",
+          "#dermapen"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#hidratacija",
+          "#pilinzi"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#pilinzi",
+          "#dermapen"
+        ],
+        [
+          "#akne",
+          "#hidratacija",
+          "#pilinzi",
+          "#lice"
+        ],
+        [
+          "#antiaging",
+          "#lifting",
+          "#glow",
+          "#pilinzi"
+        ],
+        [
+          "#antiaging",
+          "#lifting",
+          "#hidratacija",
+          "#glow"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#hidratacija",
+          "#glow"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#lifting",
+          "#telo"
+        ],
+        [
+          "#antiaging",
+          "#lifting",
+          "#lifting-niti",
+          "#celulit"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#lifting",
+          "#celulit"
+        ],
+        [
+          "#akne",
+          "#lifting",
+          "#hidratacija",
+          "#pilinzi"
+        ],
+        [
+          "#akne",
+          "#glow",
+          "#mezoterapija",
+          "#telo"
+        ],
+        [
+          "#akne",
+          "#antiaging",
+          "#lifting",
+          "#celulit"
+        ],
+        [
+          "#laserska-epilacija",
+          "#dermatologija",
+          "#telo",
+          "#trudnoca"
+        ]
+      ]
+    }
+  ],
+  "dom": {
+    "status": "ran",
+    "jsdomPath": "/Users/vladajovic/Developer/ChatBots for Business/node_modules/jsdom",
+    "indexScriptErrors": 0,
+    "recount": {
+      "tabs": 5,
+      "groups": 31,
+      "standardServices": 182,
+      "laserServices": 28,
+      "highlightedStandard": 44,
+      "standardEurMinSum": 37957,
+      "standardRsdMinSum": 4437700,
+      "laserUnifiedEurMinSum": 5935
+    },
+    "offersScriptErrors": 0,
+    "offersEurSum": 1610,
+    "blogScriptErrors": 0
+  },
+  "recount": {
+    "rawCounts": {
+      "tabs": 5,
+      "groups": 31,
+      "standardServices": 182,
+      "laserServices": 28,
+      "services": 210,
+      "highlightedStandard": 44
+    },
+    "rawSums": {
+      "standardEurMinSum": 37957,
+      "standardEurMaxSum": 38082,
+      "standardRsdMinSum": 4437700,
+      "standardRsdMaxSum": 4452500,
+      "laserNbEurMinSum": 3355,
+      "laserBwEurMinSum": 5541
+    },
+    "rawOffers": 4,
+    "rawBlog": 21,
+    "rawTestimonials": 4,
+    "rawVerticals": 5,
+    "rawQuizQ": 3,
+    "rawTagRules": 34
+  },
+  "provenance": {
+    "verbatimStringsChecked": 2986,
+    "notFound": 0
+  },
+  "ranAt": "2026-10-07T16:33:34.770Z",
+  "mutations": [
+    {
+      "name": "price changed in a cenovnik row",
+      "caught": true,
+      "failures": 2,
+      "first": "B provenance (not found in old source): pricing.tabs.0.groups.0.services.0.price = \"52€ / 6.000 rsd\""
+    },
+    {
+      "name": "diacritic dropped in a testimonial",
+      "caught": true,
+      "failures": 1,
+      "first": "B provenance (not found in old source): testimonials.0.quote = \"Posle prve konsultacije Tamara mi je dala plan koji nije samo radio, vec sam"
+    },
+    {
+      "name": "service removed from a group",
+      "caught": true,
+      "failures": 2,
+      "first": "tree services == allServices.length: content=209 recomputed=210"
+    },
+    {
+      "name": "offer price altered",
+      "caught": true,
+      "failures": 2,
+      "first": "B provenance (not found in old source): offers.0.price = \"395€ / 45.000 rsd\""
+    },
+    {
+      "name": "blog excerpt retyped",
+      "caught": true,
+      "failures": 2,
+      "first": "B provenance (not found in old source): blog.3.excerpt = \"Tretmani skalpa, koji imaju za cilj pospešivanje rasta kose, veoma su zastupljeni "
+    },
+    {
+      "name": "stat value changed",
+      "caught": true,
+      "failures": 2,
+      "first": "stat display klijenata godišnje: content=\"1.000+\" recomputed=\"1.200+\""
+    },
+    {
+      "name": "phone number changed",
+      "caught": true,
+      "failures": 1,
+      "first": "B provenance (not found in old source): locations.1.phone.display = \"+381 66 177 118\""
+    },
+    {
+      "name": "\"new\" copy string that already exists in the old site",
+      "caught": true,
+      "failures": 1,
+      "first": "E NEW copy already exists in old site: Zakaži"
+    }
+  ]
+}

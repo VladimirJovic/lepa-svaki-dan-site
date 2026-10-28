@@ -1,0 +1,3903 @@
+{
+  "meta": {
+    "pack": "Lepa Svaki Dan v2 texts pack: service-links.json",
+    "generatedBy": "ECHOSYSTEM-MOTHER AGENCY",
+    "generatedAt": "2026-10-07T16:33:36Z",
+    "ids": {
+      "groupId": "\"<tabId>:<groupIndex>\" (the data-group-id convention of the previews)",
+      "serviceId": "\"<tabId>:<groupIndex>:<serviceIndex>\" (content.json allServices[].id)",
+      "articleId": "art-1 ... art-21 (articles.json)"
+    },
+    "roles": {
+      "primary": "the price-list group IS the subject of the article (or holds the services named in it)",
+      "related": "other groups whose services are named in, or combined with, the article subject"
+    },
+    "basis": {
+      "group": "whole group is the subject",
+      "name": "service name contains the topic",
+      "description": "service description contains the topic",
+      "name or description": "name or description contains the topic",
+      "text": "the article text names it, the service name does not"
+    },
+    "method": "Curated in _tools/texts_curation.py and VALIDATED by the builder: every id exists, every selector matches at least one service, the two old SERVICE_BLOG_LINKS rules are reproduced. Matching is on the real service name/description (diacritics folded), never on invented synonyms.",
+    "counts": {
+      "articles": 21,
+      "matchedArticles": 21,
+      "unmatchedArticles": 0,
+      "groups": 31,
+      "groupsWithoutArticle": 3,
+      "servicesLinked": 164,
+      "services": 210
+    }
+  },
+  "oldSiteRules": [
+    {
+      "oldRule": "SERVICE_BLOG_LINKS",
+      "matchSubstring": "higijenski",
+      "postIndex": 10,
+      "postTitle": "Higijenski tretmani lica: Za dubinsko čišćenje i regeneraciju kože",
+      "articleId": "art-11",
+      "serviceIds": [
+        "lice:0:0",
+        "lice:0:1",
+        "lice:0:2",
+        "lice:0:3",
+        "lice:0:4"
+      ],
+      "reconciled": true,
+      "note": "every service of the old rule is linked to the same text here (the old post index equals the article order)"
+    },
+    {
+      "oldRule": "SERVICE_BLOG_LINKS",
+      "matchSubstring": "dermafacial",
+      "postIndex": 12,
+      "postTitle": "Preime Dermafacial: Napredna tehnologija za sofisticirano podmlađivanje kože",
+      "articleId": "art-13",
+      "serviceIds": [
+        "lice:2:3",
+        "lice:2:4"
+      ],
+      "reconciled": true,
+      "note": "every service of the old rule is linked to the same text here (the old post index equals the article order)"
+    }
+  ],
+  "unmatchedArticles": [],
+  "unmatchedNote": "Every one of the 21 articles has at least one price-list group.",
+  "articles": [
+    {
+      "articleId": "art-1",
+      "slug": "laserska-dermatologija-candela-laserima",
+      "title": "Laserska dermatologija Candela laserima",
+      "segmentId": "dermatologija",
+      "matched": true,
+      "primaryGroupIds": [
+        "estetske:5"
+      ],
+      "relatedGroupIds": [],
+      "serviceIds": [
+        "estetske:5:2",
+        "estetske:5:3",
+        "estetske:5:4",
+        "estetske:5:5",
+        "estetske:5:6",
+        "estetske:5:7",
+        "estetske:5:8",
+        "estetske:5:9",
+        "estetske:5:13"
+      ],
+      "groups": [
+        {
+          "tabId": "estetske",
+          "groupIndex": 5,
+          "groupId": "estetske:5",
+          "groupTitle": "Dermatologija",
+          "tabLabel": "Estetske procedure",
+          "role": "primary",
+          "basis": "Price-list group \"Dermatologija\" holds the Candela laser services the article describes",
+          "origin": null,
+          "serviceIds": [
+            "estetske:5:2",
+            "estetske:5:3",
+            "estetske:5:4",
+            "estetske:5:5",
+            "estetske:5:6",
+            "estetske:5:7",
+            "estetske:5:8",
+            "estetske:5:9",
+            "estetske:5:13"
+          ],
+          "services": [
+            {
+              "id": "estetske:5:2",
+              "name": "Candela Nordlys, Rozacea, celo lice",
+              "basis": "name",
+              "why": "service name contains \"Candela\" (Nordlys, MatrixPro Sublime, Sublative)"
+            },
+            {
+              "id": "estetske:5:3",
+              "name": "Candela Nordlys, Fotorejuvenacija lica",
+              "basis": "name",
+              "why": "service name contains \"Candela\" (Nordlys, MatrixPro Sublime, Sublative)"
+            },
+            {
+              "id": "estetske:5:4",
+              "name": "Candela Nordlys, Fotorejuvenacija lica, vrata i dekoltea",
+              "basis": "name",
+              "why": "service name contains \"Candela\" (Nordlys, MatrixPro Sublime, Sublative)"
+            },
+            {
+              "id": "estetske:5:5",
+              "name": "Candela Nordlys, Tretman akni na licu",
+              "basis": "name",
+              "why": "service name contains \"Candela\" (Nordlys, MatrixPro Sublime, Sublative)"
+            },
+            {
+              "id": "estetske:5:6",
+              "name": "Candela Nordlys Frax, Ožiljci od akni, celo lice",
+              "basis": "name",
+              "why": "service name contains \"Candela\" (Nordlys, MatrixPro Sublime, Sublative)"
+            },
+            {
+              "id": "estetske:5:7",
+              "name": "Candela MatrixPro Sublime, Celo lice",
+              "basis": "name",
+              "why": "service name contains \"Candela\" (Nordlys, MatrixPro Sublime, Sublative)"
+            },
+            {
+              "id": "estetske:5:8",
+              "name": "Candela MatrixPro Sublime, Protokol 5×",
+              "basis": "name",
+              "why": "service name contains \"Candela\" (Nordlys, MatrixPro Sublime, Sublative)"
+            },
+            {
+              "id": "estetske:5:9",
+              "name": "Candela MatrixPro Sublative, Celo lice",
+              "basis": "name",
+              "why": "service name contains \"Candela\" (Nordlys, MatrixPro Sublime, Sublative)"
+            },
+            {
+              "id": "estetske:5:13",
+              "name": "Uklanjanje proširenih kapilara na licu (jedna promena)",
+              "basis": "text",
+              "why": "the article lists removal of broken capillaries (\"uklanjanje kapilara\") among the Candela indications"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-2",
+      "slug": "dermatoloski-pregled-dermatologa",
+      "title": "Dermatološki/pregled dermatologa",
+      "segmentId": "dermatologija",
+      "matched": true,
+      "primaryGroupIds": [
+        "estetske:5"
+      ],
+      "relatedGroupIds": [
+        "estetske:7"
+      ],
+      "serviceIds": [
+        "estetske:5:0",
+        "estetske:5:1"
+      ],
+      "groups": [
+        {
+          "tabId": "estetske",
+          "groupIndex": 5,
+          "groupId": "estetske:5",
+          "groupTitle": "Dermatologija",
+          "tabLabel": "Estetske procedure",
+          "role": "primary",
+          "basis": "Price-list group \"Dermatologija\" holds the dermatological exams the article describes",
+          "origin": null,
+          "serviceIds": [
+            "estetske:5:0",
+            "estetske:5:1"
+          ],
+          "services": [
+            {
+              "id": "estetske:5:0",
+              "name": "Specijalistički dermatološki pregled dr Krstić",
+              "basis": "name",
+              "why": "\"Specijalistički dermatološki pregled\" and \"pregled sa dermoskopijom mladeža\" are the exam and the dermatoscopy described in the article"
+            },
+            {
+              "id": "estetske:5:1",
+              "name": "Specijalistički pregled sa dermoskopijom mladeža",
+              "basis": "name",
+              "why": "\"Specijalistički dermatološki pregled\" and \"pregled sa dermoskopijom mladeža\" are the exam and the dermatoscopy described in the article"
+            }
+          ]
+        },
+        {
+          "tabId": "estetske",
+          "groupIndex": 7,
+          "groupId": "estetske:7",
+          "groupTitle": "Rast kose",
+          "tabLabel": "Estetske procedure",
+          "role": "related",
+          "basis": "The article names alopecia (hair loss) among the problems a dermatologist treats",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        }
+      ]
+    },
+    {
+      "articleId": "art-3",
+      "slug": "radiotalasno-uklanjanje-promena-na-kozi",
+      "title": "Radiotalasno uklanjanje promena na koži",
+      "segmentId": "dermatologija",
+      "matched": true,
+      "primaryGroupIds": [
+        "estetske:5"
+      ],
+      "relatedGroupIds": [],
+      "serviceIds": [
+        "estetske:5:10",
+        "estetske:5:11"
+      ],
+      "groups": [
+        {
+          "tabId": "estetske",
+          "groupIndex": 5,
+          "groupId": "estetske:5",
+          "groupTitle": "Dermatologija",
+          "tabLabel": "Estetske procedure",
+          "role": "primary",
+          "basis": "Price-list group \"Dermatologija\" holds the radiowave removal services",
+          "origin": null,
+          "serviceIds": [
+            "estetske:5:10",
+            "estetske:5:11"
+          ],
+          "services": [
+            {
+              "id": "estetske:5:10",
+              "name": "Radiotalasno uklanjanje promena, lice (do 10)",
+              "basis": "name",
+              "why": "service name contains \"Radiotalasno uklanjanje promena\""
+            },
+            {
+              "id": "estetske:5:11",
+              "name": "Radiotalasno uklanjanje promena, telo (po regiji)",
+              "basis": "name",
+              "why": "service name contains \"Radiotalasno uklanjanje promena\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-4",
+      "slug": "prp-i-mezoterapija",
+      "title": "PRP i mezoterapija",
+      "segmentId": "dermatologija",
+      "matched": true,
+      "primaryGroupIds": [
+        "estetske:7"
+      ],
+      "relatedGroupIds": [
+        "estetske:3"
+      ],
+      "serviceIds": [
+        "estetske:3:13",
+        "estetske:3:14",
+        "estetske:3:15",
+        "estetske:3:16",
+        "estetske:7:2",
+        "estetske:7:3",
+        "estetske:7:4",
+        "estetske:7:5"
+      ],
+      "groups": [
+        {
+          "tabId": "estetske",
+          "groupIndex": 7,
+          "groupId": "estetske:7",
+          "groupTitle": "Rast kose",
+          "tabLabel": "Estetske procedure",
+          "role": "primary",
+          "basis": "Price-list group \"Rast kose\" lists PRP and mesotherapy for the scalp",
+          "origin": null,
+          "serviceIds": [
+            "estetske:7:2",
+            "estetske:7:3",
+            "estetske:7:4",
+            "estetske:7:5"
+          ],
+          "services": [
+            {
+              "id": "estetske:7:2",
+              "name": "PRP tretman kose",
+              "basis": "name",
+              "why": "\"PRP tretman kose\", \"PRP paket ... kosa\", \"Mezoterapija kose\" are the two treatments the article describes (the exosome lines are not mentioned in the text)"
+            },
+            {
+              "id": "estetske:7:3",
+              "name": "PRP paket 3× tretmana, kosa",
+              "basis": "name",
+              "why": "\"PRP tretman kose\", \"PRP paket ... kosa\", \"Mezoterapija kose\" are the two treatments the article describes (the exosome lines are not mentioned in the text)"
+            },
+            {
+              "id": "estetske:7:4",
+              "name": "Mezoterapija kose, 1 tretman",
+              "basis": "name",
+              "why": "\"PRP tretman kose\", \"PRP paket ... kosa\", \"Mezoterapija kose\" are the two treatments the article describes (the exosome lines are not mentioned in the text)"
+            },
+            {
+              "id": "estetske:7:5",
+              "name": "Mezoterapija kose, paket 3×",
+              "basis": "name",
+              "why": "\"PRP tretman kose\", \"PRP paket ... kosa\", \"Mezoterapija kose\" are the two treatments the article describes (the exosome lines are not mentioned in the text)"
+            }
+          ]
+        },
+        {
+          "tabId": "estetske",
+          "groupIndex": 3,
+          "groupId": "estetske:3",
+          "groupTitle": "Biorevitalizacija i skinbosteri",
+          "tabLabel": "Estetske procedure",
+          "role": "related",
+          "basis": "The article says PRP and mesotherapy are also combined in aesthetic treatments of the face",
+          "origin": null,
+          "serviceIds": [
+            "estetske:3:13",
+            "estetske:3:14",
+            "estetske:3:15",
+            "estetske:3:16"
+          ],
+          "services": [
+            {
+              "id": "estetske:3:13",
+              "name": "PRP lice ili telo po regiji",
+              "basis": "text",
+              "why": "PRP and mesotherapy for face and body"
+            },
+            {
+              "id": "estetske:3:14",
+              "name": "PRP paket 3× tretmana",
+              "basis": "text",
+              "why": "PRP and mesotherapy for face and body"
+            },
+            {
+              "id": "estetske:3:15",
+              "name": "Mezoterapija lica",
+              "basis": "text",
+              "why": "PRP and mesotherapy for face and body"
+            },
+            {
+              "id": "estetske:3:16",
+              "name": "Mezoterapija, lice, vrat i dekolte",
+              "basis": "text",
+              "why": "PRP and mesotherapy for face and body"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-5",
+      "slug": "regenerativne-procedure-i-biorevitalizacija-lica-vrata-i-dekoltea",
+      "title": "Regenerativne procedure i biorevitalizacija lica, vrata i dekoltea",
+      "segmentId": "estetske",
+      "matched": true,
+      "primaryGroupIds": [
+        "estetske:3"
+      ],
+      "relatedGroupIds": [],
+      "serviceIds": [
+        "estetske:3:0",
+        "estetske:3:1",
+        "estetske:3:6",
+        "estetske:3:7",
+        "estetske:3:12",
+        "estetske:3:13",
+        "estetske:3:14",
+        "estetske:3:15",
+        "estetske:3:16"
+      ],
+      "groups": [
+        {
+          "tabId": "estetske",
+          "groupIndex": 3,
+          "groupId": "estetske:3",
+          "groupTitle": "Biorevitalizacija i skinbosteri",
+          "tabLabel": "Estetske procedure",
+          "role": "primary",
+          "basis": "Price-list group \"Biorevitalizacija i skinbosteri\" is the article subject (biorevitalization, PRP, mesotherapy, skin boosters)",
+          "origin": null,
+          "serviceIds": [
+            "estetske:3:0",
+            "estetske:3:1",
+            "estetske:3:6",
+            "estetske:3:7",
+            "estetske:3:12",
+            "estetske:3:13",
+            "estetske:3:14",
+            "estetske:3:15",
+            "estetske:3:16"
+          ],
+          "services": [
+            {
+              "id": "estetske:3:0",
+              "name": "Biorevitalizacija lica, Jalupro",
+              "basis": "name",
+              "why": "name contains \"biorevitalizacija\", \"skinbooster\", \"PRP\" or \"Mezoterapija\", the four procedures the article lists"
+            },
+            {
+              "id": "estetske:3:1",
+              "name": "Biorevitalizacija lice i vrat, Jalupro",
+              "basis": "name",
+              "why": "name contains \"biorevitalizacija\", \"skinbooster\", \"PRP\" or \"Mezoterapija\", the four procedures the article lists"
+            },
+            {
+              "id": "estetske:3:6",
+              "name": "LOLA biorevitalizacija",
+              "basis": "name",
+              "why": "name contains \"biorevitalizacija\", \"skinbooster\", \"PRP\" or \"Mezoterapija\", the four procedures the article lists"
+            },
+            {
+              "id": "estetske:3:7",
+              "name": "Ejal skinbooster",
+              "basis": "name",
+              "why": "name contains \"biorevitalizacija\", \"skinbooster\", \"PRP\" or \"Mezoterapija\", the four procedures the article lists"
+            },
+            {
+              "id": "estetske:3:12",
+              "name": "Cellular Matrix (PRP + neukršteni hijaluron)",
+              "basis": "name",
+              "why": "name contains \"biorevitalizacija\", \"skinbooster\", \"PRP\" or \"Mezoterapija\", the four procedures the article lists"
+            },
+            {
+              "id": "estetske:3:13",
+              "name": "PRP lice ili telo po regiji",
+              "basis": "name",
+              "why": "name contains \"biorevitalizacija\", \"skinbooster\", \"PRP\" or \"Mezoterapija\", the four procedures the article lists"
+            },
+            {
+              "id": "estetske:3:14",
+              "name": "PRP paket 3× tretmana",
+              "basis": "name",
+              "why": "name contains \"biorevitalizacija\", \"skinbooster\", \"PRP\" or \"Mezoterapija\", the four procedures the article lists"
+            },
+            {
+              "id": "estetske:3:15",
+              "name": "Mezoterapija lica",
+              "basis": "name",
+              "why": "name contains \"biorevitalizacija\", \"skinbooster\", \"PRP\" or \"Mezoterapija\", the four procedures the article lists"
+            },
+            {
+              "id": "estetske:3:16",
+              "name": "Mezoterapija, lice, vrat i dekolte",
+              "basis": "name",
+              "why": "name contains \"biorevitalizacija\", \"skinbooster\", \"PRP\" or \"Mezoterapija\", the four procedures the article lists"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-6",
+      "slug": "botulinski-toksin-tipa-a-botoks-tretman",
+      "title": "Botulinski toksin tipa A - Botoks tretman",
+      "segmentId": "estetske",
+      "matched": true,
+      "primaryGroupIds": [
+        "estetske:2"
+      ],
+      "relatedGroupIds": [
+        "lice:1",
+        "lice:2",
+        "lice:3",
+        "estetske:1",
+        "protokoli:0"
+      ],
+      "serviceIds": [
+        "estetske:1:4",
+        "estetske:1:5",
+        "estetske:1:6",
+        "estetske:2:0",
+        "estetske:2:1",
+        "estetske:2:2",
+        "estetske:2:3",
+        "estetske:2:4",
+        "estetske:2:5"
+      ],
+      "groups": [
+        {
+          "tabId": "estetske",
+          "groupIndex": 2,
+          "groupId": "estetske:2",
+          "groupTitle": "Botox tretman",
+          "tabLabel": "Estetske procedure",
+          "role": "primary",
+          "basis": "Price-list group \"Botox tretman\" is the article subject",
+          "origin": null,
+          "serviceIds": [
+            "estetske:2:0",
+            "estetske:2:1",
+            "estetske:2:2",
+            "estetske:2:3",
+            "estetske:2:4",
+            "estetske:2:5"
+          ],
+          "services": [
+            {
+              "id": "estetske:2:0",
+              "name": "Korekcija bora, lice ili vrat I",
+              "basis": "group",
+              "why": "every service of the group \"Botox tretman\" (wrinkle correction, lip flip, hyperhidrosis)"
+            },
+            {
+              "id": "estetske:2:1",
+              "name": "Korekcija bora, lice ili vrat II",
+              "basis": "group",
+              "why": "every service of the group \"Botox tretman\" (wrinkle correction, lip flip, hyperhidrosis)"
+            },
+            {
+              "id": "estetske:2:2",
+              "name": "Korekcija bora, Full Face",
+              "basis": "group",
+              "why": "every service of the group \"Botox tretman\" (wrinkle correction, lip flip, hyperhidrosis)"
+            },
+            {
+              "id": "estetske:2:3",
+              "name": "LIP FLIP / Gummy smile Botox",
+              "basis": "group",
+              "why": "every service of the group \"Botox tretman\" (wrinkle correction, lip flip, hyperhidrosis)"
+            },
+            {
+              "id": "estetske:2:4",
+              "name": "Botox lice + vrat",
+              "basis": "group",
+              "why": "every service of the group \"Botox tretman\" (wrinkle correction, lip flip, hyperhidrosis)"
+            },
+            {
+              "id": "estetske:2:5",
+              "name": "Hiperhidroza, pazuh",
+              "basis": "group",
+              "why": "every service of the group \"Botox tretman\" (wrinkle correction, lip flip, hyperhidrosis)"
+            }
+          ]
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 1,
+          "groupId": "lice:1",
+          "groupTitle": "Biološki tretmani",
+          "tabLabel": "Tretmani lica",
+          "role": "related",
+          "basis": "The article names biological treatments as good preparation for Botox",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 2,
+          "groupId": "lice:2",
+          "groupTitle": "Venus Glow / Dermafacial",
+          "tabLabel": "Tretmani lica",
+          "role": "related",
+          "basis": "The article names Venus Glow as good preparation for Botox",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 3,
+          "groupId": "lice:3",
+          "groupTitle": "Hemijski pilinzi",
+          "tabLabel": "Tretmani lica",
+          "role": "related",
+          "basis": "The article names chemical peels as good preparation for Botox",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        },
+        {
+          "tabId": "estetske",
+          "groupIndex": 1,
+          "groupId": "estetske:1",
+          "groupTitle": "Hijaluronski fileri",
+          "tabLabel": "Estetske procedure",
+          "role": "related",
+          "basis": "Packages in the filler group that include Botox",
+          "origin": null,
+          "serviceIds": [
+            "estetske:1:4",
+            "estetske:1:5",
+            "estetske:1:6"
+          ],
+          "services": [
+            {
+              "id": "estetske:1:4",
+              "name": "WHOLE FACE APPROACH 3+1",
+              "basis": "name or description",
+              "why": "name or description contains \"Botox\""
+            },
+            {
+              "id": "estetske:1:5",
+              "name": "FRESH UP paket 2+1",
+              "basis": "name or description",
+              "why": "name or description contains \"Botox\""
+            },
+            {
+              "id": "estetske:1:6",
+              "name": "Botox + Profhilo / Jalupro / LOLA / Ejal",
+              "basis": "name or description",
+              "why": "name or description contains \"Botox\""
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 0,
+          "groupId": "protokoli:0",
+          "groupTitle": "GLOW & GO",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "The article names the Glow&Go protocols as good preparation for Botox",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        }
+      ]
+    },
+    {
+      "articleId": "art-7",
+      "slug": "hijaluronski-fileri",
+      "title": "Hijaluronski fileri",
+      "segmentId": "estetske",
+      "matched": true,
+      "primaryGroupIds": [
+        "estetske:1"
+      ],
+      "relatedGroupIds": [
+        "estetske:2"
+      ],
+      "serviceIds": [
+        "estetske:1:0",
+        "estetske:1:1",
+        "estetske:1:2",
+        "estetske:1:3",
+        "estetske:1:4",
+        "estetske:1:5"
+      ],
+      "groups": [
+        {
+          "tabId": "estetske",
+          "groupIndex": 1,
+          "groupId": "estetske:1",
+          "groupTitle": "Hijaluronski fileri",
+          "tabLabel": "Estetske procedure",
+          "role": "primary",
+          "basis": "Price-list group \"Hijaluronski fileri\" is the article subject",
+          "origin": null,
+          "serviceIds": [
+            "estetske:1:0",
+            "estetske:1:1",
+            "estetske:1:2",
+            "estetske:1:3",
+            "estetske:1:4",
+            "estetske:1:5"
+          ],
+          "services": [
+            {
+              "id": "estetske:1:0",
+              "name": "Hijaluron 1ml",
+              "basis": "name or description",
+              "why": "name or description contains \"Hijaluron\" or \"filer\" (the \"Botox + Profhilo\" line is not a filler and stays out)"
+            },
+            {
+              "id": "estetske:1:1",
+              "name": "Hijaluron 0.55ml, usne",
+              "basis": "name or description",
+              "why": "name or description contains \"Hijaluron\" or \"filer\" (the \"Botox + Profhilo\" line is not a filler and stays out)"
+            },
+            {
+              "id": "estetske:1:2",
+              "name": "Hijaluron 1ml, dr spec. Vujačić",
+              "basis": "name or description",
+              "why": "name or description contains \"Hijaluron\" or \"filer\" (the \"Botox + Profhilo\" line is not a filler and stays out)"
+            },
+            {
+              "id": "estetske:1:3",
+              "name": "Hijaluronidaza, topljenje filera",
+              "basis": "name or description",
+              "why": "name or description contains \"Hijaluron\" or \"filer\" (the \"Botox + Profhilo\" line is not a filler and stays out)"
+            },
+            {
+              "id": "estetske:1:4",
+              "name": "WHOLE FACE APPROACH 3+1",
+              "basis": "name or description",
+              "why": "name or description contains \"Hijaluron\" or \"filer\" (the \"Botox + Profhilo\" line is not a filler and stays out)"
+            },
+            {
+              "id": "estetske:1:5",
+              "name": "FRESH UP paket 2+1",
+              "basis": "name or description",
+              "why": "name or description contains \"Hijaluron\" or \"filer\" (the \"Botox + Profhilo\" line is not a filler and stays out)"
+            }
+          ]
+        },
+        {
+          "tabId": "estetske",
+          "groupIndex": 2,
+          "groupId": "estetske:2",
+          "groupTitle": "Botox tretman",
+          "tabLabel": "Estetske procedure",
+          "role": "related",
+          "basis": "The article combines fillers with Botox in the Full Face approach",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        }
+      ]
+    },
+    {
+      "articleId": "art-8",
+      "slug": "lifting-nitima",
+      "title": "Lifting nitima",
+      "segmentId": "estetske",
+      "matched": true,
+      "primaryGroupIds": [
+        "estetske:4"
+      ],
+      "relatedGroupIds": [],
+      "serviceIds": [
+        "estetske:4:0",
+        "estetske:4:1",
+        "estetske:4:2"
+      ],
+      "groups": [
+        {
+          "tabId": "estetske",
+          "groupIndex": 4,
+          "groupId": "estetske:4",
+          "groupTitle": "Lifting niti i mezoniti",
+          "tabLabel": "Estetske procedure",
+          "role": "primary",
+          "basis": "Price-list group \"Lifting niti i mezoniti\" is the article subject",
+          "origin": null,
+          "serviceIds": [
+            "estetske:4:0",
+            "estetske:4:1",
+            "estetske:4:2"
+          ],
+          "services": [
+            {
+              "id": "estetske:4:0",
+              "name": "Aptos niti, podizanje i konturisanje lica (par niti)",
+              "basis": "name",
+              "why": "name contains \"niti\" or \"mezoniti\""
+            },
+            {
+              "id": "estetske:4:1",
+              "name": "Plazmalifting, celo lice ili kosa (mezoniti + PRP)",
+              "basis": "name",
+              "why": "name contains \"niti\" or \"mezoniti\""
+            },
+            {
+              "id": "estetske:4:2",
+              "name": "Mezoniti po regiji, lice ili kosa",
+              "basis": "name",
+              "why": "name contains \"niti\" or \"mezoniti\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-9",
+      "slug": "bioloski-tretmani-lica",
+      "title": "Biološki tretmani lica",
+      "segmentId": "kozmetika",
+      "matched": true,
+      "primaryGroupIds": [
+        "lice:1"
+      ],
+      "relatedGroupIds": [
+        "lice:0",
+        "telo:1"
+      ],
+      "serviceIds": [
+        "lice:1:0",
+        "lice:1:1",
+        "lice:1:2",
+        "lice:1:3",
+        "lice:1:4",
+        "lice:1:5",
+        "lice:1:6",
+        "lice:1:7",
+        "lice:1:8",
+        "lice:1:9",
+        "lice:1:10"
+      ],
+      "groups": [
+        {
+          "tabId": "lice",
+          "groupIndex": 1,
+          "groupId": "lice:1",
+          "groupTitle": "Biološki tretmani",
+          "tabLabel": "Tretmani lica",
+          "role": "primary",
+          "basis": "Price-list group \"Biološki tretmani\" is the article subject",
+          "origin": null,
+          "serviceIds": [
+            "lice:1:0",
+            "lice:1:1",
+            "lice:1:2",
+            "lice:1:3",
+            "lice:1:4",
+            "lice:1:5",
+            "lice:1:6",
+            "lice:1:7",
+            "lice:1:8",
+            "lice:1:9",
+            "lice:1:10"
+          ],
+          "services": [
+            {
+              "id": "lice:1:0",
+              "name": "Biološki tretman lica 1",
+              "basis": "group",
+              "why": "every service of the group \"Biološki tretmani\""
+            },
+            {
+              "id": "lice:1:1",
+              "name": "Biološki tretman lica 2",
+              "basis": "group",
+              "why": "every service of the group \"Biološki tretmani\""
+            },
+            {
+              "id": "lice:1:2",
+              "name": "Biološki tretman lica 2, lice, vrat i dekolte",
+              "basis": "group",
+              "why": "every service of the group \"Biološki tretmani\""
+            },
+            {
+              "id": "lice:1:3",
+              "name": "Biološki tretman REVIVE & RADIATE",
+              "basis": "group",
+              "why": "every service of the group \"Biološki tretmani\""
+            },
+            {
+              "id": "lice:1:4",
+              "name": "REVIVE & RADIATE, lice, vrat i dekolte",
+              "basis": "group",
+              "why": "every service of the group \"Biološki tretmani\""
+            },
+            {
+              "id": "lice:1:5",
+              "name": "SKIN DETOX",
+              "basis": "group",
+              "why": "every service of the group \"Biološki tretmani\""
+            },
+            {
+              "id": "lice:1:6",
+              "name": "REHYDRATE",
+              "basis": "group",
+              "why": "every service of the group \"Biološki tretmani\""
+            },
+            {
+              "id": "lice:1:7",
+              "name": "BE AN ICON",
+              "basis": "group",
+              "why": "every service of the group \"Biološki tretmani\""
+            },
+            {
+              "id": "lice:1:8",
+              "name": "CINDERELLA GLOW",
+              "basis": "group",
+              "why": "every service of the group \"Biološki tretmani\""
+            },
+            {
+              "id": "lice:1:9",
+              "name": "SENSI SKIN, za osetljivu kožu",
+              "basis": "group",
+              "why": "every service of the group \"Biološki tretmani\""
+            },
+            {
+              "id": "lice:1:10",
+              "name": "READY TO GLOW",
+              "basis": "group",
+              "why": "every service of the group \"Biološki tretmani\""
+            }
+          ]
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 0,
+          "groupId": "lice:0",
+          "groupTitle": "Higijenski tretmani",
+          "tabLabel": "Tretmani lica",
+          "role": "related",
+          "basis": "The article pairs biological treatments with the hygienic treatments as the basic non-invasive care",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        },
+        {
+          "tabId": "telo",
+          "groupIndex": 1,
+          "groupId": "telo:1",
+          "groupTitle": "Presoterapija ProBallancer",
+          "tabLabel": "Tretmani tela",
+          "role": "related",
+          "basis": "The article offers presoterapija as an add-on to a biological treatment",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        }
+      ]
+    },
+    {
+      "articleId": "art-10",
+      "slug": "dermapen-i-hemijski-pilinzi-za-holivudski-tretman",
+      "title": "Dermapen i hemijski pilinzi za „holivudski tretman“",
+      "segmentId": "kozmetika",
+      "matched": true,
+      "primaryGroupIds": [
+        "lice:3",
+        "lice:5"
+      ],
+      "relatedGroupIds": [],
+      "serviceIds": [
+        "lice:3:0",
+        "lice:3:1",
+        "lice:3:2",
+        "lice:3:3",
+        "lice:3:4",
+        "lice:3:5",
+        "lice:3:6",
+        "lice:3:7",
+        "lice:3:8",
+        "lice:5:0",
+        "lice:5:1",
+        "lice:5:2",
+        "lice:5:3",
+        "lice:5:4",
+        "lice:5:5",
+        "lice:5:6"
+      ],
+      "groups": [
+        {
+          "tabId": "lice",
+          "groupIndex": 3,
+          "groupId": "lice:3",
+          "groupTitle": "Hemijski pilinzi",
+          "tabLabel": "Tretmani lica",
+          "role": "primary",
+          "basis": "Price-list group \"Hemijski pilinzi\" is the other half of the article subject",
+          "origin": null,
+          "serviceIds": [
+            "lice:3:0",
+            "lice:3:1",
+            "lice:3:2",
+            "lice:3:3",
+            "lice:3:4",
+            "lice:3:5",
+            "lice:3:6",
+            "lice:3:7",
+            "lice:3:8"
+          ],
+          "services": [
+            {
+              "id": "lice:3:0",
+              "name": "Hemijski piling I",
+              "basis": "group",
+              "why": "every service of the group \"Hemijski pilinzi\""
+            },
+            {
+              "id": "lice:3:1",
+              "name": "Hemijski piling II, biorevitalizujući",
+              "basis": "group",
+              "why": "every service of the group \"Hemijski pilinzi\""
+            },
+            {
+              "id": "lice:3:2",
+              "name": "Paket 4× Hemijska pilinga I",
+              "basis": "group",
+              "why": "every service of the group \"Hemijski pilinzi\""
+            },
+            {
+              "id": "lice:3:3",
+              "name": "Fitopiling lica",
+              "basis": "group",
+              "why": "every service of the group \"Hemijski pilinzi\""
+            },
+            {
+              "id": "lice:3:4",
+              "name": "Paket 4× Fitopiling",
+              "basis": "group",
+              "why": "every service of the group \"Hemijski pilinzi\""
+            },
+            {
+              "id": "lice:3:5",
+              "name": "PRX biorevitalizujući hemijski piling",
+              "basis": "group",
+              "why": "every service of the group \"Hemijski pilinzi\""
+            },
+            {
+              "id": "lice:3:6",
+              "name": "PRX paket 4× tretmana",
+              "basis": "group",
+              "why": "every service of the group \"Hemijski pilinzi\""
+            },
+            {
+              "id": "lice:3:7",
+              "name": "PRX + Dermapen",
+              "basis": "group",
+              "why": "every service of the group \"Hemijski pilinzi\""
+            },
+            {
+              "id": "lice:3:8",
+              "name": "Retinol tretman",
+              "basis": "group",
+              "why": "every service of the group \"Hemijski pilinzi\""
+            }
+          ]
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 5,
+          "groupId": "lice:5",
+          "groupTitle": "Dermapen",
+          "tabLabel": "Tretmani lica",
+          "role": "primary",
+          "basis": "Price-list group \"Dermapen\" is half of the article subject",
+          "origin": null,
+          "serviceIds": [
+            "lice:5:0",
+            "lice:5:1",
+            "lice:5:2",
+            "lice:5:3",
+            "lice:5:4",
+            "lice:5:5",
+            "lice:5:6"
+          ],
+          "services": [
+            {
+              "id": "lice:5:0",
+              "name": "Dermapen tretman lica",
+              "basis": "group",
+              "why": "every service of the group \"Dermapen\""
+            },
+            {
+              "id": "lice:5:1",
+              "name": "Paket 4× Dermapen tretmana",
+              "basis": "group",
+              "why": "every service of the group \"Dermapen\""
+            },
+            {
+              "id": "lice:5:2",
+              "name": "Dermapen anti-aging, lice, vrat, dekolte",
+              "basis": "group",
+              "why": "every service of the group \"Dermapen\""
+            },
+            {
+              "id": "lice:5:3",
+              "name": "DERMAWORLD Dermapen, tekstura i hidratacija",
+              "basis": "group",
+              "why": "every service of the group \"Dermapen\""
+            },
+            {
+              "id": "lice:5:4",
+              "name": "DERMAWORLD Dermapen anti-aging, lice, vrat, dekolte",
+              "basis": "group",
+              "why": "every service of the group \"Dermapen\""
+            },
+            {
+              "id": "lice:5:5",
+              "name": "Paket 4× DERMAWORLD Dermapen",
+              "basis": "group",
+              "why": "every service of the group \"Dermapen\""
+            },
+            {
+              "id": "lice:5:6",
+              "name": "NO FILTER NEEDED",
+              "basis": "group",
+              "why": "every service of the group \"Dermapen\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-11",
+      "slug": "higijenski-tretmani-lica",
+      "title": "Higijenski tretmani lica",
+      "segmentId": "kozmetika",
+      "matched": true,
+      "primaryGroupIds": [
+        "lice:0"
+      ],
+      "relatedGroupIds": [],
+      "serviceIds": [
+        "lice:0:0",
+        "lice:0:1",
+        "lice:0:2",
+        "lice:0:3",
+        "lice:0:4"
+      ],
+      "groups": [
+        {
+          "tabId": "lice",
+          "groupIndex": 0,
+          "groupId": "lice:0",
+          "groupTitle": "Higijenski tretmani",
+          "tabLabel": "Tretmani lica",
+          "role": "primary",
+          "basis": "Price-list group \"Higijenski tretmani\" is the article subject",
+          "origin": "SERVICE_BLOG_LINKS",
+          "serviceIds": [
+            "lice:0:0",
+            "lice:0:1",
+            "lice:0:2",
+            "lice:0:3",
+            "lice:0:4"
+          ],
+          "services": [
+            {
+              "id": "lice:0:0",
+              "name": "Higijenski tretman lica 1",
+              "basis": "name",
+              "why": "service name contains \"higijenski\": exactly the services the old site links to this text (SERVICE_BLOG_LINKS)",
+              "origin": "SERVICE_BLOG_LINKS"
+            },
+            {
+              "id": "lice:0:1",
+              "name": "Higijenski tretman + Fitopiling",
+              "basis": "name",
+              "why": "service name contains \"higijenski\": exactly the services the old site links to this text (SERVICE_BLOG_LINKS)",
+              "origin": "SERVICE_BLOG_LINKS"
+            },
+            {
+              "id": "lice:0:2",
+              "name": "Higijenski tretman lica 2",
+              "basis": "name",
+              "why": "service name contains \"higijenski\": exactly the services the old site links to this text (SERVICE_BLOG_LINKS)",
+              "origin": "SERVICE_BLOG_LINKS"
+            },
+            {
+              "id": "lice:0:3",
+              "name": "Higijenski tretman + PRX piling",
+              "basis": "name",
+              "why": "service name contains \"higijenski\": exactly the services the old site links to this text (SERVICE_BLOG_LINKS)",
+              "origin": "SERVICE_BLOG_LINKS"
+            },
+            {
+              "id": "lice:0:4",
+              "name": "Higijenski tretman lica 2 uz mezoporaciju",
+              "basis": "name",
+              "why": "service name contains \"higijenski\": exactly the services the old site links to this text (SERVICE_BLOG_LINKS)",
+              "origin": "SERVICE_BLOG_LINKS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-12",
+      "slug": "7e-myolift-md-tretman",
+      "title": "7E MyoLift™ MD tretman",
+      "segmentId": "kozmetika",
+      "matched": true,
+      "primaryGroupIds": [
+        "lice:7"
+      ],
+      "relatedGroupIds": [
+        "lice:1",
+        "lice:2",
+        "protokoli:1",
+        "protokoli:2"
+      ],
+      "serviceIds": [
+        "lice:1:10",
+        "lice:2:3",
+        "lice:7:0",
+        "lice:7:1",
+        "lice:7:6",
+        "lice:7:9",
+        "protokoli:1:0",
+        "protokoli:1:2",
+        "protokoli:2:2"
+      ],
+      "groups": [
+        {
+          "tabId": "lice",
+          "groupIndex": 7,
+          "groupId": "lice:7",
+          "groupTitle": "Myolift i masaže lica",
+          "tabLabel": "Tretmani lica",
+          "role": "primary",
+          "basis": "Price-list group \"Myolift i masaže lica\" holds the Myolift services",
+          "origin": null,
+          "serviceIds": [
+            "lice:7:0",
+            "lice:7:1",
+            "lice:7:6",
+            "lice:7:9"
+          ],
+          "services": [
+            {
+              "id": "lice:7:0",
+              "name": "MYOLIFT tretman",
+              "basis": "name or description",
+              "why": "name or description contains \"Myolift\""
+            },
+            {
+              "id": "lice:7:1",
+              "name": "MYOLIFT paket 6× tretmana",
+              "basis": "name or description",
+              "why": "name or description contains \"Myolift\""
+            },
+            {
+              "id": "lice:7:6",
+              "name": "WIDE AWAKE protokol, predeo oko očiju",
+              "basis": "name or description",
+              "why": "name or description contains \"Myolift\""
+            },
+            {
+              "id": "lice:7:9",
+              "name": "VENUS LIFT & GLOW",
+              "basis": "name or description",
+              "why": "name or description contains \"Myolift\""
+            }
+          ]
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 1,
+          "groupId": "lice:1",
+          "groupTitle": "Biološki tretmani",
+          "tabLabel": "Tretmani lica",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"Myolift\"",
+          "origin": null,
+          "serviceIds": [
+            "lice:1:10"
+          ],
+          "services": [
+            {
+              "id": "lice:1:10",
+              "name": "READY TO GLOW",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 2,
+          "groupId": "lice:2",
+          "groupTitle": "Venus Glow / Dermafacial",
+          "tabLabel": "Tretmani lica",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"Myolift\"",
+          "origin": null,
+          "serviceIds": [
+            "lice:2:3"
+          ],
+          "services": [
+            {
+              "id": "lice:2:3",
+              "name": "DERMAFACIAL, ceo protokol",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 1,
+          "groupId": "protokoli:1",
+          "groupTitle": "Anti-aging protokoli",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"Myolift\"",
+          "origin": null,
+          "serviceIds": [
+            "protokoli:1:0",
+            "protokoli:1:2"
+          ],
+          "services": [
+            {
+              "id": "protokoli:1:0",
+              "name": "FIT IN 50's, 60's, 70's",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "protokoli:1:2",
+              "name": "PLUMP IT UP",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 2,
+          "groupId": "protokoli:2",
+          "groupTitle": "Posebna stanja i prilike",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"Myolift\"",
+          "origin": null,
+          "serviceIds": [
+            "protokoli:2:2"
+          ],
+          "services": [
+            {
+              "id": "protokoli:2:2",
+              "name": "WEDDING READY",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-13",
+      "slug": "preime-dermafacial",
+      "title": "Preime Dermafacial",
+      "segmentId": "kozmetika",
+      "matched": true,
+      "primaryGroupIds": [
+        "lice:2"
+      ],
+      "relatedGroupIds": [
+        "lice:1",
+        "telo:5",
+        "protokoli:2"
+      ],
+      "serviceIds": [
+        "lice:1:5",
+        "lice:1:6",
+        "lice:2:3",
+        "lice:2:4",
+        "telo:5:4",
+        "telo:5:6",
+        "protokoli:2:0",
+        "protokoli:2:1"
+      ],
+      "groups": [
+        {
+          "tabId": "lice",
+          "groupIndex": 2,
+          "groupId": "lice:2",
+          "groupTitle": "Venus Glow / Dermafacial",
+          "tabLabel": "Tretmani lica",
+          "role": "primary",
+          "basis": "Price-list group \"Venus Glow / Dermafacial\" holds the Dermafacial protocols",
+          "origin": "SERVICE_BLOG_LINKS",
+          "serviceIds": [
+            "lice:2:3",
+            "lice:2:4"
+          ],
+          "services": [
+            {
+              "id": "lice:2:3",
+              "name": "DERMAFACIAL, ceo protokol",
+              "basis": "name",
+              "why": "service name contains \"Dermafacial\": exactly the services the old site links to this text (SERVICE_BLOG_LINKS)",
+              "origin": "SERVICE_BLOG_LINKS"
+            },
+            {
+              "id": "lice:2:4",
+              "name": "DERMAFACIAL LUX Skin Detox",
+              "basis": "name",
+              "why": "service name contains \"Dermafacial\": exactly the services the old site links to this text (SERVICE_BLOG_LINKS)",
+              "origin": "SERVICE_BLOG_LINKS"
+            }
+          ]
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 1,
+          "groupId": "lice:1",
+          "groupTitle": "Biološki tretmani",
+          "tabLabel": "Tretmani lica",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"Dermafacial\"",
+          "origin": null,
+          "serviceIds": [
+            "lice:1:5",
+            "lice:1:6"
+          ],
+          "services": [
+            {
+              "id": "lice:1:5",
+              "name": "SKIN DETOX",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "lice:1:6",
+              "name": "REHYDRATE",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "telo",
+          "groupIndex": 5,
+          "groupId": "telo:5",
+          "groupTitle": "Tretmani za ciljanu negu",
+          "tabLabel": "Tretmani tela",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"Dermafacial\"",
+          "origin": null,
+          "serviceIds": [
+            "telo:5:4",
+            "telo:5:6"
+          ],
+          "services": [
+            {
+              "id": "telo:5:4",
+              "name": "LEPA SVAKI DAN protokol",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "telo:5:6",
+              "name": "REBORN",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 2,
+          "groupId": "protokoli:2",
+          "groupTitle": "Posebna stanja i prilike",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"Dermafacial\"",
+          "origin": null,
+          "serviceIds": [
+            "protokoli:2:0",
+            "protokoli:2:1"
+          ],
+          "services": [
+            {
+              "id": "protokoli:2:0",
+              "name": "BABY GLOW, za trudnice",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "protokoli:2:1",
+              "name": "NEW MUM RECHARGE",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-14",
+      "slug": "venus-glow",
+      "title": "Venus Glow",
+      "segmentId": "kozmetika",
+      "matched": true,
+      "primaryGroupIds": [
+        "lice:2"
+      ],
+      "relatedGroupIds": [
+        "lice:1",
+        "telo:5",
+        "protokoli:0",
+        "protokoli:2"
+      ],
+      "serviceIds": [
+        "lice:1:5",
+        "lice:1:6",
+        "lice:1:10",
+        "lice:2:0",
+        "lice:2:1",
+        "lice:2:2",
+        "telo:5:4",
+        "telo:5:6",
+        "protokoli:0:0",
+        "protokoli:0:2",
+        "protokoli:0:4",
+        "protokoli:2:0",
+        "protokoli:2:1"
+      ],
+      "groups": [
+        {
+          "tabId": "lice",
+          "groupIndex": 2,
+          "groupId": "lice:2",
+          "groupTitle": "Venus Glow / Dermafacial",
+          "tabLabel": "Tretmani lica",
+          "role": "primary",
+          "basis": "Price-list group \"Venus Glow / Dermafacial\" holds the Venus Glow services",
+          "origin": null,
+          "serviceIds": [
+            "lice:2:0",
+            "lice:2:1",
+            "lice:2:2"
+          ],
+          "services": [
+            {
+              "id": "lice:2:0",
+              "name": "VENUS GLOW, Squeaky Clean",
+              "basis": "name or description",
+              "why": "name or description contains \"Venus Glow\""
+            },
+            {
+              "id": "lice:2:1",
+              "name": "VENUS GLOW uz tretman",
+              "basis": "name or description",
+              "why": "name or description contains \"Venus Glow\""
+            },
+            {
+              "id": "lice:2:2",
+              "name": "FRESH UP",
+              "basis": "name or description",
+              "why": "name or description contains \"Venus Glow\""
+            }
+          ]
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 1,
+          "groupId": "lice:1",
+          "groupTitle": "Biološki tretmani",
+          "tabLabel": "Tretmani lica",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"Venus Glow\"",
+          "origin": null,
+          "serviceIds": [
+            "lice:1:5",
+            "lice:1:6",
+            "lice:1:10"
+          ],
+          "services": [
+            {
+              "id": "lice:1:5",
+              "name": "SKIN DETOX",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "lice:1:6",
+              "name": "REHYDRATE",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "lice:1:10",
+              "name": "READY TO GLOW",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "telo",
+          "groupIndex": 5,
+          "groupId": "telo:5",
+          "groupTitle": "Tretmani za ciljanu negu",
+          "tabLabel": "Tretmani tela",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"Venus Glow\"",
+          "origin": null,
+          "serviceIds": [
+            "telo:5:4",
+            "telo:5:6"
+          ],
+          "services": [
+            {
+              "id": "telo:5:4",
+              "name": "LEPA SVAKI DAN protokol",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "telo:5:6",
+              "name": "REBORN",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 0,
+          "groupId": "protokoli:0",
+          "groupTitle": "GLOW & GO",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"Venus Glow\"",
+          "origin": null,
+          "serviceIds": [
+            "protokoli:0:0",
+            "protokoli:0:2",
+            "protokoli:0:4"
+          ],
+          "services": [
+            {
+              "id": "protokoli:0:0",
+              "name": "GLOW & GO 1",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "protokoli:0:2",
+              "name": "GLOW & GO 2",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "protokoli:0:4",
+              "name": "GLOW & GO 3",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 2,
+          "groupId": "protokoli:2",
+          "groupTitle": "Posebna stanja i prilike",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"Venus Glow\"",
+          "origin": null,
+          "serviceIds": [
+            "protokoli:2:0",
+            "protokoli:2:1"
+          ],
+          "services": [
+            {
+              "id": "protokoli:2:0",
+              "name": "BABY GLOW, za trudnice",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "protokoli:2:1",
+              "name": "NEW MUM RECHARGE",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-15",
+      "slug": "venus-legacy",
+      "title": "Venus Legacy",
+      "segmentId": "kozmetika",
+      "matched": true,
+      "primaryGroupIds": [
+        "lice:6"
+      ],
+      "relatedGroupIds": [
+        "lice:7",
+        "protokoli:1"
+      ],
+      "serviceIds": [
+        "lice:6:0",
+        "lice:6:1",
+        "lice:6:2",
+        "lice:6:3",
+        "lice:6:4",
+        "lice:6:5",
+        "lice:6:6",
+        "lice:7:6",
+        "lice:7:9",
+        "protokoli:1:0"
+      ],
+      "groups": [
+        {
+          "tabId": "lice",
+          "groupIndex": 6,
+          "groupId": "lice:6",
+          "groupTitle": "Venus Legacy lice",
+          "tabLabel": "Tretmani lica",
+          "role": "primary",
+          "basis": "Price-list group \"Venus Legacy lice\" is the article subject",
+          "origin": null,
+          "serviceIds": [
+            "lice:6:0",
+            "lice:6:1",
+            "lice:6:2",
+            "lice:6:3",
+            "lice:6:4",
+            "lice:6:5",
+            "lice:6:6"
+          ],
+          "services": [
+            {
+              "id": "lice:6:0",
+              "name": "Predeo oko očiju, podočnjaci",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy lice\""
+            },
+            {
+              "id": "lice:6:1",
+              "name": "Gornja trećina lica, čelo i oko očiju",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy lice\""
+            },
+            {
+              "id": "lice:6:2",
+              "name": "Donja trećina lica i podbradak",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy lice\""
+            },
+            {
+              "id": "lice:6:3",
+              "name": "Celo lice i podbradak",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy lice\""
+            },
+            {
+              "id": "lice:6:4",
+              "name": "Celo lice i vrat",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy lice\""
+            },
+            {
+              "id": "lice:6:5",
+              "name": "Celo lice, vrat i dekolte",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy lice\""
+            },
+            {
+              "id": "lice:6:6",
+              "name": "Paket 6× tretmana, celo lice i podbradak",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy lice\""
+            }
+          ]
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 7,
+          "groupId": "lice:7",
+          "groupTitle": "Myolift i masaže lica",
+          "tabLabel": "Tretmani lica",
+          "role": "related",
+          "basis": "Face services in other groups whose name or description contains \"Venus Legacy\"",
+          "origin": null,
+          "serviceIds": [
+            "lice:7:6",
+            "lice:7:9"
+          ],
+          "services": [
+            {
+              "id": "lice:7:6",
+              "name": "WIDE AWAKE protokol, predeo oko očiju",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "lice:7:9",
+              "name": "VENUS LIFT & GLOW",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 1,
+          "groupId": "protokoli:1",
+          "groupTitle": "Anti-aging protokoli",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "Face services in other groups whose name or description contains \"Venus Legacy\"",
+          "origin": null,
+          "serviceIds": [
+            "protokoli:1:0"
+          ],
+          "services": [
+            {
+              "id": "protokoli:1:0",
+              "name": "FIT IN 50's, 60's, 70's",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-16",
+      "slug": "awt-acoustic-wave-therapy-storz-tretman-za-telo",
+      "title": "AWT (Acoustic Wave Therapy) Storz tretman za telo",
+      "segmentId": "telo",
+      "matched": true,
+      "primaryGroupIds": [
+        "telo:3"
+      ],
+      "relatedGroupIds": [
+        "telo:0",
+        "telo:1"
+      ],
+      "serviceIds": [
+        "telo:3:0",
+        "telo:3:1",
+        "telo:3:2",
+        "telo:3:3"
+      ],
+      "groups": [
+        {
+          "tabId": "telo",
+          "groupIndex": 3,
+          "groupId": "telo:3",
+          "groupTitle": "AWT, Anticelulit i preoblikovanje",
+          "tabLabel": "Tretmani tela",
+          "role": "primary",
+          "basis": "Price-list group \"AWT, Anticelulit i preoblikovanje\" is the article subject",
+          "origin": null,
+          "serviceIds": [
+            "telo:3:0",
+            "telo:3:1",
+            "telo:3:2",
+            "telo:3:3"
+          ],
+          "services": [
+            {
+              "id": "telo:3:0",
+              "name": "Pojedinačni tretman, manja regija",
+              "basis": "group",
+              "why": "every service of the group \"AWT, Anticelulit i preoblikovanje\""
+            },
+            {
+              "id": "telo:3:1",
+              "name": "Pojedinačni tretman, veća regija",
+              "basis": "group",
+              "why": "every service of the group \"AWT, Anticelulit i preoblikovanje\""
+            },
+            {
+              "id": "telo:3:2",
+              "name": "Paket 7× tretmana, 15% popusta",
+              "basis": "group",
+              "why": "every service of the group \"AWT, Anticelulit i preoblikovanje\""
+            },
+            {
+              "id": "telo:3:3",
+              "name": "Paket 10× tretmana, 20% popusta",
+              "basis": "group",
+              "why": "every service of the group \"AWT, Anticelulit i preoblikovanje\""
+            }
+          ]
+        },
+        {
+          "tabId": "telo",
+          "groupIndex": 0,
+          "groupId": "telo:0",
+          "groupTitle": "Venus Legacy telo",
+          "tabLabel": "Tretmani tela",
+          "role": "related",
+          "basis": "The article recommends combining AWT with Venus Legacy",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        },
+        {
+          "tabId": "telo",
+          "groupIndex": 1,
+          "groupId": "telo:1",
+          "groupTitle": "Presoterapija ProBallancer",
+          "tabLabel": "Tretmani tela",
+          "role": "related",
+          "basis": "The article recommends combining AWT with presoterapija",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        }
+      ]
+    },
+    {
+      "articleId": "art-17",
+      "slug": "med-contour-tretman-za-oblikovanje-tela",
+      "title": "Med Contour tretman za oblikovanje tela",
+      "segmentId": "telo",
+      "matched": true,
+      "primaryGroupIds": [
+        "telo:4"
+      ],
+      "relatedGroupIds": [],
+      "serviceIds": [
+        "telo:4:0",
+        "telo:4:1",
+        "telo:4:2",
+        "telo:4:3",
+        "telo:4:4",
+        "telo:4:5"
+      ],
+      "groups": [
+        {
+          "tabId": "telo",
+          "groupIndex": 4,
+          "groupId": "telo:4",
+          "groupTitle": "MedContour, Smanjenje masnih naslaga",
+          "tabLabel": "Tretmani tela",
+          "role": "primary",
+          "basis": "Price-list group \"MedContour, Smanjenje masnih naslaga\" is the article subject",
+          "origin": null,
+          "serviceIds": [
+            "telo:4:0",
+            "telo:4:1",
+            "telo:4:2",
+            "telo:4:3",
+            "telo:4:4",
+            "telo:4:5"
+          ],
+          "services": [
+            {
+              "id": "telo:4:0",
+              "name": "Ruke",
+              "basis": "group",
+              "why": "every service of the group \"MedContour, Smanjenje masnih naslaga\""
+            },
+            {
+              "id": "telo:4:1",
+              "name": "Stomak",
+              "basis": "group",
+              "why": "every service of the group \"MedContour, Smanjenje masnih naslaga\""
+            },
+            {
+              "id": "telo:4:2",
+              "name": "Butine i zadnjica",
+              "basis": "group",
+              "why": "every service of the group \"MedContour, Smanjenje masnih naslaga\""
+            },
+            {
+              "id": "telo:4:3",
+              "name": "Cele noge i guza",
+              "basis": "group",
+              "why": "every service of the group \"MedContour, Smanjenje masnih naslaga\""
+            },
+            {
+              "id": "telo:4:4",
+              "name": "Celo telo",
+              "basis": "group",
+              "why": "every service of the group \"MedContour, Smanjenje masnih naslaga\""
+            },
+            {
+              "id": "telo:4:5",
+              "name": "Paket 5+ tretmana, 15% popusta",
+              "basis": "group",
+              "why": "every service of the group \"MedContour, Smanjenje masnih naslaga\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-18",
+      "slug": "tretmani-tela-za-opustanje-i-negu",
+      "title": "Tretmani tela za opuštanje i negu",
+      "segmentId": "telo",
+      "matched": true,
+      "primaryGroupIds": [
+        "telo:5"
+      ],
+      "relatedGroupIds": [
+        "telo:0",
+        "telo:1",
+        "telo:2"
+      ],
+      "serviceIds": [
+        "telo:2:4",
+        "telo:2:5",
+        "telo:5:0",
+        "telo:5:1",
+        "telo:5:2",
+        "telo:5:3"
+      ],
+      "groups": [
+        {
+          "tabId": "telo",
+          "groupIndex": 5,
+          "groupId": "telo:5",
+          "groupTitle": "Tretmani za ciljanu negu",
+          "tabLabel": "Tretmani tela",
+          "role": "primary",
+          "basis": "Price-list group \"Tretmani za ciljanu negu\" holds the treatments the article presents",
+          "origin": null,
+          "serviceIds": [
+            "telo:5:0",
+            "telo:5:1",
+            "telo:5:2",
+            "telo:5:3"
+          ],
+          "services": [
+            {
+              "id": "telo:5:0",
+              "name": "KICK START DIET",
+              "basis": "name",
+              "why": "the four named treatments of the article (the price list spells \"LOSE GOOSE\" where the article says \"Loose Goose\")"
+            },
+            {
+              "id": "telo:5:1",
+              "name": "SILKY SMOOTH",
+              "basis": "name",
+              "why": "the four named treatments of the article (the price list spells \"LOSE GOOSE\" where the article says \"Loose Goose\")"
+            },
+            {
+              "id": "telo:5:2",
+              "name": "LOSE GOOSE, tretman guščije kože",
+              "basis": "name",
+              "why": "the four named treatments of the article (the price list spells \"LOSE GOOSE\" where the article says \"Loose Goose\")"
+            },
+            {
+              "id": "telo:5:3",
+              "name": "FALL IN RELAXATION",
+              "basis": "name",
+              "why": "the four named treatments of the article (the price list spells \"LOSE GOOSE\" where the article says \"Loose Goose\")"
+            }
+          ]
+        },
+        {
+          "tabId": "telo",
+          "groupIndex": 0,
+          "groupId": "telo:0",
+          "groupTitle": "Venus Legacy telo",
+          "tabLabel": "Tretmani tela",
+          "role": "related",
+          "basis": "Venus Legacy is named as the usual device combination for anticelulit and tightening",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        },
+        {
+          "tabId": "telo",
+          "groupIndex": 1,
+          "groupId": "telo:1",
+          "groupTitle": "Presoterapija ProBallancer",
+          "tabLabel": "Tretmani tela",
+          "role": "related",
+          "basis": "Presoterapija is part of Kick Start Diet and is combined with the anticelulit treatments",
+          "origin": null,
+          "serviceIds": [],
+          "services": []
+        },
+        {
+          "tabId": "telo",
+          "groupIndex": 2,
+          "groupId": "telo:2",
+          "groupTitle": "Masaže",
+          "tabLabel": "Tretmani tela",
+          "role": "related",
+          "basis": "The article describes the anticelulit treatment as peeling, boosters and an anticelulit massage",
+          "origin": null,
+          "serviceIds": [
+            "telo:2:4",
+            "telo:2:5"
+          ],
+          "services": [
+            {
+              "id": "telo:2:4",
+              "name": "Anticelulit masaža I, butine i stomak",
+              "basis": "text",
+              "why": "\"Anticelulit masaža\" is the massage part of the anticelulit treatment described"
+            },
+            {
+              "id": "telo:2:5",
+              "name": "Anticelulit masaža II, celo telo",
+              "basis": "text",
+              "why": "\"Anticelulit masaža\" is the massage part of the anticelulit treatment described"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-19",
+      "slug": "proballancer-presoterapija",
+      "title": "ProBallancer presoterapija",
+      "segmentId": "telo",
+      "matched": true,
+      "primaryGroupIds": [
+        "telo:1"
+      ],
+      "relatedGroupIds": [
+        "lice:1",
+        "lice:7",
+        "telo:2",
+        "telo:5",
+        "protokoli:0",
+        "protokoli:2",
+        "protokoli:3"
+      ],
+      "serviceIds": [
+        "lice:1:10",
+        "lice:7:3",
+        "telo:1:0",
+        "telo:1:1",
+        "telo:1:2",
+        "telo:1:3",
+        "telo:1:4",
+        "telo:2:2",
+        "telo:5:0",
+        "telo:5:6",
+        "protokoli:0:5",
+        "protokoli:2:1",
+        "protokoli:2:4",
+        "protokoli:3:6",
+        "protokoli:3:7"
+      ],
+      "groups": [
+        {
+          "tabId": "telo",
+          "groupIndex": 1,
+          "groupId": "telo:1",
+          "groupTitle": "Presoterapija ProBallancer",
+          "tabLabel": "Tretmani tela",
+          "role": "primary",
+          "basis": "Price-list group \"Presoterapija ProBallancer\" is the article subject",
+          "origin": null,
+          "serviceIds": [
+            "telo:1:0",
+            "telo:1:1",
+            "telo:1:2",
+            "telo:1:3",
+            "telo:1:4"
+          ],
+          "services": [
+            {
+              "id": "telo:1:0",
+              "name": "ProBallancer, 1 tretman",
+              "basis": "group",
+              "why": "every service of the group \"Presoterapija ProBallancer\""
+            },
+            {
+              "id": "telo:1:1",
+              "name": "ProBallancer uz tretman (2u1)",
+              "basis": "group",
+              "why": "every service of the group \"Presoterapija ProBallancer\""
+            },
+            {
+              "id": "telo:1:2",
+              "name": "ProBallancer paket 5×",
+              "basis": "group",
+              "why": "every service of the group \"Presoterapija ProBallancer\""
+            },
+            {
+              "id": "telo:1:3",
+              "name": "ProBallancer paket 10×",
+              "basis": "group",
+              "why": "every service of the group \"Presoterapija ProBallancer\""
+            },
+            {
+              "id": "telo:1:4",
+              "name": "10 DAYS BODY MIRACLE",
+              "basis": "group",
+              "why": "every service of the group \"Presoterapija ProBallancer\""
+            }
+          ]
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 1,
+          "groupId": "lice:1",
+          "groupTitle": "Biološki tretmani",
+          "tabLabel": "Tretmani lica",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"presoterapija\" (the article says it combines with all face and body treatments)",
+          "origin": null,
+          "serviceIds": [
+            "lice:1:10"
+          ],
+          "services": [
+            {
+              "id": "lice:1:10",
+              "name": "READY TO GLOW",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "lice",
+          "groupIndex": 7,
+          "groupId": "lice:7",
+          "groupTitle": "Myolift i masaže lica",
+          "tabLabel": "Tretmani lica",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"presoterapija\" (the article says it combines with all face and body treatments)",
+          "origin": null,
+          "serviceIds": [
+            "lice:7:3"
+          ],
+          "services": [
+            {
+              "id": "lice:7:3",
+              "name": "FACE GYM LUX",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "telo",
+          "groupIndex": 2,
+          "groupId": "telo:2",
+          "groupTitle": "Masaže",
+          "tabLabel": "Tretmani tela",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"presoterapija\" (the article says it combines with all face and body treatments)",
+          "origin": null,
+          "serviceIds": [
+            "telo:2:2"
+          ],
+          "services": [
+            {
+              "id": "telo:2:2",
+              "name": "Antistress 30",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "telo",
+          "groupIndex": 5,
+          "groupId": "telo:5",
+          "groupTitle": "Tretmani za ciljanu negu",
+          "tabLabel": "Tretmani tela",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"presoterapija\" (the article says it combines with all face and body treatments)",
+          "origin": null,
+          "serviceIds": [
+            "telo:5:0",
+            "telo:5:6"
+          ],
+          "services": [
+            {
+              "id": "telo:5:0",
+              "name": "KICK START DIET",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "telo:5:6",
+              "name": "REBORN",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 0,
+          "groupId": "protokoli:0",
+          "groupTitle": "GLOW & GO",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"presoterapija\" (the article says it combines with all face and body treatments)",
+          "origin": null,
+          "serviceIds": [
+            "protokoli:0:5"
+          ],
+          "services": [
+            {
+              "id": "protokoli:0:5",
+              "name": "GLOW & GO 3, produženi protokol 6 nedelja",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 2,
+          "groupId": "protokoli:2",
+          "groupTitle": "Posebna stanja i prilike",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"presoterapija\" (the article says it combines with all face and body treatments)",
+          "origin": null,
+          "serviceIds": [
+            "protokoli:2:1",
+            "protokoli:2:4"
+          ],
+          "services": [
+            {
+              "id": "protokoli:2:1",
+              "name": "NEW MUM RECHARGE",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "protokoli:2:4",
+              "name": "LIFT ME UP",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 3,
+          "groupId": "protokoli:3",
+          "groupTitle": "Summer Body Ready protokoli",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "Services in other groups whose name or description contains \"presoterapija\" (the article says it combines with all face and body treatments)",
+          "origin": null,
+          "serviceIds": [
+            "protokoli:3:6",
+            "protokoli:3:7"
+          ],
+          "services": [
+            {
+              "id": "protokoli:3:6",
+              "name": "CELO TELO",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "protokoli:3:7",
+              "name": "QUICK FIX, Butine i zadnjica",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-20",
+      "slug": "venus-legacy-tretmani",
+      "title": "Venus Legacy tretmani",
+      "segmentId": "telo",
+      "matched": true,
+      "primaryGroupIds": [
+        "telo:0"
+      ],
+      "relatedGroupIds": [
+        "protokoli:2",
+        "protokoli:3"
+      ],
+      "serviceIds": [
+        "telo:0:0",
+        "telo:0:1",
+        "telo:0:2",
+        "telo:0:3",
+        "telo:0:4",
+        "telo:0:5",
+        "telo:0:6",
+        "telo:0:7",
+        "protokoli:2:2",
+        "protokoli:3:0",
+        "protokoli:3:6",
+        "protokoli:3:7"
+      ],
+      "groups": [
+        {
+          "tabId": "telo",
+          "groupIndex": 0,
+          "groupId": "telo:0",
+          "groupTitle": "Venus Legacy telo",
+          "tabLabel": "Tretmani tela",
+          "role": "primary",
+          "basis": "Price-list group \"Venus Legacy telo\" is the article subject",
+          "origin": null,
+          "serviceIds": [
+            "telo:0:0",
+            "telo:0:1",
+            "telo:0:2",
+            "telo:0:3",
+            "telo:0:4",
+            "telo:0:5",
+            "telo:0:6",
+            "telo:0:7"
+          ],
+          "services": [
+            {
+              "id": "telo:0:0",
+              "name": "Ruke",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy telo\""
+            },
+            {
+              "id": "telo:0:1",
+              "name": "Stomak ili zadnjica",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy telo\""
+            },
+            {
+              "id": "telo:0:2",
+              "name": "Butine",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy telo\""
+            },
+            {
+              "id": "telo:0:3",
+              "name": "Butine i zadnjica",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy telo\""
+            },
+            {
+              "id": "telo:0:4",
+              "name": "Listovi",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy telo\""
+            },
+            {
+              "id": "telo:0:5",
+              "name": "Cele noge i zadnjica",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy telo\""
+            },
+            {
+              "id": "telo:0:6",
+              "name": "Cele noge, zadnjica i stomak",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy telo\""
+            },
+            {
+              "id": "telo:0:7",
+              "name": "Celo telo",
+              "basis": "group",
+              "why": "every service of the group \"Venus Legacy telo\""
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 2,
+          "groupId": "protokoli:2",
+          "groupTitle": "Posebna stanja i prilike",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "Body protocols whose name or description contains \"Venus Legacy\"",
+          "origin": null,
+          "serviceIds": [
+            "protokoli:2:2"
+          ],
+          "services": [
+            {
+              "id": "protokoli:2:2",
+              "name": "WEDDING READY",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        },
+        {
+          "tabId": "protokoli",
+          "groupIndex": 3,
+          "groupId": "protokoli:3",
+          "groupTitle": "Summer Body Ready protokoli",
+          "tabLabel": "Naši protokoli",
+          "role": "related",
+          "basis": "Body protocols whose name or description contains \"Venus Legacy\"",
+          "origin": null,
+          "serviceIds": [
+            "protokoli:3:0",
+            "protokoli:3:6",
+            "protokoli:3:7"
+          ],
+          "services": [
+            {
+              "id": "protokoli:3:0",
+              "name": "STOMAK",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "protokoli:3:6",
+              "name": "CELO TELO",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            },
+            {
+              "id": "protokoli:3:7",
+              "name": "QUICK FIX, Butine i zadnjica",
+              "basis": "name or description",
+              "why": "name or description contains the topic of the article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "articleId": "art-21",
+      "slug": "bezbolna-i-bezbedna",
+      "title": "Bezbolna i bezbedna",
+      "segmentId": "telo",
+      "matched": true,
+      "primaryGroupIds": [
+        "laserska:0",
+        "laserska:1",
+        "laserska:2",
+        "laserska:3",
+        "laserska:4"
+      ],
+      "relatedGroupIds": [],
+      "serviceIds": [
+        "laserska:0:0",
+        "laserska:0:1",
+        "laserska:0:2",
+        "laserska:0:3",
+        "laserska:0:4",
+        "laserska:1:0",
+        "laserska:1:1",
+        "laserska:1:2",
+        "laserska:1:3",
+        "laserska:1:4",
+        "laserska:1:5",
+        "laserska:2:0",
+        "laserska:2:1",
+        "laserska:2:2",
+        "laserska:2:3",
+        "laserska:2:4",
+        "laserska:3:0",
+        "laserska:3:1",
+        "laserska:3:2",
+        "laserska:3:3",
+        "laserska:3:4",
+        "laserska:3:5",
+        "laserska:3:6",
+        "laserska:4:0",
+        "laserska:4:1",
+        "laserska:4:2",
+        "laserska:4:3",
+        "laserska:4:4"
+      ],
+      "groups": [
+        {
+          "tabId": "laserska",
+          "groupIndex": 0,
+          "groupId": "laserska:0",
+          "groupTitle": "Paketi, celo telo",
+          "tabLabel": "Laserska epilacija",
+          "role": "primary",
+          "basis": "Every group of the tab \"Laserska epilacija\" is laser hair removal; the old site ties this tab to \"Venus Velocity diodni laser\"",
+          "origin": "tab",
+          "serviceIds": [
+            "laserska:0:0",
+            "laserska:0:1",
+            "laserska:0:2",
+            "laserska:0:3",
+            "laserska:0:4"
+          ],
+          "services": [
+            {
+              "id": "laserska:0:0",
+              "name": "Celo telo, 1 tretman",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:0:1",
+              "name": "Celo telo, paket 6+1 tretmana",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:0:2",
+              "name": "Celo telo, paket 6 tretmana",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:0:3",
+              "name": "Essentials (potkolenice, intima, pazuh, nausnice), 1",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:0:4",
+              "name": "Essentials, 6+1",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            }
+          ]
+        },
+        {
+          "tabId": "laserska",
+          "groupIndex": 1,
+          "groupId": "laserska:1",
+          "groupTitle": "Lice",
+          "tabLabel": "Laserska epilacija",
+          "role": "primary",
+          "basis": "Tab \"Laserska epilacija\", group \"Lice\"",
+          "origin": "tab",
+          "serviceIds": [
+            "laserska:1:0",
+            "laserska:1:1",
+            "laserska:1:2",
+            "laserska:1:3",
+            "laserska:1:4",
+            "laserska:1:5"
+          ],
+          "services": [
+            {
+              "id": "laserska:1:0",
+              "name": "Nausnice",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:1:1",
+              "name": "Brada",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:1:2",
+              "name": "Podbradak",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:1:3",
+              "name": "Nausnice, brada i podbradak",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:1:4",
+              "name": "Celo lice",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:1:5",
+              "name": "Zulufi sa obrazima",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            }
+          ]
+        },
+        {
+          "tabId": "laserska",
+          "groupIndex": 2,
+          "groupId": "laserska:2",
+          "groupTitle": "Telo, gornji deo",
+          "tabLabel": "Laserska epilacija",
+          "role": "primary",
+          "basis": "Tab \"Laserska epilacija\", group \"Telo, gornji deo\"",
+          "origin": "tab",
+          "serviceIds": [
+            "laserska:2:0",
+            "laserska:2:1",
+            "laserska:2:2",
+            "laserska:2:3",
+            "laserska:2:4"
+          ],
+          "services": [
+            {
+              "id": "laserska:2:0",
+              "name": "Pazuh",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:2:1",
+              "name": "Stomak",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:2:2",
+              "name": "Linija stomaka",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:2:3",
+              "name": "Ruke i šake",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:2:4",
+              "name": "Pola ruku i šake",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            }
+          ]
+        },
+        {
+          "tabId": "laserska",
+          "groupIndex": 3,
+          "groupId": "laserska:3",
+          "groupTitle": "Telo, donji deo",
+          "tabLabel": "Laserska epilacija",
+          "role": "primary",
+          "basis": "Tab \"Laserska epilacija\", group \"Telo, donji deo\"",
+          "origin": "tab",
+          "serviceIds": [
+            "laserska:3:0",
+            "laserska:3:1",
+            "laserska:3:2",
+            "laserska:3:3",
+            "laserska:3:4",
+            "laserska:3:5",
+            "laserska:3:6"
+          ],
+          "services": [
+            {
+              "id": "laserska:3:0",
+              "name": "Prepone",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:3:1",
+              "name": "Intima i perianalna regija",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:3:2",
+              "name": "Natkolenice sa kolenima",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:3:3",
+              "name": "Potkolenice sa kolenima",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:3:4",
+              "name": "Cele noge, ris i prsti",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:3:5",
+              "name": "Cele noge i intima",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:3:6",
+              "name": "Zadnjica",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            }
+          ]
+        },
+        {
+          "tabId": "laserska",
+          "groupIndex": 4,
+          "groupId": "laserska:4",
+          "groupTitle": "Kombinacije",
+          "tabLabel": "Laserska epilacija",
+          "role": "primary",
+          "basis": "Tab \"Laserska epilacija\", group \"Kombinacije\"",
+          "origin": "tab",
+          "serviceIds": [
+            "laserska:4:0",
+            "laserska:4:1",
+            "laserska:4:2",
+            "laserska:4:3",
+            "laserska:4:4"
+          ],
+          "services": [
+            {
+              "id": "laserska:4:0",
+              "name": "Intima + pazuh",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:4:1",
+              "name": "Pazuh + potkolenice",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:4:2",
+              "name": "Potkolenice + intima",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:4:3",
+              "name": "Intima + pazuh + potkolenice + nausnice",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            },
+            {
+              "id": "laserska:4:4",
+              "name": "Prepone i noge",
+              "basis": "group",
+              "why": "row of the tab \"Laserska epilacija\"",
+              "origin": "tab"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "groups": {
+    "lice:0": {
+      "tabId": "lice",
+      "tabLabel": "Tretmani lica",
+      "groupIndex": 0,
+      "title": "Higijenski tretmani",
+      "serviceCount": 6,
+      "primaryArticleIds": [
+        "art-11"
+      ],
+      "relatedArticleIds": [
+        "art-9"
+      ],
+      "articleIds": [
+        "art-11",
+        "art-9"
+      ]
+    },
+    "lice:1": {
+      "tabId": "lice",
+      "tabLabel": "Tretmani lica",
+      "groupIndex": 1,
+      "title": "Biološki tretmani",
+      "serviceCount": 11,
+      "primaryArticleIds": [
+        "art-9"
+      ],
+      "relatedArticleIds": [
+        "art-6",
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-19"
+      ],
+      "articleIds": [
+        "art-9",
+        "art-6",
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-19"
+      ]
+    },
+    "lice:2": {
+      "tabId": "lice",
+      "tabLabel": "Tretmani lica",
+      "groupIndex": 2,
+      "title": "Venus Glow / Dermafacial",
+      "serviceCount": 5,
+      "primaryArticleIds": [
+        "art-13",
+        "art-14"
+      ],
+      "relatedArticleIds": [
+        "art-6",
+        "art-12"
+      ],
+      "articleIds": [
+        "art-13",
+        "art-14",
+        "art-6",
+        "art-12"
+      ]
+    },
+    "lice:3": {
+      "tabId": "lice",
+      "tabLabel": "Tretmani lica",
+      "groupIndex": 3,
+      "title": "Hemijski pilinzi",
+      "serviceCount": 9,
+      "primaryArticleIds": [
+        "art-10"
+      ],
+      "relatedArticleIds": [
+        "art-6"
+      ],
+      "articleIds": [
+        "art-10",
+        "art-6"
+      ]
+    },
+    "lice:4": {
+      "tabId": "lice",
+      "tabLabel": "Tretmani lica",
+      "groupIndex": 4,
+      "title": "Mezoporacija",
+      "serviceCount": 2,
+      "primaryArticleIds": [],
+      "relatedArticleIds": [],
+      "articleIds": []
+    },
+    "lice:5": {
+      "tabId": "lice",
+      "tabLabel": "Tretmani lica",
+      "groupIndex": 5,
+      "title": "Dermapen",
+      "serviceCount": 7,
+      "primaryArticleIds": [
+        "art-10"
+      ],
+      "relatedArticleIds": [],
+      "articleIds": [
+        "art-10"
+      ]
+    },
+    "lice:6": {
+      "tabId": "lice",
+      "tabLabel": "Tretmani lica",
+      "groupIndex": 6,
+      "title": "Venus Legacy lice",
+      "serviceCount": 7,
+      "primaryArticleIds": [
+        "art-15"
+      ],
+      "relatedArticleIds": [],
+      "articleIds": [
+        "art-15"
+      ]
+    },
+    "lice:7": {
+      "tabId": "lice",
+      "tabLabel": "Tretmani lica",
+      "groupIndex": 7,
+      "title": "Myolift i masaže lica",
+      "serviceCount": 11,
+      "primaryArticleIds": [
+        "art-12"
+      ],
+      "relatedArticleIds": [
+        "art-15",
+        "art-19"
+      ],
+      "articleIds": [
+        "art-12",
+        "art-15",
+        "art-19"
+      ]
+    },
+    "telo:0": {
+      "tabId": "telo",
+      "tabLabel": "Tretmani tela",
+      "groupIndex": 0,
+      "title": "Venus Legacy telo",
+      "serviceCount": 8,
+      "primaryArticleIds": [
+        "art-20"
+      ],
+      "relatedArticleIds": [
+        "art-16",
+        "art-18"
+      ],
+      "articleIds": [
+        "art-20",
+        "art-16",
+        "art-18"
+      ]
+    },
+    "telo:1": {
+      "tabId": "telo",
+      "tabLabel": "Tretmani tela",
+      "groupIndex": 1,
+      "title": "Presoterapija ProBallancer",
+      "serviceCount": 5,
+      "primaryArticleIds": [
+        "art-19"
+      ],
+      "relatedArticleIds": [
+        "art-9",
+        "art-16",
+        "art-18"
+      ],
+      "articleIds": [
+        "art-19",
+        "art-9",
+        "art-16",
+        "art-18"
+      ]
+    },
+    "telo:2": {
+      "tabId": "telo",
+      "tabLabel": "Tretmani tela",
+      "groupIndex": 2,
+      "title": "Masaže",
+      "serviceCount": 6,
+      "primaryArticleIds": [],
+      "relatedArticleIds": [
+        "art-18",
+        "art-19"
+      ],
+      "articleIds": [
+        "art-18",
+        "art-19"
+      ]
+    },
+    "telo:3": {
+      "tabId": "telo",
+      "tabLabel": "Tretmani tela",
+      "groupIndex": 3,
+      "title": "AWT, Anticelulit i preoblikovanje",
+      "serviceCount": 4,
+      "primaryArticleIds": [
+        "art-16"
+      ],
+      "relatedArticleIds": [],
+      "articleIds": [
+        "art-16"
+      ]
+    },
+    "telo:4": {
+      "tabId": "telo",
+      "tabLabel": "Tretmani tela",
+      "groupIndex": 4,
+      "title": "MedContour, Smanjenje masnih naslaga",
+      "serviceCount": 6,
+      "primaryArticleIds": [
+        "art-17"
+      ],
+      "relatedArticleIds": [],
+      "articleIds": [
+        "art-17"
+      ]
+    },
+    "telo:5": {
+      "tabId": "telo",
+      "tabLabel": "Tretmani tela",
+      "groupIndex": 5,
+      "title": "Tretmani za ciljanu negu",
+      "serviceCount": 7,
+      "primaryArticleIds": [
+        "art-18"
+      ],
+      "relatedArticleIds": [
+        "art-13",
+        "art-14",
+        "art-19"
+      ],
+      "articleIds": [
+        "art-18",
+        "art-13",
+        "art-14",
+        "art-19"
+      ]
+    },
+    "estetske:0": {
+      "tabId": "estetske",
+      "tabLabel": "Estetske procedure",
+      "groupIndex": 0,
+      "title": "Pregled i konsultacije",
+      "serviceCount": 2,
+      "primaryArticleIds": [],
+      "relatedArticleIds": [],
+      "articleIds": []
+    },
+    "estetske:1": {
+      "tabId": "estetske",
+      "tabLabel": "Estetske procedure",
+      "groupIndex": 1,
+      "title": "Hijaluronski fileri",
+      "serviceCount": 7,
+      "primaryArticleIds": [
+        "art-7"
+      ],
+      "relatedArticleIds": [
+        "art-6"
+      ],
+      "articleIds": [
+        "art-7",
+        "art-6"
+      ]
+    },
+    "estetske:2": {
+      "tabId": "estetske",
+      "tabLabel": "Estetske procedure",
+      "groupIndex": 2,
+      "title": "Botox tretman",
+      "serviceCount": 6,
+      "primaryArticleIds": [
+        "art-6"
+      ],
+      "relatedArticleIds": [
+        "art-7"
+      ],
+      "articleIds": [
+        "art-6",
+        "art-7"
+      ]
+    },
+    "estetske:3": {
+      "tabId": "estetske",
+      "tabLabel": "Estetske procedure",
+      "groupIndex": 3,
+      "title": "Biorevitalizacija i skinbosteri",
+      "serviceCount": 17,
+      "primaryArticleIds": [
+        "art-5"
+      ],
+      "relatedArticleIds": [
+        "art-4"
+      ],
+      "articleIds": [
+        "art-5",
+        "art-4"
+      ]
+    },
+    "estetske:4": {
+      "tabId": "estetske",
+      "tabLabel": "Estetske procedure",
+      "groupIndex": 4,
+      "title": "Lifting niti i mezoniti",
+      "serviceCount": 6,
+      "primaryArticleIds": [
+        "art-8"
+      ],
+      "relatedArticleIds": [],
+      "articleIds": [
+        "art-8"
+      ]
+    },
+    "estetske:5": {
+      "tabId": "estetske",
+      "tabLabel": "Estetske procedure",
+      "groupIndex": 5,
+      "title": "Dermatologija",
+      "serviceCount": 14,
+      "primaryArticleIds": [
+        "art-1",
+        "art-2",
+        "art-3"
+      ],
+      "relatedArticleIds": [],
+      "articleIds": [
+        "art-1",
+        "art-2",
+        "art-3"
+      ]
+    },
+    "estetske:6": {
+      "tabId": "estetske",
+      "tabLabel": "Estetske procedure",
+      "groupIndex": 6,
+      "title": "Infuziona suplementacija",
+      "serviceCount": 4,
+      "primaryArticleIds": [],
+      "relatedArticleIds": [],
+      "articleIds": []
+    },
+    "estetske:7": {
+      "tabId": "estetske",
+      "tabLabel": "Estetske procedure",
+      "groupIndex": 7,
+      "title": "Rast kose",
+      "serviceCount": 6,
+      "primaryArticleIds": [
+        "art-4"
+      ],
+      "relatedArticleIds": [
+        "art-2"
+      ],
+      "articleIds": [
+        "art-4",
+        "art-2"
+      ]
+    },
+    "protokoli:0": {
+      "tabId": "protokoli",
+      "tabLabel": "Naši protokoli",
+      "groupIndex": 0,
+      "title": "GLOW & GO",
+      "serviceCount": 6,
+      "primaryArticleIds": [],
+      "relatedArticleIds": [
+        "art-6",
+        "art-14",
+        "art-19"
+      ],
+      "articleIds": [
+        "art-6",
+        "art-14",
+        "art-19"
+      ]
+    },
+    "protokoli:1": {
+      "tabId": "protokoli",
+      "tabLabel": "Naši protokoli",
+      "groupIndex": 1,
+      "title": "Anti-aging protokoli",
+      "serviceCount": 6,
+      "primaryArticleIds": [],
+      "relatedArticleIds": [
+        "art-12",
+        "art-15"
+      ],
+      "articleIds": [
+        "art-12",
+        "art-15"
+      ]
+    },
+    "protokoli:2": {
+      "tabId": "protokoli",
+      "tabLabel": "Naši protokoli",
+      "groupIndex": 2,
+      "title": "Posebna stanja i prilike",
+      "serviceCount": 5,
+      "primaryArticleIds": [],
+      "relatedArticleIds": [
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-19",
+        "art-20"
+      ],
+      "articleIds": [
+        "art-12",
+        "art-13",
+        "art-14",
+        "art-19",
+        "art-20"
+      ]
+    },
+    "protokoli:3": {
+      "tabId": "protokoli",
+      "tabLabel": "Naši protokoli",
+      "groupIndex": 3,
+      "title": "Summer Body Ready protokoli",
+      "serviceCount": 9,
+      "primaryArticleIds": [],
+      "relatedArticleIds": [
+        "art-19",
+        "art-20"
+      ],
+      "articleIds": [
+        "art-19",
+        "art-20"
+      ]
+    },
+    "laserska:0": {
+      "tabId": "laserska",
+      "tabLabel": "Laserska epilacija",
+      "groupIndex": 0,
+      "title": "Paketi, celo telo",
+      "serviceCount": 5,
+      "primaryArticleIds": [
+        "art-21"
+      ],
+      "relatedArticleIds": [],
+      "articleIds": [
+        "art-21"
+      ]
+    },
+    "laserska:1": {
+      "tabId": "laserska",
+      "tabLabel": "Laserska epilacija",
+      "groupIndex": 1,
+      "title": "Lice",
+      "serviceCount": 6,
+      "primaryArticleIds": [
+        "art-21"
+      ],
+      "relatedArticleIds": [],
+      "articleIds": [
+        "art-21"
+      ]
+    },
+    "laserska:2": {
+      "tabId": "laserska",
+      "tabLabel": "Laserska epilacija",
+      "groupIndex": 2,
+      "title": "Telo, gornji deo",
+      "serviceCount": 5,
+      "primaryArticleIds": [
+        "art-21"
+      ],
+      "relatedArticleIds": [],
+      "articleIds": [
+        "art-21"
+      ]
+    },
+    "laserska:3": {
+      "tabId": "laserska",
+      "tabLabel": "Laserska epilacija",
+      "groupIndex": 3,
+      "title": "Telo, donji deo",
+      "serviceCount": 7,
+      "primaryArticleIds": [
+        "art-21"
+      ],
+      "relatedArticleIds": [],
+      "articleIds": [
+        "art-21"
+      ]
+    },
+    "laserska:4": {
+      "tabId": "laserska",
+      "tabLabel": "Laserska epilacija",
+      "groupIndex": 4,
+      "title": "Kombinacije",
+      "serviceCount": 5,
+      "primaryArticleIds": [
+        "art-21"
+      ],
+      "relatedArticleIds": [],
+      "articleIds": [
+        "art-21"
+      ]
+    }
+  },
+  "groupsWithoutArticle": [
+    {
+      "groupId": "lice:4",
+      "title": "Mezoporacija",
+      "tabId": "lice"
+    },
+    {
+      "groupId": "estetske:0",
+      "title": "Pregled i konsultacije",
+      "tabId": "estetske"
+    },
+    {
+      "groupId": "estetske:6",
+      "title": "Infuziona suplementacija",
+      "tabId": "estetske"
+    }
+  ],
+  "serviceToArticles": {
+    "lice:0:0": [
+      "art-11"
+    ],
+    "lice:0:1": [
+      "art-11"
+    ],
+    "lice:0:2": [
+      "art-11"
+    ],
+    "lice:0:3": [
+      "art-11"
+    ],
+    "lice:0:4": [
+      "art-11"
+    ],
+    "lice:1:0": [
+      "art-9"
+    ],
+    "lice:1:1": [
+      "art-9"
+    ],
+    "lice:1:2": [
+      "art-9"
+    ],
+    "lice:1:3": [
+      "art-9"
+    ],
+    "lice:1:4": [
+      "art-9"
+    ],
+    "lice:1:5": [
+      "art-9",
+      "art-13",
+      "art-14"
+    ],
+    "lice:1:6": [
+      "art-9",
+      "art-13",
+      "art-14"
+    ],
+    "lice:1:7": [
+      "art-9"
+    ],
+    "lice:1:8": [
+      "art-9"
+    ],
+    "lice:1:9": [
+      "art-9"
+    ],
+    "lice:1:10": [
+      "art-9",
+      "art-12",
+      "art-14",
+      "art-19"
+    ],
+    "lice:2:0": [
+      "art-14"
+    ],
+    "lice:2:1": [
+      "art-14"
+    ],
+    "lice:2:2": [
+      "art-14"
+    ],
+    "lice:2:3": [
+      "art-12",
+      "art-13"
+    ],
+    "lice:2:4": [
+      "art-13"
+    ],
+    "lice:3:0": [
+      "art-10"
+    ],
+    "lice:3:1": [
+      "art-10"
+    ],
+    "lice:3:2": [
+      "art-10"
+    ],
+    "lice:3:3": [
+      "art-10"
+    ],
+    "lice:3:4": [
+      "art-10"
+    ],
+    "lice:3:5": [
+      "art-10"
+    ],
+    "lice:3:6": [
+      "art-10"
+    ],
+    "lice:3:7": [
+      "art-10"
+    ],
+    "lice:3:8": [
+      "art-10"
+    ],
+    "lice:5:0": [
+      "art-10"
+    ],
+    "lice:5:1": [
+      "art-10"
+    ],
+    "lice:5:2": [
+      "art-10"
+    ],
+    "lice:5:3": [
+      "art-10"
+    ],
+    "lice:5:4": [
+      "art-10"
+    ],
+    "lice:5:5": [
+      "art-10"
+    ],
+    "lice:5:6": [
+      "art-10"
+    ],
+    "lice:6:0": [
+      "art-15"
+    ],
+    "lice:6:1": [
+      "art-15"
+    ],
+    "lice:6:2": [
+      "art-15"
+    ],
+    "lice:6:3": [
+      "art-15"
+    ],
+    "lice:6:4": [
+      "art-15"
+    ],
+    "lice:6:5": [
+      "art-15"
+    ],
+    "lice:6:6": [
+      "art-15"
+    ],
+    "lice:7:0": [
+      "art-12"
+    ],
+    "lice:7:1": [
+      "art-12"
+    ],
+    "lice:7:3": [
+      "art-19"
+    ],
+    "lice:7:6": [
+      "art-12",
+      "art-15"
+    ],
+    "lice:7:9": [
+      "art-12",
+      "art-15"
+    ],
+    "telo:0:0": [
+      "art-20"
+    ],
+    "telo:0:1": [
+      "art-20"
+    ],
+    "telo:0:2": [
+      "art-20"
+    ],
+    "telo:0:3": [
+      "art-20"
+    ],
+    "telo:0:4": [
+      "art-20"
+    ],
+    "telo:0:5": [
+      "art-20"
+    ],
+    "telo:0:6": [
+      "art-20"
+    ],
+    "telo:0:7": [
+      "art-20"
+    ],
+    "telo:1:0": [
+      "art-19"
+    ],
+    "telo:1:1": [
+      "art-19"
+    ],
+    "telo:1:2": [
+      "art-19"
+    ],
+    "telo:1:3": [
+      "art-19"
+    ],
+    "telo:1:4": [
+      "art-19"
+    ],
+    "telo:2:2": [
+      "art-19"
+    ],
+    "telo:2:4": [
+      "art-18"
+    ],
+    "telo:2:5": [
+      "art-18"
+    ],
+    "telo:3:0": [
+      "art-16"
+    ],
+    "telo:3:1": [
+      "art-16"
+    ],
+    "telo:3:2": [
+      "art-16"
+    ],
+    "telo:3:3": [
+      "art-16"
+    ],
+    "telo:4:0": [
+      "art-17"
+    ],
+    "telo:4:1": [
+      "art-17"
+    ],
+    "telo:4:2": [
+      "art-17"
+    ],
+    "telo:4:3": [
+      "art-17"
+    ],
+    "telo:4:4": [
+      "art-17"
+    ],
+    "telo:4:5": [
+      "art-17"
+    ],
+    "telo:5:0": [
+      "art-18",
+      "art-19"
+    ],
+    "telo:5:1": [
+      "art-18"
+    ],
+    "telo:5:2": [
+      "art-18"
+    ],
+    "telo:5:3": [
+      "art-18"
+    ],
+    "telo:5:4": [
+      "art-13",
+      "art-14"
+    ],
+    "telo:5:6": [
+      "art-13",
+      "art-14",
+      "art-19"
+    ],
+    "estetske:1:0": [
+      "art-7"
+    ],
+    "estetske:1:1": [
+      "art-7"
+    ],
+    "estetske:1:2": [
+      "art-7"
+    ],
+    "estetske:1:3": [
+      "art-7"
+    ],
+    "estetske:1:4": [
+      "art-6",
+      "art-7"
+    ],
+    "estetske:1:5": [
+      "art-6",
+      "art-7"
+    ],
+    "estetske:1:6": [
+      "art-6"
+    ],
+    "estetske:2:0": [
+      "art-6"
+    ],
+    "estetske:2:1": [
+      "art-6"
+    ],
+    "estetske:2:2": [
+      "art-6"
+    ],
+    "estetske:2:3": [
+      "art-6"
+    ],
+    "estetske:2:4": [
+      "art-6"
+    ],
+    "estetske:2:5": [
+      "art-6"
+    ],
+    "estetske:3:0": [
+      "art-5"
+    ],
+    "estetske:3:1": [
+      "art-5"
+    ],
+    "estetske:3:6": [
+      "art-5"
+    ],
+    "estetske:3:7": [
+      "art-5"
+    ],
+    "estetske:3:12": [
+      "art-5"
+    ],
+    "estetske:3:13": [
+      "art-4",
+      "art-5"
+    ],
+    "estetske:3:14": [
+      "art-4",
+      "art-5"
+    ],
+    "estetske:3:15": [
+      "art-4",
+      "art-5"
+    ],
+    "estetske:3:16": [
+      "art-4",
+      "art-5"
+    ],
+    "estetske:4:0": [
+      "art-8"
+    ],
+    "estetske:4:1": [
+      "art-8"
+    ],
+    "estetske:4:2": [
+      "art-8"
+    ],
+    "estetske:5:0": [
+      "art-2"
+    ],
+    "estetske:5:1": [
+      "art-2"
+    ],
+    "estetske:5:2": [
+      "art-1"
+    ],
+    "estetske:5:3": [
+      "art-1"
+    ],
+    "estetske:5:4": [
+      "art-1"
+    ],
+    "estetske:5:5": [
+      "art-1"
+    ],
+    "estetske:5:6": [
+      "art-1"
+    ],
+    "estetske:5:7": [
+      "art-1"
+    ],
+    "estetske:5:8": [
+      "art-1"
+    ],
+    "estetske:5:9": [
+      "art-1"
+    ],
+    "estetske:5:10": [
+      "art-3"
+    ],
+    "estetske:5:11": [
+      "art-3"
+    ],
+    "estetske:5:13": [
+      "art-1"
+    ],
+    "estetske:7:2": [
+      "art-4"
+    ],
+    "estetske:7:3": [
+      "art-4"
+    ],
+    "estetske:7:4": [
+      "art-4"
+    ],
+    "estetske:7:5": [
+      "art-4"
+    ],
+    "protokoli:0:0": [
+      "art-14"
+    ],
+    "protokoli:0:2": [
+      "art-14"
+    ],
+    "protokoli:0:4": [
+      "art-14"
+    ],
+    "protokoli:0:5": [
+      "art-19"
+    ],
+    "protokoli:1:0": [
+      "art-12",
+      "art-15"
+    ],
+    "protokoli:1:2": [
+      "art-12"
+    ],
+    "protokoli:2:0": [
+      "art-13",
+      "art-14"
+    ],
+    "protokoli:2:1": [
+      "art-13",
+      "art-14",
+      "art-19"
+    ],
+    "protokoli:2:2": [
+      "art-12",
+      "art-20"
+    ],
+    "protokoli:2:4": [
+      "art-19"
+    ],
+    "protokoli:3:0": [
+      "art-20"
+    ],
+    "protokoli:3:6": [
+      "art-19",
+      "art-20"
+    ],
+    "protokoli:3:7": [
+      "art-19",
+      "art-20"
+    ],
+    "laserska:0:0": [
+      "art-21"
+    ],
+    "laserska:0:1": [
+      "art-21"
+    ],
+    "laserska:0:2": [
+      "art-21"
+    ],
+    "laserska:0:3": [
+      "art-21"
+    ],
+    "laserska:0:4": [
+      "art-21"
+    ],
+    "laserska:1:0": [
+      "art-21"
+    ],
+    "laserska:1:1": [
+      "art-21"
+    ],
+    "laserska:1:2": [
+      "art-21"
+    ],
+    "laserska:1:3": [
+      "art-21"
+    ],
+    "laserska:1:4": [
+      "art-21"
+    ],
+    "laserska:1:5": [
+      "art-21"
+    ],
+    "laserska:2:0": [
+      "art-21"
+    ],
+    "laserska:2:1": [
+      "art-21"
+    ],
+    "laserska:2:2": [
+      "art-21"
+    ],
+    "laserska:2:3": [
+      "art-21"
+    ],
+    "laserska:2:4": [
+      "art-21"
+    ],
+    "laserska:3:0": [
+      "art-21"
+    ],
+    "laserska:3:1": [
+      "art-21"
+    ],
+    "laserska:3:2": [
+      "art-21"
+    ],
+    "laserska:3:3": [
+      "art-21"
+    ],
+    "laserska:3:4": [
+      "art-21"
+    ],
+    "laserska:3:5": [
+      "art-21"
+    ],
+    "laserska:3:6": [
+      "art-21"
+    ],
+    "laserska:4:0": [
+      "art-21"
+    ],
+    "laserska:4:1": [
+      "art-21"
+    ],
+    "laserska:4:2": [
+      "art-21"
+    ],
+    "laserska:4:3": [
+      "art-21"
+    ],
+    "laserska:4:4": [
+      "art-21"
+    ]
+  }
+}

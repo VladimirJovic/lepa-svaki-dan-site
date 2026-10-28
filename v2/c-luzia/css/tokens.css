@@ -1,0 +1,135 @@
+/* =====================================================================================================
+   LEPA SVAKI DAN / BEAUTY CONCEPT  -  design tokens for the "C" preview
+   Brand values come from the brand pack (v2/_shared/brand/tokens/brand.css, sampled from the brandbook).
+   Pripremio ECHOSYSTEM-MOTHER AGENCY
+
+   COLOUR TONE (client feedback, round 2): soft and clean. One text colour everywhere = the brandbook 75% BLACK (#5A5758, swatch p5 of the
+   brandbook, white on it 7.1:1). No near-black. No two-colour headings or sentences. Strong contrasts are avoided: lila is used as a surface
+   (tints), gold as a thin PRINT-like foil accent (hairlines, small labels, dots, corner brackets), never as a large fill.
+   The green of the Wellbeing concept is NOT used: it is pending from the owner.
+
+   FOIL: sampled from the ZLATNA FOLIJA swatches of the brandbook (88x88 raster, mean #D49D6F, range #BA7C54 .. #F1C998; texture p11 darkest
+   #9A6137 / lightest #F9F2CD). --foil is a 6-stop copper-gold gradient built from those samples (the cream highlight is toned down so it never
+   glitters). Text on white cannot use the light stops (contrast), so small labels use --foil-text (the same ramp in its darker range, every
+   stop >= 4.6:1 on white and on lila-100) and --foil-text-dark on 75% black blocks.
+
+   Galano Grotesque (self-hosted). Only Regular exists in the project.
+   Note (designer): when GalanoGrotesqueLight.woff2 is supplied, drop it into ../assets/fonts/ and un-comment the
+   block below. Text and display styles already ask for var(--fw-light) (300) and will switch to Light automatically.
+   Until then weight 300 resolves to Regular. (Bold is not a brandbook weight and is not used.)
+   ===================================================================================================== */
+@font-face {
+  font-family: "Galano Grotesque";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/GalanoGrotesqueRegular.woff2") format("woff2"),
+       url("../assets/fonts/GalanoGrotesqueRegular.woff") format("woff");
+}
+/*
+@font-face {
+  font-family: "Galano Grotesque";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../assets/fonts/GalanoGrotesqueLight.woff2") format("woff2"),
+       url("../assets/fonts/GalanoGrotesqueLight.woff") format("woff");
+}
+*/
+
+:root {
+  /* brand colours (brandbook, sampled) */
+  --lila: #C5B4E3;            /* PANTONE 2635 C (vector fill read from brandbook p.11: 197,180,227) - surfaces, selection, bands */
+  --lila-70: #D7CAEB;         /* 70% of 2635 C (brandbook tint): the softest "full" lila block, 75% black text on it = 4.6:1 */
+  --lila-deep: #AF96DB;       /* PANTONE 2645 C: hairlines / dots only, never behind text */
+  --charcoal: #5A5758;        /* 75% BLACK (brandbook p5 swatch, sampled; printed spec RGB 88/89/91): text, buttons, chips, dark blocks, overlays */
+  --charcoal-hover: #4C4949;  /* the same grey one step darker (hover / pressed on buttons, white on it 8.7:1) */
+  --white: #FFFFFF;
+  --lila-50: #F9F8FC;
+  --lila-100: #F4F0F9;
+  --lila-200: #E8E1F4;
+  --lila-300: #D7CAEB;
+  --on-lila: #3A3637;         /* the 75% black darkened, ONLY for text that sits on the full lila (--lila): 6.2:1 (75% black there is 3.8:1) */
+
+  /* foil (print-like gold). See the note at the top. */
+  --foil: linear-gradient(135deg, #AD7547 0%, #C98F62 20%, #E9C395 42%, #D49D6F 60%, #BE875A 80%, #A9704A 100%);
+  --foil-text: linear-gradient(100deg, #7B4A28 0%, #8A5632 24%, #94603A 46%, #86522E 66%, #7B4A28 84%, #8E5A35 100%);
+  --foil-text-dark: linear-gradient(100deg, #EBCBA0 0%, #F4DBB4 28%, #EFD0A6 54%, #F3D8B0 78%, #EBCBA0 100%);
+  --foil-ink: #8A5632;        /* solid fallback of --foil-text (6.1:1 on white) */
+  --foil-ink-dark: #EBCBA0;   /* solid fallback of --foil-text-dark (4.6:1 on 75% black) */
+  --foil-mid: #C08A5E;        /* one solid foil tone for underlines and borders */
+
+  /* roles */
+  --canvas: var(--white);
+  --ink: var(--charcoal);         /* text colour */
+  --surface: var(--lila-100);     /* soft shell */
+  --line: var(--lila-200);
+  --mute: var(--charcoal);        /* secondary text on light: same 75% black, hierarchy comes from size, not from a second grey */
+  --on-dark: #FFFFFF;
+  --on-dark-mute: #EAE6E8;        /* 5.8:1 on 75% black */
+
+  /* type: Galano Grotesque ONLY */
+  --font-sans: "Galano Grotesque", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fw-light: 300;                /* brandbook text weight (renders Regular until the Light font file is added) */
+  --fw-text: var(--fw-light);
+  --fw-display: var(--fw-light);
+  --fw-strong: 400;
+  --track-display: -0.02em;
+  --track-label: 0.18em;
+
+  --fs-h1: clamp(2.5rem, 1.5rem + 5vw, 4rem);
+  --fs-h2: clamp(2rem, 1.3rem + 2.9vw, 3.75rem);
+  --fs-h2-long: clamp(1.75rem, 1.15rem + 2.3vw, 3rem);
+  --fs-h3: clamp(1.25rem, 1.1rem + .6vw, 1.5rem);
+  --fs-body: 1rem;
+  --fs-lead: clamp(1.0625rem, 1rem + .3vw, 1.25rem);
+  --fs-small: .875rem;
+  --fs-micro: .875rem;
+
+  /* HEADING GAP (client: "ne volim prevelike razmake izmedju naslova i podnaslova"). ONE value drives the space between a heading and the
+     line directly under it (sub-line, lead, address, excerpt) on every page: 8px on phones, 10px from 768px. Change it here and all
+     headings follow (home, blog, articles, segments, offers, cards). */
+  --head-gap: 8px;
+
+  /* shape */
+  --r-card: 24px;     /* 40 at >= 768 */
+  --r-shell: 24px;
+  --r-panel: 20px;
+  --r-btn: 16px;
+  --r-chip: 12px;
+
+  /* layout */
+  --gut-min: 16px;
+  /* gutters honour the notch / rounded-corner insets (iPhone landscape, edge-to-edge webviews); symmetric on purpose so the
+     full-bleed rows that use calc(var(--gut) * -1) keep working. Portrait: insets are 0 and this is just --gut-min. */
+  --gut: max(var(--gut-min), env(safe-area-inset-left, 0px), env(safe-area-inset-right, 0px));
+  --max: 1120px;
+  --max-wide: 1360px;
+  --sec: clamp(56px, 9vw, 104px);
+  --nav-top: max(12px, env(safe-area-inset-top, 0px));
+  --nav-h: 64px;
+  --nav-space: calc(var(--nav-top) + var(--nav-h));
+  --bar-h: 64px;
+
+  /* motion */
+  --ease-settle: cubic-bezier(.22, 1, .36, 1);
+  --ease-io: cubic-bezier(.44, 0, .56, 1);
+  --t-hover: .65s;
+
+  /* shadows: flat colour blocks and hairlines; one short, soft lift (prominent card, dark quote card, search results) */
+  --shadow-btn: none;
+  --shadow-card: 0 8px 24px rgba(90, 87, 88, .1);
+  --shadow-chip: 0 .72px .72px -.83px rgba(90, 87, 88, .075), 0 2.75px 2.75px -1.67px rgba(90, 87, 88, .075), 0 12px 12px -2.5px rgba(90, 87, 88, .075);
+  --shadow-pill: 0 8px 30px -12px rgba(90, 87, 88, .22), 0 1px 2px rgba(90, 87, 88, .04);
+  --shadow-pop: 0 18px 50px -18px rgba(90, 87, 88, .35), 0 2px 6px rgba(90, 87, 88, .06);
+}
+
+@media (min-width: 768px) {
+  :root { --gut-min: 24px; --r-card: 40px; --nav-h: 68px; --head-gap: 10px; }
+}
+@media (min-width: 1024px) {
+  :root { --nav-h: 72px; --bar-h: 0px; }
+}
+@media (min-width: 1200px) {
+  :root { --gut-min: 40px; }
+}

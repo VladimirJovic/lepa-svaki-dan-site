@@ -1,0 +1,163 @@
+/* =====================================================================================================
+   LEPA SVAKI DAN  /  BEAUTY CONCEPT  -  brand tokens
+   Pripremio ECHOSYSTEM-MOTHER AGENCY  ·  2026-10-07
+
+   Source: brandbook "!!!BeautyConceptBRAND BOOK.pdf" (13 pp, 2021).
+   Colour values below were SAMPLED as pixel medians from the swatches of the PDF rendered at 200 dpi
+   (not copied from the printed specs, which are Pantone/CMYK only), then cross-checked against the vector fills.
+
+   BRANDBOOK NOTES
+   - PANTONE 2635 C is the master lila (CMYK 20/30/0/0). PANTONE 2645 C (CMYK 31/43/0/0) is the second, deeper lila
+     used for the lila LEPA SVAKI DAN marks on white (brandbook p5).
+   - "RGB R88 G89 B91" printed beside the lila swatch on pp 3-4 does NOT describe lila; it is the 75% black (charcoal).
+     The sampled lila is 198 / 180 / 227.
+   - Gold appears two ways: a flat "GOLD" (--gold, 2-colour logo) and the real gold FOIL (zlatna folija) which is
+     a rose/copper metallic and only exists as a texture; --gold-foil* are sampled from that texture.
+   - Typography (brandbook p12): the Galano Grotesque family in LIGHT, REGULAR and MEDIUM; the CONCEPT wordmark and all running
+     text are Light (pp 7-8, 12). This pack only has Regular and Bold: Light and Medium are missing (see note below).
+
+   CONTRAST (WCAG 2.x, computed with this file's values)
+   --lila               #C6B4E3   vs ink  8.57:1   vs white  1.90:1
+   --lila-70            #D7CAEB   vs ink 10.51:1   vs white  1.55:1
+   --lila-deep          #AF96DB   vs ink  6.37:1   vs white  2.56:1
+   --gold               #C18F16   vs ink  5.59:1   vs white  2.91:1
+   --gold-foil          #D1A671   vs ink  7.30:1   vs white  2.23:1
+   --gold-foil-light    #F7E5B9   vs ink 13.09:1   vs white  1.25:1
+   --gold-foil-dark     #AD7547   vs ink  4.20:1   vs white  3.88:1
+   --charcoal           #5A5758   vs ink  2.28:1   vs white  7.15:1
+   --charcoal-deep      #322F30   vs ink  1.23:1   vs white 13.25:1
+   --ink                #231F20   vs ink  1.00:1   vs white 16.30:1
+   --white              #FFFFFF   vs ink 16.30:1   vs white  1.00:1
+   --lila-50            #F9F8FC   vs ink 15.42:1   vs white  1.06:1
+   --lila-100           #F4F0F9   vs ink 14.50:1   vs white  1.12:1
+   --lila-200           #E8E1F4   vs ink 12.81:1   vs white  1.27:1
+   --lila-300           #D7CAEB   vs ink 10.51:1   vs white  1.55:1
+   --lila-400           #CFBFE7   vs ink  9.52:1   vs white  1.71:1
+   --lila-500           #C6B4E3   vs ink  8.57:1   vs white  1.90:1
+   --lila-600           #AF96DB   vs ink  6.37:1   vs white  2.56:1
+   --lila-700           #8466BA   vs ink  3.56:1   vs white  4.57:1
+   --lila-800           #61478F   vs ink  2.18:1   vs white  7.48:1
+   --lila-900           #3E2F57   vs ink  1.36:1   vs white 12.01:1
+   --lila-deep-80       #BFABE2   vs ink  7.87:1   vs white  2.07:1
+   --lila-deep-40       #DFD5F1   vs ink 11.59:1   vs white  1.41:1
+   --lila-deep-20       #EFEAF8   vs ink 13.81:1   vs white  1.18:1
+
+   Reading the table:
+   - Ink on lila is comfortable (8.6:1). White on lila is only 1.90:1, so the brandbook's white-on-lila
+     lockups are fine for the large logo but must NOT be used for small text or UI labels.
+   - Lila (--lila) as text on white is 1.90:1: decorative only. Use --lila-700 or darker for
+     small lila text on white (>= 4.5:1), or --ink.
+   ===================================================================================================== */
+
+/* ---- Galano Grotesque (self-hosted) -------------------------------------------------------------- */
+@font-face {
+  font-family: "Galano Grotesque";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/GalanoGrotesqueRegular.woff2") format("woff2"),
+       url("../fonts/GalanoGrotesqueRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "Galano Grotesque";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/GalanoGrotesqueBold.woff2") format("woff2"),
+       url("../fonts/GalanoGrotesqueBold.woff") format("woff");
+}
+/* Note (designer): Galano Grotesque LIGHT (text weight) and MEDIUM (brandbook p12) are NOT in this pack.
+   Once supplied, drop GalanoGrotesqueLight.woff2/.woff into ../fonts/ and un-comment:
+@font-face {
+  font-family: "Galano Grotesque";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/GalanoGrotesqueLight.woff2") format("woff2"),
+       url("../fonts/GalanoGrotesqueLight.woff") format("woff");
+}
+   Same for Medium (500). Until then weight 300 resolves to Regular (400) and 500 resolves to Regular (400): browsers pick
+   the nearest available face, so var(--font-weight-light) and var(--font-weight-medium) are safe to use today and
+   upgrade automatically later. (Bold 700 is in the project but is not one of the three brandbook weights.) */
+
+:root {
+  /* ---- brand colours (sampled) ---- */
+  --lila: #C6B4E3;               /* PANTONE 2635 C - master lila */
+  --lila-70: #D7CAEB;            /* 70% of 2635 C (brandbook p2/p7 tint) */
+  --lila-deep: #AF96DB;          /* PANTONE 2645 C - deeper lila (LSD marks) */
+  --gold: #C18F16;               /* flat GOLD of the 2-colour logo */
+  --gold-foil: #D1A671;          /* gold foil, mean of the swatch texture */
+  --gold-foil-light: #F7E5B9;
+  --gold-foil-dark: #AD7547;
+  --charcoal: #5A5758;           /* 75% black */
+  --charcoal-deep: #322F30;      /* dark logo block */
+  --ink: #231F20;                /* PANTONE Black C */
+  --white: #FFFFFF;
+
+  /* ---- generated lila scale: 50-300 = white mixed with 2635 C at 10/20/40/70%  (20/40/70 match the
+          brandbook tints); 400 = 85%; 500 = base; 600 = 2645 C; 700/800/900 = hue of 2645 C darkened to 4.6 / 7.5 / 12:1 on white ---- */
+  --lila-50: #F9F8FC;
+  --lila-100: #F4F0F9;
+  --lila-200: #E8E1F4;
+  --lila-300: #D7CAEB;
+  --lila-400: #CFBFE7;
+  --lila-500: #C6B4E3;
+  --lila-600: #AF96DB;
+  --lila-700: #8466BA;
+  --lila-800: #61478F;
+  --lila-900: #3E2F57;
+  /* tints of 2645 C as printed on brandbook p11 (80/40/20%) */
+  --lila-deep-80: #BFABE2;
+  --lila-deep-40: #DFD5F1;
+  --lila-deep-20: #EFEAF8;
+
+  /* ---- semantic aliases ---- */
+  --color-bg: var(--white);
+  --color-bg-tint: var(--lila-50);
+  --color-surface-lila: var(--lila);
+  --color-surface-dark: var(--charcoal-deep);
+  --color-text: var(--ink);
+  --color-text-muted: var(--charcoal);
+  --color-text-on-lila: var(--ink);          /* 8.6:1 - white on lila is 1.90:1, keep it for big logo only */
+  --color-text-lila: var(--lila-700);          /* smallest lila step that reaches 4.5:1 on white */
+  --color-accent: var(--lila);
+  --color-accent-strong: var(--lila-deep);
+  --color-rule: var(--lila-200);
+  --color-gold: var(--gold);
+  --gradient-gold-foil: linear-gradient(135deg, var(--gold-foil-light) 0%, var(--gold-foil) 45%, var(--gold-foil-dark) 100%);
+
+  /* ---- type ---- */
+  --font-sans: "Galano Grotesque", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-weight-light: 300;     /* brandbook text weight; renders as Regular until the Light font is supplied */
+  --font-weight-medium: 500;    /* brandbook weight; renders as Regular until the Medium font is supplied */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --tracking-wordmark: 0.5em;   /* wide LEPA - SVAKI - DAN spacing; use on small caps labels */
+  --tracking-label: 0.18em;
+  --measure: 62ch;
+
+  /* ---- bracket / hairline motif ---- */
+  --hairline: 0.5px;
+  --bracket-stroke: 1.5px;
+  --bracket-arm: 22.7%;          /* arm length as share of frame width (brandbook logo block) */
+  --bracket-offset: 0.75rem;     /* gap between content and bracket frame */
+}
+
+/* ---- optional helper: open corner-bracket frame around any box (pure CSS, tints with `color`) -------
+   <div class="bc-brackets" style="color: var(--lila)"> ... </div>
+   Matches graphics/corner-bracket.svg (side brackets with open top/bottom centres). */
+.bc-brackets { position: relative; }
+.bc-brackets::before {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * var(--bracket-offset));
+  pointer-events: none;
+  background:
+    linear-gradient(currentColor, currentColor) 0 0 / var(--bracket-arm) var(--bracket-stroke),
+    linear-gradient(currentColor, currentColor) 0 100% / var(--bracket-arm) var(--bracket-stroke),
+    linear-gradient(currentColor, currentColor) 0 0 / var(--bracket-stroke) 100%,
+    linear-gradient(currentColor, currentColor) 100% 0 / var(--bracket-arm) var(--bracket-stroke),
+    linear-gradient(currentColor, currentColor) 100% 100% / var(--bracket-arm) var(--bracket-stroke),
+    linear-gradient(currentColor, currentColor) 100% 0 / var(--bracket-stroke) 100%;
+  background-repeat: no-repeat;
+}

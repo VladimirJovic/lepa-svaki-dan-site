@@ -1,0 +1,293 @@
+{
+  "generatedAt": "2026-10-07T16:33:34.136Z",
+  "changes": [
+    {
+      "path": "site.pages.home.description",
+      "before": "Premium beauty & wellbeing concept u Beogradu. Estetska medicina, tretmani lica i tela, laserska epilacija, dermatologija. D\u0072 Tamara Vujačić i tim. Dve lokacije: Novi Beograd i Belgrade Waterfront.",
+      "after": "Premium beauty & wellbeing concept u Beogradu. Estetska medicina, tretmani lica i tela, laserska epilacija, dermatologija. Tamara Vujačić i tim. Dve lokacije: Novi Beograd i Belgrade Waterfront.",
+      "rules": [
+        "owner:title"
+      ]
+    },
+    {
+      "path": "hero.bar.hours",
+      "before": "Pon \u2014 Sub · 9\u201421h",
+      "after": "Pon-Sub, 9-21h",
+      "rules": [
+        "dash:Pon {U+2014} Sub · 9{U+2014}21h"
+      ]
+    },
+    {
+      "path": "founder.name",
+      "before": "D\u0072 Tamara Vujačić",
+      "after": "Tamara Vujačić",
+      "rules": [
+        "owner:title"
+      ]
+    },
+    {
+      "path": "founder.signatureName",
+      "before": "Tamara - Lepa Svaki Dan",
+      "after": "Tamara Vujačić, Lepa Svaki Dan",
+      "rules": [
+        "owner:signature"
+      ]
+    },
+    {
+      "path": "founder.image.alt",
+      "before": "D\u0072 Tamara Vujačić, osnivač",
+      "after": "Tamara Vujačić, osnivač",
+      "rules": [
+        "owner:title"
+      ]
+    },
+    {
+      "path": "contact.hours.display",
+      "before": "Pon \u2014 Sub · 9\u201421h",
+      "after": "Pon-Sub, 9-21h",
+      "rules": [
+        "dash:Pon {U+2014} Sub · 9{U+2014}21h"
+      ]
+    },
+    {
+      "path": "pricing.tabs[2].groups[0].services[1].name",
+      "before": "Specijalistički pregled d\u0072 Tamara Vujačić",
+      "after": "Specijalistički pregled Tamara Vujačić",
+      "rules": [
+        "owner:title"
+      ]
+    },
+    {
+      "path": "pricing.tabs[4].groups[0].services[2].priceNB",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "pricing.tabs[4].groups[0].services[3].priceBW",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "pricing.tabs[4].groups[0].services[4].priceBW",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "pricing.tabs[4].groups[1].services[3].priceNB",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "pricing.tabs[4].groups[3].services[5].priceBW",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "pricing.tabs[4].groups[3].services[6].priceBW",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "pricing.tabs[4].groups[4].services[2].priceBW",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "pricing.tabs[4].groups[4].services[3].priceNB",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "pricing.tabs[4].groups[4].services[4].priceNB",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "payment.modal.paragraphs[0].text",
+      "before": "Plaćanje je moguće isključivo u dinarima \u2014 u kešu ili platnim karticama, kao i putem računa.",
+      "after": "Plaćanje je moguće isključivo u dinarima: u kešu ili platnim karticama, kao i putem računa.",
+      "rules": [
+        "dash: {U+2014} u kešu"
+      ]
+    },
+    {
+      "path": "payment.modal.paragraphs[0].html",
+      "before": "Plaćanje je moguće isključivo u <strong>dinarima</strong> \u2014 u kešu ili platnim karticama, kao i putem računa.",
+      "after": "Plaćanje je moguće isključivo u <strong>dinarima</strong>: u kešu ili platnim karticama, kao i putem računa.",
+      "rules": [
+        "dash: {U+2014} u kešu"
+      ]
+    },
+    {
+      "path": "testimonials[0].quote",
+      "before": "Posle prve konsultacije d\u0072 Tamara mi je dala plan koji nije samo radio, već sam u njemu osetila pažnju. Sada svaki tretman doživljavam kao ritual, ne obavezu.",
+      "after": "Posle prve konsultacije Tamara mi je dala plan koji nije samo radio, već sam u njemu osetila pažnju. Sada svaki tretman doživljavam kao ritual, ne obavezu.",
+      "rules": [
+        "owner:title"
+      ]
+    },
+    {
+      "path": "blog[0].excerpt",
+      "before": "Candela medicinski laseri predstavljaju zlatan standard u dermatologiji za rešavanje konkretnih problema \u2013 uklanjanje kapilara, hiperpigmentacija, ožiljaka,...",
+      "after": "Candela medicinski laseri predstavljaju zlatan standard u dermatologiji za rešavanje konkretnih problema: uklanjanje kapilara, hiperpigmentacija, ožiljaka,...",
+      "rules": [
+        "dash:problema {U+2013} uklanjanje kapilara"
+      ]
+    },
+    {
+      "path": "blog[5].title",
+      "before": "Botulinski toksin tipa A \u2013 Botoks tretman",
+      "after": "Botulinski toksin tipa A - Botoks tretman",
+      "rules": [
+        "dash:tipa A {U+2013} Botoks tretman"
+      ]
+    },
+    {
+      "path": "sections.favorites.intro",
+      "before": "Tretmani koje najčešće preporučujemo \u2014 provereni favoriti našeg tima.",
+      "after": "Tretmani koje najčešće preporučujemo: provereni favoriti našeg tima.",
+      "rules": [
+        "dash: {U+2014} provereni favoriti"
+      ]
+    },
+    {
+      "path": "sections.gifts.intro",
+      "before": "Univerzalni, prijatni tretmani koje najčešće poklanjamo kroz poklon vaučere \u2014 pravo uživanje za svaku priliku.",
+      "after": "Univerzalni, prijatni tretmani koje najčešće poklanjamo kroz poklon vaučere: pravo uživanje za svaku priliku.",
+      "rules": [
+        "dash: {U+2014} pravo uživanje"
+      ]
+    },
+    {
+      "path": "images.founder-portrait.jpg.alt",
+      "before": "D\u0072 Tamara Vujačić, osnivač",
+      "after": "Tamara Vujačić, osnivač",
+      "rules": [
+        "owner:title"
+      ]
+    },
+    {
+      "path": "allServices[95].name",
+      "before": "Specijalistički pregled d\u0072 Tamara Vujačić",
+      "after": "Specijalistički pregled Tamara Vujačić",
+      "rules": [
+        "owner:title"
+      ]
+    },
+    {
+      "path": "allServices[184].priceNB",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "allServices[185].priceBW",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "allServices[186].priceBW",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "allServices[190].priceNB",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "allServices[203].priceBW",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "allServices[204].priceBW",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "allServices[207].priceBW",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "allServices[208].priceNB",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "allServices[209].priceNB",
+      "before": "\u2014",
+      "after": "-",
+      "rules": [
+        "dash:placeholder"
+      ]
+    },
+    {
+      "path": "founder.signature",
+      "before": null,
+      "after": "Tamara Vujačić, Lepa Svaki Dan",
+      "rules": [
+        "owner:signature-field"
+      ]
+    },
+    {
+      "path": "_meta.warnings[11]",
+      "before": "No map URLs, no per-location opening hours, no postal codes in the old site; locations[].mapUrl/hours and contact.mapUrls are null. Only global hours exist: \"Pon \u2014 Sub · 9\u201421h\".",
+      "after": "No map URLs, no per-location opening hours, no postal codes in the old site; locations[].mapUrl/hours and contact.mapUrls are null. Only global hours exist: \"Pon-Sub, 9-21h\".",
+      "rules": [
+        "dash:Pon {U+2014} Sub · 9{U+2014}21h"
+      ]
+    }
+  ]
+}
