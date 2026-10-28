@@ -64,8 +64,8 @@
      (the former gift section is the "Bestseller tretmani" block of the About section: pre-rendered by _tools/a/build-pages.mjs, same price format) */
   function renderPicks() {
     $('#favorites').innerHTML = D.favorites.map(function (f, i) {
-      var dark = i === 0;
-      return '<li class="fav' + (dark ? ' fav--dark bk' : '') + ' rv" style="--i:' + (i % 2) + '">' +
+      var dark = i === 0, green = f.name === 'NO FILTER NEEDED';
+      return '<li class="fav' + (dark ? ' fav--dark bk' : '') + (green ? ' fav--green' : '') + ' rv" style="--i:' + (i % 2) + '">' +
         '<div class="fav__top"><span class="chip ' + (dark ? 'chip--ghost' : 'chip--line') + '">' + esc(f.tagLabel) + '</span></div>' +
         '<div><h3 class="fav__t">' + esc(f.name) + '</h3>' + (f.description ? '<p class="fav__d">' + esc(f.description) + '</p>' : '') + '</div>' +
         '<div class="fav__bot">' + Price.html(f.price) +
